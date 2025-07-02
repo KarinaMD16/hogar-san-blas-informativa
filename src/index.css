@@ -4,7 +4,8 @@
   --color-ecruYellow: #DBBA6B;
   --color-amaranthPink: #A7074D;
   --color-night: #0D0D11;
-
+  --color-antiFlashWhite: #ECECEC;
+  --color-basicWhite: #FDF6F9;
 }
 
 @layer base {
