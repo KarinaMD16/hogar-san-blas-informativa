@@ -1,0 +1,24 @@
+{
+    "servicios": [
+    {
+      "titulo": "Trabajo social",
+      "descripcion": "Acompañamos personas con historias marcadas por abandono, pobreza y soledad, ofreciendo apoyo ético, humano y digno a personas adultas mayores. Nuestra labor va más allá de la gestión: construimos vínculos, escuchamos con respeto y trabajamos cada día para que envejecer no sea sinónimo de olvido.",
+      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+    },
+    {
+      "titulo": "Terapia física",
+      "descripcion": "Fomentamos la movilidad y autonomía de las personas adultas mayores con terapias personalizadas, atención humanizada y un equipo especializado en geriatría.",
+      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+    },
+     {
+      "titulo": "Nutrición",
+      "descripcion": "Ofrecemos atención nutricional personalizada, educación alimentaria y vigilancia en la manipulación de alimentos para garantizar el bienestar y la seguridad nutricional de nuestros residentes.",
+      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+    },
+     {
+      "titulo": "Enfermería",
+      "descripcion": "Brindamos atención clínica integral, desde valoración, administración de tratamientos y cuidados críticos, hasta acompañamiento emocional, apoyo en la vida diaria y liderazgo en procedimientos médicos, con compromiso y calidez humana.",
+      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+    }
+  ]
+}
