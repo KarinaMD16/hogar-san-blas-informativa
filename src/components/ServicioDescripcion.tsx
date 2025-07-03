@@ -1,19 +1,24 @@
+import type {  DescripcionServicioProps } from "../types/servicios"
 
 
-const ServicioDescripcion = () => {
+const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
   return (
-    <>
-      <div>
-        <img className="shadow-sm shadow-night/20 border-2 rounded-xl border-basicWhite object-cover w-32 h-32" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/330px-Placeholder_view_vector.svg.png" alt="" />
+    <div className="flex flex-col items-center justify-center gap-4 p-4 ">
+      <div className="flex flex-row items-center gap-4 w-128">
+        <img className="shadow-sm shadow-night/20 border-2 rounded-xl border-basicWhite object-cover w-55 h-55" src={servicio.imagen} alt="" />
         <div>
-            <h3 className="font-poppins">Fisioterapia</h3>
-            <p className="font-opensans">lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 className="font-bold text-lg font-poppins">{servicio.titulo}</h2>
+            
+            <p className="font-opensans text-sm text-justify">
+                {servicio.descripcion}
+            </p>
         </div>
       </div>
-      <div className="bg-antiFlashWhite p-4 rounded-lg shadow-md mt-4">
-       {} 
+
+      <div className="bg-antiFlashWhite p-4 rounded-lg w-50 shadow-md mt-4">
+       <img src={servicio.imagen} alt={`Imagen de ${servicio.titulo}`} className="object-cover w-32 h-32 rounded-lg" />
       </div>
-    </>
+    </div>
   )
 }
 
