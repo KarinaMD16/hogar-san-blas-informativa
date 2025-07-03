@@ -77,6 +77,8 @@
   },
 
   "uneteNosotros": {
+    "titulo": "Únete a nostros",
+    "descripcion": "si",
     "botones": ["Quiero ser socio", "Quiero ser voluntario"]
   },
 
@@ -86,6 +88,16 @@
 
   "footer": {
     "Contactos": ["+506 8972 9912", "hogardeancianossanblas@gmail.com"],
-    "Horario": "Lunes a Viernes 8am a 4pm"
+    "Horario": "Lunes a Viernes 8am a 4pm",
+    "Direccion": "Detrás del Hospital La Anexión"
+  },
+
+  "header":{
+    "icono": "",
+    "SobreNosotros": ["Galeria, Casos de exito, Reseña Histórica"],
+    "Residencia": ["Requisitos de ingreso, Servicios"],
+    "Apoyanos": ["Formulario Donaciones", "Formulario Voluntariado", "Requisitos Asociarse"],
+    "Anuncios": ["Solicitudes donaciones", "Actividades"],
+    "Contactos": ["Ubicación", "Horario", "Números de teléfóno"]
   }
 }
