@@ -79,7 +79,16 @@
   "uneteNosotros": {
     "titulo": "Únete a nostros",
     "descripcion": "si",
-    "botones": ["Quiero ser socio", "Quiero ser voluntario"]
+    "botones": [
+      {
+        "texto": "Quiero ser voluntario",
+        "ruta": "formularios/voluntariado"
+      },
+      {
+        "texto": "Quiero ser socio",
+        "ruta": "requisitos/asociarse"
+      }
+    ]
   },
 
   "formulario": {

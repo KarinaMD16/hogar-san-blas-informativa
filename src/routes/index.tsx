@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Servicios from '../sections/servicios/Servicios'
+import Unete from '../sections/unirse/Unete'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -15,7 +16,7 @@ function Index() {
     {/* Casos exito */}
     {/* Donar */}
     {/* Reseña historica */}
-    {/* Unirse */}
+    <Unete />
     {/* Galeria */}
     {/* Footer */}
     </>

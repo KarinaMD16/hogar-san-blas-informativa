@@ -1,5 +1,6 @@
 import type { Hero } from "./hero";
 import type { Servicio } from "./servicios";
+import type { UneteNosotros } from "./unete";
 
 export interface DatosLanding {
   servicios: Servicio[];
@@ -10,7 +11,7 @@ export interface DatosLanding {
   casosExito: { boton: string };
   donaciones: { botones: string[] };
   historia: { boton: string };
-  uneteNosotros: { botones: string[] };
+  uneteNosotros: UneteNosotros;
   formulario: { botones: string[] };
   footer: {
     Contactos: string[];
