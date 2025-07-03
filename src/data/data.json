@@ -73,6 +73,8 @@
   },
 
   "uneteNosotros": {
+    "titulo": "Únete a nostros",
+    "descripcion": "si",
     "botones": ["Quiero ser socio", "Quiero ser voluntario"]
   },
 
