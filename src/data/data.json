@@ -4,25 +4,88 @@
       "id": 1,
       "titulo": "Trabajo social",
       "descripcion": "Acompañamos personas con historias marcadas por abandono, pobreza y soledad, ofreciendo apoyo ético, humano y digno a personas adultas mayores. Nuestra labor va más allá de la gestión: construimos vínculos, escuchamos con respeto y trabajamos cada día para que envejecer no sea sinónimo de olvido.",
-      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
     },
     {
       "id": 2,
       "titulo": "Terapia física",
       "descripcion": "Fomentamos la movilidad y autonomía de las personas adultas mayores con terapias personalizadas, atención humanizada y un equipo especializado en geriatría.",
-      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
     },
      {
       "id": 3,
       "titulo": "Nutrición",
       "descripcion": "Ofrecemos atención nutricional personalizada, educación alimentaria y vigilancia en la manipulación de alimentos para garantizar el bienestar y la seguridad nutricional de nuestros residentes.",
-      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
     },
      {
       "id": 4,
       "titulo": "Enfermería",
       "descripcion": "Brindamos atención clínica integral, desde valoración, administración de tratamientos y cuidados críticos, hasta acompañamiento emocional, apoyo en la vida diaria y liderazgo en procedimientos médicos, con compromiso y calidez humana.",
-      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+      "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
     }
-  ]
+  ],
+
+  "hero": {
+    "titulo": "Hogar San Blas",
+    "descripcion": "Lorem ipsum dolor sit amet...",
+    "botones": ["Ver más", "Contáctanos"]
+  },
+
+  "misionVision": {
+    "mision": {
+      "titulo": "Misión",
+      "descripcion": "Brindar  calidad  de atención a los residentes del Hogar de Ancianos San Blas de Nicoya y a los Usiarios de la red de Cuido de la Asociación Nicoyana de Atención al Anciano, de eficiencia y seguridad, velando por su estado físico , mental, social, espiritual y alimentario, sin ver color, raza, religión ni procedencia."
+    },
+    "vision": {
+      "titulo": "Visión",
+      "descripcion": "Tener instituidos en el  Hogar de Ancianos San Blas,  servicios profesionales eficientes, que ofrezcan calidad de vida al usuario del Hogar de Ancianos San Blas en un ambiente de paz, tranquilidad y calor humano."
+    },
+    "objetivos": {
+      "titulo": "Objetivos",
+      "descripcion": "Lograr a diciembre 2022 el ingreso de recursos para satisfacer necesidades básicas, específicas y mejoras a la infraestructura del Hogar de Ancianos San Blas, así como dar calidad en todos los servicios que se le brindan a las personas  Adultas Mayores residentes y de la Red de Atención domiciliar."
+    },
+    "valores": {
+      "titulo": "Valores",
+      "descripcion": "Resilencia, amor, paz y sabiduria"
+    }
+  },
+
+  "reseñaHistorica": {
+    "descripcion": "El Hogar San Blas de Nicoya, dedicado a la Atención de la Persona Adulta Mayor Ubicado en el cantón central de Nicoya, Guanacaste. Nació por la necesidad de atención de personas mayores, que en condición de abandono y necesidad pedían en la calle, un grupo de personas de la comunidad de gran generosidad, unidos en un sentimiento de ayuda a lo que acontecía con ellos, iniciaron en forma voluntaria las gestiones de ayuda. Este Hogar de Ancianos diò apertura en setiembre del año 1983, el cual en sus primeros años inicio sus labores como un centro Diurno, luego con el paso del tiempo se convierte en Hogar de larga estancia, incrementando el número de personas atendidas a la fecha se mantiene un número entre los 36 y 40 adultos mayores Hombres y Mujeres entre los 65 y 102 años de edad, en algún momento se ha atendido adultos mayores de mayor edad a la actual, carentes de recursos, enfermos o/y  en fase terminal, este Hogar  mantiene su funcionamiento gracias a voluntarios de la comunidad, con cuyo aporte se construyó el primer Pabellón con pasillo desde 1983 a 1991, años después se dió la construcción completa con colaboración del INA- JPS – C.T.A.M.S- IMAS, MUNICIPALIDAD Y PUEBLO NICOYANO,  lo que hoy es el Hogar de Ancianos San Blas, entre sus instalaciones se cuenta con  una cocina equipada, un comedor, una capilla,  24 habitaciones en tres pabellones, un salón de actividades, una sala de terapia física, un departamento de enfermería y curaciones, oficinas de Servicio social, Nutrición, Administración, un área de recreación y eventos externa y amplias zonas verdes, una granja con animales que forma parte de la terapia para las PAM entre otras. Actualmente se mantiene un voluntariado, también de recibe ayuda económicamente de instituciones como Junta de Protección Social, CONAPAM, FODESAF, la gestión de recursos propios por parte de la Junta directiva y el apoyo de la comunidad. En el año 2011 se implementa el Programa de la red de atención domiciliar o Red de Cuido, el cual atiende a adultos mayores que no se encuentran dentro del Hogar, sino en sus casas en situación de pobreza extrema, se trabaja con recursos de CONAPAM. Iniciando con 50 beneficiarios los cuales en aumento actualmente se atienden a 125 PAM con este programa."
+  },
+
+
+  "solicitudResidencia": {
+    "boton": "Ver requisitos"
+  },
+
+  "casosExito": {
+    "boton": "Ver más"
+  },
+
+  "donaciones": {
+    "botones": ["Ver requisitos", "Donar"]
+  },
+
+ "historia": {
+    "boton": "Ver más"
+  },
+
+  "uneteNosotros": {
+    "botones": ["Quiero ser socio", "Quiero ser voluntario"]
+  },
+
+  "formulario": {
+    "botones": ["Enviar", "Cancelar"]
+  },
+
+  "footer": {
+    "Contactos": ["+506 8972 9912", "hogardeancianossanblas@gmail.com"],
+    "Horario": "Lunes a Viernes 8am a 4pm"
+  }
 }
