@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import Servicios from '../sections/servicios/Servicios'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -6,10 +7,17 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   return (
-    <div className="p-2">
-      <h3 className="text-2xl font-poppins font-bold text-amaranthPink">Welcome Home!</h3>
-      <h3 className="text-2xl font-poppins font-bold text-ecruYellow">Titulos amarillos</h3>
-
-    </div>
+    <>
+    {/* Hero */}
+    {/* Mision Vision */}
+      <Servicios />
+    {/* Req residencia */}
+    {/* Casos exito */}
+    {/* Donar */}
+    {/* Reseña historica */}
+    {/* Unirse */}
+    {/* Galeria */}
+    {/* Footer */}
+    </>
   )
 }

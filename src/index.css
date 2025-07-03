@@ -2,9 +2,11 @@
 
 @theme {
   --color-ecruYellow: #DBBA6B;
+  --color-ecruYellow300: #E1CC9A;
   --color-amaranthPink: #A7074D;
   --color-night: #0D0D11;
-
+  --color-basicWhite: #FDF6F9;
+  --color-antiFlashWhite: #ECECEC;
 }
 
 @layer base {
