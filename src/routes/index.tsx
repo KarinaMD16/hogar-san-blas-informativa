@@ -8,7 +8,16 @@ export const Route = createFileRoute('/')({
 function Index() {
   return (
     <>
+    {/* Hero */}
+    {/* Mision Vision */}
       <Servicios />
+    {/* Req residencia */}
+    {/* Casos exito */}
+    {/* Donar */}
+    {/* Reseña historica */}
+    {/* Unirse */}
+    {/* Galeria */}
+    {/* Footer */}
     </>
   )
 }
