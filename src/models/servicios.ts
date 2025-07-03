@@ -1,6 +1,8 @@
-export type Servicio = {
+export interface Servicio {
   id: number;
   titulo: string;
   descripcion: string;
-  imagen: string;
+  imagenPrincipal: string;
+  imagenes: string[];
 };
+

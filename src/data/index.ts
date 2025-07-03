@@ -1,3 +1,10 @@
+import type { DatosLanding } from "../models/datosLanding";
 import data from "./data.json";
 
-export const getEntidad = (entidad: string) => data[entidad as keyof typeof data] || [];
+const datos = data as DatosLanding;
+
+export function getEntidad<K extends keyof DatosLanding>(
+  key: K
+): DatosLanding[K] {
+  return datos[key];
+}
