@@ -19,10 +19,10 @@ const Servicios = () => {
     }
   
   return (
-    <section>
+    <section className="min-h-[700px] flex flex-col">
       <h2 className="text-3xl text-justify font-poppins font-bold text-amaranthPink">Nuestros Servicios</h2>
 
-      <div className="flex flex-col lg:flex-row flex-wrap items-center justify-evenly mt-4 gap-6">
+      <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center mt-4 gap-10">
       <div className="
       flex flex-row lg:flex-col 
       items-center lg:items-start 
@@ -57,3 +57,4 @@ const Servicios = () => {
 }
 
 export default Servicios
+
