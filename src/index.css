@@ -20,6 +20,28 @@
   }
 }
 
+@import 'tailwindcss';
+
+@theme {
+  --color-ecruYellow: #DBBA6B;
+  --color-ecruYellow300: #E1CC9A;
+  --color-amaranthPink: #A7074D;
+  --color-night: #0D0D11;
+  --color-basicWhite: #FDF6F9;
+  --color-antiFlashWhite: #ECECEC;
+  --color-amaranthPinkDark: #8F1047;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -34,8 +56,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  max-width: 1280px;
+
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
+
+@layer base {
+  section {
+    @apply pb-25 pl-25 pr-25 pt-25;
+  }
+}
+
+
+
