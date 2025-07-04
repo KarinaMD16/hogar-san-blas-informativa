@@ -1,4 +1,3 @@
-
 import type { CardServicioProps } from "../../types/servicios";
 
 const CardsServicios = ({ servicio, showMore, isSelected }: CardServicioProps) => {
@@ -33,3 +32,5 @@ const CardsServicios = ({ servicio, showMore, isSelected }: CardServicioProps) =
 };
 
 export default CardsServicios;
+
+
