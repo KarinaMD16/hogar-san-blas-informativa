@@ -74,7 +74,9 @@
   },
 
  "historia": {
-    "boton": "Ver más"
+    "introduccion": "Desde 1983\n al servicio de nuestros adultos mayores",
+    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+    "botonVerMas": "Ver más"
   },
 
   "uneteNosotros": {
