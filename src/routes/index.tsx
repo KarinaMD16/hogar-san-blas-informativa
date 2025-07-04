@@ -4,6 +4,7 @@ import Unete from '../sections/unirse/Unete'
 import Hero from '../sections/hero/Hero'
 import MisionVision from '../sections/misionVision/MisionVision'
 import Historia from '../sections/historia/Historia'
+import SolicitarResidencia from '../sections/residencia/SolicitarResidencia'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -16,7 +17,7 @@ function Index() {
       <Hero/>
       <MisionVision />
       <Servicios />
-    {/* Req residencia */}
+      <SolicitarResidencia />
     {/* Casos exito */}
     {/* Donar */}
     <Historia />

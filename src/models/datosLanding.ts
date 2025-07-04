@@ -2,6 +2,7 @@ import type { Hero } from "./hero";
 import type { HistoriaPreview } from "./historia";
 import type { misionVision } from "./misionVision";
 import type { Servicio } from "./servicios";
+import type { solicitarResidencia } from "./solicitarResidencia";
 import type { UneteNosotros } from "./unete";
 
 export interface DatosLanding {
@@ -9,7 +10,7 @@ export interface DatosLanding {
   hero: Hero;
   misionVision: misionVision;
   reseñaHistorica: { descripcion: string };
-  solicitudResidencia: { boton: string };
+  solicitudResidencia: solicitarResidencia;
   casosExito: { boton: string };
   donaciones: { botones: string[] };
   historia: HistoriaPreview;

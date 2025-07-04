@@ -8,7 +8,7 @@ const MisionVision = () => {
   const items: misionVisionItem[] = Object.values(misionVisionjson);
 
   return (
-    <section className="hidden lg:grid lg:grid-cols-2 lg:gap-6 lg:place-items-center my-16">
+    <section className="hidden lg:grid lg:grid-cols-2 lg:gap-6 lg:place-items-center">
       {items.map((item, index) => (
         <CardsMisionVision key={index} item={item} />
       ))}
