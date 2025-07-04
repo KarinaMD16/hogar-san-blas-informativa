@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PublicacionesIndexRouteImport } from './routes/publicaciones/index'
 import { Route as HistoriaIndexRouteImport } from './routes/historia/index'
 import { Route as GaleriaIndexRouteImport } from './routes/galeria/index'
 import { Route as CasosdeexitoIndexRouteImport } from './routes/casosdeexito/index'
@@ -21,6 +22,11 @@ import { Route as FormulariosDonacionRouteImport } from './routes/formularios/do
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PublicacionesIndexRoute = PublicacionesIndexRouteImport.update({
+  id: '/publicaciones/',
+  path: '/publicaciones/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HistoriaIndexRoute = HistoriaIndexRouteImport.update({
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/casosdeexito': typeof CasosdeexitoIndexRoute
   '/galeria': typeof GaleriaIndexRoute
   '/historia': typeof HistoriaIndexRoute
+  '/publicaciones': typeof PublicacionesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/casosdeexito': typeof CasosdeexitoIndexRoute
   '/galeria': typeof GaleriaIndexRoute
   '/historia': typeof HistoriaIndexRoute
+  '/publicaciones': typeof PublicacionesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/casosdeexito/': typeof CasosdeexitoIndexRoute
   '/galeria/': typeof GaleriaIndexRoute
   '/historia/': typeof HistoriaIndexRoute
+  '/publicaciones/': typeof PublicacionesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/casosdeexito'
     | '/galeria'
     | '/historia'
+    | '/publicaciones'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/casosdeexito'
     | '/galeria'
     | '/historia'
+    | '/publicaciones'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/casosdeexito/'
     | '/galeria/'
     | '/historia/'
+    | '/publicaciones/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +144,7 @@ export interface RootRouteChildren {
   CasosdeexitoIndexRoute: typeof CasosdeexitoIndexRoute
   GaleriaIndexRoute: typeof GaleriaIndexRoute
   HistoriaIndexRoute: typeof HistoriaIndexRoute
+  PublicacionesIndexRoute: typeof PublicacionesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -141,6 +154,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/publicaciones/': {
+      id: '/publicaciones/'
+      path: '/publicaciones'
+      fullPath: '/publicaciones'
+      preLoaderRoute: typeof PublicacionesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/historia/': {
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   CasosdeexitoIndexRoute: CasosdeexitoIndexRoute,
   GaleriaIndexRoute: GaleriaIndexRoute,
   HistoriaIndexRoute: HistoriaIndexRoute,
+  PublicacionesIndexRoute: PublicacionesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -34,6 +34,7 @@
   "hero": {
     "titulo": "Hogar San Blas",
     "descripcion": "Lorem ipsum dolor sit amet...",
+    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
     "botones": ["Ver más", "Contáctanos"]
   },
 
@@ -95,7 +96,8 @@
   },
 
  "historia": {
-    "introduccion": "Desde 1983\n al servicio de nuestros adultos mayores",
+    "titulo": "Desde 1983",
+    "subtitulo": "Al servicio de nuestros adultos mayores",
     "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
     "botonVerMas": "Ver más"
   },

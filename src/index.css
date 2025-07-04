@@ -63,9 +63,7 @@
 
 @layer base {
   section {
-    @apply pb-25 pl-25 pr-25 pt-25;
+    @apply pb-10 pl-10 pr-10 pt-10;
   }
+  
 }
-
-
-
