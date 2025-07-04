@@ -3,7 +3,7 @@ import Servicios from '../sections/servicios/Servicios'
 import Unete from '../sections/unirse/Unete'
 import Historia from '../sections/historia/Historia'
 import Hero from '../sections/hero/Hero'
-import MisionVision from '../sections/misionVision/misionVision'
+import MisionVision from '../sections/misionVision/MisionVision'
 
 export const Route = createFileRoute('/')({
   component: Index,
