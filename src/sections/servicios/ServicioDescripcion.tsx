@@ -11,7 +11,7 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
     setTimeout(() => {
       setImagenIndex(index); 
       setFade(true); 
-    }, 100); 
+    }, 200); 
   };
 
   useEffect(() => {
