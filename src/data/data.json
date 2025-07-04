@@ -61,20 +61,46 @@
 
 
   "solicitudResidencia": {
-    "boton": "Ver requisitos"
+  "titulo": "¿Desea solicitar residencia?",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "boton": "Ver requisitos"
   },
+
 
   "casosExito": {
-    "boton": "Ver más"
+  "titulo": "Casos de Éxito",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+  "boton": "Ver más"
   },
+
 
   "donaciones": {
-    "botones": ["Ver requisitos", "Donar"]
+  "titulo": "¿Quieres Donar?",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "informacionDonaciones": [
+  {
+  "fecha": "",
+  "titulo": "Artículo",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  },
+  {
+  "fecha": "",
+  "titulo": "Artículo",
+  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  }
+  ],
+  "botones": ["Ver requisitos", "Donar"]
   },
 
- "historia": {
+
+
+  "historia": {
+    "titulo": "Desde 1983",
+    "subtitulo": "Al servicio de nuestros adultos mayores",
     "boton": "Ver más"
   },
+
 
   "uneteNosotros": {
     "titulo": "Únete a nostros",
