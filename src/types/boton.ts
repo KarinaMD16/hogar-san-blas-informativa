@@ -1,7 +1,6 @@
-import type { JSX } from "react";
+import type { ReactNode } from "react";
 
-export type BotonProps = {
-  children: JSX.Element;
-    onClick?: () => void;
-    where?: string;
-};
+export interface BotonProps {
+  children: ReactNode;
+  where: string;
+}
