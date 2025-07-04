@@ -6,7 +6,7 @@ const CardsServicios = ({ servicio, showMore, isSelected }: CardServicioProps) =
       <div
       onClick={showMore}
       className={`
-        transition delay-100 duration-300 ease-in-out rounded-2xl cursor-pointer
+        transition-all duration-300 hover:scale-110 ease-in-out rounded-2xl cursor-pointer
         flex flex-col md:flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-evenly
         gap-3 lg:gap-6 p-4 mt-1 min-w-[280px] max-w-xs lg:min-w-0 lg:w-[360px] 
         border-4

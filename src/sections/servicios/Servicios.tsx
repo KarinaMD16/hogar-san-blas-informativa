@@ -26,7 +26,7 @@ const Servicios = () => {
       <div className="
       flex flex-row lg:flex-col 
       items-center lg:items-start 
-      gap-4 
+      gap-4 p-4
       overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto 
       w-full lg:w-auto max-w-full 
       pb-2 pr-4 lg:pr-0 lg:max-h-96 

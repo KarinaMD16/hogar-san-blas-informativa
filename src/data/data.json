@@ -5,7 +5,8 @@
       "titulo": "Trabajo social",
       "descripcion": "Acompañamos personas con historias marcadas por abandono, pobreza y soledad, ofreciendo apoyo ético, humano y digno a personas adultas mayores. Nuestra labor va más allá de la gestión: construimos vínculos, escuchamos con respeto y trabajamos cada día para que envejecer no sea sinónimo de olvido.",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-      "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
+      "imagenes": [
+        "https://periodicomensaje.com/images/1.ADULTO-MAYOR.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://casaisrael.org/wp-content/uploads/2018/06/C%C3%B3mo-es-la-vida-en-una-residencia-geri%C3%A1trica.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
     },
     {
       "id": 2,
@@ -93,12 +94,10 @@
   "botones": ["Ver requisitos", "Donar"]
   },
 
-
-
-  "historia": {
-    "titulo": "Desde 1983",
-    "subtitulo": "Al servicio de nuestros adultos mayores",
-    "boton": "Ver más"
+ "historia": {
+    "introduccion": "Desde 1983\n al servicio de nuestros adultos mayores",
+    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+    "botonVerMas": "Ver más"
   },
 
 
