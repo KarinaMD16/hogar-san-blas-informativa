@@ -1,5 +1,7 @@
  export interface HistoriaPreview {
-    "introduccion": string,
+    "titulo": string,
+    "subtitulo": string,
+
     "botonVerMas": string,
     "imagen": string
   }
