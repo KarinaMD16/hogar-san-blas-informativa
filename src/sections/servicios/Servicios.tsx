@@ -25,6 +25,7 @@ const Servicios = () => {
       </h1>
 
       <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center mt-4 gap-10">
+
         <div className="
         flex flex-row lg:flex-col items-center lg:items-start 
         gap-4 
