@@ -72,9 +72,10 @@
 
   "casosExito": {
   "titulo": "Casos de Éxito",
+  "subtitulo": "Centenarios",
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-  "boton": "Ver más"
+  "botonVerMas": "Ver más"
   },
 
 

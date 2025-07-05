@@ -7,6 +7,7 @@ import MisionVision from '../sections/misionVision/MisionVision'
 import Historia from '../sections/historia/Historia'
 import SolicitarResidencia from '../sections/residencia/SolicitarResidencia'
 import Donar from '../sections/prevDonaciones/Donar'
+import CasosExito from '../sections/casosExito/CasosExito'
 
 
 export const Route = createFileRoute('/')({
@@ -16,17 +17,16 @@ export const Route = createFileRoute('/')({
 function Index() {
   return (
     <>
-    {/* Hero */}
       <Hero/>
       <MisionVision />
       <Servicios />
       <SolicitarResidencia />
-    {/* Casos exito */}
-    <Donar/>
-    <Historia />
-    <Unete />
-    {/* Galeria */}
-    {/* Footer */}
+      <CasosExito/>
+      <Donar/>
+      <Historia />
+      <Unete />
+      {/* Galeria */}
+      {/* Footer */}
     </>
   )
 }
