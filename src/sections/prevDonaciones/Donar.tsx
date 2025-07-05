@@ -1,4 +1,5 @@
 import CardDonacion from "../../components/CardDonacion";
+import Divider from "../../components/Divider";
 import { getEntidad } from "../../data";
 import { useGetDonaciones } from "../../hooks/publicaciones/publicaciones";
 import type { Publicacion } from "../../models/publicaciones/publicaciones";
@@ -10,10 +11,11 @@ const Donar = () => {
   return (
     <section className="flex justify-center items-center flex-wrap">
       <div className="w-md flex flex-col gap-3">
-        <h1 className=" text-4xl font-poppins font-bold text-amaranthPink border-b-4 border-ecruYellow">
-        {donacionesJson.titulo}
+        <h1 className=" text-4xl font-poppins font-bold text-amaranthPink ">
+          {donacionesJson.titulo}
         </h1>
-        <p>{donacionesJson.descripcion}</p>
+        <Divider />
+        <p className="text-md">{donacionesJson.descripcion}</p>
       </div>
 
       <div className="flex flex-row gap-5 overflow-x-auto justify-around

@@ -15,12 +15,12 @@ const SolicitarResidencia = () => {
                     {solicitarResidenciaJson.titulo}
                 </h1>
                 <Divider />
-                <p className="font-opensans text-white text-xs sm:text-sm md:text-base max-w-xl">
+                <p className="font-opensans text-white text-md md:text-base max-w-xl">
                     {solicitarResidenciaJson.descripcion}
                 </p>
                 <div>
                     <Boton  where={"/requisitos/residencia"}>
-                        <span className="font-medium text-base sm:text-sm md:text-base lg:text-lg">{solicitarResidenciaJson.boton}</span>
+                        <span className="font-medium text-base text-md md:text-base lg:text-lg">{solicitarResidenciaJson.boton}</span>
                     </Boton>
                 </div>
             </div>

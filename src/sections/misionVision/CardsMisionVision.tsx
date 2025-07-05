@@ -30,7 +30,7 @@ const CardsMisionVision = ({ item }: CardMisionVisionProps) => {
               {item.titulo}
             </span>
           </h2>
-          <p className="font-opensans text-sm text-justify">{item.descripcion}</p>
+          <p className="font-opensans text-md text-justify">{item.descripcion}</p>
         </div>
     </div>
   );
