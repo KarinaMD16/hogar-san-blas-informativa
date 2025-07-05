@@ -95,10 +95,12 @@
   "botones": ["Ver requisitos", "Donar"]
   },
 
- "historia": {
-    "introduccion": "Desde 1983\n al servicio de nuestros adultos mayores",
-    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-    "botonVerMas": "Ver más"
+
+
+  "historia": {
+    "titulo": "Desde 1983",
+    "subtitulo": "Al servicio de nuestros adultos mayores",
+    "boton": "Ver más"
   },
 
 
