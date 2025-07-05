@@ -14,7 +14,7 @@ const Boton = ({ children, where }: BotonProps) => {
           hover:bg-amaranthPinkDark 
           transition-colors duration-300 
           hover:cursor-pointer
-          max-w-[250px] w-full whitespace-nowrap truncate 
+          max-w-[250px] whitespace-nowrap truncate 
           text-center text-sm sm:text-base md:text-lg"
       >
         {children}

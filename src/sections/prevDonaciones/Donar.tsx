@@ -1,3 +1,4 @@
+import Boton from "../../components/Boton";
 import CardDonacion from "../../components/CardDonacion";
 import Divider from "../../components/Divider";
 import { getEntidad } from "../../data";
@@ -16,6 +17,9 @@ const Donar = () => {
         </h1>
         <Divider />
         <p className="text-md">{donacionesJson.descripcion}</p>
+        <div>
+          <Boton children={donacionesJson.botones.botonRequisitos} where={"/formularios/donacion"}/>
+        </div>
       </div>
 
       <div className="flex flex-row gap-5 overflow-x-auto justify-around

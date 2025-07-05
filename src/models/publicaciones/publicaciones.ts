@@ -3,4 +3,5 @@ export interface Publicacion {
   fecha: string;
   Titulo: string;
   Descripcion: string;
+  imagenUrl: string;
 }
