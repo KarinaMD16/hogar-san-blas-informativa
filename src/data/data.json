@@ -5,7 +5,8 @@
       "titulo": "Trabajo social",
       "descripcion": "Acompañamos personas con historias marcadas por abandono, pobreza y soledad, ofreciendo apoyo ético, humano y digno a personas adultas mayores. Nuestra labor va más allá de la gestión: construimos vínculos, escuchamos con respeto y trabajamos cada día para que envejecer no sea sinónimo de olvido.",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-      "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
+      "imagenes": [
+        "https://periodicomensaje.com/images/1.ADULTO-MAYOR.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://casaisrael.org/wp-content/uploads/2018/06/C%C3%B3mo-es-la-vida-en-una-residencia-geri%C3%A1trica.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
     },
     {
       "id": 2,
@@ -33,6 +34,7 @@
   "hero": {
     "titulo": "Hogar San Blas",
     "descripcion": "Lorem ipsum dolor sit amet...",
+    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
     "botones": ["Ver más", "Contáctanos"]
   },
 
@@ -78,27 +80,17 @@
   "donaciones": {
   "titulo": "¿Quieres Donar?",
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  "informacionDonaciones": [
-  {
-  "fecha": "",
-  "titulo": "Artículo",
-  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-  },
-  {
-  "fecha": "",
-  "titulo": "Artículo",
-  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+   "botones": {
+    "botonDonar": "Donar",
+    "botonRequisitos": "Ver requisitos"
   }
-  ],
-  "botones": ["Ver requisitos", "Donar"]
   },
 
-
-
-  "historia": {
+ "historia": {
     "titulo": "Desde 1983",
     "subtitulo": "Al servicio de nuestros adultos mayores",
-    "boton": "Ver más"
+    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+    "botonVerMas": "Ver más"
   },
 
 

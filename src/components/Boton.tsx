@@ -8,9 +8,9 @@ const Boton = ({ children, where }: BotonProps) => {
     <>
     <Link to={where} > 
       <button
-        className="
+        className=" font-poppins font-medium
           bg-amaranthPink text-white 
-          py-2 px-4 sm:py-2 sm:px-5 md:py-3 md:px-6 lg:py-3 lg:px-7 rounded-4xl shadow-md
+          py-2 px-4 sm:py-2 sm:px-4 md:py-1.5 md:px-5 lg:py-2 lg:px-5 rounded-4xl shadow-md
           hover:bg-amaranthPinkDark 
           transition-colors duration-300 
           hover:cursor-pointer
