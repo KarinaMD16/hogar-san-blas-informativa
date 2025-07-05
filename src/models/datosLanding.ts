@@ -1,3 +1,4 @@
+import type { CasosExito } from "./casosExito";
 import type { Donaciones } from "./donaciones";
 import type { Hero } from "./hero";
 import type { HistoriaPreview } from "./historia";
@@ -12,7 +13,7 @@ export interface DatosLanding {
   misionVision: misionVision;
   reseñaHistorica: { descripcion: string };
   solicitudResidencia: solicitarResidencia;
-  casosExito: { boton: string };
+  casosExito: CasosExito;
   donaciones: Donaciones;
   historia: HistoriaPreview;
   uneteNosotros: UneteNosotros;
