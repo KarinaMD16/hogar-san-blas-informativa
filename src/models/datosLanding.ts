@@ -1,11 +1,11 @@
-import type { CasosExito } from "./casosExito";
-import type { Donaciones } from "./donaciones";
-import type { Hero } from "./hero";
-import type { HistoriaPreview } from "./historia";
-import type { misionVision } from "./misionVision";
-import type { Servicio } from "./servicios";
-import type { solicitarResidencia } from "./solicitarResidencia";
-import type { UneteNosotros } from "./unete";
+import type { CasosExito } from "./sections/casosExito";
+import type { Donaciones } from "./sections/donaciones";
+import type { Hero } from "./sections/hero";
+import type { HistoriaPreview } from "./sections/historia";
+import type { misionVision } from "./sections/misionVision";
+import type { Servicio } from "./sections/servicios";
+import type { solicitarResidencia } from "./sections/solicitarResidencia";
+import type { UneteNosotros } from "./sections/unete";
 
 export interface DatosLanding {
   servicios: Servicio[];

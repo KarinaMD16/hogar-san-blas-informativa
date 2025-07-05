@@ -1,6 +1,6 @@
 import { getEntidad } from "../../data";
 import { useState } from "react";
-import type { Servicio } from "../../models/servicios";
+import type { Servicio } from "../../models/sections/servicios";
 import CardsServicios from "./CardsServicios";
 import ServicioDescripcion from "./ServicioDescripcion";
 

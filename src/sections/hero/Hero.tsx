@@ -1,6 +1,6 @@
 import Boton from "../../components/Boton";
 import { getEntidad } from "../../data";
-import type { Hero } from "../../models/hero";
+import type { Hero } from "../../models/sections/hero";
 
 const HeroSection = () => {
   const hero: Hero = getEntidad("hero");
