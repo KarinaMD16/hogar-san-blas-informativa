@@ -23,18 +23,18 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
   }, [imagenIndex, imagenes.length]);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-4 p-4">
+    <div className="flex flex-col items-center justify-center gap-4">
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 w-full max-w-2xl">
         <img 
           className={`transition-opacity duration-500 ease-in-out
             ${fade ? "opacity-100" : "opacity-0"} 
-            shadow-sm shadow-night/20 border-2 rounded-xl border-basicWhite object-cover w-44 h-44`} 
+            shadow-sm shadow-night/20 border-2 rounded-xl border-basicWhite object-cover w-60 h-60`} 
           src={imagenes[imagenIndex]} 
           alt={servicio.titulo} 
         />
         <div className="text-center sm:text-left">
-          <h2 className="font-bold text-xl sm:text-2xl font-poppins">{servicio.titulo}</h2>
-          <p className="font-opensans text-sm text-justify">{servicio.descripcion}</p>
+          <h2 className="font-bold text-2xl sm:text-3xl font-poppins mb-2">{servicio.titulo}</h2>
+          <p className="font-opensans text-md text-justify">{servicio.descripcion}</p>
         </div>
       </div> 
 
@@ -43,7 +43,7 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
             [&::-webkit-scrollbar]:h-2.5
             [&::-webkit-scrollbar-track]:bg-gray-100
             [&::-webkit-scrollbar-thumb]:bg-ecruYellow 
-            [&::-webkit-scrollbar-thumb]:rounded-full">
+            [&::-webkit-scrollbar-thumb]:rounded-full pb-2">
           {imagenes.map((imagen, index) => (
             <img
               onClick={() => cambiarImagen(index)}
