@@ -10,7 +10,7 @@ const Donar = () => {
 
   const { Donaciones } = useGetDonaciones();
   return (
-    <section className="flex justify-center items-center flex-wrap">
+    <section className="flex justify-center items-center flex-wrap gap-5">
       <div className="w-md flex flex-col gap-3">
         <h1 className=" text-4xl font-poppins font-bold text-amaranthPink ">
           {donacionesJson.titulo}
@@ -26,8 +26,8 @@ const Donar = () => {
             [&::-webkit-scrollbar]:h-2.5
             [&::-webkit-scrollbar-track]:bg-gray-100
             [&::-webkit-scrollbar-thumb]:bg-ecruYellow 
-            [&::-webkit-scrollbar-thumb]:rounded-full pb-2
-            w-4xl">
+            [&::-webkit-scrollbar-thumb]:rounded-full pb-3
+            w-2xl">
         {Donaciones?.map((publicacion: Publicacion) => (
             <CardDonacion
               key={publicacion.id}
