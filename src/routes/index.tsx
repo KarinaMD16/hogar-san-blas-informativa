@@ -3,6 +3,7 @@ import Servicios from '../sections/servicios/Servicios'
 import Unete from '../sections/unirse/Unete'
 import Hero from '../sections/hero/Hero'
 import Historia from '../sections/historia/Historia'
+import Donar from '../sections/prevDonaciones/Donar'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -17,7 +18,7 @@ function Index() {
       <Servicios />
     {/* Req residencia */}
     {/* Casos exito */}
-    {/* Donar */}
+    <Donar/>
     <Historia />
     <Unete />
     {/* Galeria */}
