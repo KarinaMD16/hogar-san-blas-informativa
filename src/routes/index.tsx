@@ -6,7 +6,6 @@ import Hero from '../sections/hero/Hero'
 import MisionVision from '../sections/misionVision/MisionVision'
 import Historia from '../sections/historia/Historia'
 import SolicitarResidencia from '../sections/residencia/SolicitarResidencia'
-import Historia from '../sections/historia/Historia'
 import Donar from '../sections/prevDonaciones/Donar'
 
 
