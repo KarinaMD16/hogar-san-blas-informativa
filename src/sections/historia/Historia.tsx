@@ -8,8 +8,8 @@ const Historia = () => {
   return (
     <section style={{ backgroundImage: `url(${historiaJson.imagen})` }} 
     className="bg-cover bg-center bg-no-repeat h-[600px] flex flex-col flex-wrap
-    lg:gap-6 items-center justify-center max-w-full p-0">
-        <h1 className="uppercase text-white text-4xl font-bold text-shadow-md mb-0 leading-tight tracking-tight m-0">
+    lg:gap-6 items-center justify-center max-w-full p-0 ">
+        <h1 className="uppercase text-white text-4xl font-bold text-shadow-md mb-0 leading-tight tracking-tight ">
             {historiaJson.titulo}
         </h1>
         <Divider />
