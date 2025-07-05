@@ -13,13 +13,13 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
       <img className="
       rounded-md h-40 object-cover
       " 
-      src="https://i0.wp.com/ellatinoonline.com/wp-content/uploads/2018/05/1-Administracion-del-hogar.jpg?fit=700%2C453&ssl=1" alt="" />
+      src={publicacion.imagenUrl} alt={publicacion.Titulo} />
       <h3 className="font-poppins font-bold text-lg" >{publicacion.Titulo}</h3>
       <p>{publicacion.Descripcion}</p>
       <div className="flex items-start w-50 sm:w-40 md:w-50 lg:w-3xs">
         <p className="text-sm">{publicacion.fecha}</p>
       </div>
-      <Boton where={"/formularios/donacion"}>
+      <Boton where={"/formularios/donacion#formularioDonacion"}>
                 <span className="font-medium text-base sm:text-sm md:text-base lg:text-lg">
                     {donacionJson.botones.botonDonar}
                 </span>

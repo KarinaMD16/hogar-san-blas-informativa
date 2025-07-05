@@ -34,7 +34,7 @@
   "hero": {
     "titulo": "Hogar San Blas",
     "descripcion": "Lorem ipsum dolor sit amet...",
-    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+    "imagen": "https://i.ibb.co/C3wqMQDD/Imagen-de-Whats-App-2025-07-02-a-las-14-30-20-31935e6d.jpg",
     "botones": ["Ver más", "Contáctanos"]
   },
 
@@ -61,14 +61,12 @@
     "descripcion": "El Hogar San Blas de Nicoya, dedicado a la Atención de la Persona Adulta Mayor Ubicado en el cantón central de Nicoya, Guanacaste. Nació por la necesidad de atención de personas mayores, que en condición de abandono y necesidad pedían en la calle, un grupo de personas de la comunidad de gran generosidad, unidos en un sentimiento de ayuda a lo que acontecía con ellos, iniciaron en forma voluntaria las gestiones de ayuda. Este Hogar de Ancianos diò apertura en setiembre del año 1983, el cual en sus primeros años inicio sus labores como un centro Diurno, luego con el paso del tiempo se convierte en Hogar de larga estancia, incrementando el número de personas atendidas a la fecha se mantiene un número entre los 36 y 40 adultos mayores Hombres y Mujeres entre los 65 y 102 años de edad, en algún momento se ha atendido adultos mayores de mayor edad a la actual, carentes de recursos, enfermos o/y  en fase terminal, este Hogar  mantiene su funcionamiento gracias a voluntarios de la comunidad, con cuyo aporte se construyó el primer Pabellón con pasillo desde 1983 a 1991, años después se dió la construcción completa con colaboración del INA- JPS – C.T.A.M.S- IMAS, MUNICIPALIDAD Y PUEBLO NICOYANO,  lo que hoy es el Hogar de Ancianos San Blas, entre sus instalaciones se cuenta con  una cocina equipada, un comedor, una capilla,  24 habitaciones en tres pabellones, un salón de actividades, una sala de terapia física, un departamento de enfermería y curaciones, oficinas de Servicio social, Nutrición, Administración, un área de recreación y eventos externa y amplias zonas verdes, una granja con animales que forma parte de la terapia para las PAM entre otras. Actualmente se mantiene un voluntariado, también de recibe ayuda económicamente de instituciones como Junta de Protección Social, CONAPAM, FODESAF, la gestión de recursos propios por parte de la Junta directiva y el apoyo de la comunidad. En el año 2011 se implementa el Programa de la red de atención domiciliar o Red de Cuido, el cual atiende a adultos mayores que no se encuentran dentro del Hogar, sino en sus casas en situación de pobreza extrema, se trabaja con recursos de CONAPAM. Iniciando con 50 beneficiarios los cuales en aumento actualmente se atienden a 125 PAM con este programa."
   },
 
-
   "solicitudResidencia": {
   "titulo": "¿Desea solicitar residencia?",
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   "imagen": "https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/489926099_1315181850615344_1286229606703186756_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rDyYREGyUYcQ7kNvwESJF2z&_nc_oc=AdkEhlqpOkeH2xS5fZiCCCl_Z-eWgdOqAgF7S2LvMbkTMeVe6R_aMbFrpax6pxvsqJg&_nc_zt=23&_nc_ht=scontent.fsyq2-1.fna&_nc_gid=-vKWzI362HSgCLWJsHX1VQ&oh=00_AfRZwcJcRlSk50DmxDpvVp8X6GQ9x8V-jU7FVZE1YbY5GA&oe=686E243E",
   "boton": "Ver requisitos"
   },
-
 
   "casosExito": {
   "titulo": "Casos de Éxito",
@@ -77,7 +75,6 @@
   "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
   "botonVerMas": "Ver más"
   },
-
 
   "donaciones": {
   "titulo": "¿Quieres Donar?",
