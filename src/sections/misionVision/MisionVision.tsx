@@ -1,5 +1,5 @@
 import CardsMisionVision from "./CardsMisionVision";
-import type { misionVisionItem } from "../../models/misionVision";
+import type { misionVisionItem } from "../../models/sections/misionVision";
 import { getEntidad } from "../../data";
 
 const MisionVision = () => {

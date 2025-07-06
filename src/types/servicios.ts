@@ -1,4 +1,4 @@
-import type { Servicio } from "../models/servicios";
+import type { Servicio } from "../models/sections/servicios";
 
 export type CardServicioProps = {
   servicio: Servicio;

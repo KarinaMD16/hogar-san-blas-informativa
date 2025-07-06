@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { getProyectos } from "../../services/publicaciones/proyectos/proyectosServices";
-import { getDonaciones } from "../../services/publicaciones/donaciones/donaciones";
-import { getEventos } from "../../services/publicaciones/eventos/eventos";
+import { getProyectos } from "../../services/publicaciones/proyectosServices";
+import { getDonaciones } from "../../services/publicaciones/donacionesServices";
+import { getEventos } from "../../services/publicaciones/eventosServices";
 
 export function useGetProyectos() {
   const { data: Proyectos, isLoading, error } = useQuery({

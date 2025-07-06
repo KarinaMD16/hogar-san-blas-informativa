@@ -1,18 +1,18 @@
 import { getEntidad } from "../../data";
 import { useState } from "react";
-import type { Servicio } from "../../models/servicios";
+import type { Servicio } from "../../models/sections/servicios";
 import CardsServicios from "./CardsServicios";
 import ServicioDescripcion from "./ServicioDescripcion";
 
 const Servicios = () => {
   const serviciosJson = getEntidad("servicios");
-    const [selectedServicio, setSelectedServicio] =  useState<Servicio>(serviciosJson[0]); 
+  const [selectedServicio, setSelectedServicio] =  useState<Servicio>(serviciosJson[0]); 
 
   const showMore = (id: number) => {
-  setSelectedServicio(
-    serviciosJson.find((s) => s.id === id) ?? serviciosJson[0]
-  );
-};
+    setSelectedServicio(
+      serviciosJson.find((s) => s.id === id) ?? serviciosJson[0]
+    );
+  };
 
     if (!selectedServicio) {
       setSelectedServicio(serviciosJson[0]); 
