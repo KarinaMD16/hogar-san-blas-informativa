@@ -5,6 +5,13 @@ export interface Galeria {
 
 export interface Categoria {
   id: number;
-  Titulo: string;
-  Descripcion: string;
+  nombre: string;
+  descripcion: string;
+}
+
+export interface GaleriaCategoria {
+  id:number;
+  imagenUrl: string;
+    categoriaId: number;
+  
 }

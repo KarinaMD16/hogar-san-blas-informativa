@@ -1,1 +1,2 @@
 export const publicacionesRuta = '/publicaciones'
+export const galeriaRuta = '/galeria'

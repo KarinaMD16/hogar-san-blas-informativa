@@ -1,8 +1,6 @@
 import { Link } from "@tanstack/react-router"
 import type { BotonProps } from "../types/boton"
 
-
-
 const Boton = ({ children, where }: BotonProps) => {
   return (
     <>

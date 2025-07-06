@@ -1,8 +1,18 @@
 import sidnamAPI from "../../api/apiConfig";
-import type { Galeria } from "../../models/galeria/galeria";
-import { publicacionesRuta } from "../apiRutas";
+import type { Categoria, Galeria, GaleriaCategoria } from "../../models/galeria/galeria";
+import { galeriaRuta } from "../apiRutas";
 
-export const getGaleria = async (): Promise<Galeria[]> => {
-  const response = await sidnamAPI.get<Galeria[]>(`${publicacionesRuta}/getDonaciones`);
+export const getTodasGaleria = async (): Promise<Galeria[]> => {
+  const response = await sidnamAPI.get<Galeria[]>(`${galeriaRuta}/getImagenes`);
   return response.data;
 };
+
+export const getCategorias = async (): Promise<Categoria[]> => {
+  const response = await sidnamAPI.get<Categoria[]>(`${galeriaRuta}/getCategorias`);
+  return response.data;
+};
+
+export const getImagenesPorCategoria = async (id:number): Promise<GaleriaCategoria[]> => {
+  const response = await sidnamAPI.get<GaleriaCategoria[]>(`${galeriaRuta}/categoria/${id}`);
+  return response.data;
+}
