@@ -3,6 +3,7 @@ import Divider from '../../components/Divider'
 import { useGetCategorias, useGetImagenesPorCategoria, useGetTodasGaleria } from '../../hooks/galeria/galeria'
 import BotonGaleria from '../../components/BotonGaleria'
 import { useState } from 'react'
+import CardImagenGaleria from '../../components/CardImagenGaleria'
 
 export const Route = createFileRoute('/galeria/')({
   component: RouteComponent,
@@ -27,7 +28,7 @@ function RouteComponent() {
             isActive={selectedBtn === null}
             toggleCategoria={() => setSelectedBtn(null)}
           />
-
+         
           {Categorias?.map((categoria) => (
             <BotonGaleria
               key={categoria.id}
@@ -36,16 +37,21 @@ function RouteComponent() {
               toggleCategoria={() => setSelectedBtn(categoria.id)}
             />
           ))}
-        </div>
+      </div>
       
+      <p className=" text-night max-w-2xl">
+        {selectedBtn === null
+          ? "Aquí puedes explorar todas las imágenes de nuestra galería."
+          : Categorias?.find(c => c.id === selectedBtn)?.descripcion}
+      </p>
+
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 
         lg:gap-6 md:gap-4 sm:gap-4 gap-4
         justify-items-center-safe'>
          
-      {Imagenes && Imagenes.map((imagenes) => (              
-             <img className='rounded-2xl object-cover w-30 h-30 sm:w-30 md:h-50 md:w-50 lg:w-60 lg:h-60' 
-          src={imagenes.imagenUrl} alt="" />
-          ))}
+        {Imagenes && Imagenes.map((imagenes) => (              
+             <CardImagenGaleria imagenes={imagenes} />
+        ))}
       </div>
     </div>
   </div>
