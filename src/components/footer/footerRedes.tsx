@@ -7,7 +7,7 @@ const FooterRedes = () => {
             <a href="https://facebook.com/hogar.sanblasdenicoya" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <BsFacebook className="size-6 text-amaranthPink" />
             </a>
-            <a href="https://wa.me/50687000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://wa.me/50689729912" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <RiWhatsappFill className="size-7 text-amaranthPink" />
             </a>
         </div>

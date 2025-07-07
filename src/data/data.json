@@ -127,12 +127,45 @@
     "Direccion": ["100m norte y 150m oeste de la Cruz Roja", "Nicoya, Guanacaste, Costa Rica"]
   },
 
-  "header":{
-    "icono": "",
-    "SobreNosotros": ["Galeria, Casos de exito, Reseña Histórica"],
-    "Residencia": ["Requisitos de ingreso, Servicios"],
-    "Apoyanos": ["Formulario Donaciones", "Formulario Voluntariado", "Requisitos Asociarse"],
-    "Anuncios": ["Solicitudes donaciones", "Actividades"],
-    "Contactos": ["Ubicación", "Horario", "Números de teléfóno"]
+  "header": {
+    "sobreNosotros":{
+      "titulo": "Sobre Nosotros",
+      "opciones": [
+        { "texto": "Galería", "ruta": "/galeria/" },
+        { "texto": "Casos de éxito", "ruta": "/casosdeexito/" },
+        { "texto": "Reseña Histórica", "ruta": "/historia/" }
+      ]
+      },
+    "residencia":{
+      "titulo": "Residencia",
+      "opciones": [
+        { "texto": "Requisitos de ingreso", "ruta": "/requisitos/residencia" },
+        { "texto": "Servicios", "ruta": "#seccion-servicios" }
+      ]
+      },
+    "apoyanos":{
+      "titulo": "Apóyanos",
+      "opciones": [
+        { "texto": "Formulario Donaciones", "ruta": "/formularios/donacion" },
+        { "texto": "Formulario Voluntariado", "ruta": "/formularios/voluntariado" },
+        { "texto": "Requisitos Asociarse", "ruta": "/requisitos/asociarse" }
+      ]
+      },
+    "anuncios":{
+      "titulo": "Anuncios",
+      "opciones": [
+        { "texto": "Solicitudes donaciones", "ruta": "/publicaciones#solicitudes-donaciones" },
+        { "texto": "Actividades", "ruta": "/publicaciones#eventos" },
+        { "texto": "Proyectos", "ruta": "/publicaciones#proyectos" } 
+      ]
+      },
+    "contacto":{
+      "titulo": "Contacto",
+      "opciones": [
+        { "texto": "WhatsApp", "ruta": "https://wa.me/50687000000" },
+        { "texto": "Télefonos y correo", "ruta": "#footer-contactos" },
+        { "texto": "Ubicación y horario", "ruta": "#footer-contactos" }
+      ]
+    }
   }
 }
