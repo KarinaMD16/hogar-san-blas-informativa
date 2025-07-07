@@ -15,12 +15,7 @@ const iconMap: Record<string, JSX.Element> = {
 const CardsMisionVision = ({ item }: CardMisionVisionProps) => {
 
   return (
-    <div className="
-      flex items-center
-      border-4 border-amaranthPink
-      rounded-xl p-6 w-full max-w-[500px] min-h-[230px]
-      bg-white shadow-md"
-    >
+   <div className="flex items-center border-4 border-amaranthPink rounded-3xl p-6 w-full lg:max-w-[600px] min-h-[230px] bg-white shadow-md">
       <div className="flex-shrink-0 mr-6">
         {iconMap[item.titulo] ??<GiBullseye className="w-16 h-16 text-amaranthPink" />}
       </div>
@@ -30,7 +25,7 @@ const CardsMisionVision = ({ item }: CardMisionVisionProps) => {
               {item.titulo}
             </span>
           </h2>
-          <p className="font-opensans text-sm text-justify">{item.descripcion}</p>
+          <p className="font-opensans text-md text-justify">{item.descripcion}</p>
         </div>
     </div>
   );

@@ -27,7 +27,7 @@
   --color-ecruYellow300: #E1CC9A;
   --color-amaranthPink: #A7074D;
   --color-night: #0D0D11;
-  --color-basicWhite: #FDF6F9;
+  --color-basicWhite: #F5F5F5;
   --color-antiFlashWhite: #ECECEC;
   --color-amaranthPinkDark: #8F1047;
 }
@@ -63,9 +63,7 @@
 
 @layer base {
   section {
-    @apply pb-25 pl-25 pr-25 pt-25;
+    @apply pb-10 pl-10 pr-10 pt-10;
   }
+  
 }
-
-
-

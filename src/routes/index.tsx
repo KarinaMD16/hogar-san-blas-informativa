@@ -2,9 +2,14 @@ import { createFileRoute } from '@tanstack/react-router'
 import Servicios from '../sections/servicios/Servicios'
 import Unete from '../sections/unirse/Unete'
 import Hero from '../sections/hero/Hero'
+
 import MisionVision from '../sections/misionVision/MisionVision'
 import Historia from '../sections/historia/Historia'
 import SolicitarResidencia from '../sections/residencia/SolicitarResidencia'
+import Donar from '../sections/prevDonaciones/Donar'
+import CasosExito from '../sections/casosExito/CasosExito'
+import PreviewGaleria from '../sections/previewGaleria/PreviewGaleria'
+
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -13,17 +18,16 @@ export const Route = createFileRoute('/')({
 function Index() {
   return (
     <>
-    {/* Hero */}
       <Hero/>
       <MisionVision />
       <Servicios />
       <SolicitarResidencia />
-    {/* Casos exito */}
-    {/* Donar */}
-    <Historia />
-    <Unete />
-    {/* Galeria */}
-    {/* Footer */}
+      <CasosExito/>
+      <Donar/>
+      <Historia />
+      <Unete />
+      <PreviewGaleria/>
+      {/* Footer */}
     </>
   )
 }
