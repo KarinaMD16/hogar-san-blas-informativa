@@ -12,11 +12,11 @@ const Donar = () => {
   return (
     <section className="flex justify-center items-center flex-wrap gap-5">
       <div className="w-md flex flex-col gap-3">
-        <h1 className=" text-4xl font-poppins font-bold text-amaranthPink ">
+        <h1 className="font-poppins font-bold text-amaranthPink text-2xl sm:text-3xl md:text-4xl text-shadow-md mb-2">
           {donacionesJson.titulo}
         </h1>
         <Divider />
-        <p className="text-md">{donacionesJson.descripcion}</p>
+        <p className="text-black font-opensans text-md">{donacionesJson.descripcion}</p>
         <div>
           <Boton children={donacionesJson.botones.botonRequisitos} where={"/formularios/donacion"}/>
         </div>
