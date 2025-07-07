@@ -2,22 +2,22 @@ import { MdOutlineFirstPage, MdOutlineLastPage } from "react-icons/md";
 import CardDonacion from "../../components/CardDonacion";
 import { useGetDonaciones } from "../../hooks/publicaciones/publicaciones";
 import type { Publicacion } from "../../models/publicaciones/publicaciones";
-import { useState } from "react";
+import {  useState } from "react";
 
 const Donaciones = () => {
   const [page, setPage] = useState(1);
   const limit = 6;
 
-  const { Donaciones, isPlaceholderData } = useGetDonaciones(page, limit);
-  const noHayMasPaginas = (Donaciones?.length ?? 0) < limit;
+  const { donaciones, total, isPlaceholderData } = useGetDonaciones(page, limit);
 
-  const lastPage = () => {
-    setPage((old) => Math.max(old - 1, 1));
-  };
+  const totalPages = Math.ceil(total / limit);
+  const isLastPage = page >= totalPages;
 
+  const prevPage = () => setPage((p) => Math.max(p - 1, 1));
+  
   const nextPage = () => {
-    if (!isPlaceholderData && !noHayMasPaginas) {
-      setPage((old) => old + 1);
+    if (!isPlaceholderData && !isLastPage) {
+      setPage((p) => p + 1);
     }
   };
 
@@ -31,29 +31,30 @@ const Donaciones = () => {
       lg:gap-y-6 md:gap-y-6 sm:gap-6 gap-6
       justify-items-center-safe"
       >
-        {Donaciones?.map((publicacion: Publicacion) => (
+        {donaciones?.map((publicacion: Publicacion) => (
           <CardDonacion key={publicacion.id} publicacion={publicacion} />
         ))}
       </div>
-      {Donaciones && Donaciones.length > 0 && (
+      
+      {!isPlaceholderData && donaciones.length > 0 && (
         <div className="flex justify-center items-center gap-4">
           <button
-            onClick={lastPage}
+            onClick={prevPage}
             disabled={page === 1}
-            className="hover:cursor-pointer  disabled:cursor-not-allowed"
+            className="hover:cursor-pointer disabled:cursor-not-allowed"
           >
             <MdOutlineFirstPage />
           </button>
-          <button>Página {page}</button>
+          <button>Página {page} de {totalPages}</button>
           <button
             onClick={nextPage}
-            disabled={noHayMasPaginas || isPlaceholderData}
+            disabled={isLastPage}
             className="hover:cursor-pointer disabled:cursor-not-allowed"
           >
             <MdOutlineLastPage />
           </button>
         </div>
-      )}
+    )}
     </section>
   );
 };

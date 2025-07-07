@@ -7,17 +7,17 @@ import { useState } from "react";
 const Proyectos = () => {
   const [page, setPage] = useState(1);
   const limit = 6;
-  
-  const { Proyectos, isPlaceholderData } = useGetProyectos(page, limit);
-  const noHayMasPaginas = (Proyectos?.length ?? 0) < limit;
 
-  const lastPage = () => {
-    setPage((old) => Math.max(old - 1, 1));
-  };
+  const { proyectos, total, isPlaceholderData } = useGetProyectos(page, limit);
+
+  const totalPages = Math.ceil(total / limit);
+  const isLastPage = page >= totalPages;
+
+  const prevPage = () => setPage((p) => Math.max(p - 1, 1));
 
   const nextPage = () => {
-    if (!isPlaceholderData && !noHayMasPaginas) {
-      setPage((old) => old + 1);
+    if (!isPlaceholderData && !isLastPage) {
+      setPage((p) => p + 1);
     }
   };
 
@@ -31,30 +31,30 @@ const Proyectos = () => {
       lg:gap-y-6 md:gap-y-6 sm:gap-6 gap-6
       justify-items-center-safe"
       >
-        {Proyectos?.map((publicacion: Publicacion) => (
+        {proyectos?.map((publicacion: Publicacion) => (
           <CardPublicacion key={publicacion.id} publicacion={publicacion} />
         ))}
       </div>
 
-      {Proyectos && Proyectos.length > 0 && (
+      {!isPlaceholderData && proyectos.length > 0 && (
         <div className="flex justify-center items-center gap-4">
           <button
-            onClick={lastPage}
+            onClick={prevPage}
             disabled={page === 1}
-            className="hover:cursor-pointer  disabled:cursor-not-allowed"
+            className="hover:cursor-pointer disabled:cursor-not-allowed"
           >
             <MdOutlineFirstPage />
           </button>
-          <button>Página {page}</button>
+          <button>Página {page} de {totalPages}</button>
           <button
             onClick={nextPage}
-            disabled={noHayMasPaginas || isPlaceholderData}
+            disabled={isLastPage}
             className="hover:cursor-pointer disabled:cursor-not-allowed"
           >
             <MdOutlineLastPage />
           </button>
         </div>
-      )}
+    )}
     </section>
   );
 };
