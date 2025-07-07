@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query"
+import { keepPreviousData, useQuery } from "@tanstack/react-query"
 import { getCategorias, getImagenesPorCategoria, getTodasGaleria } from "../../services/galeria/galeria"
 
 export function useGetCategorias() {
@@ -14,30 +14,29 @@ export function useGetCategorias() {
   }
 }
 
-export function useGetTodasGaleria() {
-  const { data: Imagenes, isLoading, error } = useQuery({
-    queryKey: ['imagenes'],
-    queryFn: getTodasGaleria
-  })
+export function useGetTodasGaleria(page: number, limit:number) {
+  const {
+    data: imagenes, isLoading: loadingImagenes, isFetching, isPlaceholderData, error: errorImagenes } = useQuery({
+    queryKey: ['imagenes', page, limit],
+    queryFn: () => getTodasGaleria(page, limit),
+    placeholderData: keepPreviousData, 
+  });
 
-  return {
-    Imagenes,
-    loadingImagenes: isLoading,
-    errorImagenes: error
-  }
+  return { imagenes, loadingImagenes, isFetching, isPlaceholderData, errorImagenes };
 }
 
-
-export const useGetImagenesPorCategoria = (idCategoria: number) => {
-  const { data, isPending, error } = useQuery({
-    queryKey: ['imagenesPorCategoria', idCategoria],
-    queryFn: () => getImagenesPorCategoria(idCategoria!), 
+export const useGetImagenesPorCategoria = (idCategoria: number, page: number, limit:number) => {
+  const { data, isPending, error, isPlaceholderData } = useQuery({
+    queryKey: ['imagenesPorCategoria', idCategoria, page, limit],
+    queryFn: () => getImagenesPorCategoria(idCategoria, page, limit), 
     enabled: !!idCategoria,
+    placeholderData: keepPreviousData, 
   });
 
   return {
     imagenesPorCategoria: data,
     isPendingimagenesPorCategoria: isPending,
     errorimagenesPorCategoria: error,
+    isPlaceholderData
   };
 };

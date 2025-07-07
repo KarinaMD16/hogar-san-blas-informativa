@@ -7,6 +7,7 @@ import Historia from '../sections/historia/Historia'
 import SolicitarResidencia from '../sections/residencia/SolicitarResidencia'
 import Donar from '../sections/prevDonaciones/Donar'
 import CasosExito from '../sections/casosExito/CasosExito'
+import PreviewGaleria from '../sections/previewGaleria/PreviewGaleria'
 import Footer from '../components/footer/Footer'
 
 
@@ -25,7 +26,7 @@ function Index() {
       <Donar/>
       <Historia />
       <Unete />
-      {/* Galeria */}
+      <PreviewGaleria/>
       <Footer />
     </>
   )
