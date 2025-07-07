@@ -8,14 +8,14 @@ const CasosExito = () => {
     return (
         <section className="flex flex-col lg:flex-row items-center justify-evenly max-w-full min-h-[600px] gap-8 p-4 text-center">
             <div className="flex flex-col items-center justify-center z-10 gap-6 max-w-xl">
-                <h1 className="uppercase text-amaranthPink text-2xl sm:text-3xl md:text-4xl font-bold text-shadow-md mb-2 leading-tight tracking-tight">
+                <h1 className="uppercase font-poppins font-bold text-amaranthPink text-2xl sm:text-3xl md:text-4xl text-shadow-md mb-2">
                     {casosExitoJson.titulo}
                 </h1>
                 <Divider/>
                 <h2 className="font-bold text-2xl sm:text-3xl font-poppins">
                     {casosExitoJson.subtitulo}
                 </h2>
-                <p className="text-black font-opensans text-xs sm:text-sm md:text-base max-w-xl">
+                <p className="text-black font-opensans text-md max-w-xl">
                     {casosExitoJson.descripcion}
                 </p>
                 <div>

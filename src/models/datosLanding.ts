@@ -1,3 +1,4 @@
+import type { Footer } from "./footer/footer";
 import type { CasosExito } from "./sections/casosExito";
 import type { Donaciones } from "./sections/donaciones";
 import type { Hero } from "./sections/hero";
@@ -18,8 +19,5 @@ export interface DatosLanding {
   historia: HistoriaPreview;
   uneteNosotros: UneteNosotros;
   formulario: { botones: string[] };
-  footer: {
-    Contactos: string[];
-    Horario: string;
-  };
+  footer: Footer;
 }
