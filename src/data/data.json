@@ -65,7 +65,7 @@
   "titulo": "¿Desea solicitar residencia?",
   "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   "imagen": "https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/489926099_1315181850615344_1286229606703186756_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rDyYREGyUYcQ7kNvwESJF2z&_nc_oc=AdkEhlqpOkeH2xS5fZiCCCl_Z-eWgdOqAgF7S2LvMbkTMeVe6R_aMbFrpax6pxvsqJg&_nc_zt=23&_nc_ht=scontent.fsyq2-1.fna&_nc_gid=-vKWzI362HSgCLWJsHX1VQ&oh=00_AfRZwcJcRlSk50DmxDpvVp8X6GQ9x8V-jU7FVZE1YbY5GA&oe=686E243E",
-  "boton": "Ver requisitos"
+  "botonRequisitos": "Ver requisitos"
   },
 
   "casosExito": {
@@ -113,9 +113,9 @@
   },
 
   "footer": {
-    "Contactos": ["+506 8972 9912", "hogardeancianossanblas@gmail.com"],
-    "Horario": "Lunes a Viernes 8am a 4pm",
-    "Direccion": "Detrás del Hospital La Anexión"
+    "Contactos": ["+506 2685 5809", "+506 8972 9912", "hogardeancianossanblas@gmail.com"],
+    "Horario": ["Lunes a Viernes", "8am a 3pm"],
+    "Direccion": ["100m norte y 150m oeste de la Cruz Roja", "Nicoya, Guanacaste, Costa Rica"]
   },
 
   "header":{
