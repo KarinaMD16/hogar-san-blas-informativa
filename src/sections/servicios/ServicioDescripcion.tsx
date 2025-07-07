@@ -43,7 +43,8 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
             [&::-webkit-scrollbar]:h-2.5
             [&::-webkit-scrollbar-track]:bg-gray-100
             [&::-webkit-scrollbar-thumb]:bg-ecruYellow 
-            [&::-webkit-scrollbar-thumb]:rounded-full pb-2">
+            [&::-webkit-scrollbar-thumb]:rounded-full
+            [&::-webkit-scrollbar-thumb]:cursor-grab pb-2">
           {imagenes.map((imagen, index) => (
             <img
               onClick={() => cambiarImagen(index)}
