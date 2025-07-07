@@ -5,8 +5,6 @@ import type { Hero } from "../../models/sections/hero";
 const HeroSection = () => {
   const hero: Hero = getEntidad("hero");
 
-  const rutas = ["/historia/", "/contactanos"];
-
   return (
     <section
       style={{
@@ -18,9 +16,9 @@ const HeroSection = () => {
       <h2 className="text-shadow-md text-4xl sm:text-5xl md:text-6xl font-poppins font-bold">{hero.titulo}</h2>
       <p className="font-opensans text-md sm:text-base md:text-lg text-shadow-md">{hero.descripcion}</p>
       <div className="mt-4 flex justify-center gap-4 sm:gap-1 lg:gap-10">
-        {hero.botones.map((texto, idx) => (
-        <Boton key={idx} where={rutas[idx]}>
-          {texto}
+        {hero.botones.map(({ texto, ruta }, index) => (
+        <Boton key={index} where={ruta}>
+          <span className="font-medium text-base sm:text-sm md:text-base lg:text-lg">{texto}</span>
         </Boton>
         ))}
       </div>

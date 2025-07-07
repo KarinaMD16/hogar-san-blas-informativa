@@ -13,8 +13,8 @@ const Footer = () => {
     return (
         <footer className="flex flex-col lg:flex-row justify-around bg-night text-white py-8 gap-8">
             <div className="flex flex-col gap-8 mt-4 w-full lg:w-auto">
-                <div className="flex flex-col md:flex-row gap-8 md:gap-16 mb-10">
-                    <FooterSection
+                <div id="footer-contactos" className="flex flex-col md:flex-row gap-8 md:gap-16 mb-10">
+                    <FooterSection 
                         title="Contactos"
                         items={footerJson.Contactos}
                         icons={[

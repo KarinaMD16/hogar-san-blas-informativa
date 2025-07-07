@@ -35,7 +35,16 @@
     "titulo": "Hogar San Blas",
     "descripcion": "Lorem ipsum dolor sit amet...",
     "imagen": "https://i.ibb.co/C3wqMQDD/Imagen-de-Whats-App-2025-07-02-a-las-14-30-20-31935e6d.jpg",
-    "botones": ["Ver más", "Contáctanos"]
+    "botones": [
+      {
+        "texto": "Ver más",
+        "ruta": "/historia"
+      },
+      {
+        "texto": "Contáctanos",
+        "ruta": "#footer-contactos"
+      }
+    ]
   },
 
   "misionVision": {
