@@ -8,7 +8,7 @@ import type { Publicacion } from "../../models/publicaciones/publicaciones";
 const Donar = () => {
   const donacionesJson = getEntidad("donaciones");
 
-  const { Donaciones } = useGetDonaciones(1, 5);
+  const { donaciones } = useGetDonaciones(1, 5);
   return (
     <section className="flex justify-center items-center flex-wrap gap-5">
       <div className="w-md flex flex-col gap-3">
@@ -29,7 +29,7 @@ const Donar = () => {
             [&::-webkit-scrollbar-thumb]:rounded-full pb-3
             [&::-webkit-scrollbar-thumb]:cursor-grab
             w-2xl">
-        {Donaciones?.map((publicacion: Publicacion) => (
+        {donaciones?.map((publicacion: Publicacion) => (
             <CardDonacion
               key={publicacion.id}
               publicacion={publicacion}
