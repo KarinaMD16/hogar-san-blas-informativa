@@ -15,7 +15,7 @@ const CasosExito = () => {
                 <h2 className="font-bold text-2xl sm:text-3xl font-poppins">
                     {casosExitoJson.subtitulo}
                 </h2>
-                <p className="text-black font-opensans text-xs sm:text-sm md:text-base max-w-xl">
+                <p className="text-black font-opensans text-md sm:text-md md:text-base max-w-xl">
                     {casosExitoJson.descripcion}
                 </p>
                 <div>

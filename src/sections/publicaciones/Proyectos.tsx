@@ -7,6 +7,7 @@ import { useState } from "react";
 const Proyectos = () => {
   const [page, setPage] = useState(1);
   const limit = 6;
+  
   const { Proyectos, isPlaceholderData } = useGetProyectos(page, limit);
   const noHayMasPaginas = (Proyectos?.length ?? 0) < limit;
 
