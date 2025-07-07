@@ -39,6 +39,7 @@ const Servicios = () => {
         [&::-webkit-scrollbar-track]:bg-gray-100
         [&::-webkit-scrollbar-thumb]:rounded-full
         [&::-webkit-scrollbar-thumb]:bg-ecruYellow
+        [&::-webkit-scrollbar-thumb]:cursor-grab
           ">
 
           {serviciosJson.map((servicio) => (              
