@@ -1,21 +1,22 @@
-import { getEntidad } from "../../data";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import type { Servicio } from "../../models/sections/servicios";
 import CardsServicios from "./CardsServicios";
 import ServicioDescripcion from "./ServicioDescripcion";
+import IdiomaContext from "../../context/language/idiomaContext";
 
 const Servicios = () => {
-  const serviciosJson = getEntidad("servicios");
-  const [selectedServicio, setSelectedServicio] =  useState<Servicio>(serviciosJson[0]); 
+  const { contentJson } = useContext(IdiomaContext);
+  
+  const [selectedServicio, setSelectedServicio] =  useState<Servicio>(contentJson.servicios[0]); 
 
   const showMore = (id: number) => {
     setSelectedServicio(
-      serviciosJson.find((s) => s.id === id) ?? serviciosJson[0]
+      contentJson.servicios.find((s) => s.id === id) ?? contentJson.servicios[0]
     );
   };
 
     if (!selectedServicio) {
-      setSelectedServicio(serviciosJson[0]); 
+      setSelectedServicio(contentJson.servicios[0]); 
     }
   
   return (
@@ -42,7 +43,7 @@ const Servicios = () => {
         [&::-webkit-scrollbar-thumb]:cursor-grab
           ">
 
-          {serviciosJson.map((servicio) => (              
+          {contentJson.servicios.map((servicio) => (              
             <CardsServicios
               key={servicio.id}
               servicio={servicio}

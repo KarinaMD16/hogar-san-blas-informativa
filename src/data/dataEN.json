@@ -2,7 +2,7 @@
     "servicios": [
     {
       "id": 1,
-      "titulo": "Trabajo social",
+      "titulo": "lalalala social",
       "descripcion": "Acompañamos personas con historias marcadas por abandono, pobreza y soledad, ofreciendo apoyo ético, humano y digno a personas adultas mayores. Nuestra labor va más allá de la gestión: construimos vínculos, escuchamos con respeto y trabajamos cada día para que envejecer no sea sinónimo de olvido.",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
       "imagenes": [
@@ -10,8 +10,8 @@
     },
     {
       "id": 2,
-      "titulo": "Terapia física",
-      "descripcion": "Fomentamos la movilidad y autonomía de las personas adultas mayores con terapias personalizadas, atención humanizada y un equipo especializado en geriatría.",
+      "titulo": "lalalalla física",
+      "descripcion": "lalalalal la movilidad y autonomía de las personas adultas mayores con terapias personalizadas, atención humanizada y un equipo especializado en geriatría.",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
       "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
     },
@@ -31,17 +31,17 @@
     }
   ],
 
-  "hero": {
+ "hero": {
     "titulo": "Hogar San Blas",
-    "descripcion": "Bienvenidos al Hogar San Blas de Nicoya, donde dedicamos nuestra labor al cuidado y bienestar de adultos mayores con amor y compromiso. Nos enorgullece ofrecer un entorno seguro y lleno de vida para nuestros residentes, promoviendo el respeto y la calidad de vida en la comunidad. ",
+    "descripcion": "We are dedicated to the wellbeing of our elders with love and compromise. We proudly offer a safe environment, full of life for every single one of our residents, promoting respect and quality of life.",
     "imagen": "https://i.ibb.co/C3wqMQDD/Imagen-de-Whats-App-2025-07-02-a-las-14-30-20-31935e6d.jpg",
     "botones": [
       {
-        "texto": "Ver más",
+        "texto": "Read more",
         "ruta": "/historia"
       },
       {
-        "texto": "Contáctanos",
+        "texto": "Contact us",
         "ruta": "#footer-contactos"
       }
     ]
@@ -74,7 +74,7 @@
   "titulo": "¿Desea solicitar residencia?",
   "descripcion": "Para obtener más detalles sobre nuestros requisitos de admisión y procedimientos, no dudes en contactarnos a través de nuestros canales de comunicación. Estamos aquí para proporcionarte toda la información necesaria y ayudarte en este importante paso para la calidad de vida de tu ser querido.",
   "imagen": "https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/489926099_1315181850615344_1286229606703186756_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rDyYREGyUYcQ7kNvwESJF2z&_nc_oc=AdkEhlqpOkeH2xS5fZiCCCl_Z-eWgdOqAgF7S2LvMbkTMeVe6R_aMbFrpax6pxvsqJg&_nc_zt=23&_nc_ht=scontent.fsyq2-1.fna&_nc_gid=-vKWzI362HSgCLWJsHX1VQ&oh=00_AfRZwcJcRlSk50DmxDpvVp8X6GQ9x8V-jU7FVZE1YbY5GA&oe=686E243E",
-  "botonRequisitos": "Ver requisitos"
+  "botonRequisitos": "Requirements"
   },
 
   "casosExito": {
@@ -82,7 +82,7 @@
   "subtitulo": "Centenarios",
   "descripcion": "Descubre nuestros inspiradores casos de éxito, incluyendo historias de centenarios, que reflejan nuestro compromiso con el bienestar y la longevidad en el Hogar San Blas de Nicoya.",
   "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-  "botonVerMas": "Ver más"
+  "botonVerMas": "Read more"
   },
 
   "donaciones": {
@@ -90,24 +90,23 @@
   "descripcion": "¡Tu ayuda marca la diferencia! Aquí te ofrecemos la información y requisitos necesarios para contribuir con nuestro hogar.",
    "botones": {
     "botonDonar": "Donar",
-    "botonRequisitos": "Ver requisitos"
+    "botonRequisitos": "Requirements"
   }
   },
 
  "historia": {
-    "titulo": "Desde 1983",
+    "titulo": "Since 1983",
     "subtitulo": "Al servicio de nuestros adultos mayores",
     "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-    "botonVerMas": "Ver más"
+    "botonVerMas": "Read more"
   },
-
 
   "uneteNosotros": {
     "titulo": "Únete a nostros",
     "descripcion": "¿Quieres ser parte activa de nuestro compromiso? Ya sea como socio o como voluntario, tu apoyo marca la diferencia. Descubre cómo puedes contribuir a nuestro trabajo dedicado a mejorar la calidad de vida de nuestros adultos mayores. ¡Únete a nosotros hoy mismo!",
     "botones": [
       {
-        "texto": "Quiero ser voluntario",
+        "texto": " voluntario",
         "ruta": "formularios/voluntariado"
       },
       {
