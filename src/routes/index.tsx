@@ -8,9 +8,9 @@ import Donar from '../sections/prevDonaciones/Donar'
 import CasosExito from '../sections/casosExito/CasosExito'
 import PreviewGaleria from '../sections/previewGaleria/PreviewGaleria'
 import Footer from '../components/footer/Footer'
-import CambiarIdioma from '../components/Idioma'
+import CambiarIdioma from '../components/CambiarIdioma'
 import HeroSection from '../sections/hero/HeroSection'
-import Header from '../components/Header'
+import Navbar from '../components/Navbar'
 
 
 export const Route = createFileRoute('/')({
@@ -20,9 +20,9 @@ export const Route = createFileRoute('/')({
 function Index() {
   return (
     <>
-    <CambiarIdioma/>
+      <Navbar />
+      <CambiarIdioma/>
       <HeroSection/>
-      <Header />
       <MisionVision />
       <Servicios />
       <SolicitarResidencia />

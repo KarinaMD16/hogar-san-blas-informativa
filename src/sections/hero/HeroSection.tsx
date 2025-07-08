@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className="mt-4 flex justify-center gap-4 sm:gap-1 lg:gap-10">
           {contentJson.hero.botones.map((texto, idx) => (
           <Boton key={idx} where={rutas[idx]}>
-            {texto}
+            {texto.texto}
           </Boton>
           ))}
         </div>

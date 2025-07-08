@@ -2,8 +2,8 @@
     "servicios": [
     {
       "id": 1,
-      "titulo": "Social work",
-      "descripcion": "Cases cases.",
+      "titulo": "Trabajo social",
+      "descripcion": "Acompañamos personas con historias marcadas por abandono, pobreza y soledad, ofreciendo apoyo ético, humano y digno a personas adultas mayores. Nuestra labor va más allá de la gestión: construimos vínculos, escuchamos con respeto y trabajamos cada día para que envejecer no sea sinónimo de olvido.",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
       "imagenes": [
         "https://periodicomensaje.com/images/1.ADULTO-MAYOR.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://casaisrael.org/wp-content/uploads/2018/06/C%C3%B3mo-es-la-vida-en-una-residencia-geri%C3%A1trica.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
@@ -33,9 +33,18 @@
 
   "hero": {
     "titulo": "Hogar San Blas",
-    "descripcion": "Welcome",
+    "descripcion": "Bienvenidos al Hogar San Blas de Nicoya, donde dedicamos nuestra labor al cuidado y bienestar de adultos mayores con amor y compromiso. Nos enorgullece ofrecer un entorno seguro y lleno de vida para nuestros residentes, promoviendo el respeto y la calidad de vida en la comunidad. ",
     "imagen": "https://i.ibb.co/C3wqMQDD/Imagen-de-Whats-App-2025-07-02-a-las-14-30-20-31935e6d.jpg",
-    "botones": ["Ver más", "Contáctanos"]
+    "botones": [
+      {
+        "texto": "Ver más",
+        "ruta": "/historia"
+      },
+      {
+        "texto": "Contáctanos",
+        "ruta": "#footer-contactos"
+      }
+    ]
   },
 
   "misionVision": {
@@ -78,7 +87,7 @@
 
   "donaciones": {
   "titulo": "¿Quieres donar?",
-  "descripcion": "¿Quieres hacer un donativo? ¡Tu ayuda marca la diferencia! Aquí te ofrecemos la información y requisitos necesarios para contribuir con nuestro hogar.",
+  "descripcion": "¡Tu ayuda marca la diferencia! Aquí te ofrecemos la información y requisitos necesarios para contribuir con nuestro hogar.",
    "botones": {
     "botonDonar": "Donar",
     "botonRequisitos": "Ver requisitos"
@@ -118,12 +127,45 @@
     "Direccion": ["100m norte y 150m oeste de la Cruz Roja", "Nicoya, Guanacaste, Costa Rica"]
   },
 
-  "header":{
-    "icono": "",
-    "SobreNosotros": ["Galeria, Casos de exito, Reseña Histórica"],
-    "Residencia": ["Requisitos de ingreso, Servicios"],
-    "Apoyanos": ["Formulario Donaciones", "Formulario Voluntariado", "Requisitos Asociarse"],
-    "Anuncios": ["Solicitudes donaciones", "Actividades"],
-    "Contactos": ["Ubicación", "Horario", "Números de teléfóno"]
+  "header": {
+    "sobreNosotros":{
+      "titulo": "Sobre Nosotros",
+      "opciones": [
+        { "texto": "Galería", "ruta": "/galeria/" },
+        { "texto": "Casos de éxito", "ruta": "/casosdeexito/" },
+        { "texto": "Reseña Histórica", "ruta": "/historia/" }
+      ]
+      },
+    "residencia":{
+      "titulo": "Residencia",
+      "opciones": [
+        { "texto": "Requisitos de ingreso", "ruta": "/requisitos/residencia" },
+        { "texto": "Servicios", "ruta": "#seccion-servicios" }
+      ]
+      },
+    "apoyanos":{
+      "titulo": "Apóyanos",
+      "opciones": [
+        { "texto": "Formulario Donaciones", "ruta": "/formularios/donacion" },
+        { "texto": "Formulario Voluntariado", "ruta": "/formularios/voluntariado" },
+        { "texto": "Requisitos Asociarse", "ruta": "/requisitos/asociarse" }
+      ]
+      },
+    "anuncios":{
+      "titulo": "Anuncios",
+      "opciones": [
+        { "texto": "Solicitudes donaciones", "ruta": "/publicaciones#solicitudes-donaciones" },
+        { "texto": "Actividades", "ruta": "/publicaciones#eventos" },
+        { "texto": "Proyectos", "ruta": "/publicaciones#proyectos" } 
+      ]
+      },
+    "contacto":{
+      "titulo": "Contacto",
+      "opciones": [
+        { "texto": "WhatsApp", "ruta": "https://wa.me/50687000000" },
+        { "texto": "Télefonos y correo", "ruta": "#footer-contactos" },
+        { "texto": "Ubicación y horario", "ruta": "#footer-contactos" }
+      ]
+    }
   }
 }
