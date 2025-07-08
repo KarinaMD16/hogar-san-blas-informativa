@@ -10,6 +10,7 @@ import PreviewGaleria from '../sections/previewGaleria/PreviewGaleria'
 import Footer from '../components/footer/Footer'
 import CambiarIdioma from '../components/Idioma'
 import HeroSection from '../sections/hero/HeroSection'
+import Header from '../components/Header'
 
 
 export const Route = createFileRoute('/')({
@@ -21,6 +22,7 @@ function Index() {
     <>
     <CambiarIdioma/>
       <HeroSection/>
+      <Header />
       <MisionVision />
       <Servicios />
       <SolicitarResidencia />

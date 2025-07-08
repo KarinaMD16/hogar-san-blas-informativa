@@ -35,7 +35,16 @@
     "titulo": "Hogar San Blas",
     "descripcion": "Bienvenidos al Hogar San Blas de Nicoya, donde dedicamos nuestra labor al cuidado y bienestar de adultos mayores con amor y compromiso. Nos enorgullece ofrecer un entorno seguro y lleno de vida para nuestros residentes, promoviendo el respeto y la calidad de vida en la comunidad. ",
     "imagen": "https://i.ibb.co/C3wqMQDD/Imagen-de-Whats-App-2025-07-02-a-las-14-30-20-31935e6d.jpg",
-    "botones": ["Ver más", "Contáctanos"]
+    "botones": [
+      {
+        "texto": "Ver más",
+        "ruta": "/historia"
+      },
+      {
+        "texto": "Contáctanos",
+        "ruta": "#footer-contactos"
+      }
+    ]
   },
 
   "misionVision": {
@@ -118,12 +127,45 @@
     "Direccion": ["100m norte y 150m oeste de la Cruz Roja", "Nicoya, Guanacaste, Costa Rica"]
   },
 
-  "header":{
-    "icono": "",
-    "SobreNosotros": ["Galeria, Casos de exito, Reseña Histórica"],
-    "Residencia": ["Requisitos de ingreso, Servicios"],
-    "Apoyanos": ["Formulario Donaciones", "Formulario Voluntariado", "Requisitos Asociarse"],
-    "Anuncios": ["Solicitudes donaciones", "Actividades"],
-    "Contactos": ["Ubicación", "Horario", "Números de teléfóno"]
+  "header": {
+    "sobreNosotros":{
+      "titulo": "Sobre Nosotros",
+      "opciones": [
+        { "texto": "Galería", "ruta": "/galeria/" },
+        { "texto": "Casos de éxito", "ruta": "/casosdeexito/" },
+        { "texto": "Reseña Histórica", "ruta": "/historia/" }
+      ]
+      },
+    "residencia":{
+      "titulo": "Residencia",
+      "opciones": [
+        { "texto": "Requisitos de ingreso", "ruta": "/requisitos/residencia" },
+        { "texto": "Servicios", "ruta": "#seccion-servicios" }
+      ]
+      },
+    "apoyanos":{
+      "titulo": "Apóyanos",
+      "opciones": [
+        { "texto": "Formulario Donaciones", "ruta": "/formularios/donacion" },
+        { "texto": "Formulario Voluntariado", "ruta": "/formularios/voluntariado" },
+        { "texto": "Requisitos Asociarse", "ruta": "/requisitos/asociarse" }
+      ]
+      },
+    "anuncios":{
+      "titulo": "Anuncios",
+      "opciones": [
+        { "texto": "Solicitudes donaciones", "ruta": "/publicaciones#solicitudes-donaciones" },
+        { "texto": "Actividades", "ruta": "/publicaciones#eventos" },
+        { "texto": "Proyectos", "ruta": "/publicaciones#proyectos" } 
+      ]
+      },
+    "contacto":{
+      "titulo": "Contacto",
+      "opciones": [
+        { "texto": "WhatsApp", "ruta": "https://wa.me/50687000000" },
+        { "texto": "Télefonos y correo", "ruta": "#footer-contactos" },
+        { "texto": "Ubicación y horario", "ruta": "#footer-contactos" }
+      ]
+    }
   }
 }

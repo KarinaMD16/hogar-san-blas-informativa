@@ -9,10 +9,10 @@ interface FooterSectionProps {
 const FooterSection = ({ title, items, icons }: FooterSectionProps) => {
   return (
     <div className="footer-section">
-      <h4 className="text-lg font-semibold inline-block border-b-2 border-ecruYellow pb-1 mb-2">
+      <h4 className="text-xl font-semibold inline-block border-b-2 border-ecruYellow pb-1 mb-2">
         {title}
       </h4>
-      <p className="text-xs mt-2">
+      <p className="text-sm mt-2">
         {items.map((item, idx) => (
           <span key={idx}>
             {icons[idx]}

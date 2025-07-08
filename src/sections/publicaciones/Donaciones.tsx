@@ -22,7 +22,7 @@ const Donaciones = () => {
   };
 
   return (
-    <section className="lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6">
+    <section id="solicitudes-donaciones" className="lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6">
       <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
         Solicitudes de donaciones
       </h1>
