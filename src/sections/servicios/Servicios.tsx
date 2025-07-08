@@ -19,7 +19,7 @@ const Servicios = () => {
     }
   
   return (
-    <section className=" flex flex-col">
+    <section id="seccion-servicios" className="flex flex-col">
       <h1 className="lg:pl-25 text-4xl text-justify font-poppins font-bold text-amaranthPink">
         Nuestros Servicios
       </h1>

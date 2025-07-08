@@ -9,6 +9,7 @@ import Donar from '../sections/prevDonaciones/Donar'
 import CasosExito from '../sections/casosExito/CasosExito'
 import PreviewGaleria from '../sections/previewGaleria/PreviewGaleria'
 import Footer from '../components/footer/Footer'
+import Header from '../components/Header'
 
 
 export const Route = createFileRoute('/')({
@@ -18,6 +19,7 @@ export const Route = createFileRoute('/')({
 function Index() {
   return (
     <>
+      <Header />
       <Hero/>
       <MisionVision />
       <Servicios />
