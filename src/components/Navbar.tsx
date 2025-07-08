@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { getEntidad } from "../data";
 import type { Header, HeaderItem, Opcion } from "../models/header/header";
+import CambiarIdioma from "./CambiarIdioma";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
@@ -12,16 +13,17 @@ const Navbar = () => {
     links: item.opciones.map((op: Opcion) => ({
       text: op.texto,
       href: op.ruta,
+      
     })),
+    
   }));
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white text-black font-poppins z-50 shadow-md">
       <nav className="max-w-screen-xl mx-auto flex justify-between items-center py-4 px-6 relative">
-        <div className="text-2xl font-bold font-poppins">
-          <a rel="icon" type="image/svg+xml" href="/public/logo_hogar_san_blas.png" />
-        </div>
-
+        <a href="/" className="text-2xl font-bold font-poppins">
+          <img src="/public/logo_hogar_san_blas.png" alt="Logo" className="h-10" />
+        </a>
         <ul className="hidden md:flex gap-8 text-sm font-medium relative">
           {navItems.map((item, idx) => (
             <li
@@ -50,6 +52,7 @@ const Navbar = () => {
               )}
             </li>
           ))}
+        <CambiarIdioma/>
         </ul>
 
         <button className="md:hidden text-3xl" aria-label="Abrir menú móvil">

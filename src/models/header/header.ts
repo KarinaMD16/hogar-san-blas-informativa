@@ -9,9 +9,9 @@ export interface HeaderItem {
 };
 
 export interface Header {
-    SobreNosotros: HeaderItem;
-    Residencia: HeaderItem;
-    Apoyanos: HeaderItem;
-    Anuncios: HeaderItem;
-    Contactos: HeaderItem;
+    sobreNosotros: HeaderItem;
+    residencia: HeaderItem;
+    apoyanos: HeaderItem;
+    anuncios: HeaderItem;
+    contacto: HeaderItem;
 };
