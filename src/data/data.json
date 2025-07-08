@@ -33,7 +33,7 @@
 
   "hero": {
     "titulo": "Hogar San Blas",
-    "descripcion": "Lorem ipsum dolor sit amet...",
+    "descripcion": "Bienvenidos al Hogar San Blas de Nicoya, donde dedicamos nuestra labor al cuidado y bienestar de adultos mayores con amor y compromiso. Nos enorgullece ofrecer un entorno seguro y lleno de vida para nuestros residentes, promoviendo el respeto y la calidad de vida en la comunidad. ",
     "imagen": "https://i.ibb.co/C3wqMQDD/Imagen-de-Whats-App-2025-07-02-a-las-14-30-20-31935e6d.jpg",
     "botones": [
       {
@@ -50,15 +50,15 @@
   "misionVision": {
     "mision": {
       "titulo": "Misión",
-      "descripcion": "Brindar  calidad  de atención a los residentes del Hogar de Ancianos San Blas de Nicoya y a los Usiarios de la red de Cuido de la Asociación Nicoyana de Atención al Anciano, de eficiencia y seguridad, velando por su estado físico , mental, social, espiritual y alimentario, sin ver color, raza, religión ni procedencia."
+      "descripcion": "Brindar calidad  de atención a los residentes del Hogar de Ancianos San Blas de Nicoya y a los Usuarios de la red de Cuido de la Asociación Nicoyana de Atención al Anciano, de eficiencia y seguridad, velando por su estado físico, mental, social, espiritual y alimentario, sin ver color, raza, religión ni procedencia."
     },
     "vision": {
       "titulo": "Visión",
-      "descripcion": "Tener instituidos en el  Hogar de Ancianos San Blas,  servicios profesionales eficientes, que ofrezcan calidad de vida al usuario del Hogar de Ancianos San Blas en un ambiente de paz, tranquilidad y calor humano."
+      "descripcion": "Tener instituidos en el Hogar de Ancianos San Blas, servicios profesionales eficientes, que ofrezcan calidad de vida al usuario del Hogar de Ancianos San Blas en un ambiente de paz, tranquilidad y calor humano."
     },
     "objetivos": {
       "titulo": "Objetivos",
-      "descripcion": "Lograr a diciembre 2022 el ingreso de recursos para satisfacer necesidades básicas, específicas y mejoras a la infraestructura del Hogar de Ancianos San Blas, así como dar calidad en todos los servicios que se le brindan a las personas  Adultas Mayores residentes y de la Red de Atención domiciliar."
+      "descripcion": "Lograr a diciembre 2022 el ingreso de recursos para satisfacer necesidades básicas, específicas y mejoras a la infraestructura del Hogar de Ancianos San Blas, así como dar calidad en todos los servicios que se le brindan a las personas Adultas Mayores residentes y de la Red de Atención domiciliar."
     },
     "valores": {
       "titulo": "Valores",
@@ -67,7 +67,7 @@
   },
 
   "reseñaHistorica": {
-    "descripcion": "El Hogar San Blas de Nicoya, dedicado a la Atención de la Persona Adulta Mayor Ubicado en el cantón central de Nicoya, Guanacaste. Nació por la necesidad de atención de personas mayores, que en condición de abandono y necesidad pedían en la calle, un grupo de personas de la comunidad de gran generosidad, unidos en un sentimiento de ayuda a lo que acontecía con ellos, iniciaron en forma voluntaria las gestiones de ayuda. Este Hogar de Ancianos diò apertura en setiembre del año 1983, el cual en sus primeros años inicio sus labores como un centro Diurno, luego con el paso del tiempo se convierte en Hogar de larga estancia, incrementando el número de personas atendidas a la fecha se mantiene un número entre los 36 y 40 adultos mayores Hombres y Mujeres entre los 65 y 102 años de edad, en algún momento se ha atendido adultos mayores de mayor edad a la actual, carentes de recursos, enfermos o/y  en fase terminal, este Hogar  mantiene su funcionamiento gracias a voluntarios de la comunidad, con cuyo aporte se construyó el primer Pabellón con pasillo desde 1983 a 1991, años después se dió la construcción completa con colaboración del INA- JPS – C.T.A.M.S- IMAS, MUNICIPALIDAD Y PUEBLO NICOYANO,  lo que hoy es el Hogar de Ancianos San Blas, entre sus instalaciones se cuenta con  una cocina equipada, un comedor, una capilla,  24 habitaciones en tres pabellones, un salón de actividades, una sala de terapia física, un departamento de enfermería y curaciones, oficinas de Servicio social, Nutrición, Administración, un área de recreación y eventos externa y amplias zonas verdes, una granja con animales que forma parte de la terapia para las PAM entre otras. Actualmente se mantiene un voluntariado, también de recibe ayuda económicamente de instituciones como Junta de Protección Social, CONAPAM, FODESAF, la gestión de recursos propios por parte de la Junta directiva y el apoyo de la comunidad. En el año 2011 se implementa el Programa de la red de atención domiciliar o Red de Cuido, el cual atiende a adultos mayores que no se encuentran dentro del Hogar, sino en sus casas en situación de pobreza extrema, se trabaja con recursos de CONAPAM. Iniciando con 50 beneficiarios los cuales en aumento actualmente se atienden a 125 PAM con este programa."
+    "descripcion": "El Hogar San Blas de Nicoya, dedicado a la Atención de la Persona Adulta Mayor Ubicado en el cantón central de Nicoya, Guanacaste. Nació por la necesidad de atención de personas mayores, que en condición de abandono y necesidad pedían en la calle, un grupo de personas de la comunidad de gran generosidad, unidos en un sentimiento de ayuda a lo que acontecía con ellos, iniciaron en forma voluntaria las gestiones de ayuda. Este Hogar de Ancianos dio apertura en setiembre del año 1983, el cual en sus primeros años inicio sus labores como un centro Diurno, luego con el paso del tiempo se convierte en Hogar de larga estancia, incrementando el número de personas atendidas a la fecha se mantiene un número entre los 36 y 40 adultos mayores Hombres y Mujeres entre los 65 y 102 años de edad, en algún momento se ha atendido adultos mayores de mayor edad a la actual, carentes de recursos, enfermos o/y  en fase terminal, este Hogar  mantiene su funcionamiento gracias a voluntarios de la comunidad, con cuyo aporte se construyó el primer Pabellón con pasillo desde 1983 a 1991, años después se dió la construcción completa con colaboración del INA- JPS – C.T.A.M.S- IMAS, MUNICIPALIDAD Y PUEBLO NICOYANO,  lo que hoy es el Hogar de Ancianos San Blas, entre sus instalaciones se cuenta con  una cocina equipada, un comedor, una capilla,  24 habitaciones en tres pabellones, un salón de actividades, una sala de terapia física, un departamento de enfermería y curaciones, oficinas de Servicio social, Nutrición, Administración, un área de recreación y eventos externa y amplias zonas verdes, una granja con animales que forma parte de la terapia para las PAM entre otras. Actualmente se mantiene un voluntariado, también de recibe ayuda económicamente de instituciones como Junta de Protección Social, CONAPAM, FODESAF, la gestión de recursos propios por parte de la Junta directiva y el apoyo de la comunidad. En el año 2011 se implementa el Programa de la red de atención domiciliar o Red de Cuido, el cual atiende a adultos mayores que no se encuentran dentro del Hogar, sino en sus casas en situación de pobreza extrema, se trabaja con recursos de CONAPAM. Iniciando con 50 beneficiarios los cuales en aumento actualmente se atienden a 125 PAM con este programa."
   },
 
   "solicitudResidencia": {
@@ -80,14 +80,14 @@
   "casosExito": {
   "titulo": "Casos de Éxito",
   "subtitulo": "Centenarios",
-  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "descripcion": "Descubre nuestros inspiradores casos de éxito, incluyendo historias de centenarios, que reflejan nuestro compromiso con el bienestar y la longevidad en el Hogar San Blas de Nicoya.",
   "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
   "botonVerMas": "Ver más"
   },
 
   "donaciones": {
   "titulo": "¿Quieres donar?",
-  "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "descripcion": "¿Quieres hacer un donativo? ¡Tu ayuda marca la diferencia! Aquí te ofrecemos la información y requisitos necesarios para contribuir con nuestro hogar.",
    "botones": {
     "botonDonar": "Donar",
     "botonRequisitos": "Ver requisitos"
@@ -104,7 +104,7 @@
 
   "uneteNosotros": {
     "titulo": "Únete a nostros",
-    "descripcion": "si",
+    "descripcion": "¿Quieres ser parte activa de nuestro compromiso? Ya sea como socio o como voluntario, tu apoyo marca la diferencia. Descubre cómo puedes contribuir a nuestro trabajo dedicado a mejorar la calidad de vida de nuestros adultos mayores. ¡Únete a nosotros hoy mismo!",
     "botones": [
       {
         "texto": "Quiero ser voluntario",
