@@ -1,17 +1,21 @@
-import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { getProyectos } from "../../services/publicaciones/proyectosServices";
 import { getDonaciones } from "../../services/publicaciones/donacionesServices";
 import { getEventos } from "../../services/publicaciones/eventosServices";
 
 export function useGetProyectos( page: number, limit:number) {
-  const { data: Proyectos, isLoading, error, isPlaceholderData } = useQuery({
-    queryKey: ['proyectos', page, limit],
+  const { data, isLoading, error, isPlaceholderData } = useQuery({
+    queryKey: ['proyectos', page],
     queryFn: () => getProyectos(page, limit),
-    placeholderData: keepPreviousData, 
+    select: (resp) => ({
+      proyectos: resp.data,
+      total: resp.total,
+    }), 
   })
 
   return {
-    Proyectos,
+    proyectos: data?.proyectos ?? [],
+    total: data?.total ?? 0,
     loadingProyectos: isLoading,
     errorProyectos: error,
     isPlaceholderData
@@ -19,14 +23,18 @@ export function useGetProyectos( page: number, limit:number) {
 }
 
 export function useGetDonaciones(page: number, limit:number) {
-  const { data: Donaciones, isLoading, error, isPlaceholderData } = useQuery({
-    queryKey: ['donaciones', page, limit],
+  const { data, isLoading, error, isPlaceholderData } = useQuery({
+    queryKey: ['donaciones', page],
     queryFn: () => getDonaciones(page, limit),
-    placeholderData: keepPreviousData, 
+    select: (resp) => ({
+      donaciones: resp.data,
+      total: resp.total,
+    }), 
   })
 
   return {
-    Donaciones,
+    donaciones: data?.donaciones ?? [],
+    total: data?.total ?? 0,
     loadingProyectos: isLoading,
     errorProyectos: error, 
     isPlaceholderData
@@ -34,14 +42,18 @@ export function useGetDonaciones(page: number, limit:number) {
 }
 
 export function useGetEventos(page:number, limit:number) {
-  const { data: Eventos, isLoading, error, isPlaceholderData } = useQuery({
-    queryKey: ['eventos', page, limit],
+  const { data, isLoading, error, isPlaceholderData } = useQuery({
+    queryKey: ['eventos', page],
     queryFn: () => getEventos(page, limit),
-    placeholderData: keepPreviousData, 
+   select: (resp) => ({
+      eventos: resp.data,
+      total: resp.total,
+    }), 
   })
 
   return {
-    Eventos,
+    eventos: data?.eventos ?? [],
+    total: data?.total ?? 0,
     loadingProyectos: isLoading,
     errorProyectos: error,
     isPlaceholderData

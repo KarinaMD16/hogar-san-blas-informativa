@@ -33,7 +33,7 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
           alt={servicio.titulo} 
         />
         <div className="text-center sm:text-left">
-          <h2 className="font-bold text-2xl sm:text-3xl font-poppins mb-2">{servicio.titulo}</h2>
+          <h2 className="font-bold text-2xl sm:text-3xl font-poppins mb-4">{servicio.titulo}</h2>
           <p className="font-opensans text-md text-justify">{servicio.descripcion}</p>
         </div>
       </div> 

@@ -1,4 +1,5 @@
 import type { Footer } from "./footer/footer";
+import type { Header } from "./header/header";
 import type { CasosExito } from "./sections/casosExito";
 import type { Donaciones } from "./sections/donaciones";
 import type { Hero } from "./sections/hero";
@@ -9,15 +10,16 @@ import type { solicitarResidencia } from "./sections/solicitarResidencia";
 import type { UneteNosotros } from "./sections/unete";
 
 export interface DatosLanding {
-  servicios: Servicio[];
+  header: Header
   hero: Hero;
   misionVision: misionVision;
-  reseñaHistorica: { descripcion: string };
+  servicios: Servicio[];
   solicitudResidencia: solicitarResidencia;
   casosExito: CasosExito;
   donaciones: Donaciones;
   historia: HistoriaPreview;
   uneteNosotros: UneteNosotros;
-  formulario: { botones: string[] };
   footer: Footer;
+  reseñaHistorica: { descripcion: string };
+  formulario: { botones: string[] };
 }

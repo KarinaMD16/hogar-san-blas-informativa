@@ -23,7 +23,7 @@ const PreviewGaleria = () => {
       </h1> 
       </div>
 
-      <div className="w-65 sm:w-full lg:w-7xl">
+      <div className="w-65 sm:w-full lg:w-full">
         <div className="flex flex-row gap-3 overflow-x-auto justify-around
             [&::-webkit-scrollbar]:h-2.5
             [&::-webkit-scrollbar-track]:bg-gray-100

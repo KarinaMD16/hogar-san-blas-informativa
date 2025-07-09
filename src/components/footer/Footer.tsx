@@ -4,7 +4,7 @@ import { AiFillMail } from "react-icons/ai";
 import { BiSolidDirections } from "react-icons/bi";
 import { BsFillTelephoneFill, BsCalendar3WeekFill, BsClockFill } from "react-icons/bs";
 import { PiMapPinSimpleFill } from "react-icons/pi";
-import FooterRedes from "./footerRedes";
+import FooterRedes from "./FooterRedes";
 import FooterMapa from "./FooterMapa";
 
 const Footer = () => {
@@ -13,30 +13,30 @@ const Footer = () => {
     return (
         <footer className="flex flex-col lg:flex-row justify-around bg-night text-white py-8 gap-8">
             <div className="flex flex-col gap-8 mt-4 w-full lg:w-auto">
-                <div className="flex flex-col md:flex-row gap-8 md:gap-16 mb-10">
-                    <FooterSection
+                <div id="footer-contactos" className="flex flex-col md:flex-row gap-8 md:gap-16 mb-10">
+                    <FooterSection 
                         title="Contactos"
                         items={footerJson.Contactos}
                         icons={[
-                        <BsFillTelephoneFill key="tel1" className="inline-block mr-1 text-amaranthPink" />,
-                        <BsFillTelephoneFill key="tel2" className="inline-block mr-1 text-amaranthPink" />,
-                        <AiFillMail key="mail" className="inline-block mr-1 text-amaranthPink" />,
+                        <BsFillTelephoneFill key="tel1" className="inline-block mr-1 text-amaranthPink size-4" />,
+                        <BsFillTelephoneFill key="tel2" className="inline-block mr-1 text-amaranthPink size-4" />,
+                        <AiFillMail key="mail" className="inline-block mr-1 text-amaranthPink size-4" />,
                         ]}
                     />
                     <FooterSection
                         title="Horario"
                         items={footerJson.Horario}
                         icons={[
-                        <BsCalendar3WeekFill key="calendar" className="inline-block mr-1 text-amaranthPink" />,
-                        <BsClockFill key="clock" className="inline-block mr-1 text-amaranthPink" />,
+                        <BsCalendar3WeekFill key="calendar" className="inline-block mr-1 text-amaranthPink size-3.5" />,
+                        <BsClockFill key="clock" className="inline-block mr-1 text-amaranthPink size-3.5" />,
                         ]}
                     />
                     <FooterSection
                         title="Dirección"
                         items={footerJson.Direccion}
                         icons={[
-                        <BiSolidDirections key="directions" className="inline-block mr-1 text-amaranthPink" />,
-                        <PiMapPinSimpleFill key="map" className="inline-block mr-1 text-amaranthPink" />,
+                        <BiSolidDirections key="directions" className="inline-block mr-1 text-amaranthPink size-5" />,
+                        <PiMapPinSimpleFill key="map" className="inline-block mr-1 text-amaranthPink size-5" />,
                         ]}
                     />
                 </div>
