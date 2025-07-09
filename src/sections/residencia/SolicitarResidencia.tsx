@@ -1,29 +1,31 @@
+import { useContext } from "react";
 import Boton from "../../components/Boton";
 import Divider from "../../components/Divider";
-import { getEntidad } from "../../data"
+import IdiomaContext from "../../context/language/idiomaContext";
+
 
 const SolicitarResidencia = () => {
-    const solicitarResidenciaJson = getEntidad("solicitudResidencia");
+  const {contentJson } = useContext(IdiomaContext);
 
     return (
         <section
             style={{
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${solicitarResidenciaJson.imagen})`
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${contentJson.solicitudResidencia.imagen})`
             }}
             className="relative bg-cover bg-center bg-no-repeat min-h-[400px] h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] flex flex-col items-center justify-center"
         >
             <div className="relative flex flex-col items-center justify-center z-10 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8 text-center w-full max-w-3xl">
                 <h1 className="uppercase text-amaranthPink text-xl sm:text-2xl md:text-4xl font-bold text-shadow-md mb-2 leading-tight tracking-tight">
-                    {solicitarResidenciaJson.titulo}
+                    {contentJson.solicitudResidencia.titulo}
                 </h1>
                 <Divider />
                 <p className="font-opensans text-white text-sm sm:text-base md:text-lg max-w-xl">
-                    {solicitarResidenciaJson.descripcion}
+                    {contentJson.solicitudResidencia.descripcion}
                 </p>
                 <div>
                     <Boton where={"/requisitos/residencia"}>
                         <span className="font-medium text-sm sm:text-base md:text-lg lg:text-xl">
-                            {solicitarResidenciaJson.botonRequisitos}
+                            {contentJson.solicitudResidencia.botonRequisitos}
                         </span>
                     </Boton>
                 </div>

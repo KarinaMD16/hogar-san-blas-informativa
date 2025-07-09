@@ -1,24 +1,25 @@
+import { useContext } from "react";
 import Boton from "../../components/Boton";
 import CardDonacion from "../../components/CardDonacion";
 import Divider from "../../components/Divider";
-import { getEntidad } from "../../data";
+import IdiomaContext from "../../context/language/idiomaContext";
 import { useGetDonaciones } from "../../hooks/publicaciones/publicaciones";
 import type { Publicacion } from "../../models/publicaciones/publicaciones";
 
 const Donar = () => {
-  const donacionesJson = getEntidad("donaciones");
+  const {contentJson } = useContext(IdiomaContext);
 
   const { donaciones } = useGetDonaciones(1, 5);
   return (
     <section className="flex justify-center items-center flex-wrap gap-5">
       <div className="w-md flex flex-col gap-3">
         <h1 className="font-poppins font-bold text-amaranthPink text-2xl sm:text-3xl md:text-4xl text-shadow-md mb-2">
-          {donacionesJson.titulo}
+          {contentJson.donaciones.titulo}
         </h1>
         <Divider />
-        <p className="text-black font-opensans text-md py-3">{donacionesJson.descripcion}</p>
+        <p className="text-black font-opensans text-md py-3">{contentJson.donaciones.descripcion}</p>
         <div>
-          <Boton children={donacionesJson.botones.botonRequisitos} where={"/formularios/donacion"}/>
+          <Boton children={contentJson.donaciones.botones.botonRequisitos} where={"/formularios/donacion"}/>
         </div>
       </div>
 

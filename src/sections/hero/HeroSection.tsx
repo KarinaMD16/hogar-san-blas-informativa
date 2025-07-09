@@ -3,7 +3,7 @@ import Boton from "../../components/Boton";
 import IdiomaContext from "../../context/language/idiomaContext";
 
 const HeroSection = () => {
-  const {contentJson } = useContext(IdiomaContext)
+  const {contentJson } = useContext(IdiomaContext);
 
   const rutas = ["/historia/", "/contactanos"];
 

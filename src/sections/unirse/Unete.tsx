@@ -1,16 +1,17 @@
+import { useContext } from "react";
 import Boton from "../../components/Boton";
-import { getEntidad } from "../../data";
+import IdiomaContext from "../../context/language/idiomaContext";
 
 const Unete = () => {
-  const uneteJson = getEntidad("uneteNosotros");
+  const {contentJson } = useContext(IdiomaContext);
 
   return (
     <section className="flex justify-center">
     <section className="border-4 border-ecruYellow rounded-3xl p-4 m-4 w-screen h-full">
-      <h1 className="text-3xl font-bold text-amaranthPink py-1">{uneteJson.titulo}</h1>
-      <p className="text-lg text-night py-5">{uneteJson.descripcion}</p>
+      <h1 className="text-3xl font-bold text-amaranthPink py-1">{contentJson.uneteNosotros.titulo}</h1>
+      <p className="text-lg text-night py-5">{contentJson.uneteNosotros.descripcion}</p>
       <div className="flex flex-row gap-4 mt-4 justify-center flex-wrap">
-        {uneteJson.botones.map(({ texto, ruta }, index) => (
+        {contentJson.uneteNosotros.botones.map(({ texto, ruta }, index) => (
           <Boton key={index} where={ruta}>
             <span className="font-medium text-base sm:text-sm md:text-base lg:text-lg">{texto}</span>
           </Boton>
