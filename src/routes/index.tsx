@@ -8,7 +8,6 @@ import Donar from '../sections/prevDonaciones/Donar'
 import CasosExito from '../sections/casosExito/CasosExito'
 import PreviewGaleria from '../sections/previewGaleria/PreviewGaleria'
 import Footer from '../components/footer/Footer'
-import CambiarIdioma from '../components/CambiarIdioma'
 import HeroSection from '../sections/hero/HeroSection'
 import Navbar from '../components/Navbar'
 
@@ -21,7 +20,6 @@ function Index() {
   return (
     <>
       <Navbar />
-      <CambiarIdioma/>
       <HeroSection/>
       <MisionVision />
       <Servicios />
