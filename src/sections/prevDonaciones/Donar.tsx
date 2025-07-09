@@ -16,7 +16,7 @@ const Donar = () => {
           {donacionesJson.titulo}
         </h1>
         <Divider />
-        <p className="text-black font-opensans text-md">{donacionesJson.descripcion}</p>
+        <p className="text-black font-opensans text-md py-3">{donacionesJson.descripcion}</p>
         <div>
           <Boton children={donacionesJson.botones.botonRequisitos} where={"/formularios/donacion"}/>
         </div>
