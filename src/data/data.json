@@ -89,6 +89,34 @@
   "botonRequisitos": "Ver requisitos"
   },
 
+
+"paginaRequisitosResidencia": {
+  "titulo": "¿Estás interesado en solicitar residencia?",
+  "subtitulo": "Para ser residente, debes cumplir con:",
+  "requisitos": [
+    {
+      "descripcion": "Edad y Estado de Salud: Adultos mayores que necesiten asistencia y cuidado especializado."
+    },
+    {
+      "descripcion": "Documentación: Copia de cédula de identidad o pasaporte del residente."
+    },
+    {
+      "descripcion": "Evaluación Médica: Evaluación médica reciente para garantizar el adecuado cuidado según las necesidades del residente."
+    },
+    {
+      "descripcion": "Compromiso Familiar: Comunicación abierta y participación de la familia en el proceso de ingreso y cuidado del residente."
+    }
+  ],
+  "contacto": {
+    "Titulo": "Si cumples con los requisitos, contáctanos",
+    "Horario": ["Lunes a Viernes", "8am a 3pm"],
+    "Contactos": ["+506 2685 5809", "+506 8972 9912", "hogardeancianossanblas@gmail.com"],
+    "Direccion": ["100m norte y 150m oeste de la Cruz Roja", "Nicoya, Guanacaste, Costa Rica"]
+  }
+},
+  
+
+
   "casosExito": {
   "titulo": "Casos de Éxito",
   "subtitulo": "Centenarios",
@@ -128,6 +156,36 @@
       }
     ]
   },
+
+"paginaRequisitosSocio": {
+    "titulo": "¿Estás interesado en ser socio?",
+    "subtitulo": "Para volverte socio, debes cumplir con:",
+    "requisitos": [
+      {
+        "descripcion": "Nombre completo."
+      },
+      {
+        "descripcion": "Cédula de Identidad."
+      },
+      {
+        "descripcion": "Nacionalidad."
+      },
+      {
+        "descripcion": "Dirección de residencia."
+      },
+      {
+        "descripcion": "Telefono."
+      }
+    ],
+    "contacto": {
+      "Titulo": "Si cumples con los requisitos, contáctanos",
+      "Horario": ["Lunes a Viernes", "8am a 3pm"],
+      "Contactos": ["+506 2685 5809", "+506 8972 9912", "hogardeancianossanblas@gmail.com"],
+      "Direccion": ["100m norte y 150m oeste de la Cruz Roja", "Nicoya, Guanacaste, Costa Rica"]
+    }
+ },
+
+
 
   "formulario": {
     "botones": ["Enviar", "Cancelar"]
