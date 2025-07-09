@@ -115,7 +115,7 @@
 
 
   "uneteNosotros": {
-    "titulo": "Únete a nostros",
+    "titulo": "Únete a nosotros",
     "descripcion": "¿Quieres ser parte activa de nuestro compromiso? Ya sea como socio o como voluntario, tu apoyo marca la diferencia. Descubre cómo puedes contribuir a nuestro trabajo dedicado a mejorar la calidad de vida de nuestros adultos mayores. ¡Únete a nosotros hoy mismo!",
     "botones": [
       {
@@ -172,7 +172,7 @@
       ]
       },
     "contacto":{
-      "titulo": "Contacto",
+      "titulo": "Contactos",
       "opciones": [
         { "texto": "WhatsApp", "ruta": "https://wa.me/50687000000" },
         { "texto": "Télefonos y correo", "ruta": "#footer-contactos" },
