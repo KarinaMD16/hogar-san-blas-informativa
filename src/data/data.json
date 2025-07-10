@@ -66,6 +66,7 @@
     }
   },
 
+  
   "paginaReseñaHistorica": [
   {
     "titulo": "Fundados en 1983",
@@ -91,6 +92,34 @@
   "imagen": "https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/489926099_1315181850615344_1286229606703186756_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rDyYREGyUYcQ7kNvwESJF2z&_nc_oc=AdkEhlqpOkeH2xS5fZiCCCl_Z-eWgdOqAgF7S2LvMbkTMeVe6R_aMbFrpax6pxvsqJg&_nc_zt=23&_nc_ht=scontent.fsyq2-1.fna&_nc_gid=-vKWzI362HSgCLWJsHX1VQ&oh=00_AfRZwcJcRlSk50DmxDpvVp8X6GQ9x8V-jU7FVZE1YbY5GA&oe=686E243E",
   "botonRequisitos": "Ver requisitos"
   },
+
+
+"paginaRequisitosResidencia": {
+  "titulo": "¿Estás interesado en solicitar residencia?",
+  "subtitulo": "Para ser residente, debes cumplir con:",
+  "requisitos": [
+    {
+      "descripcion": "Edad y Estado de Salud: Adultos mayores que necesiten asistencia y cuidado especializado."
+    },
+    {
+      "descripcion": "Documentación: Copia de cédula de identidad o pasaporte del residente."
+    },
+    {
+      "descripcion": "Evaluación Médica: Evaluación médica reciente para garantizar el adecuado cuidado según las necesidades del residente."
+    },
+    {
+      "descripcion": "Compromiso Familiar: Comunicación abierta y participación de la familia en el proceso de ingreso y cuidado del residente."
+    }
+  ],
+  "contacto": {
+    "Titulo": "Si cumples con los requisitos, contáctanos",
+    "Horario": ["Lunes a Viernes", "8am a 3pm"],
+    "Contactos": ["+506 2685 5809", "+506 8972 9912", "hogardeancianossanblas@gmail.com"],
+    "Direccion": ["100m norte y 150m oeste de la Cruz Roja", "Nicoya, Guanacaste, Costa Rica"]
+  }
+},
+  
+
 
   "casosExito": {
   "titulo": "Casos de Éxito",
@@ -131,6 +160,36 @@
       }
     ]
   },
+
+"paginaRequisitosSocio": {
+    "titulo": "¿Estás interesado en ser socio?",
+    "subtitulo": "Para volverte socio, debes cumplir con:",
+    "requisitos": [
+      {
+        "descripcion": "Nombre completo."
+      },
+      {
+        "descripcion": "Cédula de Identidad."
+      },
+      {
+        "descripcion": "Nacionalidad."
+      },
+      {
+        "descripcion": "Dirección de residencia."
+      },
+      {
+        "descripcion": "Telefono."
+      }
+    ],
+    "contacto": {
+      "Titulo": "Si cumples con los requisitos, contáctanos",
+      "Horario": ["Lunes a Viernes", "8am a 3pm"],
+      "Contactos": ["+506 2685 5809", "+506 8972 9912", "hogardeancianossanblas@gmail.com"],
+      "Direccion": ["100m norte y 150m oeste de la Cruz Roja", "Nicoya, Guanacaste, Costa Rica"]
+    }
+ },
+
+
 
   "formulario": {
     "botones": ["Enviar", "Cancelar"]
