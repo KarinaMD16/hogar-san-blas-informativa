@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import Navbar from '../../components/Navbar'
 
 // casos de éxito
 
@@ -7,5 +8,7 @@ export const Route = createFileRoute('/casosdeexito/')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/exito/"!</div>
+  return <div>
+      <Navbar />
+      Hello "/exito/"!</div>
 }

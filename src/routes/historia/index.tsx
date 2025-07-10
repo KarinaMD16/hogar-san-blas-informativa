@@ -4,7 +4,6 @@ import ReseñaServicio from '../../sections/reseñaHistorica/ReseñaServicio'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/footer/Footer'
 
-// pagina de reseña historica
 export const Route = createFileRoute('/historia/')({
   component: RouteComponent,
 })

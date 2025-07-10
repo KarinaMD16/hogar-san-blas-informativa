@@ -5,6 +5,7 @@ import BotonGaleria from '../../components/BotonGaleria'
 import { useState } from 'react'
 import CardImagenGaleria from '../../components/CardImagenGaleria'
 import { MdOutlineLastPage, MdOutlineFirstPage } from "react-icons/md";
+import Navbar from '../../components/Navbar'
 
 export const Route = createFileRoute('/galeria/')({
   component: RouteComponent,
@@ -46,7 +47,8 @@ function RouteComponent() {
   </div>
 
   return <div className='flex flex-col justify-center items-center'>
-      <div className=' flex flex-col lg:w-5xl md:w-4xl sm:w-3xl gap-3 justify-center items-center'>
+      <Navbar />
+      <div className='mt-30 flex flex-col lg:w-5xl md:w-4xl sm:w-3xl gap-3 justify-center items-center'>
       <h1 className='text-4xl font-poppins font-bold text-amaranthPink '>Nuestra galeria</h1>
       <Divider/>
       <div className="flex flex-wrap justify-center gap-2">
