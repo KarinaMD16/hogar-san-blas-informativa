@@ -2,7 +2,6 @@ import { useState } from "react";
 import { traducciones, type Idioma, type ProviderContextProps } from "../../types/idioma/idiomaTypes";
 import IdiomaContext from "./idiomaContext";
 
-
 export const IdiomaProvider = ({ children }: ProviderContextProps) => {
     const [idioma, setIdioma] = useState<Idioma>(() => {
       return (localStorage.getItem("idioma") as Idioma) || "es";
