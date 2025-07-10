@@ -9,7 +9,7 @@ export const Route = createFileRoute('/publicaciones/')({
 })
 
 function RouteComponent() {
-  return <div className='flex flex-col items-center justify-center'>
+  return <div className='flex flex-col items-center justify-center mt-15'>
     <Navbar />
     <Donaciones />
     <Eventos />

@@ -1,8 +1,11 @@
 import { useNavigate } from "@tanstack/react-router";
 import { useGetTodasGaleria } from "../../hooks/galeria/galeria"
+import { useContext } from "react";
+import IdiomaContext from "../../context/language/idiomaContext";
 
 
 const PreviewGaleria = () => {
+  const {contentJson} = useContext(IdiomaContext)
   const { imagenes } = useGetTodasGaleria(1, 8);
 
   function cambiarImagen(): void {
@@ -19,7 +22,7 @@ const PreviewGaleria = () => {
       <div className=" w-full">
         <h1 onClick={goToGallery} className="lg:pl-25 text-4xl text-justify font-poppins font-bold text-amaranthPink
       hover:cursor-pointer">
-        Galeria
+        {contentJson.titulosSecciones.Galeria.titulo}
       </h1> 
       </div>
 

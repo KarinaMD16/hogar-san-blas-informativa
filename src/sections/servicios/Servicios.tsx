@@ -30,7 +30,7 @@ const Servicios = () => {
   return (
     <section id="seccion-servicios" className="flex flex-col">
       <h1 className="lg:pl-25 text-4xl text-justify font-poppins font-bold text-amaranthPink">
-        Nuestros Servicios
+        {contentJson.titulosSecciones.Servicios}
       </h1>
 
       <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center mt-4 gap-10">

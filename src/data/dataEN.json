@@ -170,5 +170,18 @@
         { "texto": "Ubicación y horario", "ruta": "#footer-contactos" }
       ]
     }
+  },
+  "titulosSecciones":{
+    "Servicios": "Our services",
+    "Galeria": {
+      "titulo": "Gallery",
+      "tituloExtend": "Our gallery",
+      "filtroTodas": "See all"
+    },
+    "publicaciones": {
+      "eventos": "Our events",
+      "proyectos": "Our proyects",
+      "donaciones": "You can donate"
+    }
   }
 }
