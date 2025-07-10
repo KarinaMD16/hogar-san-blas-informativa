@@ -189,8 +189,6 @@
     }
  },
 
-
-
   "formulario": {
     "botones": ["Enviar", "Cancelar"]
   },
@@ -241,5 +239,20 @@
         { "texto": "Ubicación y horario", "ruta": "#footer-contactos" }
       ]
     }
+  },
+  "titulosSecciones":{
+    "Servicios": "Nuestros servicios",
+    "Galeria": {
+      "titulo": "Galeria",
+      "tituloExtend": "Nuestra galeria",
+      "filtroTodas": "Ver todas"
+    },
+    "publicaciones": {
+      "eventos": "Nuestros eventos",
+      "proyectos": "Nuestros proyectos",
+      "donaciones": "Solicitamos donaciones"
+    }
+
   }
+
 }

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import type { Servicio } from "../../models/sections/servicios";
 import CardsServicios from "./CardsServicios";
 import ServicioDescripcion from "./ServicioDescripcion";
@@ -15,18 +15,25 @@ const Servicios = () => {
     );
   };
 
-    if (!selectedServicio) {
-      setSelectedServicio(contentJson.servicios[0]); 
-    }
-  
+  if (!selectedServicio) {
+    setSelectedServicio(contentJson.servicios[0]); 
+  }
+
+  useEffect(() => {
+    const servicioActual = contentJson.servicios.find(
+      (s) => s.id === selectedServicio?.id
+    );
+
+    setSelectedServicio(servicioActual ?? contentJson.servicios[0]);
+  }, [contentJson, selectedServicio?.id]);
+
   return (
     <section id="seccion-servicios" className="flex flex-col">
       <h1 className="lg:pl-25 text-4xl text-justify font-poppins font-bold text-amaranthPink">
-        Nuestros Servicios
+        {contentJson.titulosSecciones.Servicios}
       </h1>
 
       <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center mt-4 gap-10">
-
         <div className="
         flex flex-row lg:flex-col items-center lg:items-start 
         gap-4 

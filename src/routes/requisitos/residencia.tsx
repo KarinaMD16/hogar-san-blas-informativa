@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import Navbar from '../../components/Navbar'
 
 // requisitos de residencia
 export const Route = createFileRoute('/requisitos/residencia')({
@@ -6,5 +7,8 @@ export const Route = createFileRoute('/requisitos/residencia')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/requisitos/residencia"!</div>
+  return <>
+      <Navbar />
+      Hello "/requisitos/residencia"!
+  </>
 }
