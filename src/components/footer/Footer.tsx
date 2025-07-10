@@ -40,7 +40,7 @@ const Footer = () => {
                         ]}
                     />
                 </div>
-                <div id="linea-separadora" className="w-full md:w-84 lg:w-100 h-0.5 bg-white rounded mx-auto" />
+                <div id="linea-separadora" className="w-64 md:w-84 lg:w-100 h-0.5 bg-white rounded mx-auto" />
                 <FooterRedes />
             </div>
             <div className="flex flex-col items-center w-full lg:w-auto">
