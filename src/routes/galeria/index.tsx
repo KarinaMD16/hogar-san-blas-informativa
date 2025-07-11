@@ -5,7 +5,7 @@ import BotonGaleria from '../../components/BotonGaleria'
 import { useContext, useState } from 'react'
 import CardImagenGaleria from '../../components/CardImagenGaleria'
 import { MdOutlineLastPage, MdOutlineFirstPage } from "react-icons/md";
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/header/Navbar'
 import IdiomaContext from '../../context/language/idiomaContext'
 
 export const Route = createFileRoute('/galeria/')({

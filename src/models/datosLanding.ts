@@ -1,5 +1,5 @@
 import type { Footer } from "./footer/footer";
-import type { Header } from "./header/header";
+import type { Header } from "./header/navbar";
 import type { CasosExito } from "./sections/casosExito";
 import type { Donaciones } from "./sections/donaciones";
 import type { Hero } from "./sections/hero";
