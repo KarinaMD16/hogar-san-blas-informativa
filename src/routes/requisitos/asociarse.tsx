@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/header/Navbar'
+import Footer from '../../components/footer/Footer'
 
 // requisitos para asociarse
 
@@ -11,5 +12,6 @@ function RouteComponent() {
   return <>
       <Navbar />
       Hello "/requisitos/asociarse"!
+      <Footer />
   </>
 }
