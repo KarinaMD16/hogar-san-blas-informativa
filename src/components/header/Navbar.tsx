@@ -27,10 +27,10 @@ const Navbar = () => {
         <img src="/logo_hogar_san_blas.png" alt="Logo" className="w-16 h-16 lg:ml-8" />
       </Link>
       <div className="flex-1 flex justify-end">
-        <div className="bg-white text-black md:w-full max-w-3xl lg:max-w-4xl xl:max-w-7xl rounded-full shadow-lg px-4 py-4 md:py-2.5 font-poppins font-semibold">
+        <div className="bg-white text-black md:w-full max-w-3xl lg:max-w-4xl xl:max-w-5xl rounded-full shadow-lg px-4 py-4 md:py-2.5 font-poppins font-semibold">
           <nav className="flex justify-center items-center">
             {/* Desktop Menu */}
-            <ul className="hidden md:flex md:gap-6 lg:gap-10 xl:gap-24">
+            <ul className="hidden md:flex md:gap-6 lg:gap-10 xl:gap-15">
               {navItems.map((item, idx) => (
                 <DropdownItem
                   key={idx}

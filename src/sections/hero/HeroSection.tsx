@@ -12,7 +12,7 @@ const HeroSection = () => {
       style={{
       backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${contentJson.hero.imagen})`
       }}
-      className="bg-cover bg-center min-h-[650px] flex flex-col justify-end items-start bg-night text-basicWhite px-10 sm:px-8 md:px-25 "
+      className="bg-cover bg-center min-h-175 flex flex-col justify-end items-start bg-night text-basicWhite px-10 sm:px-8 md:px-25 "
     >
       <div className="flex flex-col gap-y-8 items-start">
         <h2 className="text-shadow-md text-4xl sm:text-5xl md:text-6xl font-poppins font-bold">{contentJson.hero.titulo}</h2>
