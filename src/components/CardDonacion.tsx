@@ -1,9 +1,12 @@
-import { getEntidad } from "../data"
+import { useContext } from "react";
+import IdiomaContext from "../context/language/idiomaContext";
 import type { PublicacionProps } from "../types/publicaciones/publicaciones";
 import Boton from "./Boton"
 
 const CardDonacion = ({ publicacion }: PublicacionProps) => {
-    const donacionJson = getEntidad("donaciones");
+  
+  const { contentJson } = useContext(IdiomaContext);
+  
   return (
      <div className="bg-basicWhite p-4 rounded-lg shadow-md hover:shadow-lg 
     transition-shadow duration-300
@@ -21,7 +24,7 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
       </div>
       <Boton where={"/formularios/donacion#formularioDonacion"}>
                 <span className="font-medium text-base sm:text-sm md:text-base lg:text-lg">
-                    {donacionJson.botones.botonDonar}
+                    {contentJson.donaciones.botones.botonDonar}
                 </span>
         </Boton>
     </div>

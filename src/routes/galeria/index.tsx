@@ -2,15 +2,18 @@ import { createFileRoute } from '@tanstack/react-router'
 import Divider from '../../components/Divider'
 import { useGetCategorias, useGetImagenesPorCategoria, useGetTodasGaleria } from '../../hooks/galeria/galeria'
 import BotonGaleria from '../../components/BotonGaleria'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import CardImagenGaleria from '../../components/CardImagenGaleria'
 import { MdOutlineLastPage, MdOutlineFirstPage } from "react-icons/md";
+import Navbar from '../../components/header/Navbar'
+import IdiomaContext from '../../context/language/idiomaContext'
 
 export const Route = createFileRoute('/galeria/')({
   component: RouteComponent,
 })
 
 function RouteComponent() {
+  const {contentJson} = useContext(IdiomaContext)
   const [selectedBtn, setSelectedBtn] = useState<number | null>(null);
   const { Categorias } = useGetCategorias();
   const [page, setPage] = useState(1);
@@ -46,12 +49,15 @@ function RouteComponent() {
   </div>
 
   return <div className='flex flex-col justify-center items-center'>
-      <div className=' flex flex-col lg:w-5xl md:w-4xl sm:w-3xl gap-3 justify-center items-center'>
-      <h1 className='text-4xl font-poppins font-bold text-amaranthPink '>Nuestra galeria</h1>
+      <Navbar />
+      <div className='mt-30 flex flex-col lg:w-5xl md:w-4xl sm:w-3xl gap-3 justify-center items-center'>
+      <h1 className='text-4xl font-poppins font-bold text-amaranthPink '>
+        {contentJson.titulosSecciones.Galeria.tituloExtend}
+      </h1>
       <Divider/>
       <div className="flex flex-wrap justify-center gap-2">
           <BotonGaleria
-            children="Ver todas"
+            children={contentJson.titulosSecciones.Galeria.filtroTodas}
             isActive={selectedBtn === null}
             toggleCategoria={() => setCategoria(null)}
           />

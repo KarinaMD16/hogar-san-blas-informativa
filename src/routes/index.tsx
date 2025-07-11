@@ -9,7 +9,7 @@ import CasosExito from '../sections/casosExito/CasosExito'
 import PreviewGaleria from '../sections/previewGaleria/PreviewGaleria'
 import Footer from '../components/footer/Footer'
 import HeroSection from '../sections/hero/HeroSection'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/header/Navbar'
 
 
 export const Route = createFileRoute('/')({

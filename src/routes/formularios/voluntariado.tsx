@@ -1,4 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
+import Navbar from '../../components/header/Navbar'
+import Footer from '../../components/footer/Footer'
 
 // formulario de voluntariado
 export const Route = createFileRoute('/formularios/voluntariado')({
@@ -6,5 +8,9 @@ export const Route = createFileRoute('/formularios/voluntariado')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/formularios/voluntariado"!</div>
+  return <div>
+      <Navbar />
+      Hello "/formularios/voluntariado"!
+      <Footer />
+    </div>
 }
