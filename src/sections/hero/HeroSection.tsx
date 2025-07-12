@@ -5,8 +5,6 @@ import IdiomaContext from "../../context/language/idiomaContext";
 const HeroSection = () => {
   const {contentJson } = useContext(IdiomaContext);
 
-  const rutas = ["/historia/", "/contactanos"];
-
   return (
     <section
       style={{
@@ -18,9 +16,9 @@ const HeroSection = () => {
         <h2 className="text-shadow-md text-4xl sm:text-5xl md:text-6xl font-poppins font-bold">{contentJson.hero.titulo}</h2>
         <p className="font-opensans text-justify text-md sm:text-base md:text-lg text-shadow-md">{contentJson.hero.descripcion}</p>
         <div className="mt-4 flex justify-center gap-4 sm:gap-1 lg:gap-10">
-          {contentJson.hero.botones.map((texto, idx) => (
-          <Boton key={idx} where={rutas[idx]}>
-            {texto.texto}
+          {contentJson.hero.botones.map((boton: { texto: string; ruta: string }, idx: number) => (
+          <Boton key={idx} where={boton.ruta}>
+            {boton.texto}
           </Boton>
           ))}
         </div>
