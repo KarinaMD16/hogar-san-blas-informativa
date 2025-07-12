@@ -40,12 +40,8 @@ function RouteComponent() {
     setPage(1);
   }
 
-  if (loadingImagenes) return <div>
-    Cargrandi
-  </div>
-
-  if (isFetching) return <div>
-    Cargand
+  if (loadingImagenes || isFetching) return <div>
+    <span className="loading loading-spinner"></span>
   </div>
 
   return <div className='flex flex-col justify-center items-center'>

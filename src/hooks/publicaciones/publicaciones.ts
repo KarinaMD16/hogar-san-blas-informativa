@@ -3,8 +3,8 @@ import { getProyectos } from "../../services/publicaciones/proyectosServices";
 import { getDonaciones } from "../../services/publicaciones/donacionesServices";
 import { getEventos } from "../../services/publicaciones/eventosServices";
 
-export function useGetProyectos( page: number, limit:number) {
-  const { data, isLoading, error, isPlaceholderData } = useQuery({
+export function useGetProyectos( page?: number, limit?:number) {
+  const { data, isLoading, error, isPlaceholderData, isFetching } = useQuery({
     queryKey: ['proyectos', page],
     queryFn: () => getProyectos(page, limit),
     select: (resp) => ({
@@ -17,13 +17,14 @@ export function useGetProyectos( page: number, limit:number) {
     proyectos: data?.proyectos ?? [],
     total: data?.total ?? 0,
     loadingProyectos: isLoading,
+    fetchingProyectos: isFetching,
     errorProyectos: error,
     isPlaceholderData
   }
 }
 
-export function useGetDonaciones(page: number, limit:number) {
-  const { data, isLoading, error, isPlaceholderData } = useQuery({
+export function useGetDonaciones(page?: number, limit?:number) {
+  const { data, isLoading, error, isPlaceholderData, isFetching } = useQuery({
     queryKey: ['donaciones', page],
     queryFn: () => getDonaciones(page, limit),
     select: (resp) => ({
@@ -35,14 +36,15 @@ export function useGetDonaciones(page: number, limit:number) {
   return {
     donaciones: data?.donaciones ?? [],
     total: data?.total ?? 0,
-    loadingProyectos: isLoading,
-    errorProyectos: error, 
+    loadingDonaciones: isLoading,
+    fetchingDonaciones: isFetching,
+    errorDonaciones: error, 
     isPlaceholderData
   }
 }
 
-export function useGetEventos(page:number, limit:number) {
-  const { data, isLoading, error, isPlaceholderData } = useQuery({
+export function useGetEventos(page?:number, limit?:number) {
+  const { data, isLoading, error, isPlaceholderData, isFetching } = useQuery({
     queryKey: ['eventos', page],
     queryFn: () => getEventos(page, limit),
    select: (resp) => ({
@@ -54,8 +56,9 @@ export function useGetEventos(page:number, limit:number) {
   return {
     eventos: data?.eventos ?? [],
     total: data?.total ?? 0,
-    loadingProyectos: isLoading,
-    errorProyectos: error,
+    loadingEventos: isLoading,
+    fetchingEventos: isFetching,
+    errorEventos: error,
     isPlaceholderData
   }
 }

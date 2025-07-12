@@ -18,18 +18,15 @@ const Donar = () => {
         </h1>
         <Divider />
         <p className="text-black font-opensans text-md py-3">{contentJson.donaciones.descripcion}</p>
-        <div>
+        <div className="flex gap-4 flex-wrap justify-center">
           <Boton children={contentJson.donaciones.botones.botonRequisitos} where={"/formularios/donacion"}/>
+          <Boton children={contentJson.donaciones.botones.botonVerOtras} where={"/publicaciones#solicitudes-donaciones"}/>
         </div>
       </div>
 
       <div className="flex flex-row gap-5 overflow-x-auto justify-around
-            [&::-webkit-scrollbar]:h-2.5
-            [&::-webkit-scrollbar-track]:bg-gray-100
-            [&::-webkit-scrollbar-thumb]:bg-ecruYellow 
-            [&::-webkit-scrollbar-thumb]:rounded-full pb-3
-            [&::-webkit-scrollbar-thumb]:cursor-grab
-            w-2xl">
+          scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent
+          w-2xl pb-3">
         {donaciones?.map((publicacion: Publicacion) => (
             <CardDonacion
               key={publicacion.id}
