@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import "tailwindcss";
+@plugin "flyonui";
 
 @theme {
   --color-ecruYellow: #DBBA6B;

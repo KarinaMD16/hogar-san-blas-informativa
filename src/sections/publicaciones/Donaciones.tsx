@@ -10,7 +10,7 @@ const Donaciones = () => {
   const [page, setPage] = useState(1);
   const limit = 6;
 
-  const { donaciones, total, isPlaceholderData } = useGetDonaciones(page, limit);
+  const { donaciones, total, isPlaceholderData, fetchingDonaciones, loadingDonaciones } = useGetDonaciones(page, limit);
 
   const totalPages = Math.ceil(total / limit);
   const isLastPage = page >= totalPages;
@@ -22,6 +22,13 @@ const Donaciones = () => {
       setPage((p) => p + 1);
     }
   };
+
+  if (loadingDonaciones || fetchingDonaciones) return <div className="mt-10 w-screen h-screen">
+    <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
+        {contentJson.titulosSecciones.publicaciones.donaciones}
+      </h1>
+    <span className="loading loading-spinner mt-4"></span>
+  </div>
 
   return (
     <section id="solicitudes-donaciones" className="lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6">
