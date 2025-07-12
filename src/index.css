@@ -1,28 +1,6 @@
-@import 'tailwindcss';
 @import "tailwindcss";
 @plugin "flyonui";
-
-@theme {
-  --color-ecruYellow: #DBBA6B;
-  --color-ecruYellow300: #E1CC9A;
-  --color-amaranthPink: #A7074D;
-  --color-night: #0D0D11;
-  --color-basicWhite: #FDF6F9;
-  --color-antiFlashWhite: #ECECEC;
-  --color-amaranthPinkDark: #8F1047;
-}
-
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
-}
-
-@import 'tailwindcss';
+@plugin 'tailwind-scrollbar';
 
 @theme {
   --color-ecruYellow: #DBBA6B;
@@ -32,6 +10,7 @@
   --color-basicWhite: #F5F5F5;
   --color-antiFlashWhite: #ECECEC;
   --color-amaranthPinkDark: #8F1047;
+  --color-white:#fefdfc;
 }
 
 @layer base {
@@ -51,7 +30,7 @@
 
   color-scheme: light dark;
   color: var(--color-night, #0D0D11);
-  background-color: #ffff;
+  background-color: #fefdfc;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

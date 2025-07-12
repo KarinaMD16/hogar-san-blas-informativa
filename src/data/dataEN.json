@@ -127,7 +127,8 @@
     "descripcion": "Your support makes a difference! Here's all the information an requirements to contribute with us",
     "botones": {
       "botonDonar": "Donate",
-      "botonRequisitos": "View requirements"
+      "botonRequisitos": "View requirements",
+      "botonVerOtras": "More petitions"
     }
   },
 

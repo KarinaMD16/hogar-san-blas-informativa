@@ -42,13 +42,8 @@ const Servicios = () => {
         pb-3 lg:pl-3
         w-full lg:w-auto
         lg:max-h-[520px] 
-        [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar]:lg:w-2
-        [&::-webkit-scrollbar-track]:rounded-full
-        [&::-webkit-scrollbar-track]:bg-gray-100
-        [&::-webkit-scrollbar-thumb]:rounded-full
-        [&::-webkit-scrollbar-thumb]:bg-ecruYellow
-        [&::-webkit-scrollbar-thumb]:cursor-grab
-          ">
+        scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent
+        ">
 
           {contentJson.servicios.map((servicio) => (              
             <CardsServicios
