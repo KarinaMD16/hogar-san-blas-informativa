@@ -28,11 +28,9 @@ const PreviewGaleria = () => {
 
       <div className="w-65 sm:w-full lg:w-full">
         <div className="flex flex-row gap-3 overflow-x-auto justify-around
-            [&::-webkit-scrollbar]:h-2.5
-            [&::-webkit-scrollbar-track]:bg-gray-100
-            [&::-webkit-scrollbar-thumb]:bg-ecruYellow 
-              [&::-webkit-scrollbar-thumb]:rounded-full pb-2 
-              [&::-webkit-scrollbar-thumb]:cursor-grab">
+            
+          scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent pb-2 
+            ">
           {imagenes?.map((imagen, index) => (
             <img
               onClick={() => cambiarImagen()}
