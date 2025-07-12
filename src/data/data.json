@@ -134,6 +134,42 @@
   }
   },
 
+"paginaDonaciones": {
+    "donacionArticulos": {
+      "titulo": "¿Estás interesado en hacer una donación?",
+      "subtitulo": "Podés donar artículos que desees",
+      "requisitos": [
+        {
+          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+      ]
+    },
+    "donacionMonetaria": {
+      "titulo": "Podés hacer donaciones monetarias",
+      "subtitulo": "Podés hacerlo por medio de SINPE Móvil o transferencias:",
+      "medios": {
+        "sinpe": "",
+        "cuentaBN": "CR32015101310010024125",
+        "cuentaBCR": "CC-CR10015201235000175310"
+      }
+    },
+    "donaTuTiempo": {
+      "titulo": "Podés donar tu tiempo",
+      "subtitulo": "Conviértete en un voluntario",
+      "boton": "Quiero ser Voluntario"
+    }
+  },
+
+
  "historia": {
     "titulo": "Desde 1983",
     "subtitulo": "Al servicio de nuestros adultos mayores",
@@ -155,6 +191,57 @@
         "ruta": "requisitos/asociarse"
       }
     ]
+  },
+
+
+  "paginaVoluntariado": {
+    "tituloGeneral": "¿Estás interesado en ser voluntario?",
+    "cumplimientoHoras": {
+      "titulo": "Podés realizar tus horas de servicio comunitario con nosotros",
+      "requisitos": [
+        {
+          "descripcion": "Hoja de presentación."
+        },
+        {
+          "descripcion": "Foto tamaño pasaporte."
+        },
+        {
+          "descripcion": "Reglamento de voluntariado."
+        },
+        {
+          "descripcion": "Hoja de delincuencia."
+        },
+        {
+          "descripcion": "Copia de la cédula."
+        },
+	      {
+          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
+        }
+      ]
+    },
+    "serVoluntario": {
+      "titulo": "Podés apoyarnos haciendo lo que mejor sabes hacer",
+      "requisitos": [
+        {
+          "descripcion": "Hoja de presentación."
+        },
+        {
+          "descripcion": "Foto tamaño pasaporte."
+        },
+        {
+          "descripcion": "Reglamento de voluntariado."
+        },
+        {
+          "descripcion": "Hoja de delincuencia."
+        },
+ 	      {
+          "descripcion": "Copia de la cédula."
+        },
+	      {
+          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
+        }
+      ]
+    }
   },
 
 "paginaRequisitosSocio": {
@@ -186,10 +273,133 @@
  },
 
 
+  "formularioVoluntariado": {
+  "campos": [
+    {
+      "nombre": "Fecha",
+      "tipo": "fecha"
+    },
+    {
+      "nombre": "Nombre",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Cédula",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Sexo",
+      "tipo": "opcion",
+      "opciones": ["M", "F"]
+    },
+    {
+      "nombre": "Ocupación",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Teléfono",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Correo electrónico",
+      "tipo": "email"
+    },
+    {
+      "nombre": "Dirección exacta",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Contacto de emergencia",
+      "tipo": "grupo",
+      "campos": [
+        {
+          "nombre": "Nombre",
+          "tipo": "texto"
+        },
+        {
+          "nombre": "Teléfono",
+          "tipo": "texto"
+        }
+      ]
+    },
+    {
+      "nombre": "Tipo de colaboración que desea brindar",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Experiencia laboral o voluntaria relacionada con adulto mayor",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Horario establecido para asistir a la institución",
+      "tipo": "horario",
+      "dias": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+    },
+    {
+      "nombre": "Observaciones",
+      "tipo": "texto"
+    }
+  ],
+  "botones": ["Enviar", "Cancelar"]
+},
 
-  "formulario": {
-    "botones": ["Enviar", "Cancelar"]
-  },
+"formularioDonaciones": {
+  "campos": [
+    {
+      "nombre": "Nombre",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Apellido",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Segundo Apellido",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Cédula de Identidad",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Teléfono",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Correo electrónico",
+      "tipo": "email"
+    },
+    {
+      "nombre": "Tipo de donación",
+      "tipo": "opcion",
+      "opciones": [
+        "Artículos de primera necesidad",
+        "Alimentos",
+        "Ropa y calzado",
+        "Dinero",
+        "Otro"
+      ]
+    },
+    {
+      "nombre": "Descripción de la donación",
+      "tipo": "texto"
+    },
+    {
+      "nombre": "Monto de la donación (opcional)",
+      "tipo": "numero"
+    },
+    {
+      "nombre": "Fecha estimada de entrega",
+      "tipo": "fecha"
+    },
+    {
+      "nombre": "Observaciones",
+      "tipo": "texto"
+    }
+  ],
+  "botones": ["Enviar", "Cancelar"]
+},
+
 
   "footer": {
     "Contactos": ["+506 2685 5809", "+506 8972 9912", "hogardeancianossanblas@gmail.com"],
