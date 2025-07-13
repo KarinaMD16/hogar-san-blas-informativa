@@ -1,10 +1,11 @@
 import CardsMisionVision from "./CardsMisionVision";
 import type { misionVisionItem } from "../../models/sections/misionVision";
-import { getEntidad } from "../../data";
+import { useContext } from "react";
+import IdiomaContext from "../../context/language/idiomaContext";
 
 const MisionVision = () => {
-    const misionVisionjson = getEntidad("misionVision");
-    const items: misionVisionItem[] = Object.values(misionVisionjson);
+    const {contentJson } = useContext(IdiomaContext);
+    const items: misionVisionItem[] = Object.values(contentJson.misionVision);
 
   return (
     <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-4 lg:gap-x-20">
