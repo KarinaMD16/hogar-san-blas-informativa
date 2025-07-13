@@ -147,7 +147,7 @@
   }
   },
 
-"paginaDonaciones": {
+ "paginaDonaciones": {
     "donacionArticulos": {
       "titulo": "¿Estás interesado en hacer una donación?",
       "subtitulo": "Podés donar artículos que desees",
@@ -182,8 +182,7 @@
     }
   },
 
-
- "historia": {
+  "historia": {
     "titulo": "Desde 1983",
     "subtitulo": "Al servicio de nuestros adultos mayores",
     "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
@@ -205,7 +204,6 @@
       }
     ]
   },
-
 
   "paginaVoluntariado": {
     "tituloGeneral": "¿Estás interesado en ser voluntario?",
@@ -257,7 +255,8 @@
     }
   },
 
-"paginaRequisitosSocio": {
+
+  "paginaRequisitosSocio": {
     "titulo": "¿Estás interesado en ser socio?",
     "subtitulo": "Para volverte socio, debes cumplir con:",
     "requisitos": [
@@ -413,7 +412,7 @@
   "botones": ["Enviar", "Cancelar"]
 },
 
-
+ 
   "footer": {
     "Contactos": ["+506 2685 5809", "+506 8972 9912", "hogardeancianossanblas@gmail.com"],
     "Horario": ["Lunes a Viernes", "8am a 3pm"],
