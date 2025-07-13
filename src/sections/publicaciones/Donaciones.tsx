@@ -2,13 +2,15 @@ import { MdOutlineFirstPage, MdOutlineLastPage } from "react-icons/md";
 import CardDonacion from "../../components/CardDonacion";
 import { useGetDonaciones } from "../../hooks/publicaciones/publicaciones";
 import type { Publicacion } from "../../models/publicaciones/publicaciones";
-import {  useState } from "react";
+import {  useContext, useState } from "react";
+import IdiomaContext from "../../context/language/idiomaContext";
 
 const Donaciones = () => {
+  const {contentJson } = useContext(IdiomaContext)
   const [page, setPage] = useState(1);
   const limit = 6;
 
-  const { donaciones, total, isPlaceholderData } = useGetDonaciones(page, limit);
+  const { donaciones, total, isPlaceholderData, fetchingDonaciones, loadingDonaciones } = useGetDonaciones(page, limit);
 
   const totalPages = Math.ceil(total / limit);
   const isLastPage = page >= totalPages;
@@ -21,10 +23,17 @@ const Donaciones = () => {
     }
   };
 
+  if (loadingDonaciones || fetchingDonaciones) return <div className="mt-10 w-screen h-screen">
+    <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
+        {contentJson.titulosSecciones.publicaciones.donaciones}
+      </h1>
+    <span className="loading loading-spinner mt-4"></span>
+  </div>
+
   return (
     <section id="solicitudes-donaciones" className="lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6">
       <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
-        Solicitudes de donaciones
+        {contentJson.titulosSecciones.publicaciones.donaciones}
       </h1>
       <div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
