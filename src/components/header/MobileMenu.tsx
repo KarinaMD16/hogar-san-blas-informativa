@@ -48,7 +48,7 @@ const MobileMenu = ({ navItems, setMobileMenuOpen }: MobileMenuProps) => {
                     <li key={linkIdx}>
                       <Link
                         to={link.ruta}
-                        className="block px-2 py-1 hover:bg-ecruYellow300 hover:text-night transition rounded"
+                        className="block px-2 py-1 hover:bg-antiFlashWhite hover:text-night transition rounded"
                         onClick={handleClose}
                       >
                         {link.texto}
