@@ -17,7 +17,7 @@ const DropdownItem = ({ item, idx, isOpen, setOpen }: DropdownItemProps) => (
           <li key={i}>
             <Link
               to={link.ruta}
-              className="block px-4 py-2 hover:bg-ecruYellow300 hover:text-night transition"
+              className="block px-4 py-2 hover:bg-antiFlashWhite hover:text-night transition"
             >
               {link.texto}
             </Link>
