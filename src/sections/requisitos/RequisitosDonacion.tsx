@@ -1,9 +1,8 @@
 import { useContext } from "react";
-import Contactos from "../../components/contactos/Contactos";
 import IdiomaContext from "../../context/language/idiomaContext";
 import SectionRequisitos from "./SectionRequisitos";
 
-const RequisitosResidencia = () => {
+const RequisitosDonacion = () => {
     const { contentJson } = useContext(IdiomaContext);
 
     return (
@@ -18,11 +17,10 @@ const RequisitosResidencia = () => {
                     requisitos={contentJson.paginaRequisitosResidencia.requisitos}
                 />
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-poppins text-amaranthPink font-semibold text-left">
-                    {contentJson.paginaRequisitosResidencia.mensaje}
+                    Formulario de Donacion
                 </h1>
-                <Contactos className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 mt-8"/>
             </div>
         </section>
     );
 }
-export default RequisitosResidencia;
+export default RequisitosDonacion;
