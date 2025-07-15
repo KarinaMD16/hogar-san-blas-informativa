@@ -24,9 +24,7 @@ const SolicitarResidencia = () => {
                 </p>
                 <div>
                     <Boton where={"/requisitos/residencia"}>
-                        <span className="font-medium text-sm sm:text-base md:text-lg lg:text-xl">
                             {contentJson.solicitudResidencia.botonRequisitos}
-                        </span>
                     </Boton>
                 </div>
             </div>
