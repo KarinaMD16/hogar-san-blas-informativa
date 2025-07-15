@@ -113,34 +113,17 @@
 
   "paginaRequisitosResidencia": {
     "titulo": "¿Estás interesado en solicitar residencia?",
-    "subtitulo": "Para ser residente, debes cumplir con:",
-    "requisitos": [
-      {
-        "descripcion": "Edad y Estado de Salud: Adultos mayores que necesiten asistencia y cuidado especializado."
-      },
-      {
-        "descripcion": "Documentación: Copia de cédula de identidad o pasaporte del residente."
-      },
-      {
-        "descripcion": "Evaluación Médica: Evaluación médica reciente para garantizar el adecuado cuidado según las necesidades del residente."
-      },
-      {
-        "descripcion": "Compromiso Familiar: Comunicación abierta y participación de la familia en el proceso de ingreso y cuidado del residente."
-      }
+    "subtitulo": [
+      "Para ser residente, debes cumplir con:",
+      "Requisitos:"
     ],
-    "contacto": {
-      "Titulo": "Si cumples con los requisitos, contáctanos",
-      "Horario": ["Lunes a Viernes", "8am a 3pm"],
-      "Contactos": [
-        "+506 2685 5809",
-        "+506 8972 9912",
-        "hogardeancianossanblas@gmail.com"
-      ],
-      "Direccion": [
-        "100m norte y 150m oeste de la Cruz Roja",
-        "Nicoya, Guanacaste, Costa Rica"
-      ]
-    }
+    "requisitos": [
+        "Edad y Estado de Salud: Adultos mayores que necesiten asistencia y cuidado especializado.",
+        "Documentación: Copia de cédula de identidad o pasaporte del residente.",
+        "Evaluación Médica: Evaluación médica reciente para garantizar el adecuado cuidado según las necesidades del residente.",
+        "Compromiso Familiar: Comunicación abierta y participación de la familia en el proceso de ingreso y cuidado del residente."
+    ],
+    "mensaje": "Si cumples con los requisitos, contáctanos"
   },
 
   "casosExito": {
@@ -203,36 +186,40 @@
         "descripcion": "Telefono."
       }
     ],
-    "contacto": {
-      "Titulo": "Si cumples con los requisitos, contáctanos",
-      "Horario": ["Lunes a Viernes", "8am a 3pm"],
-      "Contactos": [
-        "+506 2685 5809",
-        "+506 8972 9912",
-        "hogardeancianossanblas@gmail.com"
-      ],
-      "Direccion": [
-        "100m norte y 150m oeste de la Cruz Roja",
-        "Nicoya, Guanacaste, Costa Rica"
-      ]
-    }
+    "mensaje": "Si cumples con los requisitos, contáctanos"
   },
 
   "formulario": {
     "botones": ["Enviar", "Cancelar"]
   },
 
+  "contactos": {
+    "Contactos": {
+        "titulo": "Contactos",
+        "items": [
+          "+506 2685 5809",
+          "+506 8972 9912",
+          "hogardeancianossanblas@gmail.com"
+        ]
+      },
+    "Horario": {
+        "titulo": "Horario",
+        "items": [
+          "Lunes a Viernes", 
+          "8am a 3pm"
+        ]
+      },
+    "Direccion": {
+        "titulo": "Direccion",
+        "items": [
+          "100m norte y 150m oeste de la Cruz Roja",
+          "Nicoya, Guanacaste, Costa Rica"
+        ]
+      }
+  },
+
   "footer": {
-    "Contactos": [
-      "+506 2685 5809",
-      "+506 8972 9912",
-      "hogardeancianossanblas@gmail.com"
-    ],
-    "Horario": ["Lunes a Viernes", "8am a 3pm"],
-    "Direccion": [
-      "100m norte y 150m oeste de la Cruz Roja",
-      "Nicoya, Guanacaste, Costa Rica"
-    ]
+    "mensaje": "¡Visítanos!"
   },
 
   "header": {

@@ -17,12 +17,18 @@ const MobileMenu = ({ navItems, setMobileMenuOpen }: MobileMenuProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex md:hidden"
+      className="fixed inset-0 z-50 flex justify-end md:hidden"
     >
+      <div
+        className="flex-1"
+        onClick={() => setMobileMenuOpen(false)}
+        aria-label="Cerrar menú móvil"
+      />
+      
       <motion.div
-        initial={{ x: "-100%" }}
+        initial={{ x: "100%" }}
         animate={{ x: 0 }}
-        exit={{ x: "-100%" }}
+        exit={{ x: "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
         className="bg-white w-64 h-full shadow-lg p-6 flex flex-col gap-4 relative"
       >
@@ -58,12 +64,6 @@ const MobileMenu = ({ navItems, setMobileMenuOpen }: MobileMenuProps) => {
           </li>
         </ul>
       </motion.div>
-
-      <div
-        className="flex-1"
-        onClick={handleClose}
-        aria-label="Cerrar menú móvil"
-      />
     </motion.div>
   );
 };
