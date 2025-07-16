@@ -266,6 +266,7 @@
       ]
     }
   },
+  
   "titulosSecciones": {
     "Servicios": "Our services",
     "Galeria": {
@@ -278,5 +279,36 @@
       "proyectos": "Our proyects",
       "donaciones": "You can donate"
     }
-  }
+  },
+
+"paginaRequisitosResidencia": {
+  "titulo": "Are you interested in applying for residency?",
+  "subtitulo": "To be a resident, you must meet the following:",
+  "requisitos": [
+    {
+      "descripcion": "Letter of request signed by the applicant expressing the desire to be institutionalized, stating whether they have the use of their mental faculties."
+    },
+    {
+      "descripcion": "Medical report."
+    },
+    {
+      "descripcion": "Pension certification issued by CCSS."
+    },
+    {
+      "descripcion": "Certification of movable and immovable property."
+    },
+    {
+      "descripcion": "Certification of SINERUBE, in IMAS."
+    },
+    {
+      "descripcion": "Social work study."
+    },
+    {
+      "descripcion": "Blood test."
+    },
+    {
+      "descripcion": "COVID-19 vaccines."
+    }
+   ]
+ }
 }
