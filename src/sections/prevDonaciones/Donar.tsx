@@ -11,7 +11,7 @@ const Donar = () => {
 
   const { donaciones } = useGetDonaciones(1, 5);
   return (
-    <section className="flex justify-center items-center flex-wrap gap-5">
+    <section className="flex justify-evenly items-center flex-wrap gap-5">
       <div className="w-md flex flex-col gap-3">
         <h1 className="font-poppins font-bold text-amaranthPink text-2xl sm:text-3xl md:text-4xl text-shadow-md mb-2">
           {contentJson.donaciones.titulo}
