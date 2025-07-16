@@ -1,14 +1,8 @@
-import type { ReactNode } from "react";
+import type { ContactosSectionProps } from "../../models/contactos/contactos";
 
-interface FooterSectionProps {
-  title: string;
-  items: string[];
-  icons: ReactNode[];
-}
-
-const FooterSection = ({ title, items, icons }: FooterSectionProps) => {
+const ContactosSection = ({ title, items, icons }: ContactosSectionProps) => {
   return (
-    <div className="footer-section">
+    <div>
       <h4 className="text-xl font-semibold inline-block border-b-2 border-ecruYellow pb-1 mb-2">
         {title}
       </h4>
@@ -26,4 +20,4 @@ const FooterSection = ({ title, items, icons }: FooterSectionProps) => {
   );
 };
 
-export default FooterSection;
+export default ContactosSection;

@@ -85,33 +85,45 @@
     }
   },
 
-  "reseñaHistorica": {
-    "descripcion": "The Hogar San Blas of Nicoya is dedicated to the care of older adults and is located in the central canton of Nicoya, Guanacaste. It was born out of the need to care for elderly individuals who, abandoned and in need, were forced to beg on the streets. A generous group of community members, moved by compassion, began voluntary efforts to help. The Nursing Home officially opened in September 1983, initially operating as a Day Center. Over time, it evolved into a long-term care home, gradually increasing the number of residents. Today, it cares for between 36 and 40 older adults, both men and women, ranging from 65 to 102 years of age. Some residents have even been older, often lacking resources, suffering from illnesses, or in terminal stages of life. The home continues to operate thanks to community volunteers, whose efforts led to the construction of the first pavilion and corridor between 1983 and 1991. Later, with support from INA, JPS, C.T.A.M.S, IMAS, the Municipality, and the people of Nicoya, the full facility was completed. Today, the hogar San Blas features a fully equipped kitchen, dining room, chapel, 24 rooms distributed in three pavilions, an activity hall, a physical therapy room, a nursing and medical care department, offices for social services, nutrition, administration, an outdoor recreation and events area, large green spaces, and even a farm with animals used as part of therapy for older adults. The Home still benefits from a strong volunteer network and receives financial support from institutions such as the Social Protection Board (Junta de Protección Social), CONAPAM, FODESAF, as well as from its own fundraising efforts and community support. In 2011, the Home implemented the Home Care Network Program (Red de Cuido), which serves older adults living in extreme poverty in their own homes. Initially supporting 50 beneficiaries, the program now serves 125 older adults with the help of resources provided by CONAPAM."
-  },
-
   "paginaReseñaHistorica": [
     {
-      "titulo": "Fundados en 1983",
+      "titulo": "Founded in 1983",
       "descripcion": [
-        "El Hogar San Blas de Nicoya, dedicado a la Atención de la Persona Adulta Mayor, ubicado en el cantón central de Nicoya, Guanacaste. Nació por la necesidad de atención de personas mayores que, en condición de abandono y necesidad, pedían en la calle. Un grupo de personas de la comunidad, de gran generosidad, unidos en un sentimiento de ayuda a lo que acontecía con ellos, iniciaron en forma voluntaria las gestiones de ayuda. ",
-        "Este Hogar de Ancianos dio apertura en setiembre del año 1983, el cual en sus primeros años inició sus labores como un centro diurno. Luego, con el paso del tiempo, se convierte en hogar de larga estancia, incrementando el número de personas atendidas. A la fecha se mantiene un número entre los 36 y 40 adultos mayores, hombres y mujeres entre los 65 y 102 años de edad. En algún momento se ha atendido adultos mayores de mayor edad que la actual, carentes de recursos, enfermos o en fase terminal."
+        "Hogar San Blas de Nicoya, dedicated to the care of elderly individuals, is located in the central canton of Nicoya, Guanacaste. It was established out of the need to support elderly people who, in a state of abandonment and need, were forced to beg on the streets. A group of generous community members, united by a desire to help, voluntarily began the process of providing assistance.",
+        "The nursing home officially opened in September 1983, initially operating as a day center. Over time, it evolved into a long-term care facility, increasing the number of residents served. Currently, the home accommodates between 36 and 40 elderly adults—men and women aged between 65 and 102. At various times, the home has cared for individuals even older, often lacking resources, facing illness, or in terminal stages."
       ],
       "imagen": "https://scontent.fsyq3-1.fna.fbcdn.net/v/t39.30808-6/506092058_1319564893510373_8913071646491314006_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Cow5qZ185kMQ7kNvwHlGOVZ&_nc_oc=AdlXYIcOhxFlbbKM6e23Uf_R2lIhfFArsr6-88UvHj6tsOcv6FJZOE-3JOyJ8dEX-uU&_nc_zt=23&_nc_ht=scontent.fsyq3-1.fna&_nc_gid=BJ-1WwxQp8cDoFRuHKLxPA&oh=00_AfTxlQ_T6WfLxBQVHvJ7K-qYlCJMWrNP76Y6cxMPTbSHmQ&oe=68749DC4"
     },
     {
-      "titulo": "Más de 40 años de servir a nuestros adultos mayores",
+      "titulo": "Over 40 Years of Serving Our Elderly",
       "descripcion": [
-        "El Hogar San Blas de Nicoya tiene una rica historia que se remonta a décadas atrás, siendo un pilar de apoyo para la comunidad de Guanacaste. Fundado con la misión de brindar cuidado y atención a adultos mayores, ha sido un faro de esperanza y cuidado compasivo en la región. Desde sus inicios, ha evolucionado para adaptarse a las necesidades cambiantes de sus residentes, ofreciendo un ambiente hogareño donde se promueve la dignidad y el respeto. Hoy en día, continúa su compromiso con la excelencia en el cuidado geriátrico, siendo reconocido por su dedicación inquebrantable a mejorar la calidad de vida de quienes llaman al Hogar San Blas su hogar.",
-        "Este hogar mantiene su funcionamiento gracias a voluntarios de la comunidad, con cuyo aporte se construyó el primer pabellón con pasillo desde 1983 a 1991. Años después se dio la construcción completa con colaboración del INA, JPS, CTAMS, IMAS, Municipalidad y pueblo nicoyano, lo que hoy es el Hogar de Ancianos San Blas. Entre sus instalaciones se cuenta con una cocina equipada, un comedor, una capilla, 24 habitaciones en tres pabellones, un salón de actividades, una sala de terapia física, un departamento de enfermería y curaciones, oficinas de servicio social, nutrición, administración, un área de recreación y eventos externa y amplias zonas verdes, una granja con animales que forma parte de la terapia para las PAM, entre otras. Actualmente se mantiene un voluntariado, también se recibe ayuda económica de instituciones como Junta de Protección Social, CONAPAM, FODESAF, la gestión de recursos propios por parte de la Junta Directiva y el apoyo de la comunidad. En el año 2011 se implementa el programa de la Red de Atención Domiciliar o Red de Cuido, el cual atiende a adultos mayores que no se encuentran dentro del hogar sino en sus casas en situación de pobreza extrema. Se trabaja con recursos de CONAPAM. Iniciando con 50 beneficiarios, actualmente se atienden a 125 PAM con este programa."
+        "Hogar San Blas de Nicoya has a rich history spanning decades and has been a pillar of support for the Guanacaste community. Founded with the mission to provide care and attention to elderly adults, it has become a beacon of hope and compassionate service in the region. Since its inception, the facility has evolved to meet the changing needs of its residents, offering a homelike environment that promotes dignity and respect. Today, it continues its commitment to excellence in geriatric care, recognized for its unwavering dedication to improving the quality of life for those who call Hogar San Blas their home.",
+      "The home continues to operate thanks to community volunteers, whose contributions helped build the first wing and hallway between 1983 and 1991. Later, the facility was completed with support from INA, JPS, CTAMS, IMAS, the Municipality, and the people of Nicoya. Today, the nursing home features a fully equipped kitchen, dining room, chapel, 24 rooms in three wings, an activity hall, physical therapy room, nursing and wound care department, offices for social services, nutrition, administration, an outdoor recreation and event area, large green spaces, and a farm with animals used as therapy for the elderly. A volunteer program is still active, and financial support is also provided by institutions such as the Social Protection Board (Junta de Protección Social), CONAPAM, FODESAF, as well as the Board of Directors' own fundraising efforts and ongoing community support. In 2011, the Home launched the Home-Based Care Network program (Red de Cuido), which serves elderly individuals living in extreme poverty in their own homes. Initially supporting 50 beneficiaries, the program now assists 125 elderly adults through CONAPAM funding."
       ],
       "imagen": "https://scontent.fsyq3-1.fna.fbcdn.net/v/t39.30808-6/496928711_1294235876043275_1654639420676425125_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nsOT72CYHqMQ7kNvwFktjLq&_nc_oc=AdlTzwxpX1yDdmAPXksvJDDqnZEe31X5Vj8aEr4bZ5LfeIVKuWyHjxQ8lzrso8mVe4M&_nc_zt=23&_nc_ht=scontent.fsyq3-1.fna&_nc_gid=BVOoP1fCLlo2ozQbfpTXcw&oh=00_AfRs2tnWYP4yBO9qbm-NpPlfILcOYlG62OnBTNrIUBY26Q&oe=6875D309"
     }
   ],
+
   "solicitudResidencia": {
     "titulo": "Interested in Residency?",
     "descripcion": "For more details about our admission requirements and process, please contact us through any of our communication channels. We're here to guide you through this important step toward improving your loved one's quality of life.",
     "imagen": "https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/489926099_1315181850615344_1286229606703186756_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rDyYREGyUYcQ7kNvwESJF2z&_nc_oc=AdkEhlqpOkeH2xS5fZiCCCl_Z-eWgdOqAgF7S2LvMbkTMeVe6R_aMbFrpax6pxvsqJg&_nc_zt=23&_nc_ht=scontent.fsyq2-1.fna&_nc_gid=-vKWzI362HSgCLWJsHX1VQ&oh=00_AfRZwcJcRlSk50DmxDpvVp8X6GQ9x8V-jU7FVZE1YbY5GA&oe=686E243E",
     "botonRequisitos": "View requirements"
+  },
+
+  "paginaRequisitosResidencia": {
+    "titulo": "Are you interested in applying for residency?",
+    "subtitulo": [
+        "To become a resident, you must meet the following:",
+        "Requirements:"
+    ],
+    "requisitos": [
+        "Age and Health Condition: Elderly adults who require assistance and specialized care.",
+        "Documentation: Copy of the resident's ID card or passport.",
+        "Medical Evaluation: Recent medical evaluation to ensure appropriate care based on the resident's needs.",
+        "Family Commitment: Open communication and active participation from the family in the admission process and ongoing care of the resident."
+    ],
+    "mensaje": "If you meet the requirements, contact us"
   },
 
   "casosExito": {
@@ -154,21 +166,60 @@
     ]
   },
 
+  "paginaRequisitosSocio": {
+    "titulo": "Are you interested in becoming a member?",
+    "subtitulo": "To become a member, you must provide:",
+    "requisitos": [
+      {
+        "descripcion": "Full name."
+      },
+      {
+        "descripcion": "Identification card."
+      },
+      {
+        "descripcion": "Nationality."
+      },
+      {
+        "descripcion": "Home address."
+      },
+      {
+        "descripcion": "Phone number."
+      }
+    ],
+    "mensaje": "If you meet the requirements, contact us"
+  },
+
   "formulario": {
     "botones": ["Submit", "Cancel"]
   },
 
+  "contactos": {
+    "Contactos": {
+        "titulo": "Contacts",
+        "items": [
+          "+506 2685 5809",
+          "+506 8972 9912",
+          "hogardeancianossanblas@gmail.com"
+        ]
+      },
+    "Horario": {
+        "titulo": "Schedule",
+        "items": [
+          "Monday to Friday", 
+          "8am to 3pm"
+        ]
+      },
+    "Direccion": {
+        "titulo": "Address",
+        "items": [
+          "100m north and 150m west of the Cruz Roja de Nicoya",
+          "Nicoya, Guanacaste, Costa Rica"
+        ]
+      }
+  },
+
   "footer": {
-    "Contactos": [
-      "+506 2685 5809",
-      "+506 8972 9912",
-      "hogardeancianossanblas@gmail.com"
-    ],
-    "Horario": ["From Monday to Friday", "8am to 3pm"],
-    "Direccion": [
-      "100m north, 150m west of the Cruz Roja",
-      "Nicoya, Guanacaste, Costa Rica"
-    ]
+    "mensaje": "Visit us!"
   },
 
   "header": {
@@ -215,6 +266,7 @@
       ]
     }
   },
+  
   "titulosSecciones": {
     "Servicios": "Our services",
     "Galeria": {
@@ -257,8 +309,6 @@
     {
       "descripcion": "COVID-19 vaccines."
     }
-
    ]
  }
-
 }

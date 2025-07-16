@@ -7,7 +7,7 @@ const FooterMapa = () => {
 
     useEffect(() => {
         if (typeof window !== "undefined" && mapRef.current && mapRef.current.childNodes.length === 0) {
-            const map = L.map(mapRef.current).setView([10.1480343, -85.4567349], 16);
+            const map = L.map(mapRef.current).setView([10.1488373, -85.4550823], 16);
             L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
