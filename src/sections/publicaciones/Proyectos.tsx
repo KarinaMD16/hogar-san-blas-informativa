@@ -52,7 +52,7 @@ const Proyectos = () => {
             disabled={page === 1}
             className="hover:cursor-pointer disabled:cursor-not-allowed"
           >
-            <MdOutlineFirstPage />
+            <MdOutlineFirstPage size={20}/>
           </button>
           <button>Página {page} de {totalPages}</button>
           <button
@@ -60,7 +60,7 @@ const Proyectos = () => {
             disabled={isLastPage}
             className="hover:cursor-pointer disabled:cursor-not-allowed"
           >
-            <MdOutlineLastPage />
+            <MdOutlineLastPage size={20}/>
           </button>
         </div>
     )}
