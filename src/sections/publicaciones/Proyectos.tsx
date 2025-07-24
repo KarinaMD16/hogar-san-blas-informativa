@@ -6,11 +6,17 @@ import { useContext, useState } from "react";
 import IdiomaContext from "../../context/language/idiomaContext";
 
 const Proyectos = () => {
-  const {contentJson} = useContext(IdiomaContext)
+  const { contentJson } = useContext(IdiomaContext);
   const [page, setPage] = useState(1);
   const limit = 6;
 
-  const { proyectos, total, isPlaceholderData, loadingProyectos, fetchingProyectos } = useGetProyectos(page, limit);
+  const {
+    proyectos,
+    total,
+    isPlaceholderData,
+    loadingProyectos,
+    fetchingProyectos,
+  } = useGetProyectos(page, limit);
 
   const totalPages = Math.ceil(total / limit);
   const isLastPage = page >= totalPages;
@@ -23,15 +29,21 @@ const Proyectos = () => {
     }
   };
 
-  if (loadingProyectos || fetchingProyectos) return <div className="mt-10 w-screen h-screen">
-    <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
-        {contentJson.titulosSecciones.publicaciones.donaciones}
-      </h1>
-    <span className="loading loading-spinner text-accent mt-4"></span>
-  </div>
+  if (loadingProyectos || fetchingProyectos)
+    return (
+      <div className="mt-10 w-screen h-screen">
+        <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
+          {contentJson.titulosSecciones.publicaciones.donaciones}
+        </h1>
+        <span className="loading loading-spinner text-accent mt-4"></span>
+      </div>
+    );
 
   return (
-    <section id="proyectos" className="lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6">
+    <section
+      id="proyectos"
+      className="lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6"
+    >
       <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
         {contentJson.titulosSecciones.publicaciones.proyectos}
       </h1>
@@ -52,18 +64,20 @@ const Proyectos = () => {
             disabled={page === 1}
             className="hover:cursor-pointer disabled:cursor-not-allowed"
           >
-            <MdOutlineFirstPage />
+            <MdOutlineFirstPage size={20} />
           </button>
-          <button>Página {page} de {totalPages}</button>
+          <button>
+            Página {page} de {totalPages}
+          </button>
           <button
             onClick={nextPage}
             disabled={isLastPage}
             className="hover:cursor-pointer disabled:cursor-not-allowed"
           >
-            <MdOutlineLastPage />
+            <MdOutlineLastPage size={20} />
           </button>
         </div>
-    )}
+      )}
     </section>
   );
 };

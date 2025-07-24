@@ -12,25 +12,31 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const {contentJson } = useContext(IdiomaContext);
-  const navItems = (Object.values(contentJson.header) as NavItem[]).map((item: NavItem) => ({
-    label: item.titulo,
-    links: item.opciones.map((op: Opcion) => ({
-      texto: op.texto,
-      ruta: op.ruta,
-    })),
-  }));
-if (!contentJson?.header) {
-  return (
-    <header className="fixed top-5 left-0 right-0 z-50 flex justify-center items-center w-full px-6 bg-transparent">
-      <span className="text-white">Cargando menú...</span>
-    </header>
+  const { contentJson } = useContext(IdiomaContext);
+  const navItems = (Object.values(contentJson.header) as NavItem[]).map(
+    (item: NavItem) => ({
+      label: item.titulo,
+      links: item.opciones.map((op: Opcion) => ({
+        texto: op.texto,
+        ruta: op.ruta,
+      })),
+    })
   );
-}
+  if (!contentJson?.header) {
+    return (
+      <header className="fixed top-5 left-0 right-0 z-50 flex justify-center items-center w-full px-6 bg-transparent">
+        <span className="text-white">Cargando menú...</span>
+      </header>
+    );
+  }
   return (
     <header className="fixed top-5 left-0 right-0 z-50 flex justify-between items-center w-full px-6 bg-transparent">
       <Link to="/" className="flex-shrink-0">
-        <img src="/logo_hogar_san_blas.png" alt="Logo" className="w-16 h-16 lg:ml-8" />
+        <img
+          src="/logo_hogar_san_blas.png"
+          alt="Logo"
+          className="w-16 h-16 lg:ml-8"
+        />
       </Link>
       <div className="flex-1 flex justify-end">
         <div className="bg-white text-black md:w-full max-w-3xl lg:max-w-4xl xl:max-w-5xl rounded-full shadow-lg px-4 py-4 md:py-2.5 font-poppins font-semibold">
@@ -55,7 +61,6 @@ if (!contentJson?.header) {
               aria-label="Abrir menú móvil"
               aria-expanded={mobileMenuOpen}
             />
-
           </nav>
           <AnimatePresence>
             {mobileMenuOpen && (
@@ -69,5 +74,5 @@ if (!contentJson?.header) {
       </div>
     </header>
   );
-}
+};
 export default Navbar;
