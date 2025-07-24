@@ -7,5 +7,11 @@ export interface BotonGaleriaProps {
   toggleCategoria: () => void;
 }
 export interface CardGaleriaProps {
-  imagenes: Galeria
+  imagenes: Galeria,
+  toggleModal: (imagen: Galeria) => void;
 }
+export interface ModalImagenGaleriaProps {
+  imagen: { imagenUrl: string; descripcion?: string } | null;
+  open: boolean;
+  onClose: () => void;
+};
