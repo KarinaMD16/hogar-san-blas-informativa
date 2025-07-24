@@ -266,7 +266,6 @@
       ]
     }
   },
-  
   "titulosSecciones": {
     "Servicios": "Our services",
     "Galeria": {
@@ -280,35 +279,130 @@
       "donaciones": "You can donate"
     }
   },
-
-"paginaRequisitosResidencia": {
-  "titulo": "Are you interested in applying for residency?",
-  "subtitulo": "To be a resident, you must meet the following:",
-  "requisitos": [
-    {
-      "descripcion": "Letter of request signed by the applicant expressing the desire to be institutionalized, stating whether they have the use of their mental faculties."
+  "paginaRequisitosVoluntariado": {
+    "tituloGeneral": "¿Estás interesado en ser voluntario?",
+    "cumplimientoHoras": {
+      "titulo": "Podés realizar tus horas de servicio comunitario con nosotros",
+      "requisitos": [
+        {
+          "descripcion": "Hoja de presentación."
+        },
+        {
+          "descripcion": "Foto tamaño pasaporte."
+        },
+        {
+          "descripcion": "Reglamento de voluntariado."
+        },
+        {
+          "descripcion": "Hoja de delincuencia."
+        },
+        {
+          "descripcion": "Copia de la cédula."
+        },
+        {
+          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
+        }
+      ]
     },
-    {
-      "descripcion": "Medical report."
-    },
-    {
-      "descripcion": "Pension certification issued by CCSS."
-    },
-    {
-      "descripcion": "Certification of movable and immovable property."
-    },
-    {
-      "descripcion": "Certification of SINERUBE, in IMAS."
-    },
-    {
-      "descripcion": "Social work study."
-    },
-    {
-      "descripcion": "Blood test."
-    },
-    {
-      "descripcion": "COVID-19 vaccines."
+    "voluntarioPermanente": {
+      "titulo": "Podés apoyarnos haciendo lo que mejor sabes hacer",
+      "requisitos": [
+        {
+          "descripcion": "Hoja de presentación."
+        },
+        {
+          "descripcion": "Foto tamaño pasaporte."
+        },
+        {
+          "descripcion": "Reglamento de voluntariado."
+        },
+        {
+          "descripcion": "Hoja de delincuencia."
+        },
+        {
+          "descripcion": "Copia de la cédula."
+        },
+        {
+          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
+        }
+      ]
     }
-   ]
- }
+  },
+  
+  "formularioVoluntariado": {
+    "campos": [
+      {
+        "nombre": "Fecha",
+        "tipo": "fecha"
+      },
+      {
+        "nombre": "Nombre",
+        "tipo": "texto"
+      },
+      {
+        "nombre": "Cédula",
+        "tipo": "texto"
+      },
+      {
+        "nombre": "Sexo",
+        "tipo": "opcion",
+        "opciones": ["M", "F"]
+      },
+      {
+        "nombre": "Ocupación",
+        "tipo": "texto"
+      },
+      {
+        "nombre": "Teléfono",
+        "tipo": "texto"
+      },
+      {
+        "nombre": "Correo electrónico",
+        "tipo": "email"
+      },
+      {
+        "nombre": "Dirección exacta",
+        "tipo": "texto"
+      },
+      {
+        "nombre": "Contacto de emergencia",
+        "tipo": "grupo",
+        "campos": [
+          {
+            "nombre": "Nombre",
+            "tipo": "texto"
+          },
+          {
+            "nombre": "Teléfono",
+            "tipo": "texto"
+          }
+        ]
+      },
+      {
+        "nombre": "Tipo de colaboración que desea brindar",
+        "tipo": "texto"
+      },
+      {
+        "nombre": "Experiencia laboral o voluntaria relacionada con adulto mayor",
+        "tipo": "texto"
+      },
+      {
+        "nombre": "Horario establecido para asistir a la institución",
+        "tipo": "horario",
+        "dias": [
+          "Lunes",
+          "Martes",
+          "Miércoles",
+          "Jueves",
+          "Viernes",
+          "Sábado",
+          "Domingo"
+        ]
+      },
+      {
+        "nombre": "Observaciones",
+        "tipo": "texto"
+      }
+    ]
+  }
 }
