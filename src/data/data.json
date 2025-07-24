@@ -276,52 +276,29 @@
       "donaciones": "Solicitamos donaciones"
     }
   },
+  
   "paginaRequisitosVoluntariado": {
-    "tituloGeneral": "¿Estás interesado en ser voluntario?",
+    "titulo": "¿Estás interesado en ser voluntario?",
     "cumplimientoHoras": {
-      "titulo": "Podés realizar tus horas de servicio comunitario con nosotros",
+      "subtitulo": ["Podés realizar tus horas de servicio comunitario con nosotros", "Requisitos:"],
       "requisitos": [
-        {
-          "descripcion": "Hoja de presentación."
-        },
-        {
-          "descripcion": "Foto tamaño pasaporte."
-        },
-        {
-          "descripcion": "Reglamento de voluntariado."
-        },
-        {
-          "descripcion": "Hoja de delincuencia."
-        },
-        {
-          "descripcion": "Copia de la cédula."
-        },
-        {
-          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
-        }
+        "Hoja de presentación.",
+        "Foto tamaño pasaporte.",
+        "Reglamento de voluntariado.",
+        "Hoja de delincuencia.",
+        "Copia de la cédula.",
+        "Llenar boleta de asistencia cada vez que llega al hogar."
       ]
     },
     "voluntarioPermanente": {
-      "titulo": "Podés apoyarnos haciendo lo que mejor sabes hacer",
+      "subtitulo": ["Podés apoyarnos haciendo lo que mejor sabes hacer", "Requisitos:"],
       "requisitos": [
-        {
-          "descripcion": "Hoja de presentación."
-        },
-        {
-          "descripcion": "Foto tamaño pasaporte."
-        },
-        {
-          "descripcion": "Reglamento de voluntariado."
-        },
-        {
-          "descripcion": "Hoja de delincuencia."
-        },
-        {
-          "descripcion": "Copia de la cédula."
-        },
-        {
-          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
-        }
+        "Hoja de presentación.",
+        "Foto tamaño pasaporte.",
+        "Reglamento de voluntariado.",
+        "Hoja de delincuencia.",
+        "Copia de la cédula.",
+        "Llenar boleta de asistencia cada vez que llega al hogar."
       ]
     }
   },

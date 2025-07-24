@@ -9,17 +9,17 @@ const RequisitosVoluntario = () => {
         <section className="w-full h-full bg-white">
             <div className="mx-0 sm:mx-8 md:mx-16 lg:mx-30 xl:mx-40 mt-16 sm:mt-20 md:mt-24 flex flex-col gap-16">
                 <h1 className="text-3xl lg:text-4xl font-poppins text-amaranthPink font-bold text-left">
-                    {contentJson.paginaRequisitosResidencia.titulo}
+                    {contentJson.paginaRequisitosVoluntariado.titulo}
                 </h1>
                 <SectionRequisitos
-                    subtituloPrincipal={contentJson.paginaRequisitosResidencia.subtitulo[0]}
-                    subtituloSecundario={contentJson.paginaRequisitosResidencia.subtitulo[1]}
-                    requisitos={contentJson.paginaRequisitosResidencia.requisitos}
+                    subtituloPrincipal={contentJson.paginaRequisitosVoluntariado.cumplimientoHoras.subtitulo[0]}
+                    subtituloSecundario={contentJson.paginaRequisitosVoluntariado.cumplimientoHoras.subtitulo[1]}
+                    requisitos={contentJson.paginaRequisitosVoluntariado.cumplimientoHoras.requisitos}
                 />
                 <SectionRequisitos
-                    subtituloPrincipal={contentJson.paginaRequisitosResidencia.subtitulo[0]}
-                    subtituloSecundario={contentJson.paginaRequisitosResidencia.subtitulo[1]}
-                    requisitos={contentJson.paginaRequisitosResidencia.requisitos}
+                    subtituloPrincipal={contentJson.paginaRequisitosVoluntariado.voluntarioPermanente.subtitulo[0]}
+                    subtituloSecundario={contentJson.paginaRequisitosVoluntariado.voluntarioPermanente.subtitulo[1]}
+                    requisitos={contentJson.paginaRequisitosVoluntariado.voluntarioPermanente.requisitos}
                 />
                 <h1 className="text-3xl lg:text-4xl font-poppins text-amaranthPink font-bold text-left">
                     Formulario de Voluntariado
