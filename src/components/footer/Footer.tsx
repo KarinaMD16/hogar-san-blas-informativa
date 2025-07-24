@@ -1,8 +1,8 @@
 import FooterMapa from "./FooterMapa";
 import IdiomaContext from "../../context/language/idiomaContext";
 import { useContext } from "react";
-import FooterRedes from "./FooterRedes";
 import Contactos from "../contactos/Contactos";
+import FooterRedes from "./footerRedes";
 
 const Footer = () => {
   const { contentJson } = useContext(IdiomaContext);

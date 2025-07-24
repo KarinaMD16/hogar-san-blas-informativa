@@ -1,7 +1,11 @@
 import { IoMdClose } from "react-icons/io";
 import type { ModalImagenGaleriaProps } from "../types/galeria/galeria";
 
-export default function ModalImagenGaleria({ imagen, open, onClose }: ModalImagenGaleriaProps) {
+const ModalImagenGaleria = ({
+  imagen,
+  open,
+  onClose,
+}: ModalImagenGaleriaProps) => {
   if (!open || !imagen) return null;
 
   return (
@@ -27,4 +31,5 @@ export default function ModalImagenGaleria({ imagen, open, onClose }: ModalImage
       </div>
     </div>
   );
-}
+};
+export default ModalImagenGaleria;

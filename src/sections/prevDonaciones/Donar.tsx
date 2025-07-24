@@ -7,9 +7,8 @@ import { useGetDonaciones } from "../../hooks/publicaciones/publicaciones";
 import type { Publicacion } from "../../models/publicaciones/publicaciones";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
-
 const Donar = () => {
-  const {contentJson } = useContext(IdiomaContext);
+  const { contentJson } = useContext(IdiomaContext);
   const { donaciones } = useGetDonaciones(1, 5);
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -54,14 +53,22 @@ const Donar = () => {
           {contentJson.donaciones.titulo}
         </h1>
         <Divider />
-        <p className="text-black font-opensans text-md py-3">{contentJson.donaciones.descripcion}</p>
+        <p className="text-black font-opensans text-md py-3">
+          {contentJson.donaciones.descripcion}
+        </p>
         <div className="flex gap-4 flex-wrap justify-center">
-          <Boton children={contentJson.donaciones.botones.botonRequisitos} where={"/formularios/donacion"}/>
-          <Boton children={contentJson.donaciones.botones.botonVerOtras} where={"/publicaciones#solicitudes-donaciones"}/>
+          <Boton
+            children={contentJson.donaciones.botones.botonRequisitos}
+            where={"/formularios/donacion"}
+          />
+          <Boton
+            children={contentJson.donaciones.botones.botonVerOtras}
+            where={"/publicaciones#solicitudes-donaciones"}
+          />
         </div>
       </div>
 
-       <div className="relative lg:w-2xl w-65">
+      <div className="relative lg:w-2xl w-65">
         {canScrollLeft && (
           <button
             onClick={() => scroll("left")}
@@ -90,7 +97,7 @@ const Donar = () => {
         )}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Donar
+export default Donar;
