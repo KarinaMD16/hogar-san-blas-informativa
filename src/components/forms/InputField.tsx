@@ -1,19 +1,21 @@
-import type { InputFieldProps } from "../../types/forms/formularios";
+import * as React from "react"
+import { cn } from "../../lib/utils"
 
-const inputClass = "bg-white border-2 border-ecruYellow rounded-full p-2 w-full";
 
-const InputField = ({ label, name, register, errors, type = "text", placeholder, validation }: InputFieldProps) => (
-  <div>
-    <label htmlFor={name} className="block text-left mb-1">{label}</label>
+function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+  return (
     <input
-      id={name}
       type={type}
-      {...register(name, validation)}
-      placeholder={placeholder}
-      className={inputClass}
+      data-slot="input"
+      className={cn(
+        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+        className
+      )}
+      {...props}
     />
-    {errors[name] && <span className="text-red-500 text-sm">{String(errors[name].message)}</span>}
-  </div>
-);
+  )
+}
 
-export default InputField;
+export { Input }
