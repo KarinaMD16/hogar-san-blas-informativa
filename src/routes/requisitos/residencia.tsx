@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Navbar from '../../components/header/Navbar'
-import Footer from '../../components/footer/Footer'
+import RequisitosResidencia from '../../sections/requisitos/RequisitosResidencia'
 
 // requisitos de residencia
 export const Route = createFileRoute('/requisitos/residencia')({
@@ -10,7 +10,6 @@ export const Route = createFileRoute('/requisitos/residencia')({
 function RouteComponent() {
   return <>
       <Navbar />
-      Hello "/requisitos/residencia"!
-      <Footer />
+      <RequisitosResidencia />
   </>
 }

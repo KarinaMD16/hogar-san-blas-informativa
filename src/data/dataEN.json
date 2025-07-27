@@ -1,37 +1,56 @@
 {
-    "servicios": [
+  "servicios": [
     {
       "id": 1,
       "titulo": "Social Work",
       "descripcion": "We stand beside people whose lives have been marked by abandonment, poverty and loneliness, offering ethical, humane and dignified support to older people. Our work goes beyong case managament: we build bonds, listen with respect and work everyday to ensure that growing old does not mean being forgotten",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
       "imagenes": [
-        "https://periodicomensaje.com/images/1.ADULTO-MAYOR.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://casaisrael.org/wp-content/uploads/2018/06/C%C3%B3mo-es-la-vida-en-una-residencia-geri%C3%A1trica.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
+        "https://periodicomensaje.com/images/1.ADULTO-MAYOR.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://casaisrael.org/wp-content/uploads/2018/06/C%C3%B3mo-es-la-vida-en-una-residencia-geri%C3%A1trica.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+      ]
     },
     {
       "id": 2,
       "titulo": "Physical Therapy",
       "descripcion": "We improve mobility and autonomy in older adults through personalized therapies. compassionate care, and the support of a team specialized in geratrics. Our goal is to improve their quality of life with dignity and respect",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-      "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
+      "imagenes": [
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+      ]
     },
-     {
+    {
       "id": 3,
       "titulo": "Nutrition",
       "descripcion": "We offer personalized nutritional care, food education, and close monitoring of food handling to ensure the well-being and nutriotional safety of our residents. Our commitment goes beyond meals - we nurture health, dignity, and quality of life through every detail of nutrition",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-      "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
+      "imagenes": [
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+      ]
     },
-     {
+    {
       "id": 4,
       "titulo": "Nursing",
       "descripcion": "We provide comprehensive clinical care — from assessments, treatment administration, and critical care to emotional support, assistance with daily living, and leadership in medical procedures — always with commitment and human warmth.",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-      "imagenes": ["https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg", "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"]
+      "imagenes": [
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+      ]
     }
   ],
 
- "hero": {
+  "hero": {
     "titulo": "Hogar San Blas",
     "descripcion": "We are dedicated to the wellbeing of our seniors with love and compromise. We take pride in offering a safe, vibrant environment for our residents, fostering respect and quality of life within the community.",
     "imagen": "https://i.ibb.co/C3wqMQDD/Imagen-de-Whats-App-2025-07-02-a-las-14-30-20-31935e6d.jpg",
@@ -51,17 +70,14 @@
     "mision": {
       "titulo": "Mission",
       "descripcion": "To provide quality care to the residents of the Hogar San Blas in Nicoya and to the users of the Care Network of the Nicoya Association for Elderly Care, with efficiency and safety — ensuring their physical, mental, social, spiritual, and nutritional well-being, without discrimination based on color, race, religion, or origin."
-
     },
     "vision": {
       "titulo": "Vision",
       "descripcion": "To establish efficient professional services at the Hogar San Blas that provide quality of life to its residents in an environment of peace, tranquility, and human warmth."
-
     },
     "objetivos": {
       "titulo": "Goals",
       "descripcion": "By December 2022, secure the necessary resources to meet basic and specific needs, as well as improvements to the infrastructure of the Hogar San Blas. Additionally, ensure quality in all services provided to older adults living in the residence and those in the Home Care Network."
-
     },
     "valores": {
       "titulo": "Values",
@@ -69,36 +85,63 @@
     }
   },
 
-  "reseñaHistorica": {
-    "descripcion": "The Hogar San Blas of Nicoya is dedicated to the care of older adults and is located in the central canton of Nicoya, Guanacaste. It was born out of the need to care for elderly individuals who, abandoned and in need, were forced to beg on the streets. A generous group of community members, moved by compassion, began voluntary efforts to help. The Nursing Home officially opened in September 1983, initially operating as a Day Center. Over time, it evolved into a long-term care home, gradually increasing the number of residents. Today, it cares for between 36 and 40 older adults, both men and women, ranging from 65 to 102 years of age. Some residents have even been older, often lacking resources, suffering from illnesses, or in terminal stages of life. The home continues to operate thanks to community volunteers, whose efforts led to the construction of the first pavilion and corridor between 1983 and 1991. Later, with support from INA, JPS, C.T.A.M.S, IMAS, the Municipality, and the people of Nicoya, the full facility was completed. Today, the hogar San Blas features a fully equipped kitchen, dining room, chapel, 24 rooms distributed in three pavilions, an activity hall, a physical therapy room, a nursing and medical care department, offices for social services, nutrition, administration, an outdoor recreation and events area, large green spaces, and even a farm with animals used as part of therapy for older adults. The Home still benefits from a strong volunteer network and receives financial support from institutions such as the Social Protection Board (Junta de Protección Social), CONAPAM, FODESAF, as well as from its own fundraising efforts and community support. In 2011, the Home implemented the Home Care Network Program (Red de Cuido), which serves older adults living in extreme poverty in their own homes. Initially supporting 50 beneficiaries, the program now serves 125 older adults with the help of resources provided by CONAPAM."
-
-  },
+  "paginaReseñaHistorica": [
+    {
+      "titulo": "Founded in 1983",
+      "descripcion": [
+        "Hogar San Blas de Nicoya, dedicated to the care of elderly individuals, is located in the central canton of Nicoya, Guanacaste. It was established out of the need to support elderly people who, in a state of abandonment and need, were forced to beg on the streets. A group of generous community members, united by a desire to help, voluntarily began the process of providing assistance.",
+        "The nursing home officially opened in September 1983, initially operating as a day center. Over time, it evolved into a long-term care facility, increasing the number of residents served. Currently, the home accommodates between 36 and 40 elderly adults—men and women aged between 65 and 102. At various times, the home has cared for individuals even older, often lacking resources, facing illness, or in terminal stages."
+      ],
+      "imagen": "https://scontent.fsyq3-1.fna.fbcdn.net/v/t39.30808-6/506092058_1319564893510373_8913071646491314006_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Cow5qZ185kMQ7kNvwHlGOVZ&_nc_oc=AdlXYIcOhxFlbbKM6e23Uf_R2lIhfFArsr6-88UvHj6tsOcv6FJZOE-3JOyJ8dEX-uU&_nc_zt=23&_nc_ht=scontent.fsyq3-1.fna&_nc_gid=BJ-1WwxQp8cDoFRuHKLxPA&oh=00_AfTxlQ_T6WfLxBQVHvJ7K-qYlCJMWrNP76Y6cxMPTbSHmQ&oe=68749DC4"
+    },
+    {
+      "titulo": "Over 40 Years of Serving Our Elderly",
+      "descripcion": [
+        "Hogar San Blas de Nicoya has a rich history spanning decades and has been a pillar of support for the Guanacaste community. Founded with the mission to provide care and attention to elderly adults, it has become a beacon of hope and compassionate service in the region. Since its inception, the facility has evolved to meet the changing needs of its residents, offering a homelike environment that promotes dignity and respect. Today, it continues its commitment to excellence in geriatric care, recognized for its unwavering dedication to improving the quality of life for those who call Hogar San Blas their home.",
+      "The home continues to operate thanks to community volunteers, whose contributions helped build the first wing and hallway between 1983 and 1991. Later, the facility was completed with support from INA, JPS, CTAMS, IMAS, the Municipality, and the people of Nicoya. Today, the nursing home features a fully equipped kitchen, dining room, chapel, 24 rooms in three wings, an activity hall, physical therapy room, nursing and wound care department, offices for social services, nutrition, administration, an outdoor recreation and event area, large green spaces, and a farm with animals used as therapy for the elderly. A volunteer program is still active, and financial support is also provided by institutions such as the Social Protection Board (Junta de Protección Social), CONAPAM, FODESAF, as well as the Board of Directors' own fundraising efforts and ongoing community support. In 2011, the Home launched the Home-Based Care Network program (Red de Cuido), which serves elderly individuals living in extreme poverty in their own homes. Initially supporting 50 beneficiaries, the program now assists 125 elderly adults through CONAPAM funding."
+      ],
+      "imagen": "https://scontent.fsyq3-1.fna.fbcdn.net/v/t39.30808-6/496928711_1294235876043275_1654639420676425125_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nsOT72CYHqMQ7kNvwFktjLq&_nc_oc=AdlTzwxpX1yDdmAPXksvJDDqnZEe31X5Vj8aEr4bZ5LfeIVKuWyHjxQ8lzrso8mVe4M&_nc_zt=23&_nc_ht=scontent.fsyq3-1.fna&_nc_gid=BVOoP1fCLlo2ozQbfpTXcw&oh=00_AfRs2tnWYP4yBO9qbm-NpPlfILcOYlG62OnBTNrIUBY26Q&oe=6875D309"
+    }
+  ],
 
   "solicitudResidencia": {
-  "titulo": "Interested in Residency?",
-  "descripcion": "For more details about our admission requirements and process, please contact us through any of our communication channels. We're here to guide you through this important step toward improving your loved one's quality of life.",
-  "imagen": "https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/489926099_1315181850615344_1286229606703186756_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rDyYREGyUYcQ7kNvwESJF2z&_nc_oc=AdkEhlqpOkeH2xS5fZiCCCl_Z-eWgdOqAgF7S2LvMbkTMeVe6R_aMbFrpax6pxvsqJg&_nc_zt=23&_nc_ht=scontent.fsyq2-1.fna&_nc_gid=-vKWzI362HSgCLWJsHX1VQ&oh=00_AfRZwcJcRlSk50DmxDpvVp8X6GQ9x8V-jU7FVZE1YbY5GA&oe=686E243E",
-  "botonRequisitos": "View requirements"
+    "titulo": "Interested in Residency?",
+    "descripcion": "For more details about our admission requirements and process, please contact us through any of our communication channels. We're here to guide you through this important step toward improving your loved one's quality of life.",
+    "imagen": "https://scontent.fsyq2-1.fna.fbcdn.net/v/t39.30808-6/489926099_1315181850615344_1286229606703186756_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rDyYREGyUYcQ7kNvwESJF2z&_nc_oc=AdkEhlqpOkeH2xS5fZiCCCl_Z-eWgdOqAgF7S2LvMbkTMeVe6R_aMbFrpax6pxvsqJg&_nc_zt=23&_nc_ht=scontent.fsyq2-1.fna&_nc_gid=-vKWzI362HSgCLWJsHX1VQ&oh=00_AfRZwcJcRlSk50DmxDpvVp8X6GQ9x8V-jU7FVZE1YbY5GA&oe=686E243E",
+    "botonRequisitos": "View requirements"
+  },
+
+  "paginaRequisitosResidencia": {
+    "titulo": "Are you interested in applying for residency?",
+    "subtitulo": ["To become a resident, you must meet the following:", "Requirements:"],
+    "requisitos": [
+        "Age and Health Condition: Elderly adults who require assistance and specialized care.",
+        "Documentation: Copy of the resident's ID card or passport.",
+        "Medical Evaluation: Recent medical evaluation to ensure appropriate care based on the resident's needs.",
+        "Family Commitment: Open communication and active participation from the family in the admission process and ongoing care of the resident."
+    ],
+    "mensaje": "If you meet the requirements, contact us"
   },
 
   "casosExito": {
-  "titulo": "Success stories",
-  "subtitulo": "Centenarians",
-  "descripcion": "Discover inspiring success stories, including the lives of centenarians, that reflect our commitment to wellness and longevity at Hogar San Blas de Nicoya.",
-  "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-  "botonVerMas": "Read more"
+    "titulo": "Success stories",
+    "subtitulo": "Centenarians",
+    "descripcion": "Discover inspiring success stories, including the lives of centenarians, that reflect our commitment to wellness and longevity at Hogar San Blas de Nicoya.",
+    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+    "botonVerMas": "Read more"
   },
 
   "donaciones": {
-  "titulo": "Want to collaborate?",
-  "descripcion": "Your support makes a difference! Here's all the information an requirements to contribute with us",
-   "botones": {
-    "botonDonar": "Donate",
-    "botonRequisitos": "View requirements"
-  }
+    "titulo": "Want to collaborate?",
+    "descripcion": "Your support makes a difference! Here's all the information an requirements to contribute with us",
+    "botones": {
+      "botonDonar": "Donate",
+      "botonRequisitos": "View requirements",
+      "botonVerOtras": "More petitions"
+    }
   },
 
- "historia": {
+  "historia": {
     "titulo": "Since 1983",
     "subtitulo": "Serving our senior community",
     "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
@@ -120,49 +163,95 @@
     ]
   },
 
+  "paginaRequisitosSocio": {
+    "titulo": "Are you interested in becoming a member?",
+    "subtitulo": "To become a member, you must provide:",
+    "requisitos": [
+      {
+        "descripcion": "Full name."
+      },
+      {
+        "descripcion": "Identification card."
+      },
+      {
+        "descripcion": "Nationality."
+      },
+      {
+        "descripcion": "Home address."
+      },
+      {
+        "descripcion": "Phone number."
+      }
+    ],
+    "mensaje": "If you meet the requirements, contact us"
+  },
+
   "formulario": {
     "botones": ["Submit", "Cancel"]
   },
 
+  "contactos": {
+    "Contactos": {
+        "titulo": "Contacts",
+        "items": [
+          "+506 2685 5809",
+          "+506 8972 9912",
+          "hogardeancianossanblas@gmail.com"
+        ]
+      },
+    "Horario": {
+        "titulo": "Schedule",
+        "items": [ "Monday to Friday", "8am to 3pm" ]
+      },
+    "Direccion": {
+        "titulo": "Address",
+        "items": [
+          "100m north and 150m west of the Cruz Roja de Nicoya",
+          "Nicoya, Guanacaste, Costa Rica"
+        ]
+      }
+  },
+
   "footer": {
-    "Contactos": ["+506 2685 5809", "+506 8972 9912", "hogardeancianossanblas@gmail.com"],
-    "Horario": ["From Monday to Friday", "8am to 3pm"],
-    "Direccion": ["100m north, 150m west of the Cruz Roja", "Nicoya, Guanacaste, Costa Rica"]
+    "mensaje": "Visit us!"
   },
 
   "header": {
-    "sobreNosotros":{
+    "sobreNosotros": {
       "titulo": "About Us",
       "opciones": [
         { "texto": "Gallery", "ruta": "/galeria/" },
         { "texto": "Casos de éxito", "ruta": "/casosdeexito/" },
         { "texto": "Historical overview", "ruta": "/historia/" }
       ]
-      },
-    "residencia":{
+    },
+    "residencia": {
       "titulo": "Residency",
       "opciones": [
         { "texto": "Residency requirements", "ruta": "/requisitos/residencia" },
         { "texto": "Services", "ruta": "#seccion-servicios" }
       ]
-      },
-    "apoyanos":{
+    },
+    "apoyanos": {
       "titulo": "Support us",
       "opciones": [
         { "texto": "Donation form", "ruta": "/formularios/donacion" },
         { "texto": "Volunteer form", "ruta": "/formularios/voluntariado" },
         { "texto": "Partner requirements", "ruta": "/requisitos/asociarse" }
       ]
-      },
-    "anuncios":{
+    },
+    "anuncios": {
       "titulo": "Notices",
       "opciones": [
-        { "texto": "Donation requests", "ruta": "/publicaciones#solicitudes-donaciones" },
+        {
+          "texto": "Donation requests",
+          "ruta": "/publicaciones#solicitudes-donaciones"
+        },
         { "texto": "Events", "ruta": "/publicaciones#eventos" },
-        { "texto": "Proyects", "ruta": "/publicaciones#proyectos" } 
+        { "texto": "Proyects", "ruta": "/publicaciones#proyectos" }
       ]
-      },
-    "contacto":{
+    },
+    "contacto": {
       "titulo": "Contacts",
       "opciones": [
         { "texto": "WhatsApp", "ruta": "https://wa.me/50687000000" },
@@ -171,7 +260,8 @@
       ]
     }
   },
-  "titulosSecciones":{
+
+  "titulosSecciones": {
     "Servicios": "Our services",
     "Galeria": {
       "titulo": "Gallery",
@@ -182,6 +272,92 @@
       "eventos": "Our events",
       "proyectos": "Our proyects",
       "donaciones": "You can donate"
+    }
+  },
+
+  "paginaRequisitosVoluntariado": {
+    "titulo": "Are you interested in becoming a volunteer?",
+    "cumplimientoHoras": {
+      "subtitulo": [
+        "You can complete your community service hours with us",
+        "Requirements:"
+      ],
+      "requisitos": [
+        "Presentation letter.",
+        "Passport-sized photo.",
+        "Volunteer regulations.",
+        "Criminal record certificate.",
+        "Copy of ID card.",
+        "Fill out the attendance form each time you arrive at the home."
+      ]
+    },
+    "voluntarioPermanente": {
+      "subtitulo": [
+        "You can complete your community service hours with us",
+        "Requirements:"
+      ],
+      "requisitos": [
+        "Presentation letter.",
+        "Passport-sized photo.",
+        "Volunteer regulations.",
+        "Criminal record certificate.",
+        "Copy of ID card.",
+        "Fill out the attendance form each time you arrive at the home."
+      ]
+    }
+  },
+
+  "formularioVoluntariado": {
+    "nombre": "Name",
+    "apellido1": "Middle name",
+    "apellido2": "Last name",
+    "cedula": "ID Number",
+    "sexo": {
+      "label": "Gender",
+      "opciones": ["Select...", "Female", "Male", "Other"]
+    },
+    "ocupacion": "Occupation",
+    "telefono": "Phone",
+    "correo": {
+      "label": "Email",
+      "placeholder": "name@gmail.com"
+    },
+    "direccion": "Exact Address",
+    "contactoEmergencia": {
+      "label": "Emergency Contact",
+      "nombre": {
+        "label": "Name"
+      },
+      "telefono": {
+        "label": "Phone"
+      }
+    },
+    "colaboracion": "Type of collaboration you would like to offer",
+    "experiencia": "Work or volunteer experience related to elderly care",
+    "horas": [
+      "This volunteering is for fulfilling required hours",
+      "Number of hours to complete"
+    ],
+    "horario": {
+      "label": "Preferred schedule to attend the institution",
+      "placeholder": "E.g. 9 am - 11 am",
+      "dias": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "observaciones": "Observations",
+    "delincuencia": {
+      "label": "Criminal record certificate (PDF)",
+      "preview": [
+        "Selected file:",
+        "View criminal record (PDF)"
+      ]
     }
   }
 }

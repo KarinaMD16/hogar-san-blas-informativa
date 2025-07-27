@@ -6,8 +6,10 @@ import IdiomaContext from "../../context/language/idiomaContext";
 
 const Servicios = () => {
   const { contentJson } = useContext(IdiomaContext);
-  
-  const [selectedServicio, setSelectedServicio] =  useState<Servicio>(contentJson.servicios[0]); 
+
+  const [selectedServicio, setSelectedServicio] = useState<Servicio>(
+    contentJson.servicios[0]
+  );
 
   const showMore = (id: number) => {
     setSelectedServicio(
@@ -16,7 +18,7 @@ const Servicios = () => {
   };
 
   if (!selectedServicio) {
-    setSelectedServicio(contentJson.servicios[0]); 
+    setSelectedServicio(contentJson.servicios[0]);
   }
 
   useEffect(() => {
@@ -34,7 +36,8 @@ const Servicios = () => {
       </h1>
 
       <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center mt-4 gap-10">
-        <div className="
+        <div
+          className="
         flex flex-row lg:flex-col items-center lg:items-start 
         gap-4 
         overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto 
@@ -42,15 +45,10 @@ const Servicios = () => {
         pb-3 lg:pl-3
         w-full lg:w-auto
         lg:max-h-[520px] 
-        [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar]:lg:w-2
-        [&::-webkit-scrollbar-track]:rounded-full
-        [&::-webkit-scrollbar-track]:bg-gray-100
-        [&::-webkit-scrollbar-thumb]:rounded-full
-        [&::-webkit-scrollbar-thumb]:bg-ecruYellow
-        [&::-webkit-scrollbar-thumb]:cursor-grab
-          ">
-
-          {contentJson.servicios.map((servicio) => (              
+        scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent
+        "
+        >
+          {contentJson.servicios.map((servicio) => (
             <CardsServicios
               key={servicio.id}
               servicio={servicio}
@@ -61,13 +59,13 @@ const Servicios = () => {
         </div>
 
         <div className="w-full lg:w-auto">
-          {selectedServicio && <ServicioDescripcion servicio={selectedServicio} />}
+          {selectedServicio && (
+            <ServicioDescripcion servicio={selectedServicio} />
+          )}
         </div>
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default Servicios
-
+export default Servicios;
