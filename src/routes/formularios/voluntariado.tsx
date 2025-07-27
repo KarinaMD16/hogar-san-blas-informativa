@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import Navbar from '../../components/header/Navbar'
 import Footer from '../../components/footer/Footer'
 import RequisitosVoluntario from '../../sections/requisitos/RequisitosVoluntario'
-import FormularioVoluntariado from '../../components/forms/FormularioVoluntariado'
+import SectionFormVoluntario from '../../sections/formularios/SectionFormVoluntario'
 
 // formulario de voluntariado
 export const Route = createFileRoute('/formularios/voluntariado')({
@@ -13,7 +13,7 @@ function RouteComponent() {
   return <div>
       <Navbar />
       <RequisitosVoluntario />
-      <FormularioVoluntariado />
+      <SectionFormVoluntario />
       <Footer />
     </div>
 }

@@ -263,6 +263,7 @@
       ]
     }
   },
+  
   "titulosSecciones": {
     "Servicios": "Nuestros servicios",
     "Galeria": {
@@ -304,7 +305,9 @@
   },
   
   "formularioVoluntariado": {
-    "nombre": "Nombre Completo",
+    "nombre": "Nombre",
+    "apellido1": "Primer apellido",
+    "apellido2": "Segundo apellido",
     "cedula": "Cédula",
     "sexo": { 
       "label": "Sexo",
@@ -352,6 +355,11 @@
         "Archivo seleccionado:",
         "Ver hoja de delincuencia (PDF)"
       ]
-    }
+    },
+    "botones": [
+      "Anterior",
+      "Siguiente",
+      "Enviar"
+    ]
   }
 }

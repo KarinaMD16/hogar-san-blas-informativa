@@ -1,8 +1,7 @@
-import type { ReactNode } from "react";
-
 export interface BotonProps {
-  children: ReactNode;
-  where?: string; // ahora opcional
-  type?: "button" | "submit";
+  children: React.ReactNode;
+  where?: string;
+  type?: "button" | "submit" | "reset";
   onClick?: () => void;
+  variant?: "filled" | "outline";
 }
