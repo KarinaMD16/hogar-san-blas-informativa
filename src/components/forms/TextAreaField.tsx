@@ -1,4 +1,4 @@
-import type { TextAreaFieldProps } from "../../types/forms/formularios";
+import type { TextAreaFieldProps } from "../../types/formularios/formularios";
 
 const inputClass = "bg-white border-2 border-ecruYellow rounded-full p-2 w-full";
 
