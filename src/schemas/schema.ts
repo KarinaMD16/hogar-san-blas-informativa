@@ -17,7 +17,7 @@ export const formVoluntarioSchema = z.object({
   direccion: z.string(),
   sexo: z.string(),
   experienciaLaboral: z.string(),
-  tipoVoluntariado: z.number(),
+  tipoVoluntariado: z.number().min(1, "Debe seleccionar un tipo de voluntariado"),
   contactosEmergencia: z.array(
     z.object({
       nombre: z.string(),

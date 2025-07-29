@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Label } from "@radix-ui/react-label";
 import { useForm } from "@tanstack/react-form";
-import { usePostSolicitudVoluntario } from "../../hooks/formularios/solicitudVoluntario";
+import { useGetTipoVoluntarios, usePostSolicitudVoluntario } from "../../hooks/formularios/solicitudVoluntario";
 import type { CrearSolicitudPendienteDto } from "../../models/formularios/solicitudVoluntario";
 import { formVoluntarioSchema } from "../../schemas/schema";
 import { Input } from "./InputField";
@@ -10,6 +10,7 @@ import Boton from "../Boton";
 const SolicitudVoluntariadoForm = () => {
   const mutation = usePostSolicitudVoluntario();
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+  const { tiposVoluntariado } = useGetTipoVoluntarios();
 
   const form = useForm({
     defaultValues: {
@@ -23,7 +24,7 @@ const SolicitudVoluntariadoForm = () => {
       direccion: "",
       sexo: "F",
       experienciaLaboral: "",
-      tipoVoluntariado: 1,
+      tipoVoluntariado: 0,
       contactosEmergencia: [{ nombre: "", telefono: "" }],
       horarios: [{ dia: "", horaInicio: "", horaFin: "" }],
     },
@@ -294,38 +295,31 @@ const SolicitudVoluntariadoForm = () => {
           </div>
         )}
       />
-      <form.Field
-        name="tipoVoluntariado"
-        validators={{ onChangeAsyncDebounceMs: 500 }}
-        children={(field) => {
-          const isChecked = field.state.value === 2;
-
-          return (
-            <div className="mb-4">
-              <div className="flex items-center">
-                <input
-                  id="tipoVoluntariado"
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={(e) => {
-                    // Set "2" if checked, "1" if unchecked
-                    field.handleChange(e.target.checked ? 2 : 1);
-                  }}
-                  className="h-4 w-4 rounded border-gray-300"
-                />
-                <Label htmlFor="tipoVoluntariado" className="ml-2">
-                  Tipo de Voluntariado
-                </Label>
-              </div>
-              {formErrors.tipoVoluntariado && (
-                <p className="text-red-700 text-sm">
-                  {formErrors.tipoVoluntariado}
-                </p>
-              )}
-            </div>
-          );
-        }}
-      />
+      <form.Field name="tipoVoluntariado">
+        {(field) => (
+          <div className="mb-4">
+            <Label htmlFor="tipoVoluntariado">Tipo de Voluntariado</Label>
+            <select
+              id="tipoVoluntariado"
+              value={field.state.value ?? ""}
+              onChange={(e) => field.handleChange(Number(e.target.value))}
+              className="w-full rounded-md border border-gray-300 px-3 py-2"
+            >
+              <option value={0}>Seleccione una opción</option>
+              {tiposVoluntariado.map((tipo) => (
+                <option key={tipo.id} value={tipo.id}>
+                  {tipo.nombre}
+                </option>
+              ))}
+            </select>
+            {formErrors.tipoVoluntariado && (
+              <p className="text-red-700 text-sm mt-1">
+                {formErrors.tipoVoluntariado}
+              </p>
+            )}
+          </div>
+        )}
+      </form.Field>
       <form.Field
         name="contactosEmergencia"
         validators={{ onChangeAsyncDebounceMs: 500 }}
