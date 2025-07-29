@@ -1,19 +1,21 @@
-import type { InputFieldProps } from "../../types/forms/formularios";
+import * as React from "react"
+import { cn } from "../../lib/utils"
 
-const inputClass = "bg-white border-2 border-ecruYellow rounded-full p-2 w-full";
-
-const InputField = ({ label, name, register, errors, type = "text", placeholder, validation }: InputFieldProps) => (
-  <div>
-    <label htmlFor={name} className="block text-left mb-1">{label}</label>
+function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+  return (
     <input
-      id={name}
       type={type}
-      {...register(name, validation)}
-      placeholder={placeholder}
-      className={inputClass}
+      data-slot="input"
+      className={cn(
+        "bg-white border-2 border-ecruYellow rounded-full px-4 py-2 w-full",
+        "focus:outline-none focus:ring-2 focus:ring-ecruYellow focus:border-ecruYellow",
+        "placeholder:text-gray-400",
+        "disabled:opacity-50 disabled:cursor-not-allowed",
+        className
+      )}
+      {...props}
     />
-    {errors[name] && <span className="text-red-500 text-sm">{String(errors[name].message)}</span>}
-  </div>
-);
+  );
+}
 
-export default InputField;
+export { Input }
