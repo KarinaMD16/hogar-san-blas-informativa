@@ -5,6 +5,7 @@ import { usePostSolicitudVoluntario } from "../../hooks/formularios/solicitudVol
 import type { CrearSolicitudPendienteDto } from "../../models/formularios/solicitudVoluntario";
 import { formVoluntarioSchema } from "../../schemas/schema";
 import { Input } from "./InputField";
+import Boton from "../Boton";
 
 const SolicitudVoluntariadoForm = () => {
   const mutation = usePostSolicitudVoluntario();
@@ -22,7 +23,7 @@ const SolicitudVoluntariadoForm = () => {
       direccion: "",
       sexo: "F",
       experienciaLaboral: "",
-      tipoVoluntariado: "1",
+      tipoVoluntariado: 1,
       contactosEmergencia: [{ nombre: "", telefono: "" }],
       horarios: [{ dia: "", horaInicio: "", horaFin: "" }],
     },
@@ -32,8 +33,10 @@ const SolicitudVoluntariadoForm = () => {
           (h) => h.dia && h.horaInicio && h.horaFin
         );
       }
+      console.log(value);
 
       const result = formVoluntarioSchema.safeParse(value);
+      console.log(result);
 
       if (!result.success) {
         const fieldErrors: Record<string, string> = {};
@@ -125,6 +128,27 @@ const SolicitudVoluntariadoForm = () => {
           </div>
         )}
       />
+      <form.Field
+        name="cedula"
+        validators={{ onChangeAsyncDebounceMs: 500 }}
+        children={(field: {
+          state: { value: string | number | readonly string[] | undefined };
+          handleChange: (arg0: string) => void;
+        }) => (
+          <div className="mb-4">
+            <Label htmlFor="cedula">Cedula</Label>
+            <Input
+              id="cedula"
+              type="text"
+              value={field.state.value}
+              onChange={(e) => field.handleChange(e.target.value)}
+            />
+            {formErrors.cedula && (
+              <p className="text-red-700 text-sm">{formErrors.cedula}</p>
+            )}
+          </div>
+        )}
+      ></form.Field>
       <form.Field
         name="email"
         validators={{ onChangeAsyncDebounceMs: 500 }}
@@ -274,7 +298,7 @@ const SolicitudVoluntariadoForm = () => {
         name="tipoVoluntariado"
         validators={{ onChangeAsyncDebounceMs: 500 }}
         children={(field) => {
-          const isChecked = field.state.value === "2";
+          const isChecked = field.state.value === 2;
 
           return (
             <div className="mb-4">
@@ -285,7 +309,7 @@ const SolicitudVoluntariadoForm = () => {
                   checked={isChecked}
                   onChange={(e) => {
                     // Set "2" if checked, "1" if unchecked
-                    field.handleChange(e.target.checked ? "2" : "1");
+                    field.handleChange(e.target.checked ? 2 : 1);
                   }}
                   className="h-4 w-4 rounded border-gray-300"
                 />
@@ -534,9 +558,9 @@ const SolicitudVoluntariadoForm = () => {
         }}
       />
 
-      <button type="submit" disabled={mutation.isPending}>
+      <Boton type="submit">
         {mutation.isPending ? "Enviando..." : "Enviar solicitud"}
-      </button>
+      </Boton>
     </form>
   );
 };

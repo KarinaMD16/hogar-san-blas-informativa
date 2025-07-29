@@ -1,6 +1,6 @@
 export type Sexo = 'F' | 'M';
 
-export type TipoVoluntariado = "1" | "2";
+export type TipoVoluntariado = 1 | 2;
 
 export interface ContactoEmergenciaPendiente {
   nombre: string;
