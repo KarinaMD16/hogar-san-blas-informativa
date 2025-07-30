@@ -113,10 +113,7 @@
 
   "paginaRequisitosResidencia": {
     "titulo": "Are you interested in applying for residency?",
-    "subtitulo": [
-        "To become a resident, you must meet the following:",
-        "Requirements:"
-    ],
+    "subtitulo": ["To become a resident, you must meet the following:", "Requirements:"],
     "requisitos": [
         "Age and Health Condition: Elderly adults who require assistance and specialized care.",
         "Documentation: Copy of the resident's ID card or passport.",
@@ -204,10 +201,7 @@
       },
     "Horario": {
         "titulo": "Schedule",
-        "items": [
-          "Monday to Friday", 
-          "8am to 3pm"
-        ]
+        "items": [ "Monday to Friday", "8am to 3pm" ]
       },
     "Direccion": {
         "titulo": "Address",
@@ -266,6 +260,7 @@
       ]
     }
   },
+
   "titulosSecciones": {
     "Servicios": "Our services",
     "Galeria": {
@@ -279,130 +274,90 @@
       "donaciones": "You can donate"
     }
   },
+
   "paginaRequisitosVoluntariado": {
-    "tituloGeneral": "¿Estás interesado en ser voluntario?",
+    "titulo": "Are you interested in becoming a volunteer?",
     "cumplimientoHoras": {
-      "titulo": "Podés realizar tus horas de servicio comunitario con nosotros",
+      "subtitulo": [
+        "You can complete your community service hours with us",
+        "Requirements:"
+      ],
       "requisitos": [
-        {
-          "descripcion": "Hoja de presentación."
-        },
-        {
-          "descripcion": "Foto tamaño pasaporte."
-        },
-        {
-          "descripcion": "Reglamento de voluntariado."
-        },
-        {
-          "descripcion": "Hoja de delincuencia."
-        },
-        {
-          "descripcion": "Copia de la cédula."
-        },
-        {
-          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
-        }
+        "Presentation letter.",
+        "Passport-sized photo.",
+        "Volunteer regulations.",
+        "Criminal record certificate.",
+        "Copy of ID card.",
+        "Fill out the attendance form each time you arrive at the home."
       ]
     },
     "voluntarioPermanente": {
-      "titulo": "Podés apoyarnos haciendo lo que mejor sabes hacer",
+      "subtitulo": [
+        "You can complete your community service hours with us",
+        "Requirements:"
+      ],
       "requisitos": [
-        {
-          "descripcion": "Hoja de presentación."
-        },
-        {
-          "descripcion": "Foto tamaño pasaporte."
-        },
-        {
-          "descripcion": "Reglamento de voluntariado."
-        },
-        {
-          "descripcion": "Hoja de delincuencia."
-        },
-        {
-          "descripcion": "Copia de la cédula."
-        },
-        {
-          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
-        }
+        "Presentation letter.",
+        "Passport-sized photo.",
+        "Volunteer regulations.",
+        "Criminal record certificate.",
+        "Copy of ID card.",
+        "Fill out the attendance form each time you arrive at the home."
       ]
     }
   },
-  
+
   "formularioVoluntariado": {
-    "campos": [
-      {
-        "nombre": "Fecha",
-        "tipo": "fecha"
+    "nombre": "Name",
+    "apellido1": "Middle name",
+    "apellido2": "Last name",
+    "cedula": "ID Number",
+    "sexo": {
+      "label": "Gender",
+      "opciones": ["Select...", "Female", "Male", "Other"]
+    },
+    "ocupacion": "Occupation",
+    "telefono": "Phone",
+    "correo": {
+      "label": "Email",
+      "placeholder": "name@gmail.com"
+    },
+    "direccion": "Exact Address",
+    "contactoEmergencia": {
+      "label": "Emergency Contact",
+      "nombre": {
+        "label": "Name"
       },
-      {
-        "nombre": "Nombre",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Cédula",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Sexo",
-        "tipo": "opcion",
-        "opciones": ["M", "F"]
-      },
-      {
-        "nombre": "Ocupación",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Teléfono",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Correo electrónico",
-        "tipo": "email"
-      },
-      {
-        "nombre": "Dirección exacta",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Contacto de emergencia",
-        "tipo": "grupo",
-        "campos": [
-          {
-            "nombre": "Nombre",
-            "tipo": "texto"
-          },
-          {
-            "nombre": "Teléfono",
-            "tipo": "texto"
-          }
-        ]
-      },
-      {
-        "nombre": "Tipo de colaboración que desea brindar",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Experiencia laboral o voluntaria relacionada con adulto mayor",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Horario establecido para asistir a la institución",
-        "tipo": "horario",
-        "dias": [
-          "Lunes",
-          "Martes",
-          "Miércoles",
-          "Jueves",
-          "Viernes",
-          "Sábado",
-          "Domingo"
-        ]
-      },
-      {
-        "nombre": "Observaciones",
-        "tipo": "texto"
+      "telefono": {
+        "label": "Phone"
       }
-    ]
+    },
+    "colaboracion": "Type of collaboration you would like to offer",
+    "experiencia": "Work or volunteer experience related to elderly care",
+    "horas": [
+      "This volunteering is for fulfilling required hours",
+      "Number of hours to complete"
+    ],
+    "horario": {
+      "label": "Preferred schedule to attend the institution",
+      "placeholder": "E.g. 9 am - 11 am",
+      "dias": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "observaciones": "Observations",
+    "delincuencia": {
+      "label": "Criminal record certificate (PDF)",
+      "preview": [
+        "Selected file:",
+        "View criminal record (PDF)"
+      ]
+    }
   }
 }

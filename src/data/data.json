@@ -263,6 +263,7 @@
       ]
     }
   },
+  
   "titulosSecciones": {
     "Servicios": "Nuestros servicios",
     "Galeria": {
@@ -276,130 +277,89 @@
       "donaciones": "Solicitamos donaciones"
     }
   },
+  
   "paginaRequisitosVoluntariado": {
-    "tituloGeneral": "¿Estás interesado en ser voluntario?",
+    "titulo": "¿Estás interesado en ser voluntario?",
     "cumplimientoHoras": {
-      "titulo": "Podés realizar tus horas de servicio comunitario con nosotros",
+      "subtitulo": ["Podés realizar tus horas de servicio comunitario con nosotros", "Requisitos:"],
       "requisitos": [
-        {
-          "descripcion": "Hoja de presentación."
-        },
-        {
-          "descripcion": "Foto tamaño pasaporte."
-        },
-        {
-          "descripcion": "Reglamento de voluntariado."
-        },
-        {
-          "descripcion": "Hoja de delincuencia."
-        },
-        {
-          "descripcion": "Copia de la cédula."
-        },
-        {
-          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
-        }
+        "Hoja de presentación.",
+        "Foto tamaño pasaporte.",
+        "Reglamento de voluntariado.",
+        "Hoja de delincuencia.",
+        "Copia de la cédula.",
+        "Llenar boleta de asistencia cada vez que llega al hogar."
       ]
     },
     "voluntarioPermanente": {
-      "titulo": "Podés apoyarnos haciendo lo que mejor sabes hacer",
+      "subtitulo": ["Podés apoyarnos haciendo lo que mejor sabes hacer", "Requisitos:"],
       "requisitos": [
-        {
-          "descripcion": "Hoja de presentación."
-        },
-        {
-          "descripcion": "Foto tamaño pasaporte."
-        },
-        {
-          "descripcion": "Reglamento de voluntariado."
-        },
-        {
-          "descripcion": "Hoja de delincuencia."
-        },
-        {
-          "descripcion": "Copia de la cédula."
-        },
-        {
-          "descripcion": "Llenar boleta de asistencia cada vez que llega al hogar."
-        }
+        "Hoja de presentación.",
+        "Foto tamaño pasaporte.",
+        "Reglamento de voluntariado.",
+        "Hoja de delincuencia.",
+        "Copia de la cédula.",
+        "Llenar boleta de asistencia cada vez que llega al hogar."
       ]
     }
   },
   
   "formularioVoluntariado": {
-    "campos": [
-      {
-        "nombre": "Fecha",
-        "tipo": "fecha"
+    "nombre": "Nombre",
+    "apellido1": "Primer apellido",
+    "apellido2": "Segundo apellido",
+    "cedula": "Cédula",
+    "sexo": { 
+      "label": "Sexo",
+      "opciones": ["Seleccione...", "Femenino", "Masculino", "Otro"] 
+    },
+    "ocupacion": "Ocupación",
+    "telefono": "Teléfono",
+    "correo": {
+      "label": "Correo electrónico",
+      "placeholder": "nombre@gmail.com"
+    },
+    "direccion": "Dirección exacta",
+    "contactoEmergencia": {
+      "label": "Contacto de emergencia",
+      "nombre": {
+        "label": "Nombre"
       },
-      {
-        "nombre": "Nombre",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Cédula",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Sexo",
-        "tipo": "opcion",
-        "opciones": ["M", "F"]
-      },
-      {
-        "nombre": "Ocupación",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Teléfono",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Correo electrónico",
-        "tipo": "email"
-      },
-      {
-        "nombre": "Dirección exacta",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Contacto de emergencia",
-        "tipo": "grupo",
-        "campos": [
-          {
-            "nombre": "Nombre",
-            "tipo": "texto"
-          },
-          {
-            "nombre": "Teléfono",
-            "tipo": "texto"
-          }
-        ]
-      },
-      {
-        "nombre": "Tipo de colaboración que desea brindar",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Experiencia laboral o voluntaria relacionada con adulto mayor",
-        "tipo": "texto"
-      },
-      {
-        "nombre": "Horario establecido para asistir a la institución",
-        "tipo": "horario",
-        "dias": [
-          "Lunes",
-          "Martes",
-          "Miércoles",
-          "Jueves",
-          "Viernes",
-          "Sábado",
-          "Domingo"
-        ]
-      },
-      {
-        "nombre": "Observaciones",
-        "tipo": "texto"
+      "telefono": {
+        "label": "Teléfono"
       }
+    },
+    "colaboracion": "Tipo de colaboración que desea brindar",
+    "experiencia": "Experiencia laboral o voluntaria relacionada con adulto mayor",
+    "horas": [
+      "Este voluntariado es para cumplir horas",
+      "Cantidad de horas a cumplir"
+    ],
+     "horario": {
+      "label": "Horario establecido para asistir a la institución",
+      "placeholder": "Ej. 9 am - 11 am",
+      "dias": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ]
+    },
+    "observaciones": "Observaciones",
+    "delincuencia": {
+      "label": "Hoja de delincuencia (PDF)",
+      "preview": [
+        "Archivo seleccionado:",
+        "Ver hoja de delincuencia (PDF)"
+      ]
+    },
+    "botones": [
+      "Anterior",
+      "Siguiente",
+      "Enviar"
     ]
   }
 }
