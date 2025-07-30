@@ -31,4 +31,5 @@ export const formVoluntarioSchema = z.object({
       horaFin: z.string(),
     })
   ),
+  observaciones: z.string()
 });

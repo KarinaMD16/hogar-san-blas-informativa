@@ -30,6 +30,7 @@ export interface CrearSolicitudPendienteDto {
   tipoVoluntariado: number;
   contactosEmergencia?: ContactoEmergenciaPendiente[];
   horarios?: HorarioPendiente[];
+  observaciones: string;
 }
 
 export interface SolicitudPendiente extends CrearSolicitudPendienteDto {
