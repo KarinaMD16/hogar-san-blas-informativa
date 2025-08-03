@@ -1,9 +1,10 @@
-import InputField from "./InputField";
+import InputField from "../../../components/forms/InputField";
 import { Label } from "@radix-ui/react-label";
 
-export const HorariosDisponiblesSection = ({ form, formErrors }: any) => (
-  <>
-  <form.Field name="horarios">
+export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
+  return (
+    <>
+    <form.Field name="horarios">
     {(field: { state: { value: any; }; handleChange: (arg0: any[]) => void; }) => {
       const horarios = Array.isArray(field.state.value)
             ? field.state.value
@@ -49,7 +50,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => (
 
           return (
             <div className="mb-4">
-              <Label className="block mb-2">Horarios Disponibles</Label>
+              <Label className="block text-left text-sm font-medium mb-1">Seleccione los horarios disponibles para voluntariado:</Label>
 
               {horarios.length === 0 ? (
                 <p className="text-gray-500 text-sm mb-2">
@@ -78,7 +79,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => (
                       <div>
                         <Label
                           htmlFor={`horario-dia-${index}`}
-                          className="text-sm block mb-1"
+                          className="block text-center text-sm font-medium mb-1"
                         >
                           Día
                         </Label>
@@ -104,7 +105,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => (
                       <div>
                         <Label
                           htmlFor={`horario-inicio-${index}`}
-                          className="text-sm block mb-1"
+                          className="block text-center text-sm font-medium mb-1"
                         >
                           Hora Inicio
                         </Label>
@@ -122,7 +123,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => (
                       <div>
                         <Label
                           htmlFor={`horario-fin-${index}`}
-                          className="text-sm block mb-1"
+                          className="block text-center text-sm font-medium mb-1"
                         >
                           Hora Fin
                         </Label>
@@ -164,23 +165,27 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => (
     }}
   </form.Field>
 
-  <form.Field name="observaciones"
-        {...(field: { state: { value: string | number | readonly string[] | undefined }; handleChange: (arg0: string) => void;}) => (
-          <div className="mb-4">
-            <Label htmlFor="observaciones">Observaciones</Label>
-            <InputField
-              id="observaciones"
-              type="text"
-              value={field.state.value}
-              onChange={(e) => field.handleChange(e.target.value)}
-            />
-            {formErrors.observaciones && (
-              <p className="text-red-700 text-sm">
-                {formErrors.observaciones}
-              </p>
-            )}
-          </div>
-        )}
-      />
+  <form.Field 
+              name="observaciones"
+              validators={{ onChangeAsyncDebounceMs: 500 }}
+                  children={(field: {
+                  state: { value: string | number | readonly string[] | undefined };
+                  handleChange: (arg0: string) => void;
+                  }) => (
+                  <div className="mb-4 text-left">
+                      <Label htmlFor="observaciones" className="block text-left text-sm font-medium mb-1">Observaciones</Label>
+                      <InputField
+                      id="observaciones"
+                      type="text"
+                      value={field.state.value}
+                      onChange={(e) => field.handleChange(e.target.value)}
+                      />
+                      {formErrors.observaciones && (
+                      <p className="text-red-700 text-sm">{formErrors.observaciones}</p>
+                      )}
+                  </div>
+                  )}
+              />
     </>
 );
+};

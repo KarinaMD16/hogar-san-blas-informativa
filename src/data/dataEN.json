@@ -304,7 +304,8 @@
         "Copy of ID card.",
         "Fill out the attendance form each time you arrive at the home."
       ]
-    }
+    },
+    "formulario": "Volunteer form"
   },
 
   "formularioVoluntariado": {
@@ -359,5 +360,30 @@
         "View criminal record (PDF)"
       ]
     }
+  },
+
+  "paginaRequisitosDonacion": {
+    "donacionArticulos":{
+      "titulo": "Are you interested in making a donation?",
+      "subtitulo": ["Any donation is welcome", "Requirements:"],
+      "requisitos": [
+        "Clothing in good condition: without stains, not broken or very worn out",
+        "Medications: consult the donation protocol for medications",
+        "Food: not expired"
+      ]
+    },
+    "donacionMonetaria":{
+      "subtitulo": ["You can make monetary donations", "You can do it by SINPE móvil or transfer:"],
+      "medios": [
+        "SINPE móvil: ",
+        "BCR Bank Account:  CC-CR10015201235000175310",
+        "BN Bank Account: CR32015101310010024125"
+      ]
+    },
+    "donacionTiempo":{
+      "subtitulo": ["You can donate your time", "Convert yourself into a volunteer:"],
+      "boton": {"nombre": "I want to be a volunteer", "ruta": "/formularios/voluntariado"}
+    },
+    "formulario": "Donation form"
   }
 }

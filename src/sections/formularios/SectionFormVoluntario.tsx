@@ -2,9 +2,9 @@ import FormSolicitudVoluntariado from "../../components/forms/voluntariado/FormS
 
 const SectionFormVoluntario = () => {
     return (
-        <div className="flex flex-col mb-10">
+        <section className="flex flex-col mb-10">
             <FormSolicitudVoluntariado />
-        </div>
+        </section>
     );
 };
 export default SectionFormVoluntario

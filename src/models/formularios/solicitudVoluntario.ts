@@ -28,6 +28,7 @@ export interface CrearSolicitudPendienteDto {
   sexo: Sexo;
   experienciaLaboral?: string;
   tipoVoluntariado: number;
+  cantidadHoras: number;
   contactosEmergencia?: ContactoEmergenciaPendiente[];
   horarios?: HorarioPendiente[];
   observaciones: string;

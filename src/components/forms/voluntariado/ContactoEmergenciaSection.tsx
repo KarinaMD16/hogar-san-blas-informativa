@@ -1,4 +1,4 @@
-import InputField from "./InputField";
+import InputField from "../../../components/forms/InputField";
 import { Label } from "@radix-ui/react-label";
 
 export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
@@ -19,15 +19,11 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                 };
 
                 return (
-                    <div className="mb-4">
-                    <Label htmlFor="contacto-nombre" className="block mb-2">
-                        Contacto de Emergencia
-                    </Label>
-                    <div className="space-y-3">
+                    <div className="space-y-3 text-left">
                         <div>
                         <Label
                             htmlFor="contacto-nombre"
-                            className="text-sm block mb-1"
+                            className="block text-left text-sm font-medium mb-1"
                         >
                             Nombre
                         </Label>
@@ -45,7 +41,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                         <div>
                         <Label
                             htmlFor="contacto-telefono"
-                            className="text-sm block mb-1"
+                            className="block text-left text-sm font-medium mb-1"
                         >
                             Teléfono
                         </Label>
@@ -59,7 +55,6 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                             placeholder="Número de teléfono"
                         />
                         </div>
-                    </div>
 
                     {formErrors.contactosEmergencia && (
                         <p className="text-red-700 text-sm mt-1">
@@ -68,7 +63,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                     )}
                     </div>
                 );
-                }}
+            }}
         </form.Field>
     );
 }; export default ContactoEmergenciaSection

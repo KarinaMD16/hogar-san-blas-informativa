@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { BotonProps } from "../types/boton";
 
-const Boton = ({ children, where, type = "button", onClick, variant = "filled" }: BotonProps) => {
+const Boton = ({ children, where, type = "button", onClick, variant = "filled", disabled = false }: BotonProps) => {
   const baseClasses = `
     font-poppins font-medium
     py-1 px-4 sm:py-2 sm:px-4 md:py-1.5 md:px-5 lg:py-2 lg:px-4
@@ -22,7 +22,7 @@ const Boton = ({ children, where, type = "button", onClick, variant = "filled" }
   if (where) {
     return (
       <Link to={where}>
-        <button type="button" className={classes}>
+        <button type="button" className={classes} disabled={disabled}>
           {children}
         </button>
       </Link>
@@ -30,7 +30,7 @@ const Boton = ({ children, where, type = "button", onClick, variant = "filled" }
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} className={classes} disabled={disabled}>
       {children}
     </button>
   );
