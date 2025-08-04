@@ -50,7 +50,9 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
 
           return (
             <div className="mb-4">
-              <Label className="block text-left text-sm font-medium mb-1">Seleccione los horarios disponibles para voluntariado:</Label>
+              <Label className="block text-left text-sm font-medium mb-1">
+                Horarios disponibles para voluntariado 
+              </Label>
 
               {horarios.length === 0 ? (
                 <p className="text-gray-500 text-sm mb-2">
@@ -112,7 +114,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                         <InputField
                           id={`horario-inicio-${index}`}
                           type="text"
-                          placeholder="08:00"
+                          placeholder="08:00 AM"
                           value={horario.horaInicio}
                           onChange={(e) =>
                             updateHorario(index, "horaInicio", e.target.value)
@@ -130,7 +132,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                         <InputField
                           id={`horario-fin-${index}`}
                           type="text"
-                          placeholder="17:00"
+                          placeholder="05:00 PM"
                           value={horario.horaFin}
                           onChange={(e) =>
                             updateHorario(index, "horaFin", e.target.value)
@@ -173,12 +175,15 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                   handleChange: (arg0: string) => void;
                   }) => (
                   <div className="mb-4 text-left">
-                      <Label htmlFor="observaciones" className="block text-left text-sm font-medium mb-1">Observaciones</Label>
+                      <Label htmlFor="observaciones" className="block text-left text-sm font-medium mb-1">
+                        Observaciones <span className="text-gray-400">(Opcional)</span>
+                      </Label>
                       <InputField
-                      id="observaciones"
-                      type="text"
-                      value={field.state.value}
-                      onChange={(e) => field.handleChange(e.target.value)}
+                        id="observaciones"
+                        type="text"
+                        value={field.state.value}
+                        onChange={(e) => field.handleChange(e.target.value)}
+                        placeholder="Alguna información adicional sobre su disponibilidad o voluntariado"
                       />
                       {formErrors.observaciones && (
                       <p className="text-red-700 text-sm">{formErrors.observaciones}</p>

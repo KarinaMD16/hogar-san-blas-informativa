@@ -1,5 +1,3 @@
-export type Sexo = 'F' | 'M';
-
 export interface TipoVoluntariado{
   id: number,
   nombre: string;
@@ -25,7 +23,7 @@ export interface CrearSolicitudPendienteDto {
   telefono: string;
   ocupacion: string;
   direccion: string;
-  sexo: Sexo;
+  sexo: string;
   experienciaLaboral?: string;
   tipoVoluntariado: number;
   cantidadHoras: number;

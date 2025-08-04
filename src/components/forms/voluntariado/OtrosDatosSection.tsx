@@ -8,7 +8,9 @@ export const OtrosDatosSection = ({ form, formErrors }: any) => {
             name="sexo"
             children={(field: { state: { value: string; }; handleChange: (arg0: string) => void; }) => (
                 <div className="mb-8">
-                    <Label className="block text-left text-sm font-medium mb-4">Sexo</Label>
+                    <Label className="block text-left text-sm font-medium mb-4">
+                        Sexo <span className="text-red-600">*</span>
+                    </Label>
                     <div className="flex flex-wrap gap-4">
                         {[
                             { id: 'F', label: 'Femenino' },
@@ -49,12 +51,15 @@ export const OtrosDatosSection = ({ form, formErrors }: any) => {
                     handleChange: (arg0: string) => void;
                 }) => (
                     <div>
-                        <Label htmlFor="ocupacion" className="block text-left text-sm font-medium mb-1">Ocupación</Label>
+                        <Label htmlFor="ocupacion" className="block text-left text-sm font-medium mb-1">
+                            Ocupación <span className="text-red-600">*</span>
+                        </Label>
                         <InputField
                             id="ocupacion"
                             type="text"
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
+                            placeholder="Ingrese su ocupación"
                         />
                         {formErrors.ocupacion && (
                             <p className="text-red-700 text-sm">{formErrors.ocupacion}</p>
@@ -70,12 +75,15 @@ export const OtrosDatosSection = ({ form, formErrors }: any) => {
                     handleChange: (arg0: string) => void;
                 }) => (
                     <div>
-                        <Label htmlFor="direccion" className="block text-left text-sm font-medium mb-1">Dirección</Label>
+                        <Label htmlFor="direccion" className="block text-left text-sm font-medium mb-1">
+                            Dirección exacta <span className="text-red-600">*</span>
+                        </Label>
                         <InputField
                             id="direccion"
                             type="text"
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
+                            placeholder="Ingrese su dirección exacta"
                         />
                         {formErrors.direccion && (
                             <p className="text-red-700 text-sm">{formErrors.direccion}</p>
@@ -91,12 +99,15 @@ export const OtrosDatosSection = ({ form, formErrors }: any) => {
                 handleChange: (arg0: string) => void;
             }) => (
                 <div className="mb-4">
-                    <Label htmlFor="experienciaLaboral" className="block text-left text-sm font-medium mb-1">Experiencia Laboral</Label>
+                    <Label htmlFor="experienciaLaboral" className="block text-left text-sm font-medium mb-1">
+                        Experiencia Laboral o voluntaria relacionada a adultos mayores <span className="text-red-600">*</span>
+                    </Label>
                     <InputField
                         id="experienciaLaboral"
                         type="text"
                         value={field.state.value}
                         onChange={(e) => field.handleChange(e.target.value)}
+                        placeholder="Describa su experiencia o indique si no tiene"
                     />
                     {formErrors.experienciaLaboral && (
                         <p className="text-red-700 text-sm">

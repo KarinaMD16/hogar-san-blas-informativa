@@ -10,7 +10,9 @@ const TipoVoluntariadoSection = ({ form, formErrors }: any) => {
           name="tipoVoluntariado">
           {(field: { state: { value: any; }; handleChange: (arg0: number) => void; }) => (
             <div className="mb-4">
-              <Label className="block text-left text-sm font-medium mb-6">Seleccione el tipo de voluntariado a realizar:</Label>
+              <Label className="block text-left text-sm font-medium mb-6">
+                Seleccione el tipo de voluntariado a realizar: <span className="text-red-600">*</span>
+              </Label>
               <div className="flex flex-wrap gap-4 mb-10">
                 {tiposVoluntariado.map((tipo) => (
                   <div key={tipo.id} className="flex items-center">
@@ -43,11 +45,13 @@ const TipoVoluntariadoSection = ({ form, formErrors }: any) => {
         <form.Field name="cantidadHoras">
           {(field: { state: { value: any; }; handleChange: (arg0: number) => void; }) => (
             <div className="mb-4">
-              <Label className="block text-left text-sm font-medium mb-2">Cantidad de horas a cumplir:</Label>
+              <Label className="block text-left text-sm font-medium mb-2">
+                Cantidad de horas a cumplir: <span className="text-red-600">*</span>
+              </Label>
               <InputField
                 id="cantidadHoras"
                 type="number"
-                placeholder="Cantidad de horas"
+                placeholder="Ejemplo: 4 (horas por semana)"
                 value={field.state.value}
                 onChange={(e) => field.handleChange(Number(e.target.value))}
               />

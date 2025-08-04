@@ -25,7 +25,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                             htmlFor="contacto-nombre"
                             className="block text-left text-sm font-medium mb-1"
                         >
-                            Nombre
+                            Nombre <span className="text-red-600">*</span>
                         </Label>
                         <InputField
                             id="contacto-nombre"
@@ -34,7 +34,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                             onChange={(e) =>
                             handleContactChange("nombre", e.target.value)
                             }
-                            placeholder="Nombre del contacto"
+                            placeholder="Ingrese el nombre completo de alguien a quien llamar en caso de emergencia"
                         />
                         </div>
 
@@ -43,7 +43,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                             htmlFor="contacto-telefono"
                             className="block text-left text-sm font-medium mb-1"
                         >
-                            Teléfono
+                            Teléfono <span className="text-red-600">*</span>
                         </Label>
                         <InputField
                             id="contacto-telefono"
@@ -52,7 +52,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                             onChange={(e) =>
                             handleContactChange("telefono", e.target.value)
                             }
-                            placeholder="Número de teléfono"
+                            placeholder="Ingrese el número de su contacto de emergencia"
                         />
                         </div>
 
