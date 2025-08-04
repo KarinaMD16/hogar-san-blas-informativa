@@ -301,7 +301,8 @@
         "Copia de la cédula.",
         "Llenar boleta de asistencia cada vez que llega al hogar."
       ]
-    }
+    },
+    "formulario": "Formulario de Voluntariado"
   },
   
   "formularioVoluntariado": {
@@ -361,5 +362,30 @@
       "Siguiente",
       "Enviar"
     ]
+  },
+
+  "paginaRequisitosDonacion": {
+    "donacionArticulos":{
+      "titulo": "¿Estás interesado en hacer una donación?",
+      "subtitulo": ["Podés donar los articulos que desees", "Requisitos:"],
+      "requisitos": [
+        "Ropa en buen estado: sin manchas, que no esté rota ni muy desgastada",
+        "Medicamentos: consultar por el protocolo de donación de medicamentos",
+        "Alimentos: no pasados de su fecha de vencimiento"
+      ]
+    },
+    "donacionMonetaria":{
+      "subtitulo": ["Podés hacer donaciones monetarias", "Podés hacerlo por medio de SINPE móvil o transferencia:"],
+      "medios": [
+        "SINPE móvil: ",
+        "Cuenta BCR:  CC-CR10015201235000175310",
+        "Cuenta BN:  CR32015101310010024125"
+      ]
+    },
+    "donacionTiempo":{
+      "subtitulo": ["Podés donar tu tiempo", "Conviértete en un voluntario:"],
+      "boton": {"nombre": "Quiero ser voluntario", "ruta": "/formularios/voluntariado"}
+    },
+    "formulario": "Formulario de Donación"
   }
 }

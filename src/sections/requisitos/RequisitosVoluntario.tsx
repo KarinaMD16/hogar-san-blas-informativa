@@ -22,7 +22,7 @@ const RequisitosVoluntario = () => {
                     requisitos={contentJson.paginaRequisitosVoluntariado.voluntarioPermanente.requisitos}
                 />
                 <h1 className="text-3xl lg:text-4xl font-poppins text-amaranthPink font-bold text-left">
-                    Formulario de Voluntariado
+                    {contentJson.paginaRequisitosVoluntariado.formulario}
                 </h1>
             </div>
         </section>

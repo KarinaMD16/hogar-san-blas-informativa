@@ -1,0 +1,64 @@
+import { useGetTipoVoluntarios } from "../../../hooks/formularios/solicitudVoluntario";
+import InputField from "../../../components/forms/InputField";
+import { Label } from "@radix-ui/react-label";
+
+const TipoVoluntariadoSection = ({ form, formErrors }: any) => {
+    const { tiposVoluntariado } = useGetTipoVoluntarios();
+    return (
+        <>
+        <form.Field 
+          name="tipoVoluntariado">
+          {(field: { state: { value: any; }; handleChange: (arg0: number) => void; }) => (
+            <div className="mb-4">
+              <Label className="block text-left text-sm font-medium mb-6">Seleccione el tipo de voluntariado a realizar:</Label>
+              <div className="flex flex-wrap gap-4 mb-10">
+                {tiposVoluntariado.map((tipo) => (
+                  <div key={tipo.id} className="flex items-center">
+                    <input
+                      type="radio"
+                      id={`tipo-${tipo.id}`}
+                      name="tipoVoluntariado"
+                      value={tipo.id}
+                      checked={field.state.value === tipo.id}
+                      onChange={() => field.handleChange(tipo.id)}
+                      className="h-4 w-4 accent-amaranthPink focus:ring-amaranthPink border-gray-300"
+                    />
+                    <label 
+                      htmlFor={`tipo-${tipo.id}`}
+                      className="ml-2 block text-sm"
+                    >
+                      {tipo.nombre}
+                    </label>
+                  </div>
+                ))}
+              </div>
+              {formErrors.tipoVoluntariado && (
+                <p className="text-red-700 text-sm mt-1">
+                  {formErrors.tipoVoluntariado}
+                </p>
+              )}
+            </div>
+          )}
+        </form.Field>
+        <form.Field name="cantidadHoras">
+          {(field: { state: { value: any; }; handleChange: (arg0: number) => void; }) => (
+            <div className="mb-4">
+              <Label className="block text-left text-sm font-medium mb-2">Cantidad de horas a cumplir:</Label>
+              <InputField
+                id="cantidadHoras"
+                type="number"
+                placeholder="Cantidad de horas"
+                value={field.state.value}
+                onChange={(e) => field.handleChange(Number(e.target.value))}
+              />
+              {formErrors.cantidadHoras && (
+                <p className="text-red-700 text-sm mt-1">
+                  {formErrors.cantidadHoras}
+                </p>
+              )}
+            </div>
+          )}
+        </form.Field>
+        </>
+    )
+}; export default TipoVoluntariadoSection;
