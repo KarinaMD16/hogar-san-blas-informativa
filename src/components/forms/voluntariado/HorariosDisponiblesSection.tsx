@@ -1,6 +1,8 @@
 import InputField from "../../../components/forms/InputField";
 import { Label } from "@radix-ui/react-label";
 
+const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
+
 export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
   return (
     <>
@@ -23,19 +25,39 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
             field.handleChange(newHorarios);
           };
 
+          const validateTime = (time: string): string => {
+            if (!time) return '';
+            
+            // Remove any non-digit characters and split into hours and minutes
+            const cleaned = time.replace(/[^\d:]/g, '');
+            const match = cleaned.match(/^(\d{1,2}):?(\d{0,2})$/);
+            
+            if (!match) return '';
+            
+            let hours = parseInt(match[1]) || 0;
+            let minutes = parseInt(match[2]) || 0;
+            
+            // Validate hours (7-15)
+            if (hours < 7) hours = 7;
+            if (hours > 15) hours = 15;
+            
+            // Validate minutes (0-59)
+            if (minutes < 0) minutes = 0;
+            if (minutes > 59) minutes = 59;
+            
+            // Special case: if hours is 15, minutes must be 00
+            if (hours === 15) minutes = 0;
+            
+            return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+          };
+
           const updateHorario = (
             index: number,
             key: "dia" | "horaInicio" | "horaFin",
             value: string
           ) => {
-            if ((key === "horaInicio" || key === "horaFin") && value) {
-              const cleaned = value.replace(/[^\d:]/g, "");
-              const match = cleaned.match(/^(\d{0,2}):?(\d{0,2})$/);
-              if (match) {
-                const hours = match[1] ? match[1].padStart(2, "0") : "00";
-                const minutes = match[2] ? match[2].padStart(2, "0") : "00";
-                value = `${hours}:${minutes}`;
-              }
+            if (key === "horaInicio" || key === "horaFin") {
+              value = validateTime(value);
             }
 
             const newHorarios = horarios.map((horario, i) => {
@@ -66,7 +88,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                   >
                     <div className="flex justify-between mb-2">
                       <h4 className="text-sm font-medium">
-                        Horario {index + 1}
+                        Dia {index + 1}
                       </h4>
                       <button
                         type="button"
@@ -93,14 +115,10 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                           }
                           className="w-full rounded-md border border-gray-300 px-3 py-2"
                         >
-                          <option value="">Seleccionar día</option>
-                          <option value="Lunes">Lunes</option>
-                          <option value="Martes">Martes</option>
-                          <option value="Miércoles">Miércoles</option>
-                          <option value="Jueves">Jueves</option>
-                          <option value="Viernes">Viernes</option>
-                          <option value="Sábado">Sábado</option>
-                          <option value="Domingo">Domingo</option>
+                          <option className="hover:cursor-pointer" value="">Seleccionar día</option>
+                          {dias.map((dia, index) => (
+                            <option key={index} className="hover:cursor-pointer" value={dia}>{dia}</option>
+                          ))}
                         </select>
                       </div>
 
@@ -109,16 +127,24 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                           htmlFor={`horario-inicio-${index}`}
                           className="block text-center text-sm font-medium mb-1"
                         >
-                          Hora Inicio
+                          Hora Inicio (mín 07:00)
                         </Label>
                         <InputField
                           id={`horario-inicio-${index}`}
-                          type="text"
-                          placeholder="08:00 AM"
+                          type="time"
+                          min="07:00"
+                          max="15:00"
+                          placeholder="07:00"
                           value={horario.horaInicio}
                           onChange={(e) =>
-                            updateHorario(index, "horaInicio", e.target.value)
+                            updateHorario(
+                              index,
+                              "horaInicio",
+                              e.target.value
+                            )
                           }
+                          step={60}
+                          className="time-input"
                         />
                       </div>
 
@@ -127,16 +153,20 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                           htmlFor={`horario-fin-${index}`}
                           className="block text-center text-sm font-medium mb-1"
                         >
-                          Hora Fin
+                          Hora Fin (máx 15:00)
                         </Label>
                         <InputField
                           id={`horario-fin-${index}`}
-                          type="text"
-                          placeholder="05:00 PM"
+                          type="time"
+                          min="07:00"
+                          max="15:00"
+                          placeholder="15:00"
                           value={horario.horaFin}
                           onChange={(e) =>
                             updateHorario(index, "horaFin", e.target.value)
                           }
+                          step={60}
+                          className="time-input"
                         />
                       </div>
                     </div>

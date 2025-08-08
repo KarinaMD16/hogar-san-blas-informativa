@@ -9,6 +9,7 @@ import { Stepper, StepperIndicator, StepperItem, StepperSeparator, StepperTrigge
 import { cn } from "../../../lib/utils";
 import Boton from "../../Boton";
 import ContactosDonanteSection from "./ConactosDonanteSection";
+import { toast } from "sonner";
 
 const steps = [1, 2, 3];
 
@@ -97,12 +98,22 @@ const FormSolicitudDonacion = () => {
             }
 
             try {
-                await mutation.mutateAsync(value);
-                alert("Formulario enviado con éxito");
+                const result = await mutation.mutateAsync(value);
+                console.log("Form submission successful:", result);
+                toast.success("Solicitud de donación enviada", {
+                    description: "Hemos recibido tu solicitud de donación. ¡Gracias por tu generosidad!",
+                    duration: 5000,
+                });
                 form.reset();
-            } catch (error) {
-                console.error(error);
-                setFormErrors({ error: "Error al enviar formulario" });
+                setCurrentStep(1);
+            } catch (error: any) {
+                console.error("Form submission error:", error);
+                console.error("Error response:", error?.response);
+                
+                toast.error("Ocurrió un error al enviar tu solicitud de donación", {
+                    description: error?.response?.data?.message || "Por favor, inténtalo de nuevo más tarde",
+                    duration: 8000,
+                });
             }
         },
     });

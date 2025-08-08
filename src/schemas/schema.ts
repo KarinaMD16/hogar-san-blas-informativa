@@ -48,7 +48,8 @@ export const formVoluntarioSchema = z.object({
     .min(1, "Debe seleccionar un tipo de voluntariado"),
   
   cantidadHoras: z.number()
-    .min(1, "Debe ingresar una cantidad de horas"),
+    .min(1, "Debe ingresar una cantidad de horas")
+    .optional(),
   
   contactosEmergencia: z.array(
     z.object({
@@ -64,7 +65,7 @@ export const formVoluntarioSchema = z.object({
   
   horarios: z.array(
     z.object({
-      dia: z.enum(["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]),
+      dia: z.enum(["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]),
       horaInicio: z.string()
         .regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, "Formato de hora inválido (HH:MM)"),
       horaFin: z.string()

@@ -1,14 +1,29 @@
 import { useGetTipoVoluntarios } from "../../../hooks/formularios/solicitudVoluntario";
 import InputField from "../../../components/forms/InputField";
 import { Label } from "@radix-ui/react-label";
+import { useStore } from "@tanstack/react-form";
+import { useEffect } from "react";
 
 const TipoVoluntariadoSection = ({ form, formErrors }: any) => {
     const { tiposVoluntariado } = useGetTipoVoluntarios();
+
+    const tipoSeleccionadoId = useStore(form.store, (state: any) => state.values.tipoVoluntariado);
+    const tipoSeleccionado = tiposVoluntariado?.find((tipo) => tipo.id === tipoSeleccionadoId);
+    const isHoras = tipoSeleccionado?.nombre.toLowerCase().includes("horas");
+
+    useEffect(() => {
+      if (!isHoras) {
+        form.setFieldValue("cantidadHoras", "0");
+      }
+    }, [isHoras, form]);
     return (
         <>
         <form.Field 
           name="tipoVoluntariado">
-          {(field: { state: { value: any; }; handleChange: (arg0: number) => void; }) => (
+          {(field: { 
+            state: { value: number | undefined }; 
+            handleChange: (value: number) => void; 
+          }) => (
             <div className="mb-4">
               <Label className="block text-left text-sm font-medium mb-6">
                 Seleccione el tipo de voluntariado a realizar: <span className="text-red-600">*</span>
@@ -42,11 +57,11 @@ const TipoVoluntariadoSection = ({ form, formErrors }: any) => {
             </div>
           )}
         </form.Field>
-        <form.Field name="cantidadHoras">
+        {isHoras && (<form.Field name="cantidadHoras">
           {(field: { state: { value: any; }; handleChange: (arg0: number) => void; }) => (
             <div className="mb-4">
               <Label className="block text-left text-sm font-medium mb-2">
-                Cantidad de horas a cumplir: <span className="text-red-600">*</span>
+                Cantidad de horas totales a cumplir: <span className="text-red-600">*</span>
               </Label>
               <InputField
                 id="cantidadHoras"
@@ -63,6 +78,7 @@ const TipoVoluntariadoSection = ({ form, formErrors }: any) => {
             </div>
           )}
         </form.Field>
+        )}
         </>
     )
 }; export default TipoVoluntariadoSection;
