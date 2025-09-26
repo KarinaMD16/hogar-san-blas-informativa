@@ -51,7 +51,8 @@ const FormSolicitudVoluntariado = () => {
 
       const formData = {
         ...value,
-        horarios: filteredHorarios || []
+        horarios: filteredHorarios || [],
+        cantidadHoras: Number(value.cantidadHoras)
       };
 
       const shouldValidateCantidadHoras = formData.tipoVoluntariado && 
@@ -78,7 +79,7 @@ const FormSolicitudVoluntariado = () => {
         console.log("Form submission successful:", result);
         toast.success("Solicitud de voluntario enviada", {
           description: "Se te enviará un aviso a tu correo electrónico sobre el estado de tu solicitud",
-          duration: 4000,
+          duration: 8000,
         });
         form.reset();
         setCurrentStep(1);
