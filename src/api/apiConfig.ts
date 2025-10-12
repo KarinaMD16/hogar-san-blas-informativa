@@ -6,3 +6,5 @@ const sidnamAPI = axios.create({
 })
 
 export default sidnamAPI
+
+//api
