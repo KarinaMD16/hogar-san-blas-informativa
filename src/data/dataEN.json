@@ -360,6 +360,12 @@
         "View criminal record (PDF)"
       ]
     }
+    ,
+    "botones": [
+      "Previous",
+      "Next",
+      "Send"
+    ]
   },
 
   "paginaRequisitosDonacion": {

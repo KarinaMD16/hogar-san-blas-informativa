@@ -8,6 +8,7 @@ import type { misionVision } from "./sections/misionVision";
 import type { Servicio } from "./sections/servicios";
 import type { solicitarResidencia } from "./sections/solicitarResidencia";
 import type { UneteNosotros } from "./sections/unete";
+import type { SeccionReseñaHistorica } from "./reseñaHistorica/seccionReseñaHistorica";
 
 export interface DatosLanding {
   header: Header
@@ -20,6 +21,6 @@ export interface DatosLanding {
   historia: HistoriaPreview;
   uneteNosotros: UneteNosotros;
   footer: Footer;
-  reseñaHistorica: { descripcion: string };
+  paginaReseñaHistorica: SeccionReseñaHistorica[];
   formulario: { botones: string[] };
 }
