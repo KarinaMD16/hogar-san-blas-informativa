@@ -11,7 +11,7 @@ export const getTodasGaleria = async (page: number, limit: number)
 };
 
 export const getCategorias = async (): Promise<Categoria[]> => {
-  const response = await sidnamAPI.get<Categoria[]>(`${galeriaRuta}/getCategorias`);
+  const response = await sidnamAPI.get<Categoria[]>(`${galeriaRuta}/getCategoriasActivas`);
   return response.data;
 };
 
