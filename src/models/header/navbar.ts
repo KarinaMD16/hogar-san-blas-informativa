@@ -9,9 +9,12 @@ export interface NavItem {
 };
 
 export interface navbar {
-    sobreNosotros: NavItem;
-    residencia: NavItem;
-    apoyanos: NavItem;
-    anuncios: NavItem;
-    contacto: NavItem;
+  sobreNosotros: NavItem;
+  residencia: NavItem;
+  apoyanos: NavItem;
+  anuncios: NavItem;
+  contacto: NavItem;
 };
+
+// Provide a clearer exported name expected by other modules
+export type Header = navbar;
