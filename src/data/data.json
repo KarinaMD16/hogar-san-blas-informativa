@@ -73,7 +73,7 @@
     },
     "vision": {
       "titulo": "Visión",
-      "descripcion": "Tener instituidos en el Hogar de Ancianos San Blas, servicios profesionales eficientes, que ofrezcan calidad de vida al usuario del Hogar de Ancianos San Blas en un ambiente de paz, tranquilidad y calor humano."
+      "descripcion": "Ser un referente nacional en el cuidado integral y humanizado de las personas adultas mayores, brindando servicios innovadores que promuevan calidad de vida, resiliencia y bienestar en un entorno de paz, amor y sabiduría. A través de la transformación y la mejora continua, proyectarnos como un hogar confiable y sostenible, capaz de inspirar a la comunidad y servir como modelo de atención para las futuras generaciones."
     },
     "objetivos": {
       "titulo": "Objetivos",
@@ -155,10 +155,6 @@
       {
         "texto": "Quiero ser voluntario",
         "ruta": "formularios/voluntariado"
-      },
-      {
-        "texto": "Quiero ser socio",
-        "ruta": "requisitos/asociarse"
       }
     ]
   },
@@ -229,7 +225,7 @@
       "titulo": "Residencia",
       "opciones": [
         { "texto": "Requisitos de ingreso", "ruta": "/requisitos/residencia" },
-        { "texto": "Servicios", "ruta": "#seccion-servicios" }
+        { "texto": "Servicios", "ruta": "/#seccion-servicios" }
       ]
     },
     "apoyanos": {
@@ -239,8 +235,7 @@
         {
           "texto": "Formulario Voluntariado",
           "ruta": "/formularios/voluntariado"
-        },
-        { "texto": "Requisitos Asociarse", "ruta": "/requisitos/asociarse" }
+        }
       ]
     },
     "anuncios": {
@@ -248,10 +243,10 @@
       "opciones": [
         {
           "texto": "Solicitudes donaciones",
-          "ruta": "/publicaciones#solicitudes-donaciones"
+          "ruta": "/publicaciones/solicitudes-donaciones"
         },
-        { "texto": "Actividades", "ruta": "/publicaciones#eventos" },
-        { "texto": "Proyectos", "ruta": "/publicaciones#proyectos" }
+        { "texto": "Actividades", "ruta": "/publicaciones/eventos" },
+        { "texto": "Proyectos", "ruta": "/publicaciones/proyectos" }
       ]
     },
     "contacto": {

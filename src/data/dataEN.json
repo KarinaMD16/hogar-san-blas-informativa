@@ -73,7 +73,7 @@
     },
     "vision": {
       "titulo": "Vision",
-      "descripcion": "To establish efficient professional services at the Hogar San Blas that provide quality of life to its residents in an environment of peace, tranquility, and human warmth."
+      "descripcion": "To become a national benchmark in the comprehensive and humanized care of older adults, providing innovative services that promote quality of life, resilience, and well-being in an environment of peace, love, and wisdom. Through transformation and continuous improvement, we aim to be a trustworthy and sustainable home—one that inspires the community and serves as a model of care for future generations."
     },
     "objetivos": {
       "titulo": "Goals",
@@ -155,10 +155,6 @@
       {
         "texto": "I want to volunteer",
         "ruta": "formularios/voluntariado"
-      },
-      {
-        "texto": "Become a partner",
-        "ruta": "requisitos/asociarse"
       }
     ]
   },
@@ -229,15 +225,14 @@
       "titulo": "Residency",
       "opciones": [
         { "texto": "Residency requirements", "ruta": "/requisitos/residencia" },
-        { "texto": "Services", "ruta": "#seccion-servicios" }
+        { "texto": "Services", "ruta": "/#seccion-servicios" }
       ]
     },
     "apoyanos": {
       "titulo": "Support us",
       "opciones": [
         { "texto": "Donation form", "ruta": "/formularios/donacion" },
-        { "texto": "Volunteer form", "ruta": "/formularios/voluntariado" },
-        { "texto": "Partner requirements", "ruta": "/requisitos/asociarse" }
+        { "texto": "Volunteer form", "ruta": "/formularios/voluntariado" }
       ]
     },
     "anuncios": {
@@ -245,10 +240,10 @@
       "opciones": [
         {
           "texto": "Donation requests",
-          "ruta": "/publicaciones#solicitudes-donaciones"
+          "ruta": "/publicaciones/solicitudes-donaciones"
         },
-        { "texto": "Events", "ruta": "/publicaciones#eventos" },
-        { "texto": "Proyects", "ruta": "/publicaciones#proyectos" }
+        { "texto": "Events", "ruta": "/publicaciones/eventos" },
+        { "texto": "Proyects", "ruta": "/publicaciones/proyectos" }
       ]
     },
     "contacto": {

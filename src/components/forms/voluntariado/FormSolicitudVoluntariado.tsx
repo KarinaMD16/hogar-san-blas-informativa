@@ -17,6 +17,7 @@ import {
 } from "../../ui/Stepper"
 import { cn } from "../../../lib/utils";
 import TipoVoluntariadoSection from "./TipoVoluntariadoSection";
+import { toast } from "sonner";
 
 const steps = [1, 2, 3, 4, 5];
 
@@ -50,10 +51,18 @@ const FormSolicitudVoluntariado = () => {
 
       const formData = {
         ...value,
-        horarios: filteredHorarios || []
+        horarios: filteredHorarios || [],
+        cantidadHoras: Number(value.cantidadHoras)
       };
 
-      const result = formVoluntarioSchema.safeParse(formData);
+      const shouldValidateCantidadHoras = formData.tipoVoluntariado && 
+        formData.tipoVoluntariado.toString().toLowerCase().includes('horas');
+      
+      const submissionSchema = shouldValidateCantidadHoras
+        ? formVoluntarioSchema
+        : formVoluntarioSchema.omit({ cantidadHoras: true });
+      
+      const result = submissionSchema.safeParse(formData);
 
       if (!result.success) {
         const fieldErrors: Record<string, string> = {};
@@ -66,15 +75,25 @@ const FormSolicitudVoluntariado = () => {
       }
 
       try {
-        await mutation.mutateAsync(formData);
-        alert("Formulario enviado con éxito");
+        const result = await mutation.mutateAsync(formData);
+        console.log("Form submission successful:", result);
+        toast.success("Solicitud de voluntario enviada", {
+          description: "Se te enviará un aviso a tu correo electrónico sobre el estado de tu solicitud",
+          duration: 8000,
+        });
         form.reset();
-      } catch (error) {
-        console.error("Error al enviar el formulario:", error);
-        alert("Ocurrió un error al enviar el formulario. Por favor, inténtalo de nuevo.");
+        setCurrentStep(1);
+      } catch (error: any) {
+        console.error("Form submission error:", error);
+        console.error("Error response:", error?.response);
+        
+        toast.error("Ocurrió un error al enviar tu solicitud de voluntario", {
+          description: "Vuelve a intentarlo más tarde",
+          duration: 8000,
+        });
       }
     },
-  })
+  });
 
   const validateCurrentStep = async (step: number): Promise<boolean> => {
     const fields = getFieldsForStep(step);
@@ -82,9 +101,25 @@ const FormSolicitudVoluntariado = () => {
     let isValid = true;
 
     const formValues = form.state.values;
+
+    const shouldValidateCantidadHoras = fields.includes('cantidadHoras') && 
+      formValues.tipoVoluntariado && 
+      formValues.tipoVoluntariado.toString().toLowerCase().includes('horas');
+
+    const fieldsToValidate = shouldValidateCantidadHoras 
+      ? fields 
+      : fields.filter(field => field !== 'cantidadHoras');
     
-    for (const field of fields) {
+    for (const field of fieldsToValidate) {
       try {
+        if (field === 'cantidadHoras' && shouldValidateCantidadHoras) {
+          if (!formValues.cantidadHoras || formValues.cantidadHoras < 1) {
+            errors[field] = 'Debe ingresar una cantidad de horas';
+            isValid = false;
+            continue;
+          }
+        }
+        
         const fieldSchema = formVoluntarioSchema.pick({ [field]: true } as any);
         const result = fieldSchema.safeParse({ [field]: formValues[field as keyof typeof formValues] });
         

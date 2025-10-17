@@ -22,6 +22,7 @@ export const InformacionDonanteSection = ({ form, formErrors }: any) => {
                         onChange={(e) => field.handleChange(e.target.value)}
                         className="w-full"
                         placeholder="Ingrese su nombre"
+                        maxLength={30}
                     />
                     {formErrors.nombre && (
                         <p className="text-red-700 text-sm mt-1">{formErrors.nombre}</p>
@@ -47,6 +48,7 @@ export const InformacionDonanteSection = ({ form, formErrors }: any) => {
                         onChange={(e) => field.handleChange(e.target.value)}
                         className="w-full"
                         placeholder="Ingrese su primer apellido"
+                        maxLength={20}
                     />
                     {formErrors.apellido1 && (
                         <p className="text-red-700 text-sm mt-1">{formErrors.apellido1}</p>
@@ -72,6 +74,7 @@ export const InformacionDonanteSection = ({ form, formErrors }: any) => {
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="w-full"
                     placeholder="Ingrese su segundo apellido (opcional)"
+                    maxLength={20}
                 />
                 {formErrors.apellido2 && (
                     <p className="text-red-700 text-sm mt-1">{formErrors.apellido2}</p>
@@ -97,6 +100,7 @@ export const InformacionDonanteSection = ({ form, formErrors }: any) => {
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="w-full"
                     placeholder="Ingrese su número de cédula"
+                    maxLength={15}
                 />
                 {formErrors.cedula && (
                     <p className="text-red-700 text-sm mt-1">{formErrors.cedula}</p>
