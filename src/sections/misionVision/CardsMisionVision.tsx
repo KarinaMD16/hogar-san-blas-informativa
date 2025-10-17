@@ -9,7 +9,11 @@ const iconMap: Record<string, JSX.Element> = {
   "Misión": <GiBullseye className="w-16 h-16 text-amaranthPink" />,
   "Visión": <PiBinocularsFill className="w-16 h-16 text-amaranthPink" />,
   "Objetivos": <SiSearxng className="w-16 h-16 text-amaranthPink" />,
-  "Valores": <BiSolidHeart  className="w-16 h-16 text-amaranthPink" />
+  "Valores": <BiSolidHeart  className="w-16 h-16 text-amaranthPink" />,
+  "Mission": <GiBullseye className="w-16 h-16 text-amaranthPink" />,
+  "Vision": <PiBinocularsFill className="w-16 h-16 text-amaranthPink" />,
+  "Goals": <SiSearxng className="w-16 h-16 text-amaranthPink" />,
+  "Values": <BiSolidHeart  className="w-16 h-16 text-amaranthPink" />
 };
 
 const CardsMisionVision = ({ item }: CardMisionVisionProps) => {

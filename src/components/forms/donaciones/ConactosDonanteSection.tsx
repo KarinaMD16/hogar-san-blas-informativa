@@ -22,6 +22,7 @@ export const ContactosDonanteSection = ({ form, formErrors }: any) => {
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="w-full"
                     placeholder="ejemplo@correo.com"
+                    maxLength={100}
                 />
                 {formErrors.email && (
                     <p className="text-red-700 text-sm mt-1">{formErrors.email}</p>
@@ -47,6 +48,7 @@ export const ContactosDonanteSection = ({ form, formErrors }: any) => {
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="w-full"
                     placeholder="Ingrese su número de teléfono"
+                    maxLength={15}
                 />
                 {formErrors.telefono && (
                     <p className="text-red-700 text-sm mt-1">{formErrors.telefono}</p>

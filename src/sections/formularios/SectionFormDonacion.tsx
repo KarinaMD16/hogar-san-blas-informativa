@@ -2,7 +2,7 @@ import FormSolicitudDonacion from "../../components/forms/donaciones/FormSolicit
 
 const SectionFormDonacion = () => {
   return (
-    <section id='formularioDonacion' className="flex flex-col mb-10">
+    <section id='formularioDonacion' className="flex flex-col">
       <FormSolicitudDonacion />
     </section>
   )

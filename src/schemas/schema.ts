@@ -48,7 +48,8 @@ export const formVoluntarioSchema = z.object({
     .min(1, "Debe seleccionar un tipo de voluntariado"),
   
   cantidadHoras: z.number()
-    .min(1, "Debe ingresar una cantidad de horas"),
+    .min(1, "Debe ingresar una cantidad de horas")
+    .optional(),
   
   contactosEmergencia: z.array(
     z.object({
@@ -64,7 +65,7 @@ export const formVoluntarioSchema = z.object({
   
   horarios: z.array(
     z.object({
-      dia: z.enum(["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]),
+      dia: z.enum(["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]),
       horaInicio: z.string()
         .regex(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, "Formato de hora inválido (HH:MM)"),
       horaFin: z.string()
@@ -110,13 +111,13 @@ export const formDonacionSchema = z.object({
   
   tipoDonacion: z.string()
     .min(1, "Debe seleccionar un tipo de donación")
-    .max(100, "El tipo de donación no puede tener más de 100 caracteres"),
+    .max(15, "El tipo de donación no puede tener más de 15 caracteres"),
   
   descripcion: z.string()
     .min(10, "La descripción debe tener al menos 10 caracteres")
-    .max(500, "La descripción no puede tener más de 500 caracteres"),
+    .max(200, "La descripción no puede tener más de 200 caracteres"),
   
   observaciones: z.string()
-    .max(1000, "Las observaciones no pueden tener más de 1000 caracteres")
+    .max(200, "Las observaciones no pueden tener más de 200 caracteres")
     .optional()
 });
