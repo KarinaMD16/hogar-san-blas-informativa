@@ -17,6 +17,7 @@ const DatosDonacionSection = ({ form, formErrors }: any) => {
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => field.handleChange(e.target.value)}
                             className="w-full"
                             placeholder="Ej: Ropa, alimentos, aseo personal, pañales, etc."
+                            maxLength={15}
                         />
                         {formErrors.tipoDonacion && (
                             <p className="text-red-700 text-sm mt-1">{formErrors.tipoDonacion}</p>
@@ -34,6 +35,7 @@ const DatosDonacionSection = ({ form, formErrors }: any) => {
                             onChange={(e) => field.handleChange(e.target.value)}
                             className="w-full min-h-[100px]"
                             placeholder="Describa ampliamente los artículos que desea donar"
+                            maxLength={200}
                         />
                         {formErrors.descripcion && (
                             <p className="text-red-700 text-sm mt-1">{formErrors.descripcion}</p>
@@ -51,6 +53,7 @@ const DatosDonacionSection = ({ form, formErrors }: any) => {
                             onChange={(e) => field.handleChange(e.target.value)}
                             className="w-full min-h-[100px]"
                             placeholder="Agregue cualquier información adicional que desee compartir (opcional)"
+                            maxLength={200}
                         />
                         {formErrors.observaciones && (
                             <p className="text-red-700 text-sm mt-1">{formErrors.observaciones}</p>

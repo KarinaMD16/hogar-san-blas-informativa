@@ -10,23 +10,19 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PublicacionesIndexRouteImport } from './routes/publicaciones/index'
 import { Route as HistoriaIndexRouteImport } from './routes/historia/index'
 import { Route as GaleriaIndexRouteImport } from './routes/galeria/index'
 import { Route as CasosdeexitoIndexRouteImport } from './routes/casosdeexito/index'
 import { Route as RequisitosResidenciaRouteImport } from './routes/requisitos/residencia'
-import { Route as RequisitosAsociarseRouteImport } from './routes/requisitos/asociarse'
+import { Route as PublicacionesSolicitudesDonacionesRouteImport } from './routes/publicaciones/solicitudes-donaciones'
+import { Route as PublicacionesProyectosRouteImport } from './routes/publicaciones/proyectos'
+import { Route as PublicacionesEventosRouteImport } from './routes/publicaciones/eventos'
 import { Route as FormulariosVoluntariadoRouteImport } from './routes/formularios/voluntariado'
 import { Route as FormulariosDonacionRouteImport } from './routes/formularios/donacion'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PublicacionesIndexRoute = PublicacionesIndexRouteImport.update({
-  id: '/publicaciones/',
-  path: '/publicaciones/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HistoriaIndexRoute = HistoriaIndexRouteImport.update({
@@ -49,9 +45,20 @@ const RequisitosResidenciaRoute = RequisitosResidenciaRouteImport.update({
   path: '/requisitos/residencia',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RequisitosAsociarseRoute = RequisitosAsociarseRouteImport.update({
-  id: '/requisitos/asociarse',
-  path: '/requisitos/asociarse',
+const PublicacionesSolicitudesDonacionesRoute =
+  PublicacionesSolicitudesDonacionesRouteImport.update({
+    id: '/publicaciones/solicitudes-donaciones',
+    path: '/publicaciones/solicitudes-donaciones',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PublicacionesProyectosRoute = PublicacionesProyectosRouteImport.update({
+  id: '/publicaciones/proyectos',
+  path: '/publicaciones/proyectos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PublicacionesEventosRoute = PublicacionesEventosRouteImport.update({
+  id: '/publicaciones/eventos',
+  path: '/publicaciones/eventos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FormulariosVoluntariadoRoute = FormulariosVoluntariadoRouteImport.update({
@@ -69,35 +76,38 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/formularios/donacion': typeof FormulariosDonacionRoute
   '/formularios/voluntariado': typeof FormulariosVoluntariadoRoute
-  '/requisitos/asociarse': typeof RequisitosAsociarseRoute
+  '/publicaciones/eventos': typeof PublicacionesEventosRoute
+  '/publicaciones/proyectos': typeof PublicacionesProyectosRoute
+  '/publicaciones/solicitudes-donaciones': typeof PublicacionesSolicitudesDonacionesRoute
   '/requisitos/residencia': typeof RequisitosResidenciaRoute
   '/casosdeexito': typeof CasosdeexitoIndexRoute
   '/galeria': typeof GaleriaIndexRoute
   '/historia': typeof HistoriaIndexRoute
-  '/publicaciones': typeof PublicacionesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/formularios/donacion': typeof FormulariosDonacionRoute
   '/formularios/voluntariado': typeof FormulariosVoluntariadoRoute
-  '/requisitos/asociarse': typeof RequisitosAsociarseRoute
+  '/publicaciones/eventos': typeof PublicacionesEventosRoute
+  '/publicaciones/proyectos': typeof PublicacionesProyectosRoute
+  '/publicaciones/solicitudes-donaciones': typeof PublicacionesSolicitudesDonacionesRoute
   '/requisitos/residencia': typeof RequisitosResidenciaRoute
   '/casosdeexito': typeof CasosdeexitoIndexRoute
   '/galeria': typeof GaleriaIndexRoute
   '/historia': typeof HistoriaIndexRoute
-  '/publicaciones': typeof PublicacionesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/formularios/donacion': typeof FormulariosDonacionRoute
   '/formularios/voluntariado': typeof FormulariosVoluntariadoRoute
-  '/requisitos/asociarse': typeof RequisitosAsociarseRoute
+  '/publicaciones/eventos': typeof PublicacionesEventosRoute
+  '/publicaciones/proyectos': typeof PublicacionesProyectosRoute
+  '/publicaciones/solicitudes-donaciones': typeof PublicacionesSolicitudesDonacionesRoute
   '/requisitos/residencia': typeof RequisitosResidenciaRoute
   '/casosdeexito/': typeof CasosdeexitoIndexRoute
   '/galeria/': typeof GaleriaIndexRoute
   '/historia/': typeof HistoriaIndexRoute
-  '/publicaciones/': typeof PublicacionesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -105,46 +115,50 @@ export interface FileRouteTypes {
     | '/'
     | '/formularios/donacion'
     | '/formularios/voluntariado'
-    | '/requisitos/asociarse'
+    | '/publicaciones/eventos'
+    | '/publicaciones/proyectos'
+    | '/publicaciones/solicitudes-donaciones'
     | '/requisitos/residencia'
     | '/casosdeexito'
     | '/galeria'
     | '/historia'
-    | '/publicaciones'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/formularios/donacion'
     | '/formularios/voluntariado'
-    | '/requisitos/asociarse'
+    | '/publicaciones/eventos'
+    | '/publicaciones/proyectos'
+    | '/publicaciones/solicitudes-donaciones'
     | '/requisitos/residencia'
     | '/casosdeexito'
     | '/galeria'
     | '/historia'
-    | '/publicaciones'
   id:
     | '__root__'
     | '/'
     | '/formularios/donacion'
     | '/formularios/voluntariado'
-    | '/requisitos/asociarse'
+    | '/publicaciones/eventos'
+    | '/publicaciones/proyectos'
+    | '/publicaciones/solicitudes-donaciones'
     | '/requisitos/residencia'
     | '/casosdeexito/'
     | '/galeria/'
     | '/historia/'
-    | '/publicaciones/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FormulariosDonacionRoute: typeof FormulariosDonacionRoute
   FormulariosVoluntariadoRoute: typeof FormulariosVoluntariadoRoute
-  RequisitosAsociarseRoute: typeof RequisitosAsociarseRoute
+  PublicacionesEventosRoute: typeof PublicacionesEventosRoute
+  PublicacionesProyectosRoute: typeof PublicacionesProyectosRoute
+  PublicacionesSolicitudesDonacionesRoute: typeof PublicacionesSolicitudesDonacionesRoute
   RequisitosResidenciaRoute: typeof RequisitosResidenciaRoute
   CasosdeexitoIndexRoute: typeof CasosdeexitoIndexRoute
   GaleriaIndexRoute: typeof GaleriaIndexRoute
   HistoriaIndexRoute: typeof HistoriaIndexRoute
-  PublicacionesIndexRoute: typeof PublicacionesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -154,13 +168,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/publicaciones/': {
-      id: '/publicaciones/'
-      path: '/publicaciones'
-      fullPath: '/publicaciones'
-      preLoaderRoute: typeof PublicacionesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/historia/': {
@@ -191,11 +198,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RequisitosResidenciaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/requisitos/asociarse': {
-      id: '/requisitos/asociarse'
-      path: '/requisitos/asociarse'
-      fullPath: '/requisitos/asociarse'
-      preLoaderRoute: typeof RequisitosAsociarseRouteImport
+    '/publicaciones/solicitudes-donaciones': {
+      id: '/publicaciones/solicitudes-donaciones'
+      path: '/publicaciones/solicitudes-donaciones'
+      fullPath: '/publicaciones/solicitudes-donaciones'
+      preLoaderRoute: typeof PublicacionesSolicitudesDonacionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/publicaciones/proyectos': {
+      id: '/publicaciones/proyectos'
+      path: '/publicaciones/proyectos'
+      fullPath: '/publicaciones/proyectos'
+      preLoaderRoute: typeof PublicacionesProyectosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/publicaciones/eventos': {
+      id: '/publicaciones/eventos'
+      path: '/publicaciones/eventos'
+      fullPath: '/publicaciones/eventos'
+      preLoaderRoute: typeof PublicacionesEventosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/formularios/voluntariado': {
@@ -219,12 +240,14 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FormulariosDonacionRoute: FormulariosDonacionRoute,
   FormulariosVoluntariadoRoute: FormulariosVoluntariadoRoute,
-  RequisitosAsociarseRoute: RequisitosAsociarseRoute,
+  PublicacionesEventosRoute: PublicacionesEventosRoute,
+  PublicacionesProyectosRoute: PublicacionesProyectosRoute,
+  PublicacionesSolicitudesDonacionesRoute:
+    PublicacionesSolicitudesDonacionesRoute,
   RequisitosResidenciaRoute: RequisitosResidenciaRoute,
   CasosdeexitoIndexRoute: CasosdeexitoIndexRoute,
   GaleriaIndexRoute: GaleriaIndexRoute,
   HistoriaIndexRoute: HistoriaIndexRoute,
-  PublicacionesIndexRoute: PublicacionesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
