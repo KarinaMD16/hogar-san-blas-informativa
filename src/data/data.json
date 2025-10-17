@@ -107,7 +107,7 @@
   "solicitudResidencia": {
     "titulo": "¿Desea solicitar residencia?",
     "descripcion": "Para obtener más detalles sobre nuestros requisitos de admisión y procedimientos, no dudes en contactarnos a través de nuestros canales de comunicación. Estamos aquí para proporcionarte toda la información necesaria y ayudarte en este importante paso para la calidad de vida de tu ser querido.",
-    "imagen": "https://i.ibb.co/gM7s9HmD/IMG-0476.jpg",
+    "imagen": "https://i.ibb.co/PGq5QhcR/IMG-0483.jpg",
     "botonRequisitos": "Ver requisitos"
   },
 
@@ -262,8 +262,8 @@
   "titulosSecciones": {
     "Servicios": "Nuestros servicios",
     "Galeria": {
-      "titulo": "Galeria",
-      "tituloExtend": "Nuestra galeria",
+      "titulo": "Galería",
+      "tituloExtend": "Nuestra galería",
       "filtroTodas": "Ver todas"
     },
     "publicaciones": {
