@@ -11,6 +11,6 @@ export async function getTipoVoluntarios(): Promise<TipoVoluntariado[]> {
 }
 
 export const postSolicitudPendiente = async (data: CrearSolicitudPendienteDto): Promise<SolicitudPendiente> => {
-  const response = await sidnamAPI.post<SolicitudPendiente>( `${voluntariosRuta}/crearSolicitudPendiente`, data);
+  const response = await sidnamAPI.post<SolicitudPendiente>(`${voluntariosRuta}/solicitudes/pendiente`, data);
   return response.data;
 };
