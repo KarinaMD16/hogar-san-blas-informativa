@@ -242,10 +242,10 @@
       "titulo": "Anuncios",
       "opciones": [
         {
-          "texto": "Solicitudes donaciones",
+          "texto": "Solicitudes de donaciones",
           "ruta": "/publicaciones/solicitudes-donaciones"
         },
-        { "texto": "Actividades", "ruta": "/publicaciones/eventos" },
+        { "texto": "Eventos", "ruta": "/publicaciones/eventos" },
         { "texto": "Proyectos", "ruta": "/publicaciones/proyectos" }
       ]
     },
