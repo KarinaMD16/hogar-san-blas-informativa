@@ -4,13 +4,13 @@ import { voluntariosRuta } from "../apiRutas";
 
 export async function getTipoVoluntarios(): Promise<TipoVoluntariado[]> {
   const response = await sidnamAPI.get<TipoVoluntariado[]>(
-    `${voluntariosRuta}/getTipoVoluntario`
+    `${voluntariosRuta}/tipos-voluntariado`
   );
 
   return response.data;
 }
 
 export const postSolicitudPendiente = async (data: CrearSolicitudPendienteDto): Promise<SolicitudPendiente> => {
-  const response = await sidnamAPI.post<SolicitudPendiente>( `${voluntariosRuta}/crearSolicitudPendiente`, data);
+  const response = await sidnamAPI.post<SolicitudPendiente>(`${voluntariosRuta}/solicitudes/pendiente`, data);
   return response.data;
 };

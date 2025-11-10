@@ -63,7 +63,7 @@ const Donar = () => {
           />
           <Boton
             children={contentJson.donaciones.botones.botonVerOtras}
-            where={"/publicaciones#solicitudes-donaciones"}
+            where={"/publicaciones/solicitudes-donaciones"}
           />
         </div>
       </div>

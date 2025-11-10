@@ -92,7 +92,7 @@
         "El Hogar San Blas de Nicoya, dedicado a la Atención de la Persona Adulta Mayor, ubicado en el cantón central de Nicoya, Guanacaste. Nació por la necesidad de atención de personas mayores que, en condición de abandono y necesidad, pedían en la calle. Un grupo de personas de la comunidad, de gran generosidad, unidos en un sentimiento de ayuda a lo que acontecía con ellos, iniciaron en forma voluntaria las gestiones de ayuda. ",
         "Este Hogar de Ancianos dio apertura en setiembre del año 1983, el cual en sus primeros años inició sus labores como un centro diurno. Luego, con el paso del tiempo, se convierte en hogar de larga estancia, incrementando el número de personas atendidas. A la fecha se mantiene un número entre los 36 y 40 adultos mayores, hombres y mujeres entre los 65 y 102 años de edad. En algún momento se ha atendido adultos mayores de mayor edad que la actual, carentes de recursos, enfermos o en fase terminal."
       ],
-      "imagen": "https://scontent.fsyq3-1.fna.fbcdn.net/v/t39.30808-6/506092058_1319564893510373_8913071646491314006_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Cow5qZ185kMQ7kNvwHlGOVZ&_nc_oc=AdlXYIcOhxFlbbKM6e23Uf_R2lIhfFArsr6-88UvHj6tsOcv6FJZOE-3JOyJ8dEX-uU&_nc_zt=23&_nc_ht=scontent.fsyq3-1.fna&_nc_gid=BJ-1WwxQp8cDoFRuHKLxPA&oh=00_AfTxlQ_T6WfLxBQVHvJ7K-qYlCJMWrNP76Y6cxMPTbSHmQ&oe=68749DC4"
+      "imagen": "https://i.ibb.co/4RwXyS42/IMG-0402.jpg"
     },
     {
       "titulo": "Más de 40 años de servir a nuestros adultos mayores",
@@ -100,14 +100,14 @@
         "El Hogar San Blas de Nicoya tiene una rica historia que se remonta a décadas atrás, siendo un pilar de apoyo para la comunidad de Guanacaste. Fundado con la misión de brindar cuidado y atención a adultos mayores, ha sido un faro de esperanza y cuidado compasivo en la región. Desde sus inicios, ha evolucionado para adaptarse a las necesidades cambiantes de sus residentes, ofreciendo un ambiente hogareño donde se promueve la dignidad y el respeto. Hoy en día, continúa su compromiso con la excelencia en el cuidado geriátrico, siendo reconocido por su dedicación inquebrantable a mejorar la calidad de vida de quienes llaman al Hogar San Blas su hogar.",
         "Este hogar mantiene su funcionamiento gracias a voluntarios de la comunidad, con cuyo aporte se construyó el primer pabellón con pasillo desde 1983 a 1991. Años después se dio la construcción completa con colaboración del INA, JPS, CTAMS, IMAS, Municipalidad y pueblo nicoyano, lo que hoy es el Hogar de Ancianos San Blas. Entre sus instalaciones se cuenta con una cocina equipada, un comedor, una capilla, 24 habitaciones en tres pabellones, un salón de actividades, una sala de terapia física, un departamento de enfermería y curaciones, oficinas de servicio social, nutrición, administración, un área de recreación y eventos externa y amplias zonas verdes, una granja con animales que forma parte de la terapia para las PAM, entre otras. Actualmente se mantiene un voluntariado, también se recibe ayuda económica de instituciones como Junta de Protección Social, CONAPAM, FODESAF, la gestión de recursos propios por parte de la Junta Directiva y el apoyo de la comunidad. En el año 2011 se implementa el programa de la Red de Atención Domiciliar o Red de Cuido, el cual atiende a adultos mayores que no se encuentran dentro del hogar sino en sus casas en situación de pobreza extrema. Se trabaja con recursos de CONAPAM. Iniciando con 50 beneficiarios, actualmente se atienden a 125 PAM con este programa."
       ],
-      "imagen": "https://scontent.fsyq3-1.fna.fbcdn.net/v/t39.30808-6/496928711_1294235876043275_1654639420676425125_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nsOT72CYHqMQ7kNvwFktjLq&_nc_oc=AdlTzwxpX1yDdmAPXksvJDDqnZEe31X5Vj8aEr4bZ5LfeIVKuWyHjxQ8lzrso8mVe4M&_nc_zt=23&_nc_ht=scontent.fsyq3-1.fna&_nc_gid=BVOoP1fCLlo2ozQbfpTXcw&oh=00_AfRs2tnWYP4yBO9qbm-NpPlfILcOYlG62OnBTNrIUBY26Q&oe=6875D309"
+      "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
     }
   ],
 
   "solicitudResidencia": {
     "titulo": "¿Desea solicitar residencia?",
     "descripcion": "Para obtener más detalles sobre nuestros requisitos de admisión y procedimientos, no dudes en contactarnos a través de nuestros canales de comunicación. Estamos aquí para proporcionarte toda la información necesaria y ayudarte en este importante paso para la calidad de vida de tu ser querido.",
-    "imagen": "https://i.ibb.co/XZmLDJWF/481280141-1224544679679062-4516655931557123434-n-1.jpg",
+    "imagen": "https://i.ibb.co/PGq5QhcR/IMG-0483.jpg",
     "botonRequisitos": "Ver requisitos"
   },
 
@@ -242,10 +242,10 @@
       "titulo": "Anuncios",
       "opciones": [
         {
-          "texto": "Solicitudes donaciones",
+          "texto": "Solicitudes de donaciones",
           "ruta": "/publicaciones/solicitudes-donaciones"
         },
-        { "texto": "Actividades", "ruta": "/publicaciones/eventos" },
+        { "texto": "Eventos", "ruta": "/publicaciones/eventos" },
         { "texto": "Proyectos", "ruta": "/publicaciones/proyectos" }
       ]
     },
@@ -262,8 +262,8 @@
   "titulosSecciones": {
     "Servicios": "Nuestros servicios",
     "Galeria": {
-      "titulo": "Galeria",
-      "tituloExtend": "Nuestra galeria",
+      "titulo": "Galería",
+      "tituloExtend": "Nuestra galería",
       "filtroTodas": "Ver todas"
     },
     "publicaciones": {
