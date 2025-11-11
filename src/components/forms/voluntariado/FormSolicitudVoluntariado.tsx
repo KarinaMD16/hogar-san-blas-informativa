@@ -39,60 +39,72 @@ const FormSolicitudVoluntariado = () => {
       sexo: "",
       experienciaLaboral: "",
       tipoVoluntariado: 0,
-      cantidadHoras: 0,
+      cantidadHoras: undefined,
       contactosEmergencia: [{ nombre: "", telefono: "" }],
-      horarios: [{ dia: "", horaInicio: "", horaFin: "" }],
+      horarios: [],
       observaciones: ""
     },
     onSubmit: async ({ value }: { value: CrearSolicitudPendienteDto }) => {
-      const filteredHorarios = value.horarios?.filter(
-        (h) => h.dia && h.horaInicio && h.horaFin
-      );
+  // First filter the horarios
+  const filteredHorarios = value.horarios?.filter(
+    (h) => h.dia && h.horaInicio && h.horaFin
+  );
 
-      const formData = {
-        ...value,
-        horarios: filteredHorarios || [],
-        cantidadHoras: Number(value.cantidadHoras)
-      };
+  // Create form data without modifying the original value
+  const formData = {
+    ...value,
+    horarios: filteredHorarios || [],
+    // Convert cantidadHoras to number and handle empty/undefined
+    cantidadHoras: value.cantidadHoras ? Number(value.cantidadHoras) : undefined
+  };
 
-      const shouldValidateCantidadHoras = formData.tipoVoluntariado && 
-        formData.tipoVoluntariado.toString().toLowerCase().includes('horas');
-      
-      const submissionSchema = shouldValidateCantidadHoras
-        ? formVoluntarioSchema
-        : formVoluntarioSchema.omit({ cantidadHoras: true });
-      
-      const result = submissionSchema.safeParse(formData);
+  // Remove cantidadHoras if it's 0, "0", or undefined
+  if (formData.cantidadHoras === 0 || formData.cantidadHoras?.toString() === "0" || formData.cantidadHoras === undefined) {
+    delete formData.cantidadHoras;
+  }
 
-      if (!result.success) {
-        const fieldErrors: Record<string, string> = {};
-        result.error.issues.forEach((issue) => {
-          const path = issue.path.join('.');
-          fieldErrors[path] = issue.message;
-        });
-        setFormErrors(fieldErrors);
-        return;
-      }
+  // Determine if we should validate cantidadHoras
+  const shouldValidateCantidadHoras = formData.tipoVoluntariado && 
+    formData.tipoVoluntariado.toString().toLowerCase().includes('horas');
+  
+  // Apply schema with or without cantidadHoras validation
+  const submissionSchema = shouldValidateCantidadHoras
+    ? formVoluntarioSchema
+    : formVoluntarioSchema.omit({ cantidadHoras: true });
+  
+  // Validate the form data
+  const result = submissionSchema.safeParse(formData);
 
-      try {
-        const result = await mutation.mutateAsync(formData);
-        console.log("Form submission successful:", result);
-        toast.success("Solicitud de voluntario enviada", {
-          description: "Se te enviará un aviso a tu correo electrónico sobre el estado de tu solicitud",
-          duration: 8000,
-        });
-        form.reset();
-        setCurrentStep(1);
-      } catch (error: any) {
-        console.error("Form submission error:", error);
-        console.error("Error response:", error?.response);
-        
-        toast.error("Ocurrió un error al enviar tu solicitud de voluntario", {
-          description: "Vuelve a intentarlo más tarde",
-          duration: 8000,
-        });
-      }
-    },
+  if (!result.success) {
+    const fieldErrors: Record<string, string> = {};
+    result.error.issues.forEach((issue) => {
+      const path = issue.path.join('.');
+      fieldErrors[path] = issue.message;
+    });
+    setFormErrors(fieldErrors);
+    return;
+  }
+
+  try {
+    // Send the form data (without cantidadHoras if it was 0/undefined)
+    const result = await mutation.mutateAsync(formData);
+    console.log("Form submission successful:", result);
+    toast.success("Solicitud de voluntario enviada", {
+      description: "Se te enviará un aviso a tu correo electrónico sobre el estado de tu solicitud",
+      duration: 8000,
+    });
+    form.reset();
+    setCurrentStep(1);
+  } catch (error: any) {
+    console.error("Form submission error:", error);
+    console.error("Error response:", error?.response);
+    
+    toast.error("Ocurrió un error al enviar tu solicitud de voluntario", {
+      description: "Vuelve a intentarlo más tarde",
+      duration: 8000,
+    });
+  }
+},
   });
 
   const validateCurrentStep = async (step: number): Promise<boolean> => {
