@@ -17,7 +17,7 @@ const DatosDonacionSection = ({ form, formErrors }: any) => {
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => field.handleChange(e.target.value)}
                             className="w-full"
                             placeholder="Ej: Ropa, alimentos, aseo personal, pañales, etc."
-                            maxLength={15}
+                            maxLength={30}
                         />
                         {formErrors.tipoDonacion && (
                             <p className="text-red-700 text-sm mt-1">{formErrors.tipoDonacion}</p>
