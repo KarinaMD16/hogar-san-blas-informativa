@@ -16,11 +16,6 @@ const RequisitosVoluntario = () => {
                     subtituloSecundario={contentJson.paginaRequisitosVoluntariado.cumplimientoHoras.subtitulo[1]}
                     requisitos={contentJson.paginaRequisitosVoluntariado.cumplimientoHoras.requisitos}
                 />
-                <SectionRequisitos
-                    subtituloPrincipal={contentJson.paginaRequisitosVoluntariado.voluntarioPermanente.subtitulo[0]}
-                    subtituloSecundario={contentJson.paginaRequisitosVoluntariado.voluntarioPermanente.subtitulo[1]}
-                    requisitos={contentJson.paginaRequisitosVoluntariado.voluntarioPermanente.requisitos}
-                />
                 <h1 className="text-3xl lg:text-4xl font-poppins text-amaranthPink font-bold text-left">
                     {contentJson.paginaRequisitosVoluntariado.formulario}
                 </h1>

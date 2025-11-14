@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Boton from "../../components/Boton";
+//import Boton from "../../components/Boton";
 import Divider from "../../components/Divider";
 import IdiomaContext from "../../context/language/idiomaContext";
 
@@ -19,11 +19,11 @@ const CasosExito = () => {
         <p className="text-black font-opensans text-md max-w-xl">
           {contentJson.casosExito.descripcion}
         </p>
-        <div>
+        {/*<div>
           <Boton where="/casosdeexito">
             {contentJson.casosExito.botonVerMas}
           </Boton>
-        </div>
+        </div>*/}
       </div>
 
       <div className="flex flex-col justify-center items-center">

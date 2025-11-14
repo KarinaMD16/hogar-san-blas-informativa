@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as HistoriaIndexRouteImport } from './routes/historia/index'
 import { Route as GaleriaIndexRouteImport } from './routes/galeria/index'
-import { Route as CasosdeexitoIndexRouteImport } from './routes/casosdeexito/index'
 import { Route as RequisitosResidenciaRouteImport } from './routes/requisitos/residencia'
 import { Route as PublicacionesSolicitudesDonacionesRouteImport } from './routes/publicaciones/solicitudes-donaciones'
 import { Route as PublicacionesProyectosRouteImport } from './routes/publicaciones/proyectos'
@@ -33,11 +32,6 @@ const HistoriaIndexRoute = HistoriaIndexRouteImport.update({
 const GaleriaIndexRoute = GaleriaIndexRouteImport.update({
   id: '/galeria/',
   path: '/galeria/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CasosdeexitoIndexRoute = CasosdeexitoIndexRouteImport.update({
-  id: '/casosdeexito/',
-  path: '/casosdeexito/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RequisitosResidenciaRoute = RequisitosResidenciaRouteImport.update({
@@ -80,7 +74,6 @@ export interface FileRoutesByFullPath {
   '/publicaciones/proyectos': typeof PublicacionesProyectosRoute
   '/publicaciones/solicitudes-donaciones': typeof PublicacionesSolicitudesDonacionesRoute
   '/requisitos/residencia': typeof RequisitosResidenciaRoute
-  '/casosdeexito': typeof CasosdeexitoIndexRoute
   '/galeria': typeof GaleriaIndexRoute
   '/historia': typeof HistoriaIndexRoute
 }
@@ -92,7 +85,6 @@ export interface FileRoutesByTo {
   '/publicaciones/proyectos': typeof PublicacionesProyectosRoute
   '/publicaciones/solicitudes-donaciones': typeof PublicacionesSolicitudesDonacionesRoute
   '/requisitos/residencia': typeof RequisitosResidenciaRoute
-  '/casosdeexito': typeof CasosdeexitoIndexRoute
   '/galeria': typeof GaleriaIndexRoute
   '/historia': typeof HistoriaIndexRoute
 }
@@ -105,7 +97,6 @@ export interface FileRoutesById {
   '/publicaciones/proyectos': typeof PublicacionesProyectosRoute
   '/publicaciones/solicitudes-donaciones': typeof PublicacionesSolicitudesDonacionesRoute
   '/requisitos/residencia': typeof RequisitosResidenciaRoute
-  '/casosdeexito/': typeof CasosdeexitoIndexRoute
   '/galeria/': typeof GaleriaIndexRoute
   '/historia/': typeof HistoriaIndexRoute
 }
@@ -119,7 +110,6 @@ export interface FileRouteTypes {
     | '/publicaciones/proyectos'
     | '/publicaciones/solicitudes-donaciones'
     | '/requisitos/residencia'
-    | '/casosdeexito'
     | '/galeria'
     | '/historia'
   fileRoutesByTo: FileRoutesByTo
@@ -131,7 +121,6 @@ export interface FileRouteTypes {
     | '/publicaciones/proyectos'
     | '/publicaciones/solicitudes-donaciones'
     | '/requisitos/residencia'
-    | '/casosdeexito'
     | '/galeria'
     | '/historia'
   id:
@@ -143,7 +132,6 @@ export interface FileRouteTypes {
     | '/publicaciones/proyectos'
     | '/publicaciones/solicitudes-donaciones'
     | '/requisitos/residencia'
-    | '/casosdeexito/'
     | '/galeria/'
     | '/historia/'
   fileRoutesById: FileRoutesById
@@ -156,7 +144,6 @@ export interface RootRouteChildren {
   PublicacionesProyectosRoute: typeof PublicacionesProyectosRoute
   PublicacionesSolicitudesDonacionesRoute: typeof PublicacionesSolicitudesDonacionesRoute
   RequisitosResidenciaRoute: typeof RequisitosResidenciaRoute
-  CasosdeexitoIndexRoute: typeof CasosdeexitoIndexRoute
   GaleriaIndexRoute: typeof GaleriaIndexRoute
   HistoriaIndexRoute: typeof HistoriaIndexRoute
 }
@@ -182,13 +169,6 @@ declare module '@tanstack/react-router' {
       path: '/galeria'
       fullPath: '/galeria'
       preLoaderRoute: typeof GaleriaIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/casosdeexito/': {
-      id: '/casosdeexito/'
-      path: '/casosdeexito'
-      fullPath: '/casosdeexito'
-      preLoaderRoute: typeof CasosdeexitoIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/requisitos/residencia': {
@@ -245,7 +225,6 @@ const rootRouteChildren: RootRouteChildren = {
   PublicacionesSolicitudesDonacionesRoute:
     PublicacionesSolicitudesDonacionesRoute,
   RequisitosResidenciaRoute: RequisitosResidenciaRoute,
-  CasosdeexitoIndexRoute: CasosdeexitoIndexRoute,
   GaleriaIndexRoute: GaleriaIndexRoute,
   HistoriaIndexRoute: HistoriaIndexRoute,
 }
