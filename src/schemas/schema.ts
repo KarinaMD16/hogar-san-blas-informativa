@@ -113,7 +113,7 @@ export const formDonacionSchema = z.object({
   
   tipoDonacion: z.string()
     .min(1, "Debe seleccionar un tipo de donación")
-    .max(15, "El tipo de donación no puede tener más de 15 caracteres"),
+    .max(30, "El tipo de donación no puede tener más de 30 caracteres"),
   
   descripcion: z.string()
     .min(10, "La descripción debe tener al menos 10 caracteres")
