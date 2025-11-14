@@ -100,7 +100,7 @@ export const InformacionDonanteSection = ({ form, formErrors }: any) => {
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="w-full"
                     placeholder="Ingrese su número de cédula"
-                    maxLength={15}
+                    maxLength={20}
                 />
                 {formErrors.cedula && (
                     <p className="text-red-700 text-sm mt-1">{formErrors.cedula}</p>
