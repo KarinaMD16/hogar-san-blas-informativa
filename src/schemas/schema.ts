@@ -29,11 +29,11 @@ export const formVoluntarioSchema = z.object({
     .regex(/^[0-9+\-\s()]+$/, "Formato de teléfono inválido"),
   
   ocupacion: z.string()
-    .min(2, "La ocupación debe tener al menos 2 caracteres")
+    .min(2, "La ocupación es obligatoria")
     .max(100, "La ocupación no puede tener más de 100 caracteres"),
   
   direccion: z.string()
-    .min(5, "La dirección debe tener al menos 5 caracteres")
+    .min(5, "La dirección es obligatoria y debe tener más de 5 caracteres")
     .max(200, "La dirección no puede tener más de 200 caracteres"),
   
   sexo: z.enum(["M", "F"], {
@@ -41,15 +41,17 @@ export const formVoluntarioSchema = z.object({
   }),
   
   experienciaLaboral: z.string()
-    .max(1000, "La experiencia no puede tener más de 1000 caracteres")
-    .optional(),
+    .min(2, "La experiencia laboral es obligatoria y debe tener más de 2 caracteres")
+    .max(1000, "La experiencia no puede tener más de 1000 caracteres"),
   
   tipoVoluntariado: z.number()
     .min(1, "Debe seleccionar un tipo de voluntariado"),
   
   cantidadHoras: z.number()
-    .min(1, "Debe ingresar una cantidad de horas")
-    .optional(),
+  .refine((val) => val === undefined || val > 0, {
+    message: "La cantidad de horas debe ser mayor a 0"
+  })
+  .optional(),
   
   contactosEmergencia: z.array(
     z.object({

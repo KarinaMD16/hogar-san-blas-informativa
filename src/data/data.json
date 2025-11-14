@@ -4,36 +4,36 @@
       "id": 1,
       "titulo": "Trabajo social",
       "descripcion": "Acompañamos personas con historias marcadas por abandono, pobreza y soledad, ofreciendo apoyo ético, humano y digno a personas adultas mayores. Nuestra labor va más allá de la gestión: construimos vínculos, escuchamos con respeto y trabajamos cada día para que envejecer no sea sinónimo de olvido.",
-      "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenPrincipal": "https://i.ibb.co/0jbKy6vr/IMG-0410.jpg",
       "imagenes": [
+        "https://i.ibb.co/0jbKy6vr/IMG-0410.jpg",
         "https://periodicomensaje.com/images/1.ADULTO-MAYOR.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
         "https://casaisrael.org/wp-content/uploads/2018/06/C%C3%B3mo-es-la-vida-en-una-residencia-geri%C3%A1trica.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+        "https://i.ibb.co/bMdrSxF2/trabajo-social.jpg"
       ]
     },
     {
       "id": 2,
       "titulo": "Terapia física",
       "descripcion": "Fomentamos la movilidad y autonomía de las personas adultas mayores con terapias personalizadas, atención humanizada y un equipo especializado en geriatría.",
-      "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenPrincipal": "https://i.ibb.co/vC1Ptxy4/IMG-0532.jpg",
       "imagenes": [
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+        "https://i.ibb.co/vC1Ptxy4/IMG-0532.jpg",
+        "https://i.ibb.co/ynSG0F21/IMG-0477.jpg",
+        "https://i.ibb.co/mCh22fbt/pexels-kampus-7551627.jpg",
+        "https://i.ibb.co/ccW4WGPH/hand-3666974-1280.jpg"
       ]
     },
     {
       "id": 3,
       "titulo": "Nutrición",
       "descripcion": "Ofrecemos atención nutricional personalizada, educación alimentaria y vigilancia en la manipulación de alimentos para garantizar el bienestar y la seguridad nutricional de nuestros residentes.",
-      "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenPrincipal": "https://i.ibb.co/gFjVB2DV/pexels-pavel-danilyuk-7653090.jpg",
       "imagenes": [
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+        "https://i.ibb.co/gFjVB2DV/pexels-pavel-danilyuk-7653090.jpg",
+        "https://i.ibb.co/DDWSGDcg/pexels-gustavo-fring-5622211.jpg",
+        "https://i.ibb.co/jv2ZhxNT/pexels-yaroslav-shuraev-8844387.jpg",
+        "https://i.ibb.co/JjQ7k0rb/pexels-yaroslav-shuraev-8844564.jpg"
       ]
     },
     {
@@ -43,9 +43,9 @@
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
       "imagenes": [
         "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg"
+        "https://i.ibb.co/xKM7zWvF/enfermeria2.jpg",
+        "https://i.ibb.co/5hGF6Yr4/enfermeria.jpg",
+        "https://i.ibb.co/spQTwLGR/enfermeria3.jpg"
       ]
     }
   ],
@@ -126,7 +126,7 @@
   "casosExito": {
     "titulo": "Casos de Éxito",
     "subtitulo": "Centenarios",
-    "descripcion": "Descubre nuestros inspiradores casos de éxito, incluyendo historias de centenarios, que reflejan nuestro compromiso con el bienestar y la longevidad en el Hogar San Blas de Nicoya.",
+    "descripcion": "Nicoya es reconocida por ser una de las zonas azules del mundo. En el Hogar San Blas de Nicoya, tenemos la dicha de haber sido residencia para diversos casos de éxito de adultos mayores centenarios, conociendo sus historias, mejorando su calidad de vida con nuestros servicios y atesorando su sabiduría con amor, reflejando así nuestro compromiso con el bienestar y la longevidad de nuestros adultos mayores de la comunidad.",
     "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
     "botonVerMas": "Ver más"
   },
@@ -217,7 +217,6 @@
       "titulo": "Sobre Nosotros",
       "opciones": [
         { "texto": "Galería", "ruta": "/galeria/" },
-        { "texto": "Casos de éxito", "ruta": "/casosdeexito/" },
         { "texto": "Reseña Histórica", "ruta": "/historia/" }
       ]
     },
@@ -276,7 +275,7 @@
   "paginaRequisitosVoluntariado": {
     "titulo": "¿Estás interesado en ser voluntario?",
     "cumplimientoHoras": {
-      "subtitulo": ["Podés realizar tus horas de servicio comunitario con nosotros", "Requisitos:"],
+      "subtitulo": ["Podés apoyarnos haciendo lo que mejor sabes hacer", "Requisitos:"],
       "requisitos": [
         "Hoja de presentación.",
         "Foto tamaño pasaporte.",
@@ -372,7 +371,7 @@
     "donacionMonetaria":{
       "subtitulo": ["Podés hacer donaciones monetarias", "Podés hacerlo por medio de SINPE móvil o transferencia:"],
       "medios": [
-        "SINPE móvil: ",
+        "SINPE móvil: 8972-9912",
         "Cuenta BCR:  CC-CR10015201235000175310",
         "Cuenta BN:  CR32015101310010024125"
       ]
