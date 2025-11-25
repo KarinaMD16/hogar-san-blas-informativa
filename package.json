@@ -29,6 +29,7 @@
     "express": "^5.1.0",
     "flyonui": "^2.2.0",
     "framer-motion": "^12.23.3",
+    "gsap": "^3.13.0",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.536.0",
     "multer": "^2.0.2",

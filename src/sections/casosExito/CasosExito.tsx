@@ -3,11 +3,17 @@ import { useContext } from "react";
 import Divider from "../../components/Divider";
 import IdiomaContext from "../../context/language/idiomaContext";
 
-const CasosExito = () => {
+import { cn } from "../../lib/utils";
+
+type CasosExitoProps = {
+  className?: string;
+};
+
+const CasosExito: React.FC<CasosExitoProps> = ({ className }) => {
   const { contentJson } = useContext(IdiomaContext);
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-evenly max-w-full min-h-[600px] gap-8 p-4 text-center">
+    <section className={cn("flex flex-col lg:flex-row items-center justify-evenly max-w-full min-h-[600px] gap-8 p-4 text-center", className)}>
       <div className="flex flex-col items-center justify-center z-10 gap-6 max-w-xl">
         <h1 className="font-poppins font-bold text-amaranthPink text-2xl sm:text-3xl md:text-4xl text-shadow-md mb-2">
           {contentJson.casosExito.titulo}

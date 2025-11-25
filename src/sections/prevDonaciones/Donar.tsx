@@ -7,7 +7,11 @@ import { useGetDonaciones } from "../../hooks/publicaciones/publicaciones";
 import type { Publicacion } from "../../models/publicaciones/publicaciones";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
-const Donar = () => {
+type DonarProps = {
+  className?: string;
+};
+
+const Donar: React.FC<DonarProps> = ({ className }) => {
   const { contentJson } = useContext(IdiomaContext);
   const { donaciones } = useGetDonaciones(1, 5);
 
@@ -47,7 +51,12 @@ const Donar = () => {
   };
 
   return (
-    <section className="flex justify-evenly items-center flex-wrap gap-5">
+    <section
+      className={`
+        flex justify-evenly items-center flex-wrap gap-5
+        ${className ?? ""}
+      `}
+    >
       <div className="w-md flex flex-col gap-3">
         <h1 className="font-poppins font-bold text-amaranthPink text-2xl sm:text-3xl md:text-4xl text-shadow-md mb-2">
           {contentJson.donaciones.titulo}
@@ -57,14 +66,12 @@ const Donar = () => {
           {contentJson.donaciones.descripcion}
         </p>
         <div className="flex gap-4 flex-wrap justify-center">
-          <Boton
-            children={contentJson.donaciones.botones.botonRequisitos}
-            where={"/formularios/donacion"}
-          />
-          <Boton
-            children={contentJson.donaciones.botones.botonVerOtras}
-            where={"/publicaciones/solicitudes-donaciones"}
-          />
+          <Boton where={"/formularios/donacion"}>
+            {contentJson.donaciones.botones.botonRequisitos}
+          </Boton>
+          <Boton where={"/publicaciones/solicitudes-donaciones"}>
+            {contentJson.donaciones.botones.botonVerOtras}
+          </Boton>
         </div>
       </div>
 

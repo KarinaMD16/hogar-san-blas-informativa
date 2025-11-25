@@ -3,12 +3,17 @@ import IdiomaContext from "../../context/language/idiomaContext";
 import { useContext } from "react";
 import Contactos from "../contactos/Contactos";
 import FooterRedes from "./footerRedes";
+import { cn } from "../../lib/utils";
 
-const Footer = () => {
+type FooterProps = {
+    className?: string;
+};
+
+const Footer: React.FC<FooterProps> = ({ className }) => {
   const { contentJson } = useContext(IdiomaContext);
 
     return (
-        <footer className="flex flex-col lg:flex-row justify-around bg-night text-white py-8 gap-8">
+        <footer className={cn("flex flex-col lg:flex-row justify-around bg-night text-white py-8 gap-8", className)}>
             <div id="footer-contactos" className="flex flex-col gap-8 mt-4 w-full lg:w-auto">
                 <Contactos className="flex flex-col md:flex-row gap-8 md:gap-16 mb-10" />
                 <div id="linea-separadora" className="w-64 md:w-84 lg:w-100 h-0.5 bg-white rounded mx-auto" />
