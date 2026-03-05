@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Navbar from '../../components/header/Navbar'
 import RequisitosResidencia from '../../sections/requisitos/RequisitosResidencia'
+import { useFadeIn } from '../../components/useFadeIn'
 
 // requisitos de residencia
 export const Route = createFileRoute('/requisitos/residencia')({
@@ -8,8 +9,12 @@ export const Route = createFileRoute('/requisitos/residencia')({
 })
 
 function RouteComponent() {
+  useFadeIn()
+
   return <>
-      <Navbar />
+    <Navbar />
+    <div className="fade-in-on-scroll">
       <RequisitosResidencia />
+    </div>
   </>
 }

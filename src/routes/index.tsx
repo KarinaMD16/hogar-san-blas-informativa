@@ -12,7 +12,6 @@ import HeroSection from '../sections/hero/HeroSection'
 import Navbar from '../components/header/Navbar'
 import { useFadeIn } from '../components/useFadeIn'
 
-
 export const Route = createFileRoute('/')({
   component: Index,
 })

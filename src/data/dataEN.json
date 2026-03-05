@@ -15,7 +15,7 @@
     {
       "id": 2,
       "titulo": "Physical Therapy",
-      "descripcion": "We improve mobility and autonomy in older adults through personalized therapies. compassionate care, and the support of a team specialized in geratrics. Our goal is to improve their quality of life with dignity and respect",
+      "descripcion": "We improve mobility and autonomy in older adults through personalized therapies, compassionate care, and the support of a team specialized in geratrics. Our goal is to improve their quality of life with dignity and respect",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
       "imagenes": [
         "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
@@ -27,7 +27,7 @@
     {
       "id": 3,
       "titulo": "Nutrition",
-      "descripcion": "We offer personalized nutritional care, food education, and close monitoring of food handling to ensure the well-being and nutriotional safety of our residents. Our commitment goes beyond meals - we nurture health, dignity, and quality of life through every detail of nutrition",
+      "descripcion": "We offer personalized nutritional care, food education, and close monitoring of food handling to ensure the well-being and nutriotional safety of our residents. Our commitment goes beyond meals: we nurture health, dignity, and quality of life through every detail of nutrition",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
       "imagenes": [
         "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
@@ -39,7 +39,7 @@
     {
       "id": 4,
       "titulo": "Nursing",
-      "descripcion": "We provide comprehensive clinical care — from assessments, treatment administration, and critical care to emotional support, assistance with daily living, and leadership in medical procedures — always with commitment and human warmth.",
+      "descripcion": "We provide comprehensive clinical care. From assessments, treatment administration, and critical care to emotional support, assistance with daily living, and leadership in medical procedures, always with commitment and human warmth.",
       "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
       "imagenes": [
         "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
@@ -90,7 +90,7 @@
       "titulo": "Founded in 1983",
       "descripcion": [
         "Hogar San Blas de Nicoya, dedicated to the care of elderly individuals, is located in the central canton of Nicoya, Guanacaste. It was established out of the need to support elderly people who, in a state of abandonment and need, were forced to beg on the streets. A group of generous community members, united by a desire to help, voluntarily began the process of providing assistance.",
-        "The nursing home officially opened in September 1983, initially operating as a day center. Over time, it evolved into a long-term care facility, increasing the number of residents served. Currently, the home accommodates between 36 and 40 elderly adults—men and women aged between 65 and 102. At various times, the home has cared for individuals even older, often lacking resources, facing illness, or in terminal stages."
+        "The nursing home officially opened in September 1983, initially operating as a day center. Over time, it evolved into a long-term care facility, increasing the number of residents served. Currently, the home accommodates between 36 and 40 elderly adults: men and women aged between 65 and 102. At various times, the home has cared for individuals even older, often lacking resources, facing illness, or in terminal stages."
       ],
       "imagen": "https://i.ibb.co/4RwXyS42/IMG-0402.jpg"
     },
@@ -126,14 +126,14 @@
   "casosExito": {
     "titulo": "Success stories",
     "subtitulo": "Centenarians",
-    "descripcion": "Nicoya is known for being one of the world’s Blue Zones. At the San Blas Home in Nicoya, we are fortunate to have been the residence of several successful cases of centenarian older adults. We have learned their stories, improved their quality of life through our services, and treasured their wisdom with love—reflecting our commitment to the well-being and longevity of the older adults in our community.",
+    "descripcion": "Nicoya is known for being one of the world’s Blue Zones. Here in the San Blas nursing home, we are fortunate to have been the residence of several cases of centenarian older adults. We have learned their stories, improved their quality of life through our services, and treasured their wisdom with love, reflecting our commitment to the well-being and longevity of the older adults in our community.",
     "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
     "botonVerMas": "Read more"
   },
 
   "donaciones": {
     "titulo": "Want to collaborate?",
-    "descripcion": "Your support makes a difference! Here's all the information an requirements to contribute with us",
+    "descripcion": "Your support makes a difference! Here's all the information and requirements to contribute with us",
     "botones": {
       "botonDonar": "Donate",
       "botonRequisitos": "View requirements",
@@ -249,8 +249,8 @@
       "titulo": "Contacts",
       "opciones": [
         { "texto": "WhatsApp", "ruta": "https://wa.me/50687000000" },
-        { "texto": "Télefonos y correo", "ruta": "#footer-contactos" },
-        { "texto": "Ubicación y horario", "ruta": "#footer-contactos" }
+        { "texto": "Phone number and email", "ruta": "#footer-contactos" },
+        { "texto": "Location and schedule", "ruta": "#footer-contactos" }
       ]
     }
   },

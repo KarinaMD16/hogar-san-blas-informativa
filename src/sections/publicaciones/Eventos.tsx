@@ -26,9 +26,6 @@ export const Eventos = () => {
   if (loadingEventos || fetchingEventos)
     return (
       <div className="mt-10 w-screen h-screen">
-        <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
-          {contentJson.titulosSecciones.publicaciones.eventos}
-        </h1>
         <span className="loading loading-spinner"></span>
       </div>
     );
