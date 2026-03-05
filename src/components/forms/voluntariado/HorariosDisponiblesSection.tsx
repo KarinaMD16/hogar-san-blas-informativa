@@ -4,6 +4,8 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Popover, PopoverContent, PopoverTrigger } from "../../Popover";
 import { CirclePlus, Clock } from "lucide-react";
 import { Command, CommandGroup, CommandItem } from "../../Command";
+import { useContext } from "react";
+import IdiomaContext from "../../../context/language/idiomaContext";
 
 const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
 const generarHoras = () => {
@@ -17,6 +19,10 @@ const generarHoras = () => {
 
 export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
   const horas = generarHoras();
+
+  const { contentJson } = useContext(IdiomaContext);
+  const placeholders = contentJson.formularioVoluntariado;
+
   
   return (
     <>
@@ -50,7 +56,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
           return (
             <div className="mb-4">
             <Label htmlFor="observaciones" className="block text-left text-sm font-medium mb-1">
-              Horarios disponibles para voluntariado <span className="text-red-600">*</span>
+              {placeholders.horario.label} <span className="text-red-600">*</span>
             </Label>
 
               {horarios.length === 0 && (
@@ -70,13 +76,13 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                     className="mb-3 p-3 border border-gray-200 rounded-md bg-gray-200/10"
                   >
                     <div className="flex justify-between mb-2">
-                      <h4 className="text-sm font-medium">Horario {index + 1}</h4>
+                      <h4 className="text-sm font-medium">{placeholders.horario.horario} {index + 1}</h4>
                       <button
                         type="button"
                         onClick={() => removeHorario(index)}
                         className="text-red-600 text-xs hover:cursor-pointer"
                       >
-                        Eliminar
+                        {placeholders.botones.eliminar}
                       </button>
                     </div>
 
@@ -86,7 +92,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                           htmlFor={`horario-dia-${index}`}
                           className="text-sm block mb-1"
                         >
-                          Día
+                          {placeholders.horario.dia}
                         </Label>
                         <DropdownMenu>
                           <DropdownMenuTrigger className="w-full text-left px-3 py-2 border rounded-md hover:cursor-pointer">
@@ -115,7 +121,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                             htmlFor={`horario-inicio-${index}`}
                             className="text-sm block mb-1"
                           >
-                            Hora Inicio
+                            {placeholders.horario.inicio}
                           </Label>
                           <Popover>
                             <PopoverTrigger asChild>
@@ -156,7 +162,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                             htmlFor={`horario-fin-${index}`}
                             className="text-sm block mb-1"
                           >
-                            Hora Fin
+                            {placeholders.horario.fin}
                           </Label>
                           <Popover>
                             <PopoverTrigger asChild>
@@ -210,12 +216,12 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                   }
                 >
                   <CirclePlus size={15} />
-                  Agregar horario
+                  {placeholders.horario.agregar}
                 </button>
               </div>
 
               <p className="text-sm text-gray-500 mt-1">
-                Solo se guardarán los horarios donde todos los campos estén completos.
+                {placeholders.tips.horarios}
               </p>
               {formErrors.horarios && (
                 <p className="text-red-700 text-sm mt-1">
@@ -236,14 +242,14 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
         }) => (
           <div className="mb-4 text-left">
             <Label htmlFor="observaciones" className="block text-left text-sm font-medium mb-1">
-              Observaciones <span className="text-gray-400">(Opcional)</span>
+              {placeholders.observaciones.label} <span className="text-gray-400">(Opcional)</span>
             </Label>
             <InputField
               id="observaciones"
               type="text"
               value={field.state.value}
               onChange={(e) => field.handleChange(e.target.value)}
-              placeholder="Alguna información adicional sobre su disponibilidad o voluntariado"
+              placeholder={placeholders.observaciones.placeholder}
             />
             {formErrors.observaciones && (
               <p className="text-red-700 text-sm">{formErrors.observaciones}</p>

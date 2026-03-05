@@ -98,7 +98,7 @@
       "titulo": "Over 40 Years of Serving Our Elderly",
       "descripcion": [
         "Hogar San Blas de Nicoya has a rich history spanning decades and has been a pillar of support for the Guanacaste community. Founded with the mission to provide care and attention to elderly adults, it has become a beacon of hope and compassionate service in the region. Since its inception, the facility has evolved to meet the changing needs of its residents, offering a homelike environment that promotes dignity and respect. Today, it continues its commitment to excellence in geriatric care, recognized for its unwavering dedication to improving the quality of life for those who call Hogar San Blas their home.",
-      "The home continues to operate thanks to community volunteers, whose contributions helped build the first wing and hallway between 1983 and 1991. Later, the facility was completed with support from INA, JPS, CTAMS, IMAS, the Municipality, and the people of Nicoya. Today, the nursing home features a fully equipped kitchen, dining room, chapel, 24 rooms in three wings, an activity hall, physical therapy room, nursing and wound care department, offices for social services, nutrition, administration, an outdoor recreation and event area, large green spaces, and a farm with animals used as therapy for the elderly. A volunteer program is still active, and financial support is also provided by institutions such as the Social Protection Board (Junta de Protección Social), CONAPAM, FODESAF, as well as the Board of Directors' own fundraising efforts and ongoing community support. In 2011, the Home launched the Home-Based Care Network program (Red de Cuido), which serves elderly individuals living in extreme poverty in their own homes. Initially supporting 50 beneficiaries, the program now assists 125 elderly adults through CONAPAM funding."
+        "The home continues to operate thanks to community volunteers, whose contributions helped build the first wing and hallway between 1983 and 1991. Later, the facility was completed with support from INA, JPS, CTAMS, IMAS, the Municipality, and the people of Nicoya. Today, the nursing home features a fully equipped kitchen, dining room, chapel, 24 rooms in three wings, an activity hall, physical therapy room, nursing and wound care department, offices for social services, nutrition, administration, an outdoor recreation and event area, large green spaces, and a farm with animals used as therapy for the elderly. A volunteer program is still active, and financial support is also provided by institutions such as the Social Protection Board (Junta de Protección Social), CONAPAM, FODESAF, as well as the Board of Directors' own fundraising efforts and ongoing community support. In 2011, the Home launched the Home-Based Care Network program (Red de Cuido), which serves elderly individuals living in extreme poverty in their own homes. Initially supporting 50 beneficiaries, the program now assists 125 elderly adults through CONAPAM funding."
       ],
       "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
     }
@@ -113,12 +113,15 @@
 
   "paginaRequisitosResidencia": {
     "titulo": "Are you interested in applying for residency?",
-    "subtitulo": ["To become a resident, you must meet the following:", "Requirements:"],
+    "subtitulo": [
+      "To become a resident, you must meet the following:",
+      "Requirements:"
+    ],
     "requisitos": [
-        "Age and Health Condition: Elderly adults who require assistance and specialized care.",
-        "Documentation: Copy of the resident's ID card or passport.",
-        "Medical Evaluation: Recent medical evaluation to ensure appropriate care based on the resident's needs.",
-        "Family Commitment: Open communication and active participation from the family in the admission process and ongoing care of the resident."
+      "Age and Health Condition: Elderly adults who require assistance and specialized care.",
+      "Documentation: Copy of the resident's ID card or passport.",
+      "Medical Evaluation: Recent medical evaluation to ensure appropriate care based on the resident's needs.",
+      "Family Commitment: Open communication and active participation from the family in the admission process and ongoing care of the resident."
     ],
     "mensaje": "If you meet the requirements, contact us"
   },
@@ -188,24 +191,24 @@
 
   "contactos": {
     "Contactos": {
-        "titulo": "Contacts",
-        "items": [
-          "+506 2685 5809",
-          "+506 8972 9912",
-          "hogardeancianossanblas@gmail.com"
-        ]
-      },
+      "titulo": "Contacts",
+      "items": [
+        "+506 2685 5809",
+        "+506 8972 9912",
+        "hogardeancianossanblas@gmail.com"
+      ]
+    },
     "Horario": {
-        "titulo": "Schedule",
-        "items": [ "Monday to Friday", "8am to 3pm" ]
-      },
+      "titulo": "Schedule",
+      "items": ["Monday to Friday", "8am to 3pm"]
+    },
     "Direccion": {
-        "titulo": "Address",
-        "items": [
-          "100m north and 150m west of the Cruz Roja de Nicoya",
-          "Nicoya, Guanacaste, Costa Rica"
-        ]
-      }
+      "titulo": "Address",
+      "items": [
+        "100m north and 150m west of the Cruz Roja de Nicoya",
+        "Nicoya, Guanacaste, Costa Rica"
+      ]
+    }
   },
 
   "footer": {
@@ -303,38 +306,84 @@
   },
 
   "formularioVoluntariado": {
-    "nombre": "Name",
-    "apellido1": "Middle name",
-    "apellido2": "Last name",
-    "cedula": "ID Number",
+    "titles": {
+      "informacionPersonal": "Personal information",
+      "contactoEmergencia": "Emergency contact",
+      "otrosDatos": "Other information",
+      "tipo": "Type of volunteering",
+      "horarios": "Available schedules"
+    },
+    "tips": {
+      "obligatorio": "Fields marked with * are required.",
+      "horarios": "Only schedules where all fields are completed will be saved."
+    },
+    "nombre": {
+      "label": "Name",
+      "placeholder": "Enter your name"
+    },
+    "apellido1": {
+      "label": "Middle name",
+      "placeholder": "Enter your middle name"
+    },
+    "apellido2": {
+      "label": "Last name",
+      "placeholder": "Enter your last name"
+    },
+    "cedula": {
+      "label": "ID Number",
+      "placeholder": "Enter your ID number"
+    },
     "sexo": {
       "label": "Gender",
+      "placeholder": "Select...",
       "opciones": ["Select...", "Female", "Male", "Other"]
     },
-    "ocupacion": "Occupation",
-    "telefono": "Phone",
+    "ocupacion": {
+      "label": "Occupation",
+      "placeholder": "Enter your occupation"
+    },
+    "telefono": {
+      "label": "Phone",
+      "placeholder": "Enter your phone number"
+    },
     "correo": {
       "label": "Email",
       "placeholder": "name@gmail.com"
     },
-    "direccion": "Exact Address",
+    "direccion": {
+      "label": "Exact Address",
+      "placeholder": "Enter your exact address"
+    },
     "contactoEmergencia": {
       "label": "Emergency Contact",
       "nombre": {
-        "label": "Name"
+        "label": "Name",
+        "placeholder": "Enter emergency contact name"
       },
       "telefono": {
-        "label": "Phone"
+        "label": "Phone",
+        "placeholder": "Enter emergency contact phone"
       }
     },
-    "colaboracion": "Type of collaboration you would like to offer",
-    "experiencia": "Work or volunteer experience related to elderly care",
+    "colaboracion": {
+      "label": "Type of collaboration you would like to offer",
+      "placeholder": "Describe how you would like to collaborate"
+    },
+    "experienciaLaboral": {
+      "label": "Work or volunteer experience related to elderly care",
+      "placeholder": "Describe your relevant experience"
+    },
     "horas": [
       "This volunteering is for fulfilling required hours",
       "Number of hours to complete"
     ],
     "horario": {
-      "label": "Preferred schedule to attend the institution",
+      "horario": "Schedule",
+      "dia": "Day",
+      "inicio": "Start time",
+      "fin": "End time",
+      "agregar": "Add schedule",
+      "label": "Available schedules for volunteering",
       "placeholder": "E.g. 9 am - 11 am",
       "dias": [
         "Monday",
@@ -346,24 +395,91 @@
         "Sunday"
       ]
     },
-    "observaciones": "Observations",
+    "observaciones": {
+      "label": "Observations",
+      "placeholder": "Write any additional observations"
+    },
     "delincuencia": {
       "label": "Criminal record certificate (PDF)",
-      "preview": [
-        "Selected file:",
-        "View criminal record (PDF)"
-      ]
+      "placeholder": "Select a PDF file",
+      "preview": ["Selected file:", "View criminal record (PDF)"]
+    },
+    "tipoVoluntariado": {
+      "label": "Type of volunteering",
+      "cargando": "Loading types of volunteering...",
+      "opciones": [
+        "Select...",
+        "Volunteer for required hours",
+        "Permanent volunteer"
+      ],
+      "horas": "Total hours to complete:",
+      "placeholder": "E.g. 400"
+    },
+    "botones": {
+      "siguiente": "Next",
+      "anterior": "Previous",
+      "enviar": "Submit",
+      "cancelar": "Cancel",
+      "enviando": "Submitting...",
+      "eliminar": "Delete"
     }
-    ,
-    "botones": [
-      "Previous",
-      "Next",
-      "Send"
-    ]
+  },
+
+  "formularioDonacion": {
+    "titles": {
+      "informacionPersonal": "Donnor information",
+      "contacto": "Donnor contact",
+      "detalles": "Donation details"
+    },
+    "tips": {
+      "obligatorio": "Fields marked with * are required.",
+      "anonimo": "I want my donation to be anonimous",
+      "detalleAnonimo": "(Your name will not be shown in any public registers)"
+    },
+    "nombre": {
+      "label": "Name",
+      "placeholder": "Enter your name"
+    },
+    "apellido1": {
+      "label": "Middle name",
+      "placeholder": "Enter your middle name"
+    },
+    "apellido2": {
+      "label": "Last name",
+      "placeholder": "Enter your last name"
+    },
+    "cedula": {
+      "label": "ID Number",
+      "placeholder": "Enter your ID number"
+    },
+    "tipoDonacion": {
+      "label": "Type of donation",
+      "placeholder": "Ex: Clothing, food, personal care, etc."
+    },
+    "telefono": {
+      "label": "Phone number",
+      "placeholder": "Enter your phone number"
+    },
+    "correo": {
+      "label": "Email",
+      "placeholder": "name@gmail.com"
+    },
+    "direccion": {
+      "label": "Exact Address",
+      "placeholder": "Enter your exact address"
+    },
+    "descripcion": {
+      "label": "Description",
+      "placeholder": "Describe in detail the items you want to donate"
+    },
+    "observaciones": {
+      "label": "Comments",
+      "placeholder": "Add any additional information you'd like to share (optional)"
+    }
   },
 
   "paginaRequisitosDonacion": {
-    "donacionArticulos":{
+    "donacionArticulos": {
       "titulo": "Are you interested in making a donation?",
       "subtitulo": ["Any donation is welcome", "Requirements:"],
       "requisitos": [
@@ -372,17 +488,26 @@
         "Food: not expired"
       ]
     },
-    "donacionMonetaria":{
-      "subtitulo": ["You can make monetary donations", "You can do it by SINPE móvil or transfer:"],
+    "donacionMonetaria": {
+      "subtitulo": [
+        "You can make monetary donations",
+        "You can do it by SINPE móvil or transfer:"
+      ],
       "medios": [
         "SINPE móvil: 8972-9912",
         "BCR Bank Account:  CC-CR10015201235000175310",
         "BN Bank Account: CR32015101310010024125"
       ]
     },
-    "donacionTiempo":{
-      "subtitulo": ["You can donate your time", "Convert yourself into a volunteer:"],
-      "boton": {"nombre": "I want to be a volunteer", "ruta": "/formularios/voluntariado"}
+    "donacionTiempo": {
+      "subtitulo": [
+        "You can donate your time",
+        "Convert yourself into a volunteer:"
+      ],
+      "boton": {
+        "nombre": "I want to be a volunteer",
+        "ruta": "/formularios/voluntariado"
+      }
     },
     "formulario": "Donation form"
   }

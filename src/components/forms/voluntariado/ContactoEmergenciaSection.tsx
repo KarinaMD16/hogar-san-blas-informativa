@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import InputField from "../../../components/forms/InputField";
 import { Label } from "@radix-ui/react-label";
+import IdiomaContext from "../../../context/language/idiomaContext";
 
 export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
+
+    const { contentJson } = useContext(IdiomaContext);
+    const placeholders = contentJson.formularioVoluntariado;
+
     return (
         <form.Field name="contactosEmergencia">
             {(field: { state: { value: string | any[]; }; handleChange: (arg0: any[]) => void; }) => {
@@ -25,7 +31,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                             htmlFor="contacto-nombre"
                             className="block text-left text-sm font-medium mb-1"
                         >
-                            Nombre <span className="text-red-600">*</span>
+                            {placeholders.contactoEmergencia.nombre.label} <span className="text-red-600">*</span>
                         </Label>
                         <InputField
                             id="contacto-nombre"
@@ -34,7 +40,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                             onChange={(e) =>
                             handleContactChange("nombre", e.target.value)
                             }
-                            placeholder="Ingrese el nombre completo de alguien a quien llamar en caso de emergencia"
+                            placeholder={placeholders.contactoEmergencia.nombre.placeholder}
                         />
                         </div>
 
@@ -43,7 +49,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                             htmlFor="contacto-telefono"
                             className="block text-left text-sm font-medium mb-1"
                         >
-                            Teléfono <span className="text-red-600">*</span>
+                            {placeholders.contactoEmergencia.telefono.label} <span className="text-red-600">*</span>
                         </Label>
                         <InputField
                             id="contacto-telefono"
@@ -52,7 +58,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                             onChange={(e) =>
                             handleContactChange("telefono", e.target.value)
                             }
-                            placeholder="Ingrese el número de su contacto de emergencia"
+                            placeholder={placeholders.contactoEmergencia.telefono.placeholder}
                         />
                         </div>
 
