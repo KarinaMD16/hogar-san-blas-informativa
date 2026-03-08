@@ -433,7 +433,7 @@
     },
     "tips": {
       "obligatorio": "Fields marked with * are required.",
-      "anonimo": "I want my donation to be anonimous",
+      "anonimo": "I want my donation to be anonymous",
       "detalleAnonimo": "(Your name will not be shown in any public registers)"
     },
     "nombre": {
