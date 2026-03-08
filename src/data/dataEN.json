@@ -475,6 +475,14 @@
     "observaciones": {
       "label": "Comments",
       "placeholder": "Add any additional information you'd like to share (optional)"
+    },
+    "botones": {
+      "siguiente": "Next",
+      "anterior": "Previous",
+      "enviar": "Submit",
+      "cancelar": "Cancel",
+      "enviando": "Submitting...",
+      "eliminar": "Delete"
     }
   },
 

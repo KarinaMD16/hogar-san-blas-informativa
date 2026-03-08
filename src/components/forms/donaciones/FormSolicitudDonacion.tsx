@@ -307,7 +307,7 @@ const FormSolicitudDonacion = () => {
                                 type="button"
                                 onClick={handleNext}
                             >
-                                Siguiente
+                                {placeholders.botones.siguiente}
                             </Boton>
                         ) : (
                             <Boton 
@@ -318,10 +318,10 @@ const FormSolicitudDonacion = () => {
                                 {mutation.isPending ? (
                                     <div className="flex items-center">
                                         <Loader2 className="mr-2" />
-                                        Enviando...
+                                        {placeholders.botones.enviando}
                                     </div>
                                 ) : (
-                                    "Enviar"
+                                    placeholders.botones.enviar
                                 )}
                             </Boton>
                         )}

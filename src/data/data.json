@@ -467,6 +467,13 @@
     "observaciones": {
       "label": "Observaciones",
       "placeholder": "Agregue cualquier información adicional que desee compartir (opcional)"
+    },
+    "botones": {
+      "siguiente": "Siguiente",
+      "anterior": "Anterior",
+      "enviando": "Enviando...",
+      "enviar": "Enviar",
+      "eliminar": "Eliminar"
     }
   },
 
