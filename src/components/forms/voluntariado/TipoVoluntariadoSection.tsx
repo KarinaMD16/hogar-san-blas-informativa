@@ -37,7 +37,7 @@ const TipoVoluntariadoSection = ({ form, formErrors }: any) => {
               <div className="flex gap-4 mb-10">
                 <div className="flex items-center">
                   <div className="h-4 w-4 rounded-full border-2 border-gray-300 border-t-amaranthPink animate-spin" />
-                  <p className="ml-2 text-sm text-gray-500">{placeholders.tipoVoluntariado.cargando}.</p>
+                  <p className="ml-2 text-sm text-gray-500">{placeholders.tipoVoluntariado.cargando}</p>
                 </div>
               </div>
             ) : (
