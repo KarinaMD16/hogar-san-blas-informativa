@@ -1,5 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
+import Navbar from '../../components/header/Navbar'
+import Footer from '../../components/footer/Footer'
+import HeroCentenarios from '../../sections/casosExito/HeroCentenarios'
+import ZonaAzul from '../../sections/casosExito/ZonaAzul'
 import Centenarios from '../../sections/casosExito/Centenarios'
+import Divider from '../../components/Divider'
 
 export const Route = createFileRoute('/casosdeexito/')({
   component: RouteComponent,
@@ -7,10 +12,15 @@ export const Route = createFileRoute('/casosdeexito/')({
 
 function RouteComponent() {
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Casos de Éxito</h1>
-      <p className="text-lg mb-6">Descubre historias inspiradoras de residentes del Hogar San Blas.</p>
+    <div>
+      <Navbar />
+      <HeroCentenarios />
+      <ZonaAzul />
+      <div className="px-25 py-12">
+       <div className="w-full h-1 bg-ecruYellow rounded"/>
+      </div>
       <Centenarios />
+      <Footer />
     </div>
   )
 }
