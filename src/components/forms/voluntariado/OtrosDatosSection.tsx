@@ -1,7 +1,13 @@
 import InputField from "../../../components/forms/InputField";
 import { Label } from "@radix-ui/react-label";
+import IdiomaContext from "../../../context/language/idiomaContext";
+import { useContext } from "react";
 
 export const OtrosDatosSection = ({ form, formErrors }: any) => {
+
+    const { contentJson } = useContext(IdiomaContext);
+    const placeholders = contentJson.formularioVoluntariado;
+
     return (
         <div className="space-y-6 text-left">
             <form.Field 
@@ -9,7 +15,7 @@ export const OtrosDatosSection = ({ form, formErrors }: any) => {
             children={(field: { state: { value: string; }; handleChange: (arg0: string) => void; }) => (
                 <div className="mb-8">
                     <Label className="block text-left text-sm font-medium mb-4">
-                        Sexo <span className="text-red-600">*</span>
+                        {placeholders.sexo.label} <span className="text-red-600">*</span>
                     </Label>
                     <div className="flex flex-wrap gap-4">
                         {[
@@ -52,14 +58,14 @@ export const OtrosDatosSection = ({ form, formErrors }: any) => {
                 }) => (
                     <div>
                         <Label htmlFor="ocupacion" className="block text-left text-sm font-medium mb-1">
-                            Ocupación <span className="text-red-600">*</span>
+                            {placeholders.ocupacion.label} <span className="text-red-600">*</span>
                         </Label>
                         <InputField
                             id="ocupacion"
                             type="text"
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
-                            placeholder="Ingrese su ocupación"
+                            placeholder={placeholders.ocupacion.placeholder}
                         />
                         {formErrors.ocupacion && (
                             <p className="text-red-700 text-sm">{formErrors.ocupacion}</p>
@@ -76,14 +82,14 @@ export const OtrosDatosSection = ({ form, formErrors }: any) => {
                 }) => (
                     <div>
                         <Label htmlFor="direccion" className="block text-left text-sm font-medium mb-1">
-                            Dirección exacta <span className="text-red-600">*</span>
+                            {placeholders.direccion.label} <span className="text-red-600">*</span>
                         </Label>
                         <InputField
                             id="direccion"
                             type="text"
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
-                            placeholder="Ingrese su dirección exacta"
+                            placeholder={placeholders.direccion.placeholder}
                         />
                         {formErrors.direccion && (
                             <p className="text-red-700 text-sm">{formErrors.direccion}</p>
@@ -100,14 +106,14 @@ export const OtrosDatosSection = ({ form, formErrors }: any) => {
             }) => (
                 <div className="mb-4">
                     <Label htmlFor="experienciaLaboral" className="block text-left text-sm font-medium mb-1">
-                        Experiencia Laboral o voluntaria relacionada a adultos mayores <span className="text-red-600">*</span>
+                        {placeholders.experienciaLaboral.label} <span className="text-red-600">*</span>
                     </Label>
                     <InputField
                         id="experienciaLaboral"
                         type="text"
                         value={field.state.value}
                         onChange={(e) => field.handleChange(e.target.value)}
-                        placeholder="Describa su experiencia o indique si no tiene"
+                        placeholder={placeholders.experienciaLaboral.placeholder}
                     />
                     {formErrors.experienciaLaboral && (
                         <p className="text-red-700 text-sm">

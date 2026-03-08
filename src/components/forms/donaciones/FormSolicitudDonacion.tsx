@@ -1,5 +1,5 @@
 import { useForm } from "@tanstack/react-form";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { usePostSolicitudDonacion } from "../../../hooks/formularios/solicitudDonacion";
 import type { CrearSolicitudDonacionDto } from "../../../models/formularios/solicitudDonacion";
 import { formDonacionSchema } from "../../../schemas/schema";
@@ -11,6 +11,7 @@ import Boton from "../../Boton";
 import ContactosDonanteSection from "./ConactosDonanteSection";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
+import IdiomaContext from "../../../context/language/idiomaContext";
 
 const steps = [1, 2, 3];
 
@@ -19,6 +20,8 @@ const FormSolicitudDonacion = () => {
     const [formErrors, setFormErrors] = useState<Record<string, string>>({});
     const [currentStep, setCurrentStep] = useState(1);
     const [touchedSteps, setTouchedSteps] = useState<Set<number>>(new Set());
+    const { contentJson } = useContext(IdiomaContext);
+    const placeholders = contentJson.formularioDonacion;
 
     const getFieldsForStep = (step: number): string[] => {
         switch (step) {
@@ -244,9 +247,9 @@ const FormSolicitudDonacion = () => {
                 <div className="mt-4 space-y-6">
                     {currentStep === 1 && (
                         <div className="space-y-4">
-                            <h3 className="text-lg font-medium text-gray-900 mb-10">Información del Donante</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-10">{placeholders.titles.informacionPersonal}</h3>
                             <p className="text-sm text-gray-500 text-left mb-6">
-                                Los campos marcados con <span className="text-red-600">*</span> son obligatorios
+                                {placeholders.tips.obligatorio}
                             </p>
                             <div className="space-y-4">
                                 <InformacionDonanteSection 
@@ -258,9 +261,9 @@ const FormSolicitudDonacion = () => {
                     )}
                     {currentStep === 2 && (
                         <div className="space-y-4">
-                            <h3 className="text-lg font-medium text-gray-900 mb-10">Información de Contacto</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-10">{placeholders.titles.contacto}</h3>
                             <p className="text-sm text-gray-500 text-left mb-6">
-                                Los campos marcados con <span className="text-red-600">*</span> son obligatorios
+                                {placeholders.tips.obligatorio}
                             </p>
                             <div className="space-y-4">
                                 <ContactosDonanteSection 
@@ -272,9 +275,9 @@ const FormSolicitudDonacion = () => {
                     )}
                     {currentStep === 3 && (
                         <div className="space-y-4">
-                            <h3 className="text-lg font-medium text-gray-900 mb-10">Detalles de la Donación</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-10">{placeholders.titles.detalles}</h3>
                             <p className="text-sm text-gray-500 text-left mb-6">
-                                Los campos marcados con <span className="text-red-600">*</span> son obligatorios
+                                {placeholders.tips.obligatorio}
                             </p>
                             <div className="space-y-4">
                                 <DatosDonacionSection 
@@ -304,7 +307,7 @@ const FormSolicitudDonacion = () => {
                                 type="button"
                                 onClick={handleNext}
                             >
-                                Siguiente
+                                {placeholders.botones.siguiente}
                             </Boton>
                         ) : (
                             <Boton 
@@ -315,10 +318,10 @@ const FormSolicitudDonacion = () => {
                                 {mutation.isPending ? (
                                     <div className="flex items-center">
                                         <Loader2 className="mr-2" />
-                                        Enviando...
+                                        {placeholders.botones.enviando}
                                     </div>
                                 ) : (
-                                    "Enviar"
+                                    placeholders.botones.enviar
                                 )}
                             </Boton>
                         )}

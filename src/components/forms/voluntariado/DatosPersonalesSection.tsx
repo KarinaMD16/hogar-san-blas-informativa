@@ -1,7 +1,13 @@
+import { useContext } from "react";
+import IdiomaContext from "../../../context/language/idiomaContext";
 import InputField from "../InputField";
 import { Label } from "@radix-ui/react-label";
 
 export const DatosPersonalesSection = ({ form, formErrors }: any) => {
+
+    const { contentJson } = useContext(IdiomaContext);
+    const placeholders = contentJson.formularioVoluntariado;
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <form.Field 
@@ -13,7 +19,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                 }) => (
                 <div className="space-y-1">
                     <Label htmlFor="nombre" className="block text-left text-sm font-medium mb-1">
-                        Nombre <span className="text-red-600">*</span>
+                        {placeholders.nombre.label} <span className="text-red-600">*</span>
                     </Label>
                     <InputField
                         id="nombre"
@@ -21,7 +27,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                         value={field.state.value}
                         onChange={(e) => field.handleChange(e.target.value)}
                         className="w-full"
-                        placeholder="Ingrese su nombre"
+                        placeholder={placeholders.nombre.placeholder}
                     />
                     {formErrors.nombre && (
                         <p className="text-red-700 text-sm mt-1">{formErrors.nombre}</p>
@@ -38,7 +44,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
             }) => (
                 <div className="space-y-1">
                     <Label htmlFor="apellido1" className="block text-left text-sm font-medium mb-1">
-                        Primer Apellido <span className="text-red-600">*</span>
+                        {placeholders.apellido1.label} <span className="text-red-600">*</span>
                     </Label>
                     <InputField
                         id="apellido1"
@@ -46,7 +52,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                         value={field.state.value}
                         onChange={(e) => field.handleChange(e.target.value)}
                         className="w-full"
-                        placeholder="Ingrese su primer apellido"
+                        placeholder={placeholders.apellido1.placeholder}
                     />
                     {formErrors.apellido1 && (
                         <p className="text-red-700 text-sm mt-1">{formErrors.apellido1}</p>
@@ -63,7 +69,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                 }) => (
             <div className="space-y-1">
                 <Label htmlFor="apellido2" className="block text-left text-sm font-medium mb-1">
-                    Segundo Apellido
+                    {placeholders.apellido2.label}
                 </Label>
                 <InputField
                     id="apellido2"
@@ -71,7 +77,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                     value={field.state.value}
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="w-full"
-                    placeholder="Ingrese su segundo apellido (opcional)"
+                    placeholder={placeholders.apellido2.placeholder}
                 />
                 {formErrors.apellido2 && (
                     <p className="text-red-700 text-sm mt-1">{formErrors.apellido2}</p>
@@ -88,7 +94,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                 }) => (
             <div className="space-y-1">
                 <Label htmlFor="cedula" className="block text-left text-sm font-medium mb-1">
-                    Cédula <span className="text-red-600">*</span>
+                    {placeholders.cedula.label} <span className="text-red-600">*</span>
                 </Label>
                 <InputField
                     id="cedula"
@@ -96,7 +102,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                     value={field.state.value}
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="w-full"
-                    placeholder="Ingrese su número de cédula"
+                    placeholder={placeholders.cedula.placeholder}
                 />
                 {formErrors.cedula && (
                     <p className="text-red-700 text-sm mt-1">{formErrors.cedula}</p>
@@ -113,7 +119,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                 }) => (
             <div className="space-y-1">
                 <Label htmlFor="email" className="block text-left text-sm font-medium mb-1">
-                    Correo Electrónico <span className="text-red-600">*</span>
+                    {placeholders.correo.label} <span className="text-red-600">*</span>
                 </Label>
                 <InputField
                     id="email"
@@ -121,7 +127,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                     value={field.state.value}
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="w-full"
-                    placeholder="ejemplo@correo.com"
+                    placeholder={placeholders.correo.placeholder}
                 />
                 {formErrors.email && (
                     <p className="text-red-700 text-sm mt-1">{formErrors.email}</p>
@@ -138,7 +144,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                 }) => (
             <div className="space-y-1">
                 <Label htmlFor="telefono" className="block text-left text-sm font-medium mb-1">
-                    Teléfono <span className="text-red-600">*</span>
+                    {placeholders.telefono.label} <span className="text-red-600">*</span>
                 </Label>
                 <InputField
                     id="telefono"
@@ -146,7 +152,7 @@ export const DatosPersonalesSection = ({ form, formErrors }: any) => {
                     value={field.state.value}
                     onChange={(e) => field.handleChange(e.target.value)}
                     className="w-full"
-                    placeholder="Ingrese su número de teléfono"
+                    placeholder={placeholders.telefono.placeholder}
                 />
                 {formErrors.telefono && (
                     <p className="text-red-700 text-sm mt-1">{formErrors.telefono}</p>

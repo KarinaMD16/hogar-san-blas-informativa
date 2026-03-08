@@ -9,27 +9,40 @@ const CardsServicios = ({
     <div
       onClick={showMore}
       className={`
-        transition-all duration-300 hover:scale-110 ease-in-out rounded-2xl cursor-pointer
+        group cursor-pointer rounded-2xl
+        transition-all duration-300 ease-out hover:-translate-y-1
 
         flex flex-col md:flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-evenly
-        gap-3 lg:gap-6 pt-4 pb-4 mt-2 min-w-[180px] max-w-xs lg:min-w-0 lg:w-[360px] 
-        border-4
-         ${
-           isSelected
-             ? "border-white bg-antiFlashWhite  hover:bg-ecruYellow300"
-             : "border-antiFlashWhite hover:bg-ecruYellow300 hover:border-white"
-         }
-        lg:mr-4 
+        gap-3 lg:gap-6 pt-4 pb-4 mt-2 px-4
+        min-w-[180px] max-w-xs lg:min-w-0 lg:w-[360px]
+
+        border
+        ${isSelected
+        ? "bg-basicWhite border-amaranthPink/30 shadow-md shadow-amaranthPink/10"
+          : "bg-transparent border-night/10 hover:border-ecruYellow/60 hover:shadow-md hover:shadow-night/10"
+        }
+
+        lg:mr-4
       `}
     >
       <img
         src={servicio.imagenPrincipal}
         alt={servicio.titulo}
-        className="shadow-md shadow-night/20 border-2 rounded-xl border-basicWhite object-cover w-28 h-28"
+        className="
+          rounded-xl object-cover w-28 h-28
+          border border-night/10
+          shadow-sm shadow-night/10
+          group-hover:shadow-md group-hover:shadow-night/15 transition
+        "
       />
 
       <div className="text-center lg:text-left">
-        <strong className="font-opensans text-base block">
+        <strong
+          className={`
+            font-opensans text-base block transition
+            ${isSelected ? "text-amaranthPink" : "text-night"}
+          `}
+        >
           {servicio.titulo}
         </strong>
       </div>

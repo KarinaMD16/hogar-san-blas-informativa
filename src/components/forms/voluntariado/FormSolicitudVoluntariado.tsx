@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { usePostSolicitudVoluntario } from "../../../hooks/formularios/solicitudVoluntario";
 import type { CrearSolicitudPendienteDto } from "../../../models/formularios/solicitudVoluntario";
@@ -18,6 +18,7 @@ import {
 import { cn } from "../../../lib/utils";
 import TipoVoluntariadoSection from "./TipoVoluntariadoSection";
 import { toast } from "sonner";
+import IdiomaContext from "../../../context/language/idiomaContext";
 
 const steps = [1, 2, 3, 4, 5];
 
@@ -25,6 +26,9 @@ const FormSolicitudVoluntariado = () => {
   const mutation = usePostSolicitudVoluntario();
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [currentStep, setCurrentStep] = useState(1);
+
+  const { contentJson } = useContext(IdiomaContext);
+  const placeholders = contentJson.formularioVoluntariado;
 
   const form = useForm({
     defaultValues: {
@@ -195,38 +199,38 @@ const FormSolicitudVoluntariado = () => {
         </Stepper>
         {currentStep === 1 && (
           <div className="space-y-4">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Información Personal</h3>
-            <p className="text-sm text-gray-500 text-left mb-6">Los campos marcados con <span className="text-red-600">*</span> son obligatorios</p>
+            <h3 className="text-lg font-medium text-gray-900 mb-4">{placeholders.titles.informacionPersonal}</h3>
+            <p className="text-sm text-gray-500 text-left mb-6">{placeholders.tips.obligatorio}</p>
             <DatosPersonalesSection form={form} formErrors={formErrors} />
           </div>
         )}
         {currentStep === 2 && (
           <div className="space-y-8">
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Otros Datos</h3>
-              <p className="text-sm text-gray-500 text-left mb-6">Los campos marcados con <span className="text-red-600">*</span> son obligatorios</p>
+              <h3 className="text-lg font-medium text-gray-900 mb-4">{placeholders.titles.otrosDatos}</h3>
+              <p className="text-sm text-gray-500 text-left mb-6">{placeholders.tips.obligatorio}</p>
               <OtrosDatosSection form={form} formErrors={formErrors} />
             </div>
           </div>
         )}
         {currentStep === 3 && (
           <div className="space-y-4">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Contacto de Emergencia</h3>
-            <p className="text-sm text-gray-500 text-left mb-6">Los campos marcados con <span className="text-red-600">*</span> son obligatorios</p>
+            <h3 className="text-lg font-medium text-gray-900 mb-4">{placeholders.titles.contactoEmergencia}</h3>
+            <p className="text-sm text-gray-500 text-left mb-6">{placeholders.tips.obligatorio}</p>
             <ContactoEmergenciaSection form={form} formErrors={formErrors} />
           </div>
         )}
         {currentStep === 4 && (
           <div className="space-y-4">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Tipo de Voluntariado</h3>
-            <p className="text-sm text-gray-500 text-left mb-6">Los campos marcados con <span className="text-red-600">*</span> son obligatorios</p>
+            <h3 className="text-lg font-medium text-gray-900 mb-4">{placeholders.titles.tipo}</h3>
+            <p className="text-sm text-gray-500 text-left mb-6">{placeholders.tips.obligatorio}</p>
             <TipoVoluntariadoSection form={form} formErrors={formErrors} />
           </div>
         )}
         {currentStep === 5 && (
           <div className="space-y-4">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Horarios Disponibles</h3>
-            <p className="text-sm text-gray-500 text-left mb-6">Los campos marcados con <span className="text-red-600">*</span> son obligatorios</p>
+            <h3 className="text-lg font-medium text-gray-900 mb-4">{placeholders.titles.horarios}</h3>
+            <p className="text-sm text-gray-500 text-left mb-6">{placeholders.tips.obligatorio}</p>
             <HorariosDisponiblesSection form={form} formErrors={formErrors} />
           </div>
         )}
@@ -238,7 +242,7 @@ const FormSolicitudVoluntariado = () => {
                 variant="outline"
                 onClick={() => setCurrentStep(prev => prev - 1)}
               >
-                Anterior
+                {placeholders.botones.anterior}
               </Boton>
             ) : <div></div>}
             {currentStep < steps.length ? (
@@ -257,14 +261,14 @@ const FormSolicitudVoluntariado = () => {
                   }
                 }}
               >
-                Siguiente
+                {placeholders.botones.siguiente}
               </Boton>
             ) : (
               <form.Subscribe
                 selector={(state) => [state.canSubmit, state.isSubmitting]}
                 children={([canSubmit, isSubmitting]) => (
                   <Boton type="submit" disabled={!canSubmit || isSubmitting}>
-                    {isSubmitting ? "Enviando..." : "Enviar"}
+                    {isSubmitting ? placeholders.botones.enviando : placeholders.botones.enviar}
                   </Boton>
                 )}
               />

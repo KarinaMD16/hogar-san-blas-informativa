@@ -42,14 +42,16 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
         </div>
       </div>
 
-      <div className="bg-antiFlashWhite p-4 rounded-lg mt-4 w-full">
+      <div className="bg-basicWhite/70 border border-ecruYellow/30 p-4 rounded-2xl w-full max-w-2xl shadow-sm shadow-night/5">
         <div
-          className="flex flex-row gap-3 overflow-x-auto justify-around
+          className="
+            flex flex-row gap-3 overflow-x-auto justify-around
             [&::-webkit-scrollbar]:h-2.5
             [&::-webkit-scrollbar-track]:bg-gray-100
-            [&::-webkit-scrollbar-thumb]:bg-ecruYellow 
+            [&::-webkit-scrollbar-thumb]:bg-ecruYellow
             [&::-webkit-scrollbar-thumb]:rounded-full
-            [&::-webkit-scrollbar-thumb]:cursor-grab pb-2"
+            [&::-webkit-scrollbar-thumb]:cursor-grab pb-2
+          "
         >
           {imagenes.map((imagen, index) => (
             <img
@@ -57,8 +59,13 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
               key={index}
               src={imagen}
               alt={`Imagen de ${servicio.titulo}`}
-              className={`hover:cursor-pointer object-cover w-24 h-24 sm:w-30 sm:h-30 rounded-lg flex-shrink-0 
-              ${index === imagenIndex ? "shadow-sm shadow-night/20 border-3 rounded-xl border-basicWhite " : ""}`}
+              className={`object-cover mt-1 mb-1 w-24 h-24 sm:w-30 sm:h-30 rounded-xl flex-shrink-0
+                transition hover:scale-105 hover:cursor-pointer 
+              ${
+                index === imagenIndex
+                  ? "ring-4 ring-ecruYellow shadow-md shadow-night/10"
+                  : "opacity-85 hover:opacity-100"
+                }`}
             />
           ))}
         </div>

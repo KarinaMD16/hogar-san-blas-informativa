@@ -32,9 +32,6 @@ const Donaciones = () => {
   if (loadingDonaciones || fetchingDonaciones)
     return (
       <div className="mt-10 w-screen h-screen">
-        <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
-          {contentJson.titulosSecciones.publicaciones.donaciones}
-        </h1>
         <span className="loading loading-spinner mt-4"></span>
       </div>
     );
