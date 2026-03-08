@@ -13,6 +13,7 @@ import Navbar from "../../components/header/Navbar";
 import IdiomaContext from "../../context/language/idiomaContext";
 import ModalImagenGaleria from "../../components/ModalGaleria";
 import type { Galeria } from "../../models/galeria/galeria";
+import { useFadeIn } from "../../components/useFadeIn";
 
 export const Route = createFileRoute("/galeria/")({
   component: RouteComponent,
@@ -47,6 +48,10 @@ function RouteComponent() {
     selectedBtn ?? 0,
     page,
     limit
+  );
+
+  useFadeIn(
+    `${loadingImagenes}-${isFetching}-${page}-${selectedBtn ?? "all"}`
   );
 
   const Imagenes = selectedBtn === null ? todas : filtradas;
@@ -96,15 +101,16 @@ function RouteComponent() {
 
   if (loadingImagenes || isFetching)
     return (
-      <div>
-        <span className="loading loading-spinner"></span>
+      <div className="w-screen h-screen">
+        <Navbar />
+        <span className="mt-40 loading loading-spinner"></span>
       </div>
     );
 
   return (
     <div className="flex flex-col justify-center items-center">
       <Navbar />
-      <div className="mt-30 flex flex-col lg:w-5xl md:w-4xl sm:w-3xl gap-3 justify-center items-center">
+      <div className="mt-30 flex flex-col lg:w-5xl md:w-4xl sm:w-3xl gap-3 justify-center items-center fade-in-on-scroll">
         <h1 className="text-4xl font-poppins font-bold text-amaranthPink ">
           {contentJson.titulosSecciones.Galeria.tituloExtend}
         </h1>

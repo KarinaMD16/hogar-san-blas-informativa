@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const useFadeIn = () => {
+export const useFadeIn = (rerunKey?: string) => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const elements = gsap.utils.toArray<HTMLElement>(".fade-in-on-scroll");
@@ -18,12 +18,12 @@ export const useFadeIn = () => {
           scrollTrigger: {
             trigger: el,
             start: "top 80%",
-              toggleActions: "play reverse play reverse"
+            toggleActions: "play reverse play reverse"
           },
         });
       });
     });
 
     return () => ctx.revert();
-  }, []);
+  }, [rerunKey]);
 };

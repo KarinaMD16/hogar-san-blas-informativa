@@ -135,7 +135,7 @@
     "titulo": "¿Quieres donar?",
     "descripcion": "¡Tu ayuda marca la diferencia! Aquí te ofrecemos la información y requisitos necesarios para contribuir con nuestro hogar.",
     "botones": {
-      "botonDonar": "Donar",
+      "botonDonar": "QUIERO DONAR",
       "botonRequisitos": "Ver requisitos",
       "botonVerOtras": "Ver otras peticiones"
     }
@@ -257,7 +257,7 @@
       ]
     }
   },
-  
+
   "titulosSecciones": {
     "Servicios": "Nuestros servicios",
     "Galeria": {
@@ -271,11 +271,14 @@
       "donaciones": "Solicitamos donaciones"
     }
   },
-  
+
   "paginaRequisitosVoluntariado": {
     "titulo": "¿Estás interesado en ser voluntario?",
     "cumplimientoHoras": {
-      "subtitulo": ["Podés apoyarnos haciendo lo que mejor sabes hacer", "Requisitos:"],
+      "subtitulo": [
+        "Podés apoyarnos haciendo lo que mejor sabes hacer",
+        "Requisitos:"
+      ],
       "requisitos": [
         "Hoja de presentación.",
         "Foto tamaño pasaporte.",
@@ -286,7 +289,10 @@
       ]
     },
     "voluntarioPermanente": {
-      "subtitulo": ["Podés apoyarnos haciendo lo que mejor sabes hacer", "Requisitos:"],
+      "subtitulo": [
+        "Podés apoyarnos haciendo lo que mejor sabes hacer",
+        "Requisitos:"
+      ],
       "requisitos": [
         "Hoja de presentación.",
         "Foto tamaño pasaporte.",
@@ -298,40 +304,86 @@
     },
     "formulario": "Formulario de Voluntariado"
   },
-  
+
   "formularioVoluntariado": {
-    "nombre": "Nombre",
-    "apellido1": "Primer apellido",
-    "apellido2": "Segundo apellido",
-    "cedula": "Cédula",
-    "sexo": { 
-      "label": "Sexo",
-      "opciones": ["Seleccione...", "Femenino", "Masculino", "Otro"] 
+    "titles": {
+      "informacionPersonal": "Información Personal",
+      "contactoEmergencia": "Contacto de Emergencia",
+      "otrosDatos": "Otros datos",
+      "tipo": "Tipo de voluntariado",
+      "horarios": "Horarios Disponibles"
     },
-    "ocupacion": "Ocupación",
-    "telefono": "Teléfono",
+    "tips": {
+      "obligatorio": "Los campos marcados con * son obligatorios.",
+      "horarios": "Solo se guardarán los horarios donde todos los campos estén completos."
+    },
+    "nombre": {
+      "label": "Nombre",
+      "placeholder": "Ingrese su nombre"
+    },
+    "apellido1": {
+      "label": "Primer apellido",
+      "placeholder": "Ingrese su primer apellido"
+    },
+    "apellido2": {
+      "label": "Segundo apellido",
+      "placeholder": "Ingrese su segundo apellido"
+    },
+    "cedula": {
+      "label": "Cédula",
+      "placeholder": "Ingrese su cédula"
+    },
+    "sexo": {
+      "label": "Sexo",
+      "placeholder": "Seleccione...",
+      "opciones": ["Seleccione...", "Femenino", "Masculino", "Otro"]
+    },
+    "ocupacion": {
+      "label": "Ocupación",
+      "placeholder": "Ingrese su ocupación"
+    },
+    "telefono": {
+      "label": "Teléfono",
+      "placeholder": "Ingrese su teléfono"
+    },
     "correo": {
       "label": "Correo electrónico",
       "placeholder": "nombre@gmail.com"
     },
-    "direccion": "Dirección exacta",
+    "direccion": {
+      "label": "Dirección exacta",
+      "placeholder": "Ingrese su dirección exacta"
+    },
     "contactoEmergencia": {
       "label": "Contacto de emergencia",
       "nombre": {
-        "label": "Nombre"
+        "label": "Nombre",
+        "placeholder": "Ingrese el nombre del contacto"
       },
       "telefono": {
-        "label": "Teléfono"
+        "label": "Teléfono",
+        "placeholder": "Ingrese el teléfono del contacto"
       }
     },
-    "colaboracion": "Tipo de colaboración que desea brindar",
-    "experiencia": "Experiencia laboral o voluntaria relacionada con adulto mayor",
+    "colaboracion": {
+      "label": "Tipo de colaboración que desea ofrecer",
+      "placeholder": "Ej. Ropa, alimentos"
+    },
+    "experienciaLaboral": {
+      "label": "Experiencia laboral o voluntaria relacionada con adulto mayor",
+      "placeholder": "Describa su experiencia"
+    },
     "horas": [
       "Este voluntariado es para cumplir horas",
       "Cantidad de horas a cumplir"
     ],
-     "horario": {
-      "label": "Horario establecido para asistir a la institución",
+    "horario": {
+      "horario": "Horario",
+      "dia": "Día",
+      "inicio": "Hora de inicio",
+      "fin": "Hora de fin",
+      "agregar": "Agregar horario",
+      "label": "Horarios disponibles para voluntariado",
       "placeholder": "Ej. 9 am - 11 am",
       "dias": [
         "Lunes",
@@ -343,23 +395,90 @@
         "Domingo"
       ]
     },
-    "observaciones": "Observaciones",
+    "observaciones": {
+      "label": "Observaciones",
+      "placeholder": "Escriba observaciones adicionales"
+    },
     "delincuencia": {
       "label": "Hoja de delincuencia (PDF)",
-      "preview": [
-        "Archivo seleccionado:",
-        "Ver hoja de delincuencia (PDF)"
-      ]
+      "placeholder": "Seleccione un archivo PDF",
+      "preview": ["Archivo seleccionado:", "Ver hoja de delincuencia (PDF)"]
     },
-    "botones": [
-      "Anterior",
-      "Siguiente",
-      "Enviar"
-    ]
+    "tipoVoluntariado": {
+      "label": "Tipo de voluntariado",
+      "cargando": "Cargando tipos de voluntariado...",
+      "opciones": ["Seleccione...", "Voluntario para cumplir horas", "Voluntario permanente"],
+      "horas": "Cantidad de horas totales a cumplir:",
+        "placeholder": "Ej. 400"
+    },
+    "botones": {
+      "siguiente": "Siguiente",
+      "anterior": "Anterior",
+      "enviando": "Enviando...",
+      "enviar": "Enviar",
+      "eliminar": "Eliminar"
+
+    }
+  },
+
+  "formularioDonacion": {
+    "titles": {
+      "informacionPersonal": "Información del donante",
+      "contacto": "Contacto del donante",
+      "detalles": "Detalles de la donación"
+    },
+    "tips": {
+      "obligatorio": "Los campos marcados con * son obligatorios.",
+      "anonimo": "Deseo que mi donación sea anónima",
+      "detalleAnonimo": "(Su nombre no aparecerá en nuestros registros públicos)"
+    },
+    "nombre": {
+      "label": "Nombre",
+      "placeholder": "Ingrese su nombre"
+    },
+    "apellido1": {
+      "label": "Primer apellido",
+      "placeholder": "Ingrese su primer apellido"
+    },
+    "apellido2": {
+      "label": "Segundo apellido",
+      "placeholder": "Ingrese su segundo apellido"
+    },
+    "cedula": {
+      "label": "Cédula",
+      "placeholder": "Ingrese su cédula"
+    },
+    "tipoDonacion": {
+      "label": "Tipo de donación",
+      "placeholder": "Ej: Ropa, alimentos, aseo personal, pañales, etc."
+    },
+    "telefono": {
+      "label": "Teléfono",
+      "placeholder": "Ingrese su teléfono"
+    },
+    "correo": {
+      "label": "Correo electrónico",
+      "placeholder": "nombre@gmail.com"
+    },
+    "descripcion": {
+      "label": "Descripcion",
+      "placeholder": "Describa ampliamente los artículos que desea donar"
+    },
+    "observaciones": {
+      "label": "Observaciones",
+      "placeholder": "Agregue cualquier información adicional que desee compartir (opcional)"
+    },
+    "botones": {
+      "siguiente": "Siguiente",
+      "anterior": "Anterior",
+      "enviando": "Enviando...",
+      "enviar": "Enviar",
+      "eliminar": "Eliminar"
+    }
   },
 
   "paginaRequisitosDonacion": {
-    "donacionArticulos":{
+    "donacionArticulos": {
       "titulo": "¿Estás interesado en hacer una donación?",
       "subtitulo": ["Podés donar los articulos que desees", "Requisitos:"],
       "requisitos": [
@@ -368,17 +487,23 @@
         "Alimentos: no pasados de su fecha de vencimiento"
       ]
     },
-    "donacionMonetaria":{
-      "subtitulo": ["Podés hacer donaciones monetarias", "Podés hacerlo por medio de SINPE móvil o transferencia:"],
+    "donacionMonetaria": {
+      "subtitulo": [
+        "Podés hacer donaciones monetarias",
+        "Podés hacerlo por medio de SINPE móvil o transferencia:"
+      ],
       "medios": [
         "SINPE móvil: 8972-9912",
         "Cuenta BCR:  CC-CR10015201235000175310",
         "Cuenta BN:  CR32015101310010024125"
       ]
     },
-    "donacionTiempo":{
+    "donacionTiempo": {
       "subtitulo": ["Podés donar tu tiempo", "Conviértete en un voluntario:"],
-      "boton": {"nombre": "Quiero ser voluntario", "ruta": "/formularios/voluntariado"}
+      "boton": {
+        "nombre": "Quiero ser voluntario",
+        "ruta": "/formularios/voluntariado"
+      }
     },
     "formulario": "Formulario de Donación"
   }
