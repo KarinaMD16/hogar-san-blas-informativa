@@ -427,8 +427,8 @@
 
   "formularioDonacion": {
     "titles": {
-      "informacionPersonal": "Donnor information",
-      "contacto": "Donnor contact",
+      "informacionPersonal": "Donor information",
+      "contacto": "Donor contact",
       "detalles": "Donation details"
     },
     "tips": {
