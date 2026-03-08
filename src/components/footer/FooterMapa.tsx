@@ -24,7 +24,7 @@ const FooterMapa = () => {
     <div
       ref={mapRef}
       id="map"
-      className="w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square min-w-[300px] min-h-[300px]"
+      className="w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square min-w-[250px] min-h-[250px]"
     ></div>
   );
 };

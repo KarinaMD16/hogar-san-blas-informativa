@@ -6,7 +6,7 @@ const ReseñaServicio = () => {
   const reseña = contentJson.paginaReseñaHistorica[1];
 
   return (
-    <section className="px-4 md:px-10 py-4 sm:py-10 bg-white">
+    <section className="px-4 md:px-25 py-4 sm:py-10 bg-white">
       <div className="block sm:hidden mb-8">
         <p className="font-opensans text-black text-left text-md w-full">
           {contentJson.paginaReseñaHistorica[0].descripcion[1]}

@@ -130,7 +130,7 @@
     "titulo": "Success stories",
     "subtitulo": "Centenarians",
     "descripcion": "Nicoya is known for being one of the world’s Blue Zones. Here in the San Blas nursing home, we are fortunate to have been the residence of several cases of centenarian older adults. We have learned their stories, improved their quality of life through our services, and treasured their wisdom with love, reflecting our commitment to the well-being and longevity of the older adults in our community.",
-    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+    "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg",
     "botonVerMas": "Read more"
   },
 
@@ -212,7 +212,8 @@
   },
 
   "footer": {
-    "mensaje": "Visit us!"
+    "mensaje": "Visit us!",
+    "derechos": "© 2026 Hogar San Blas de Nicoya. All rights reserved."
   },
 
   "header": {
@@ -220,7 +221,8 @@
       "titulo": "About Us",
       "opciones": [
         { "texto": "Gallery", "ruta": "/galeria/" },
-        { "texto": "Historical overview", "ruta": "/historia/" }
+        { "texto": "Historical overview", "ruta": "/historia/" },
+        { "texto": "Success stories", "ruta": "/casosdeexito/" }
       ]
     },
     "residencia": {
@@ -518,5 +520,84 @@
       }
     },
     "formulario": "Donation form"
+  },
+
+  "paginaCentenarios": {
+    "hero": {
+      "titulo": "Centenarians of Hogar San Blas",
+      "texto": "Nicoya is recognized as one of the Blue Zones of the world. At Hogar San Blas in Nicoya, we have had the privilege of being a home for several remarkable centenarians, learning their stories, improving their quality of life through our services, and cherishing their wisdom with love. This reflects our commitment to the well-being and longevity of the older adults in our community.",
+      "subtitulo": "Each story represents a life full of effort, wisdom, and love. At Hogar San Blas, we celebrate longevity as a legacy for our community.",
+      "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+    },
+    "zonaAzul": {
+      "titulo": "We are a blue zone of the world",
+      "descripcion": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      ],
+      "imagen": "https://i.ibb.co/d4LgGVt4/zona-azul.jpg"
+    },
+    "centenarios": {
+      "residentes": {
+        "titulo": "Resident centenarians",
+        "subtitulo": "They currently live in our home, serving as living testimony of longevity and care.",
+        "lista": [
+          {
+            "nombre": "Ana Medina Duarte",
+            "edad": 102,
+            "fecha": "Born on March 15, 1922",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+          },
+          {
+            "nombre": "José Barrantes Díaz",
+            "edad": 101,
+            "fecha": "Born on July 10, 1923",
+            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+          }
+        ]
+      },
+      "pasados": {
+        "titulo": "Centenarians who left their mark",
+        "subtitulo": "Over the years, we had the honor of accompanying other centenarians whose memory is now part of our institutional history.",
+        "lista": [
+          {
+            "nombre": "Ana Medina Duarte",
+            "edad": 102,
+            "fecha": "1922 - 2024",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+          },
+          {
+            "nombre": "José Barrantes Díaz",
+            "edad": 101,
+            "fecha": "1923 - 2024",
+            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+          },
+          {
+            "nombre": "Ana Medina Duarte",
+            "edad": 102,
+            "fecha": "1922 - 2024",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+          },
+          {
+            "nombre": "José Barrantes Díaz",
+            "edad": 101,
+            "fecha": "1923 - 2024",
+            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+          },
+          {
+            "nombre": "Ana Medina Duarte",
+            "edad": 102,
+            "fecha": "1922 - 2024",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+          },
+          {
+            "nombre": "José Barrantes Díaz",
+            "edad": 101,
+            "fecha": "1923 - 2024",
+            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+          }
+        ]
+      }
+    }
   }
 }

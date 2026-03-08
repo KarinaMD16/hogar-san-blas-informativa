@@ -127,7 +127,7 @@
     "titulo": "Casos de Éxito",
     "subtitulo": "Centenarios",
     "descripcion": "Nicoya es reconocida por ser una de las zonas azules del mundo. En el Hogar San Blas de Nicoya, tenemos la dicha de haber sido residencia para diversos casos de éxito de adultos mayores centenarios, conociendo sus historias, mejorando su calidad de vida con nuestros servicios y atesorando su sabiduría con amor, reflejando así nuestro compromiso con el bienestar y la longevidad de nuestros adultos mayores de la comunidad.",
-    "imagen": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+    "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg",
     "botonVerMas": "Ver más"
   },
 
@@ -209,7 +209,8 @@
   },
 
   "footer": {
-    "mensaje": "¡Visítanos!"
+    "mensaje": "¡Visítanos!",
+    "derechos": "© 2026 Hogar San Blas de Nicoya. Todos los derechos reservados."
   },
 
   "header": {
@@ -217,7 +218,8 @@
       "titulo": "Sobre Nosotros",
       "opciones": [
         { "texto": "Galería", "ruta": "/galeria/" },
-        { "texto": "Reseña Histórica", "ruta": "/historia/" }
+        { "texto": "Reseña Histórica", "ruta": "/historia/" },
+        { "texto": "Casos de Éxito", "ruta": "/casosdeexito/" }
       ]
     },
     "residencia": {
@@ -506,5 +508,84 @@
       }
     },
     "formulario": "Formulario de Donación"
+  },
+
+  "paginaCentenarios": {
+    "hero": {
+      "titulo": "Centenarios del Hogar San Blas",
+      "texto": "Nicoya es reconocida por ser una de las zonas azules del mundo. En el Hogar San Blas de Nicoya, tenemos la dicha de haber sido residencia para diversos casos de éxito de adultos mayores centenarios, conociendo sus historias, mejorando su calidad de vida con nuestros servicios y atesorando su sabiduría con amor, reflejando así nuestro compromiso con el bienestar y la longevidad de nuestros adultos mayores de la comunidad.",
+      "subtitulo": "Cada historia representa una vida llena de esfuerzo, sabiduría y amor. En el Hogar San Blas celebramos la longevidad como un legado para nuestra comunidad.",
+      "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+    },
+    "zonaAzul": {
+      "titulo": "Somos zona azul del mundo",
+      "descripcion": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      ],
+      "imagen": "https://i.ibb.co/d4LgGVt4/zona-azul.jpg"
+    },
+    "centenarios": {
+      "residentes": {
+        "titulo": "Centenarios residentes",
+        "subtitulo": "Actualmente residen en nuestro hogar, siendo testimonio vivo de longevidad y cuidado.",
+        "lista":[
+          {
+            "nombre": "Ana Medina Duarte",
+            "edad": 102,
+            "fecha": "Nació el 15 de marzo de 1922",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+          },
+          {
+            "nombre": "José Barrantes Díaz",
+            "edad": 101,
+            "fecha": "Nació el 10 de julio de 1923",
+            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+          }
+        ]
+      },
+      "pasados": {
+        "titulo": "Centenarios que dejaron huella",
+        "subtitulo": "A lo largo de los años, tuvimos el honor de acompañar a otros centenarios cuya memoria forma parte de nuestra historia institucional.",
+        "lista":[
+          {
+            "nombre": "Doña María",
+            "edad": 102,
+            "fecha": "1922 - 2024",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+          },
+          {
+            "nombre": "Don José",
+            "edad": 101,
+            "fecha": "1923 - 2024",
+            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+          },
+          {
+            "nombre": "Doña María",
+            "edad": 102,
+            "fecha": "1922 - 2024",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+          },
+          {
+            "nombre": "Don José",
+            "edad": 101,
+            "fecha": "1923 - 2024",
+            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+          },
+          {
+            "nombre": "Doña María",
+            "edad": 102,
+            "fecha": "1922 - 2024",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+          },
+          {
+            "nombre": "Don José",
+            "edad": 101,
+            "fecha": "1923 - 2024",
+            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+          }
+        ]
+      }
+    }
   }
 }
