@@ -22,7 +22,7 @@ const CambiarIdioma = () => {
       whileTap={{ scale: 0.96 }}
       className="flex items-center gap-2 hover:cursor-pointer"
       aria-label={
-        idioma === "es" ? "Cambiar de espanol a ingles" : "Switch from English to Spanish"
+        idioma === "es" ? "Cambiar de español a inglés" : "Switch from English to Spanish"
       }
     >
       <motion.span animate={iconControls} className="inline-flex items-center">
