@@ -101,7 +101,7 @@ function RouteComponent() {
 
   if (loadingImagenes || isFetching)
     return (
-      <div className="mw-screen h-screen">
+      <div className="w-screen h-screen">
         <Navbar />
         <span className="mt-40 loading loading-spinner"></span>
       </div>
