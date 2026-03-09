@@ -6,13 +6,13 @@ const ReseñaServicio = () => {
   const reseña = contentJson.paginaReseñaHistorica[1];
 
   return (
-    <section className="px-4 md:px-25 py-4 sm:py-10 bg-white">
-      <div className="block sm:hidden mb-8">
+    <section className="px-4 md:px-15 lg:px-16 xl:px-25 py-4 sm:py-10 bg-white">
+      {/*<div className="block sm:hidden mb-8">
         <p className="font-opensans text-black text-left text-md w-full">
           {contentJson.paginaReseñaHistorica[0].descripcion[1]}
         </p>
-      </div>
-      <div className="flex flex-col gap-10 ">
+      </div>*/}
+      <div className="flex flex-col gap-10 sm:left-4 md:left-6 lg:left-8 xl:left-10">
         <h1 className="font-poppins text-left text-amaranthPink text-2xl sm:text-3xl md:text-6xl font-bold text-shadow-md leading-tight tracking-normal">
           {reseña.titulo}
         </h1>

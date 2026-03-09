@@ -12,7 +12,7 @@ export const Route = createFileRoute('/casosdeexito/')({
 
 function RouteComponent() {
   useFadeIn();
-  
+
   return (
     <div>
       <Navbar />
@@ -22,9 +22,9 @@ function RouteComponent() {
       <div className="fade-in-on-scroll">
         <ZonaAzul />
       </div>
-      <div className="px-25 py-12 fade-in-on-scroll">
+      {/*<div className="px-4 mt-142 sm:mt-170 md:mt-75 lg:mt-28 sm:mt-0 xl:px-25 xl:py-12 fade-in-on-scroll">
        <div className="w-full h-1 bg-ecruYellow rounded"/>
-      </div>
+      </div>*/}
       <div className="fade-in-on-scroll">
         <Centenarios />
       </div>
