@@ -31,8 +31,8 @@ const Donaciones = () => {
 
   if (loadingDonaciones || fetchingDonaciones)
     return (
-      <div className="mt-10 w-screen h-screen">
-        <span className="loading loading-spinner mt-4"></span>
+      <div className="w-screen h-screen">
+        <span className="mt-40 loading loading-spinner"></span>
       </div>
     );
 
