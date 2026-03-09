@@ -4,30 +4,41 @@ const CardCentenario = ({ centenario }: CentenarioProps) => {
   return (
     <div
       className="
-      bg-basicWhite rounded-3xl shadow-lg overflow-hidden
-      w-72 md:w-80 lg:w-88
-      h-96 md:h-100 lg:h-80
-      flex flex-col
+      relative
+      w-72 md:w-80
+      h-96
+      rounded-3xl
+      overflow-hidden
+      shadow-lg
       "
     >
       <img
-        className="
-        w-full h-36 object-cover
-        "
         src={centenario.imagen}
         alt={centenario.nombre}
+        className="w-full h-full object-cover"
       />
 
-      <div className="flex flex-col items-center text-center p-6 gap-3">
-        <h3 className="font-poppins font-semibold text-2xl">
-          {centenario.nombre}
-        </h3>
+      <div
+        className="
+        absolute bottom-4 left-4 right-4
+        bg-white/95
+        backdrop-blur-sm
+        rounded-2xl
+        p-3
+        flex items-center justify-between gap-4
+        "
+      >
+        <div className="flex flex-col gap-1 max-w-2/3">
+          <h3 className="font-poppins font-semibold text-lg">
+            {centenario.nombre}
+          </h3>
 
-        <p className="text-3xl font-bold">
-          {centenario.edad} años
-        </p>
+          <p className="font-bold text-2xl">
+            {centenario.edad} años
+          </p>
+        </div>
 
-        <p className="text-lg text-gray-700 mt-3">
+        <p className="text-gray-600 font-medium max-w-1/3">
           {centenario.fecha}
         </p>
       </div>
