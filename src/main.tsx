@@ -6,6 +6,7 @@ import { routeTree } from './routeTree.gen'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { IdiomaProvider } from './context/language/idiomaContextProvider';
 import App from './App';
+import { HelmetProvider } from 'react-helmet-async'
 
 const queryClient = new QueryClient()
 const router = createRouter({ routeTree })
@@ -22,13 +23,15 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <QueryClientProvider client={queryClient}>
-        <IdiomaProvider>
-          <App>
-            <RouterProvider router={router} />
-          </App>
-        </IdiomaProvider>
-      </QueryClientProvider>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <IdiomaProvider>
+            <App>
+              <RouterProvider router={router} />
+            </App>
+          </IdiomaProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
     </StrictMode>,
   )
 }
