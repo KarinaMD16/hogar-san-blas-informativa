@@ -39,7 +39,7 @@ const Donaciones = () => {
   return (
     <section
       id="solicitudes-donaciones"
-      className="lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6"
+      className="lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6 mt-40"
     >
       <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
         {contentJson.titulosSecciones.publicaciones.donaciones}
