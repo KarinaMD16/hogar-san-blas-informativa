@@ -25,8 +25,8 @@ export const Eventos = () => {
 
   if (loadingEventos || fetchingEventos)
     return (
-      <div className="mt-10 w-screen h-screen">
-        <span className="loading loading-spinner"></span>
+      <div className="w-screen h-screen">
+        <span className="mt-40 loading loading-spinner"></span>
       </div>
     );
 

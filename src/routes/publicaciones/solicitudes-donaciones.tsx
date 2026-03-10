@@ -13,7 +13,7 @@ function RouteComponent() {
 
   return (
     <div className="flex flex-col justify-between h-screen">
-      <div className="flex flex-col items-center justify-center mt-15 fade-in-on-scroll">
+      <div className="flex flex-col items-center justify-center fade-in-on-scroll">
         <Navbar />
         <Donaciones />
       </div>

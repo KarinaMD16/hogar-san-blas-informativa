@@ -11,48 +11,48 @@
       "id": 1,
       "titulo": "Social Work",
       "descripcion": "We stand beside people whose lives have been marked by abandonment, poverty and loneliness, offering ethical, humane and dignified support to older people. Our work goes beyong case managament: we build bonds, listen with respect and work everyday to ensure that growing old does not mean being forgotten",
-      "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenPrincipal": "https://i.ibb.co/MyXYfXWk/trabajosocial4.webp",
       "imagenes": [
-        "https://i.ibb.co/0jbKy6vr/IMG-0410.jpg",
-        "https://periodicomensaje.com/images/1.ADULTO-MAYOR.jpg",
-        "https://casaisrael.org/wp-content/uploads/2018/06/C%C3%B3mo-es-la-vida-en-una-residencia-geri%C3%A1trica.jpg",
-        "https://i.ibb.co/bMdrSxF2/trabajo-social.jpg"
+        "https://i.ibb.co/jPDY7zd6/trabajosocial2.webp",
+        "https://i.ibb.co/cVQZXBN/trabajosocial3.webp",
+        "https://i.ibb.co/MyXYfXWk/trabajosocial4.webp",
+        "https://i.ibb.co/99CYdPxd/trabajosocial.webp"
       ]
     },
     {
       "id": 2,
       "titulo": "Physical Therapy",
       "descripcion": "We improve mobility and autonomy in older adults through personalized therapies, compassionate care, and the support of a team specialized in geriatrics. Our goal is to improve their quality of life with dignity and respect",
-      "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenPrincipal": "https://i.ibb.co/SwbVSTdh/terapia4.webp",
       "imagenes": [
-        "https://i.ibb.co/vC1Ptxy4/IMG-0532.jpg",
-        "https://i.ibb.co/ynSG0F21/IMG-0477.jpg",
-        "https://i.ibb.co/mCh22fbt/pexels-kampus-7551627.jpg",
-        "https://i.ibb.co/ccW4WGPH/hand-3666974-1280.jpg"
+        "https://i.ibb.co/MDCCXXDx/terapia.webp",
+        "https://i.ibb.co/8nX6t2Cf/terapia2.webp",
+        "https://i.ibb.co/fzXyNyfz/terapia3.webp",
+        "https://i.ibb.co/SwbVSTdh/terapia4.webp"
       ]
     },
     {
       "id": 3,
       "titulo": "Nutrition",
       "descripcion": "We offer personalized nutritional care, food education, and close monitoring of food handling to ensure the well-being and nutritional safety of our residents. Our commitment goes beyond meals: we nurture health, dignity, and quality of life through every detail of nutrition",
-      "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenPrincipal": "https://i.ibb.co/tMPw8dJG/nutricion2.webp",
       "imagenes": [
-        "https://i.ibb.co/vC1Ptxy4/IMG-0532.jpg",
-        "https://i.ibb.co/ynSG0F21/IMG-0477.jpg",
-        "https://i.ibb.co/mCh22fbt/pexels-kampus-7551627.jpg",
-        "https://i.ibb.co/ccW4WGPH/hand-3666974-1280.jpg"
+        "https://i.ibb.co/bMGVXkS4/nutricion4.webp",
+        "https://i.ibb.co/m5dH24pw/nutricion5.webp",
+        "https://i.ibb.co/99jPDktb/nutricion.webp",
+        "https://i.ibb.co/600n4sJS/nutricion3.webp"
       ]
     },
     {
       "id": 4,
       "titulo": "Nursing",
       "descripcion": "We provide comprehensive clinical care. From assessments, treatment administration, and critical care to emotional support, assistance with daily living, and leadership in medical procedures, always with commitment and human warmth.",
-      "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenPrincipal": "https://i.ibb.co/rRYB6NZF/enfermeria3.webp",
       "imagenes": [
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://i.ibb.co/xKM7zWvF/enfermeria2.jpg",
-        "https://i.ibb.co/HfN4L0yQ/enfermeria.jpg",
-        "https://i.ibb.co/spQTwLGR/enfermeria3.jpg"
+        "https://i.ibb.co/DfMJ1hXH/enfermeria4.webp",
+        "https://i.ibb.co/1t1FLtxK/enfermeria2.webp",
+        "https://i.ibb.co/rRYB6NZF/enfermeria3.webp",
+        "https://i.ibb.co/4R1n81cL/enfermeria.webp"
       ]
     }
   ],
@@ -114,7 +114,7 @@
   "solicitudResidencia": {
     "titulo": "Interested in Residency?",
     "descripcion": "For more details about our admission requirements and process, please contact us through any of our communication channels. We're here to guide you through this important step toward improving your loved one's quality of life.",
-    "imagen": "https://i.ibb.co/PGq5QhcR/IMG-0483.jpg",
+    "imagen": "https://i.ibb.co/Fk61gZbV/solicitud.jpg",
     "botonRequisitos": "View requirements"
   },
 

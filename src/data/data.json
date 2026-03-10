@@ -11,48 +11,48 @@
       "id": 1,
       "titulo": "Trabajo social",
       "descripcion": "Acompañamos personas con historias marcadas por abandono, pobreza y soledad, ofreciendo apoyo ético, humano y digno a personas adultas mayores. Nuestra labor va más allá de la gestión: construimos vínculos, escuchamos con respeto y trabajamos cada día para que envejecer no sea sinónimo de olvido.",
-      "imagenPrincipal": "https://i.ibb.co/0jbKy6vr/IMG-0410.jpg",
+      "imagenPrincipal": "https://i.ibb.co/MyXYfXWk/trabajosocial4.webp",
       "imagenes": [
-        "https://i.ibb.co/0jbKy6vr/IMG-0410.jpg",
-        "https://periodicomensaje.com/images/1.ADULTO-MAYOR.jpg",
-        "https://casaisrael.org/wp-content/uploads/2018/06/C%C3%B3mo-es-la-vida-en-una-residencia-geri%C3%A1trica.jpg",
-        "https://i.ibb.co/bMdrSxF2/trabajo-social.jpg"
+        "https://i.ibb.co/jPDY7zd6/trabajosocial2.webp",
+        "https://i.ibb.co/cVQZXBN/trabajosocial3.webp",
+        "https://i.ibb.co/MyXYfXWk/trabajosocial4.webp",
+        "https://i.ibb.co/99CYdPxd/trabajosocial.webp"
       ]
     },
     {
       "id": 2,
       "titulo": "Terapia física",
       "descripcion": "Fomentamos la movilidad y autonomía de las personas adultas mayores con terapias personalizadas, atención humanizada y un equipo especializado en geriatría.",
-      "imagenPrincipal": "https://i.ibb.co/vC1Ptxy4/IMG-0532.jpg",
+      "imagenPrincipal": "https://i.ibb.co/SwbVSTdh/terapia4.webp",
       "imagenes": [
-        "https://i.ibb.co/vC1Ptxy4/IMG-0532.jpg",
-        "https://i.ibb.co/ynSG0F21/IMG-0477.jpg",
-        "https://i.ibb.co/mCh22fbt/pexels-kampus-7551627.jpg",
-        "https://i.ibb.co/ccW4WGPH/hand-3666974-1280.jpg"
+        "https://i.ibb.co/MDCCXXDx/terapia.webp",
+        "https://i.ibb.co/8nX6t2Cf/terapia2.webp",
+        "https://i.ibb.co/fzXyNyfz/terapia3.webp",
+        "https://i.ibb.co/SwbVSTdh/terapia4.webp"
       ]
     },
     {
       "id": 3,
       "titulo": "Nutrición",
       "descripcion": "Ofrecemos atención nutricional personalizada, educación alimentaria y vigilancia en la manipulación de alimentos para garantizar el bienestar y la seguridad nutricional de nuestros residentes.",
-      "imagenPrincipal": "https://i.ibb.co/gFjVB2DV/pexels-pavel-danilyuk-7653090.jpg",
+      "imagenPrincipal": "https://i.ibb.co/tMPw8dJG/nutricion2.webp",
       "imagenes": [
-        "https://i.ibb.co/gFjVB2DV/pexels-pavel-danilyuk-7653090.jpg",
-        "https://i.ibb.co/DDWSGDcg/pexels-gustavo-fring-5622211.jpg",
-        "https://i.ibb.co/jv2ZhxNT/pexels-yaroslav-shuraev-8844387.jpg",
-        "https://i.ibb.co/JjQ7k0rb/pexels-yaroslav-shuraev-8844564.jpg"
+        "https://i.ibb.co/bMGVXkS4/nutricion4.webp",
+        "https://i.ibb.co/m5dH24pw/nutricion5.webp",
+        "https://i.ibb.co/99jPDktb/nutricion.webp",
+        "https://i.ibb.co/600n4sJS/nutricion3.webp"
       ]
     },
     {
       "id": 4,
       "titulo": "Enfermería",
       "descripcion": "Brindamos atención clínica integral, desde valoración, administración de tratamientos y cuidados críticos, hasta acompañamiento emocional, apoyo en la vida diaria y liderazgo en procedimientos médicos, con compromiso y calidez humana.",
-      "imagenPrincipal": "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
+      "imagenPrincipal": "https://i.ibb.co/rRYB6NZF/enfermeria3.webp",
       "imagenes": [
-        "https://boletines.guanajuato.gob.mx/wp-content/uploads/2020/12/Imagen-208-scaled.jpg",
-        "https://i.ibb.co/xKM7zWvF/enfermeria2.jpg",
-        "https://i.ibb.co/HfN4L0yQ/enfermeria.jpg",
-        "https://i.ibb.co/spQTwLGR/enfermeria3.jpg"
+        "https://i.ibb.co/DfMJ1hXH/enfermeria4.webp",
+        "https://i.ibb.co/1t1FLtxK/enfermeria2.webp",
+        "https://i.ibb.co/rRYB6NZF/enfermeria3.webp",
+        "https://i.ibb.co/4R1n81cL/enfermeria.webp"
       ]
     }
   ],
@@ -114,7 +114,7 @@
   "solicitudResidencia": {
     "titulo": "¿Desea solicitar residencia?",
     "descripcion": "Para obtener más detalles sobre nuestros requisitos de admisión y procedimientos, no dudes en contactarnos a través de nuestros canales de comunicación. Estamos aquí para proporcionarte toda la información necesaria y ayudarte en este importante paso para la calidad de vida de tu ser querido.",
-    "imagen": "https://i.ibb.co/PGq5QhcR/IMG-0483.jpg",
+    "imagen": "https://i.ibb.co/Fk61gZbV/solicitud.jpg",
     "botonRequisitos": "Ver requisitos"
   },
 
@@ -416,9 +416,13 @@
     "tipoVoluntariado": {
       "label": "Tipo de voluntariado",
       "cargando": "Cargando tipos de voluntariado...",
-      "opciones": ["Seleccione...", "Voluntario para cumplir horas", "Voluntario permanente"],
+      "opciones": [
+        "Seleccione...",
+        "Voluntario para cumplir horas",
+        "Voluntario permanente"
+      ],
       "horas": "Cantidad de horas totales a cumplir:",
-        "placeholder": "Ej. 400"
+      "placeholder": "Ej. 400"
     },
     "botones": {
       "siguiente": "Siguiente",
@@ -426,7 +430,6 @@
       "enviando": "Enviando...",
       "enviar": "Enviar",
       "eliminar": "Eliminar"
-
     }
   },
 
@@ -536,7 +539,7 @@
       "residentes": {
         "titulo": "Centenarios residentes",
         "subtitulo": "Actualmente residen en nuestro hogar, siendo testimonio vivo de longevidad y cuidado.",
-        "lista":[
+        "lista": [
           {
             "nombre": "Ana Medina González",
             "edad": 102,
@@ -554,7 +557,7 @@
       "pasados": {
         "titulo": "Centenarios que dejaron huella",
         "subtitulo": "A lo largo de los años, tuvimos el honor de acompañar a otros centenarios cuya memoria forma parte de nuestra historia institucional.",
-        "lista":[
+        "lista": [
           {
             "nombre": "María González",
             "edad": 102,
