@@ -11,6 +11,7 @@ import Footer from '../components/footer/Footer'
 import HeroSection from '../sections/hero/HeroSection'
 import Navbar from '../components/header/Navbar'
 import { useFadeIn } from '../components/useFadeIn'
+import Seo from '../components/Seo'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -20,6 +21,7 @@ function Index() {
   useFadeIn();
   return (
     <>
+      <Seo />
       <Navbar />
       <HeroSection className="fade-in-on-scroll" />
       <MisionVision className="fade-in-on-scroll" />

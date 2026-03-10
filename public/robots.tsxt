@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hogarsanblas.com/sitemap.xml
+Host: https://hogarsanblas.com
