@@ -260,7 +260,7 @@
     "contacto": {
       "titulo": "Contacts",
       "opciones": [
-        { "texto": "WhatsApp", "ruta": "https://wa.me/50687000000" },
+        { "texto": "WhatsApp", "ruta": "https://wa.me/50689729912" },
         { "texto": "Phone number and email", "ruta": "#footer-contactos" },
         { "texto": "Location and schedule", "ruta": "#footer-contactos" }
       ]

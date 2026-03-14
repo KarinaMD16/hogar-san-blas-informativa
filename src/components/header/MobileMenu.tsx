@@ -5,7 +5,7 @@ import type { MobileMenuProps } from "../../types/header/navbar";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 
-const MobileMenu = ({ navItems, setMobileMenuOpen }: MobileMenuProps) => {
+const MobileMenu = ({ navItems, setMobileMenuOpen, onLinkClick }: MobileMenuProps) => {
   const handleClose = () => {
     // Espera a que termine la animación antes de desmontar
     setTimeout(() => setMobileMenuOpen(false), 300); // coincide con duración de animación
@@ -24,7 +24,7 @@ const MobileMenu = ({ navItems, setMobileMenuOpen }: MobileMenuProps) => {
         onClick={() => setMobileMenuOpen(false)}
         aria-label="Cerrar menú móvil"
       />
-      
+
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
@@ -48,8 +48,13 @@ const MobileMenu = ({ navItems, setMobileMenuOpen }: MobileMenuProps) => {
                     <li key={linkIdx}>
                       <Link
                         to={link.ruta}
+                        target={link.ruta.includes("wa.me") ? "_blank" : undefined}
+                        rel={link.ruta.includes("wa.me") ? "noopener noreferrer" : undefined}
                         className="block px-2 py-1 hover:bg-antiFlashWhite hover:text-night transition rounded"
-                        onClick={handleClose}
+                        onClick={(event) => {
+                          onLinkClick(event, link.ruta);
+                          handleClose();
+                        }}
                       >
                         {link.texto}
                       </Link>
