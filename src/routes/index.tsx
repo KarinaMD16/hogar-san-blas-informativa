@@ -19,9 +19,14 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   useFadeIn();
+
   return (
     <>
-      <Seo />
+      <Seo
+        title="Hogar de Ancianos San Blas | Cuidado y apoyo para adultos mayores"
+        description="Hogar San Blas de Nicoya: atención integral para personas adultas mayores. Conoce nuestros servicios y cómo ayudar con voluntariado o donaciones."
+        path="/"
+      />
       <Navbar />
       <HeroSection className="fade-in-on-scroll" />
       <MisionVision className="fade-in-on-scroll" />

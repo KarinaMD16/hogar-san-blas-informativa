@@ -14,6 +14,7 @@ import IdiomaContext from "../../context/language/idiomaContext";
 import ModalImagenGaleria from "../../components/ModalGaleria";
 import type { Galeria } from "../../models/galeria/galeria";
 import { useFadeIn } from "../../components/useFadeIn";
+import Seo from "../../components/Seo";
 
 export const Route = createFileRoute("/galeria/")({
   component: RouteComponent,
@@ -109,6 +110,11 @@ function RouteComponent() {
 
   return (
     <div className="flex flex-col justify-center items-center">
+      <Seo
+        title="Galería del Hogar San Blas | Actividades y momentos"
+        description="Explora la galería de imágenes del Hogar San Blas de Nicoya y conoce nuestras actividades, espacios y vida comunitaria."
+        path="/galeria"
+      />
       <Navbar />
       <div className="mt-30 flex flex-col lg:w-5xl md:w-4xl sm:w-3xl gap-3 justify-center items-center fade-in-on-scroll">
         <h1 className="text-4xl font-poppins font-bold text-amaranthPink ">
