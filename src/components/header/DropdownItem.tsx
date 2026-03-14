@@ -2,7 +2,7 @@ import { FaChevronDown } from "react-icons/fa";
 import type { DropdownItemProps } from "../../types/header/navbar";
 import { Link } from "@tanstack/react-router";
 
-const DropdownItem = ({ item, idx, isOpen, setOpen }: DropdownItemProps) => (
+const DropdownItem = ({ item, idx, isOpen, setOpen, onLinkClick }: DropdownItemProps) => (
   <li
     className="relative"
     onMouseEnter={() => setOpen(idx)}
@@ -17,7 +17,13 @@ const DropdownItem = ({ item, idx, isOpen, setOpen }: DropdownItemProps) => (
           <li key={i}>
             <Link
               to={link.ruta}
+              target={link.ruta.includes("wa.me") ? "_blank" : undefined}
+              rel={link.ruta.includes("wa.me") ? "noopener noreferrer" : undefined}
               className="block px-4 py-2 hover:bg-antiFlashWhite hover:text-night transition"
+              onClick={(event) => {
+                onLinkClick(event, link.ruta);
+                setOpen(null);
+              }}
             >
               {link.texto}
             </Link>

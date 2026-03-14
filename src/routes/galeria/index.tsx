@@ -27,7 +27,7 @@ export const Route = createFileRoute("/galeria/")({
 
 function RouteComponent() {
   const { img } = Route.useSearch();
-  const { contentJson } = useContext(IdiomaContext);
+  const { contentJson, idioma } = useContext(IdiomaContext);
   const [selectedBtn, setSelectedBtn] = useState<number | null>(null);
   const { Categorias } = useGetCategorias();
   const [page, setPage] = useState(1);
@@ -56,7 +56,13 @@ function RouteComponent() {
   );
 
   const Imagenes = selectedBtn === null ? todas : filtradas;
+  const noHayContenido = (Imagenes?.length ?? 0) === 0;
   const noHayMasPaginas = (Imagenes?.length ?? 0) < limit;
+  const mensajeSinContenido =
+    idioma === "es"
+      ? "En este momento no hay contenido disponible. Regresa pronto para ver novedades."
+      : "There is no content available right now. Please check back soon.";
+  const paginaTexto = idioma === "es" ? `Pagina ${page}` : `Page ${page}`;
 
   const lastPage = () => {
     setPage((old) => Math.max(old - 1, 1));
@@ -73,19 +79,17 @@ function RouteComponent() {
     setPage(1);
   };
 
-  const verImagen = (imgId: string) => {
-    const foundImage = todas?.find((img) => img.id.toString() === imgId);
+  useEffect(() => {
+    if (!img || !todas) {
+      return;
+    }
+
+    const foundImage = todas.find((item) => item.id.toString() === img);
     if (foundImage) {
       setImagenSeleccionada(foundImage);
       setModalOpen(true);
     }
-  };
-
-  useEffect(() => {
-    if (img) {
-      verImagen(img);
-    }
-  }, [img]);
+  }, [img, todas]);
 
   const handleImagenClick = (imagen: Galeria) => {
     setImagenSeleccionada(imagen);
@@ -144,38 +148,50 @@ function RouteComponent() {
             : Categorias?.find((c) => c.id === selectedBtn)?.descripcion}
         </p>
 
-        <div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 
+        {noHayContenido ? (
+          <p className="max-w-xl text-center text-base italic text-night/60 sm:text-lg">
+            {mensajeSinContenido}
+          </p>
+        ) : (
+          <div
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 
         lg:gap-6 md:gap-4 sm:gap-4 gap-4
         justify-items-center-safe"
-        >
-          {Imagenes &&
-            Imagenes.map((imagenes) => (
-              <CardImagenGaleria
-                key={imagenes.id}
-                imagenes={imagenes}
-                toggleModal={handleImagenClick}
-              />
-            ))}
-        </div>
+          >
+            {Imagenes &&
+              Imagenes.map((imagenes) => (
+                <CardImagenGaleria
+                  key={imagenes.id}
+                  imagenes={imagenes}
+                  toggleModal={handleImagenClick}
+                />
+              ))}
+          </div>
+        )}
 
-        <div className="flex justify-center items-center gap-4">
-          <button
-            onClick={lastPage}
-            disabled={page === 1}
-            className="hover:cursor-pointer  disabled:cursor-not-allowed"
-          >
-            <MdOutlineFirstPage size={20} />
-          </button>
-          <button>Página {page}</button>
-          <button
-            onClick={nextPage}
-            disabled={noHayMasPaginas || isPlaceholderData}
-            className="hover:cursor-pointer disabled:cursor-not-allowed"
-          >
-            <MdOutlineLastPage size={20} />
-          </button>
-        </div>
+        {Imagenes && Imagenes.length > 0 && (
+          <div className="mt-2 inline-flex items-center justify-center gap-3 rounded-full border border-ecruYellow300 bg-basicWhite px-3 py-2 shadow-md">
+            <button
+              onClick={lastPage}
+              disabled={page === 1}
+              aria-label={idioma === "es" ? "Pagina anterior" : "Previous page"}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-amaranthPink text-white transition hover:cursor-pointer hover:bg-amaranthPinkDark disabled:cursor-not-allowed disabled:bg-ecruYellow300 disabled:text-night/55"
+            >
+              <MdOutlineFirstPage size={20} />
+            </button>
+            <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-night shadow-inner">
+              {paginaTexto}
+            </span>
+            <button
+              onClick={nextPage}
+              disabled={noHayMasPaginas || isPlaceholderData}
+              aria-label={idioma === "es" ? "Pagina siguiente" : "Next page"}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-amaranthPink text-white transition hover:cursor-pointer hover:bg-amaranthPinkDark disabled:cursor-not-allowed disabled:bg-ecruYellow300 disabled:text-night/55"
+            >
+              <MdOutlineLastPage size={20} />
+            </button>
+          </div>
+        )}
       </div>
 
       <ModalImagenGaleria
