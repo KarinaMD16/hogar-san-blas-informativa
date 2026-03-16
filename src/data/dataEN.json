@@ -534,7 +534,7 @@
       "titulo": "Centenarians of Hogar San Blas",
       "texto": "Nicoya is recognized as one of the Blue Zones of the world. At Hogar San Blas in Nicoya, we have had the privilege of being a home for several remarkable centenarians, learning their stories, improving their quality of life through our services, and cherishing their wisdom with love. This reflects our commitment to the well-being and longevity of the older adults in our community.",
       "subtitulo": "Each story represents a life full of effort, wisdom, and love. At Hogar San Blas, we celebrate longevity as a legacy for our community.",
-      "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+      "imagen": "https://i.ibb.co/TD7s4Cwv/centenario-page.jpg"
     },
     "zonaAzul": {
       "titulo": "We are a blue zone of the world",
@@ -568,40 +568,46 @@
         "subtitulo": "Over the years, we had the honor of accompanying other centenarians whose memory is now part of our institutional history.",
         "lista": [
           {
-            "nombre": "Ana Medina Duarte",
-            "edad": 102,
-            "fecha": "1922 - 2024",
+            "nombre": "Juana Almanza Blandon",
+            "edad": 100,
+            "fecha": "1923 - 2023",
             "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           },
           {
-            "nombre": "José Barrantes Díaz",
-            "edad": 101,
-            "fecha": "1923 - 2024",
+            "nombre": "María Hermenia del Carmen Solano Luna",
+            "edad": 103,
+            "fecha": "1921 - 2024",
             "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
           },
           {
-            "nombre": "Ana Medina Duarte",
-            "edad": 102,
-            "fecha": "1922 - 2024",
+            "nombre": "Reinery Fonseca Gutiérrez",
+            "edad": 106,
+            "fecha": "1914 - 2020",
             "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           },
           {
-            "nombre": "José Barrantes Díaz",
+            "nombre": "Blanca Nieve Lamas Jaen",
             "edad": 101,
-            "fecha": "1923 - 2024",
+            "fecha": "1920 - 2021",
             "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
           },
           {
-            "nombre": "Ana Medina Duarte",
-            "edad": 102,
-            "fecha": "1922 - 2024",
+            "nombre": "María de la Paz González González",
+            "edad": 103,
+            "fecha": "1918 - 2021",
             "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           },
           {
-            "nombre": "José Barrantes Díaz",
-            "edad": 101,
-            "fecha": "1923 - 2024",
+            "nombre": "Cristóbal de Jesús Muñoz Villalobos",
+            "edad": 104,
+            "fecha": "1917 - 2021",
             "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+          },
+          {
+            "nombre": "Jose Cornelio Francisco López Fajardo",
+            "edad": 100,
+            "fecha": "1924 - 2024",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           }
         ]
       }
