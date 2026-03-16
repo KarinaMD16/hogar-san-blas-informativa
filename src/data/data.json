@@ -1,6 +1,6 @@
 {
   "seo": {
-    "titulo": "Hogar San Blas - Cuidado y Bienestar para Adultos Mayores",
+    "titulo": "Hogar de Ancianos San Blas - Cuidado y Bienestar para Adultos Mayores",
     "descripcion": "Hogar San Blas es un hogar de ancianos dedicado al cuidado y bienestar de adultos mayores. Conoce cómo ayudar mediante voluntariado o donaciones.",
     "keywords": "hogar de ancianos, adultos mayores, voluntariado, donaciones, Hogar San Blas, Costa Rica, Guanacaste, Nicoya, tercera edad, cuidado de ancianos, apoyo a adultos mayores",
     "url": "https://hogarsanblas.com"
@@ -134,7 +134,7 @@
     "titulo": "Casos de Éxito",
     "subtitulo": "Centenarios",
     "descripcion": "Nicoya es reconocida por ser una de las zonas azules del mundo. En el Hogar San Blas de Nicoya, tenemos la dicha de haber sido residencia para diversos casos de éxito de adultos mayores centenarios, conociendo sus historias, mejorando su calidad de vida con nuestros servicios y atesorando su sabiduría con amor, reflejando así nuestro compromiso con el bienestar y la longevidad de nuestros adultos mayores de la comunidad.",
-    "imagen": "https://i.ibb.co/LhPdhDVW/centenarios.webp",
+    "imagen": "https://i.ibb.co/mVYGT7kb/centenario-section.jpg",
     "botonVerMas": "Ver más"
   },
 
@@ -525,7 +525,7 @@
       "titulo": "Centenarios del Hogar San Blas",
       "texto": "Nicoya es reconocida por ser una de las zonas azules del mundo. En el Hogar San Blas de Nicoya, tenemos la dicha de haber sido residencia para diversos casos de éxito de adultos mayores centenarios, conociendo sus historias, mejorando su calidad de vida con nuestros servicios y atesorando su sabiduría con amor, reflejando así nuestro compromiso con el bienestar y la longevidad de nuestros adultos mayores de la comunidad.",
       "subtitulo": "Cada historia representa una vida llena de esfuerzo, sabiduría y amor. En el Hogar San Blas celebramos la longevidad como un legado para nuestra comunidad.",
-      "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+      "imagen": "https://i.ibb.co/TD7s4Cwv/centenario-page.jpg"
     },
     "zonaAzul": {
       "titulo": "Somos zona azul del mundo",
@@ -550,7 +550,7 @@
             "nombre": "Jose Manuel Díaz Barrantes",
             "edad": 101,
             "fecha": "Nació el 10 de julio de 1923",
-            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+            "imagen": "https://i.ibb.co/mVYGT7kb/centenario-section.jpg"
           }
         ]
       },
@@ -559,40 +559,46 @@
         "subtitulo": "A lo largo de los años, tuvimos el honor de acompañar a otros centenarios cuya memoria forma parte de nuestra historia institucional.",
         "lista": [
           {
-            "nombre": "María González",
-            "edad": 102,
-            "fecha": "1922 - 2024",
+            "nombre": "Juana Almanza Blandon",
+            "edad": 100,
+            "fecha": "1923 - 2023",
             "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           },
           {
-            "nombre": "Pedro Díaz Barrantes",
-            "edad": 101,
-            "fecha": "1923 - 2024",
-            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+            "nombre": "María Hermenia del Carmen Solano Luna",
+            "edad": 103,
+            "fecha": "1921 - 2024",
+            "imagen": "https://i.ibb.co/mVYGT7kb/centenario-section.jpg"
           },
           {
-            "nombre": "Juana Rodríguez",
-            "edad": 102,
-            "fecha": "1922 - 2024",
+            "nombre": "Reinery Fonseca Gutiérrez",
+            "edad": 106,
+            "fecha": "1914 - 2020",
             "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           },
           {
-            "nombre": "Dariel Badilla Fernández",
+            "nombre": "Blanca Nieve Lamas Jaen",
             "edad": 101,
-            "fecha": "1923 - 2024",
-            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+            "fecha": "1920 - 2021",
+            "imagen": "https://i.ibb.co/mVYGT7kb/centenario-section.jpg"
           },
           {
-            "nombre": "Cindy Moreno Díaz",
-            "edad": 102,
-            "fecha": "1922 - 2024",
+            "nombre": "María de la Paz González González",
+            "edad": 103,
+            "fecha": "1918 - 2021",
             "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           },
           {
-            "nombre": "Jose Daniel Núñez",
-            "edad": 101,
-            "fecha": "1923 - 2024",
-            "imagen": "https://i.ibb.co/Ps3HZdZH/centenario.jpg"
+            "nombre": "Cristóbal de Jesús Muñoz Villalobos",
+            "edad": 104,
+            "fecha": "1917 - 2021",
+            "imagen": "https://i.ibb.co/mVYGT7kb/centenario-section.jpg"
+          },
+          {
+            "nombre": "Jose Cornelio Francisco López Fajardo",
+            "edad": 100,
+            "fecha": "1924 - 2024",
+            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           }
         ]
       }
