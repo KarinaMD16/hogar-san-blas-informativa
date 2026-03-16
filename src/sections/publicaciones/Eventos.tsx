@@ -6,7 +6,7 @@ import { MdOutlineFirstPage, MdOutlineLastPage } from "react-icons/md";
 import IdiomaContext from "../../context/language/idiomaContext";
 
 export const Eventos = () => {
-  const { contentJson } = useContext(IdiomaContext);
+  const { contentJson, idioma } = useContext(IdiomaContext);
   const [page, setPage] = useState(1);
   const limit = 6;
   const { eventos, total, isPlaceholderData, loadingEventos, fetchingEventos } =
@@ -14,6 +14,13 @@ export const Eventos = () => {
 
   const totalPages = Math.ceil(total / limit);
   const isLastPage = page >= totalPages;
+  const noHayContenido = eventos.length === 0;
+  const mensajeSinContenido =
+    idioma === "es"
+      ? "En este momento no hay contenido disponible. Regresa pronto para ver novedades."
+      : "There is no content available right now. Please check back soon.";
+  const paginaTexto =
+    idioma === "es" ? `Pagina ${page} de ${totalPages}` : `Page ${page} of ${totalPages}`;
 
   const prevPage = () => setPage((p) => Math.max(p - 1, 1));
 
@@ -38,31 +45,39 @@ export const Eventos = () => {
       <h1 className=" text-4xl text-justify font-poppins font-bold text-amaranthPink">
         {contentJson.titulosSecciones.publicaciones.eventos}
       </h1>
-      <div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
+      {noHayContenido ? (
+        <p className="max-w-xl text-center text-base italic text-night/60 sm:text-lg">
+          {mensajeSinContenido}
+        </p>
+      ) : (
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
       lg:gap-y-6 md:gap-y-6 sm:gap-6 gap-6
       justify-items-center-safe"
-      >
-        {eventos?.map((publicacion: Publicacion) => (
-          <CardPublicacion key={publicacion.id} publicacion={publicacion} />
-        ))}
-      </div>
+        >
+          {eventos?.map((publicacion: Publicacion) => (
+            <CardPublicacion key={publicacion.id} publicacion={publicacion} />
+          ))}
+        </div>
+      )}
       {!isPlaceholderData && eventos.length > 0 && (
-        <div className="flex justify-center items-center gap-4">
+        <div className="mt-2 inline-flex items-center justify-center gap-3 rounded-full border border-ecruYellow300 bg-basicWhite px-3 py-2 shadow-md">
           <button
             onClick={prevPage}
             disabled={page === 1}
-            className="hover:cursor-pointer disabled:cursor-not-allowed"
+            aria-label={idioma === "es" ? "Pagina anterior" : "Previous page"}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-amaranthPink text-white transition hover:cursor-pointer hover:bg-amaranthPinkDark disabled:cursor-not-allowed disabled:bg-ecruYellow300 disabled:text-night/55"
           >
             <MdOutlineFirstPage size={20} />
           </button>
-          <button>
-            Página {page} de {totalPages}
-          </button>
+          <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-night shadow-inner">
+            {paginaTexto}
+          </span>
           <button
             onClick={nextPage}
             disabled={isLastPage}
-            className="hover:cursor-pointer disabled:cursor-not-allowed"
+            aria-label={idioma === "es" ? "Pagina siguiente" : "Next page"}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-amaranthPink text-white transition hover:cursor-pointer hover:bg-amaranthPinkDark disabled:cursor-not-allowed disabled:bg-ecruYellow300 disabled:text-night/55"
           >
             <MdOutlineLastPage size={20} />
           </button>

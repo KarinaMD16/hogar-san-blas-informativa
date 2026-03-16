@@ -1,16 +1,74 @@
-import { useContext, useState } from "react";
+import { useContext, useState, type MouseEvent } from "react";
 import type { NavItem, Opcion } from "../../models/header/navbar";
 import CambiarIdioma from "../CambiarIdioma";
 import DropdownItem from "./DropdownItem";
 import { HiOutlineMenu } from "react-icons/hi";
 import MobileMenu from "./MobileMenu";
 import IdiomaContext from "../../context/language/idiomaContext";
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { AnimatePresence } from "framer-motion";
+
+const SCROLL_RETRY_ATTEMPTS = 40;
+const SECTION_CENTER_TOLERANCE_PX = 64;
+
+type SectionLinkTarget = {
+  sectionId: string;
+  requiresHomeRoute: boolean;
+};
+
+function getSectionTarget(ruta: string): SectionLinkTarget | null {
+  if (ruta.startsWith("/#")) {
+    const sectionId = ruta.slice(2).trim();
+    return sectionId ? { sectionId, requiresHomeRoute: true } : null;
+  }
+
+  if (ruta.startsWith("#")) {
+    const sectionId = ruta.slice(1).trim();
+    return sectionId ? { sectionId, requiresHomeRoute: false } : null;
+  }
+
+  return null;
+}
+
+function isSectionCentered(element: HTMLElement) {
+  const rect = element.getBoundingClientRect();
+  const sectionCenter = rect.top + rect.height / 2;
+  const viewportCenter = window.innerHeight / 2;
+
+  return Math.abs(sectionCenter - viewportCenter) <= SECTION_CENTER_TOLERANCE_PX;
+}
+
+function scrollToSection(sectionId: string) {
+  const section = document.getElementById(sectionId);
+
+  if (!section) {
+    return false;
+  }
+
+  if (isSectionCentered(section)) {
+    return true;
+  }
+
+  const sectionRect = section.getBoundingClientRect();
+  const sectionCenter = sectionRect.top + sectionRect.height / 2;
+  const viewportCenter = window.innerHeight / 2;
+  const targetTop = window.scrollY + sectionCenter - viewportCenter;
+  const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0);
+  const clampedTargetTop = Math.min(Math.max(targetTop, 0), maxScroll);
+
+  window.scrollTo({
+    top: clampedTargetTop,
+    behavior: "smooth",
+  });
+
+  return true;
+}
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const { contentJson } = useContext(IdiomaContext);
   const navItems = (Object.values(contentJson.header) as NavItem[]).map(
@@ -22,6 +80,50 @@ const Navbar = () => {
       })),
     })
   );
+
+  const scrollToSectionWhenReady = (sectionId: string) => {
+    let attempts = 0;
+
+    const tryScroll = () => {
+      attempts += 1;
+      const scrolled = scrollToSection(sectionId);
+
+      if (!scrolled && attempts < SCROLL_RETRY_ATTEMPTS) {
+        window.requestAnimationFrame(tryScroll);
+      }
+    };
+
+    window.requestAnimationFrame(tryScroll);
+  };
+
+  const handleLogoClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname !== "/") {
+      return;
+    }
+
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNavLinkClick = async (
+    event: MouseEvent<HTMLAnchorElement>,
+    ruta: string
+  ) => {
+    const target = getSectionTarget(ruta);
+
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+
+    if (target.requiresHomeRoute && location.pathname !== "/") {
+      await navigate({ to: "/" });
+    }
+
+    scrollToSectionWhenReady(target.sectionId);
+  };
+
   if (!contentJson?.header) {
     return (
       <header className="fixed top-5 left-0 right-0 z-50 flex justify-center items-center w-full px-6 bg-transparent">
@@ -31,7 +133,7 @@ const Navbar = () => {
   }
   return (
     <header className="fixed top-5 left-0 right-0 z-50 flex justify-between items-center w-full px-6 bg-transparent">
-      <Link to="/" className="flex-shrink-0">
+      <Link to="/" className="flex-shrink-0" onClick={handleLogoClick}>
         <img
           src="/logo_hogar_san_blas.png"
           alt="Logo"
@@ -50,6 +152,7 @@ const Navbar = () => {
                   idx={idx}
                   isOpen={openDropdown === idx}
                   setOpen={setOpenDropdown}
+                  onLinkClick={handleNavLinkClick}
                 />
               ))}
               <CambiarIdioma />
@@ -67,6 +170,7 @@ const Navbar = () => {
               <MobileMenu
                 navItems={navItems}
                 setMobileMenuOpen={setMobileMenuOpen}
+                onLinkClick={handleNavLinkClick}
               />
             )}
           </AnimatePresence>
