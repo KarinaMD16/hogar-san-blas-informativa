@@ -115,7 +115,7 @@ export const InformacionDonanteSection = ({ form, formErrors }: any) => {
             ></form.Field>
             <form.Field name="anonimo" children={(field: { state: { value: boolean | undefined; }; handleChange: (arg0: boolean) => void; }) => (
                 <div className="mb-4">
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-col items-left lg:flex-row lg:items-center gap-2">
                         <label htmlFor="anonimo" className="flex items-center gap-2 cursor-pointer whitespace-nowrap">
                             <div className="relative">
                                 <input
