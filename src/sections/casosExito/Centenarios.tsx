@@ -3,6 +3,8 @@ import IdiomaContext from "../../context/language/idiomaContext";
 import CardCentenario from "../../components/CardCentenario";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
+const SCROLL_STEP_PX = 320;
+
 const Centenarios = () => {
   const { contentJson } = useContext(IdiomaContext);
 
@@ -10,7 +12,7 @@ const Centenarios = () => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  const checkScroll = () => {
+  const updateScrollButtons = () => {
     const el = scrollRef.current;
     if (!el) return;
 
@@ -19,17 +21,28 @@ const Centenarios = () => {
   };
 
   useEffect(() => {
-    checkScroll();
     const el = scrollRef.current;
 
     if (!el) return;
 
-    el.addEventListener("scroll", checkScroll);
-    window.addEventListener("resize", checkScroll);
+    let frameId = 0;
+
+    const scheduleUpdate = () => {
+      window.cancelAnimationFrame(frameId);
+      frameId = window.requestAnimationFrame(updateScrollButtons);
+    };
+
+    updateScrollButtons();
+
+    const resizeObserver = new ResizeObserver(scheduleUpdate);
+    resizeObserver.observe(el);
+
+    el.addEventListener("scroll", scheduleUpdate, { passive: true });
 
     return () => {
-      el.removeEventListener("scroll", checkScroll);
-      window.removeEventListener("resize", checkScroll);
+      window.cancelAnimationFrame(frameId);
+      resizeObserver.disconnect();
+      el.removeEventListener("scroll", scheduleUpdate);
     };
   }, [contentJson]);
 
@@ -37,15 +50,8 @@ const Centenarios = () => {
     const el = scrollRef.current;
     if (!el) return;
 
-    const card = el.querySelector("[data-card]") as HTMLElement;
-
-    if (!card) return;
-
-    const gap = 24; // mismo que gap-6
-    const amount = card.offsetWidth + gap;
-
     el.scrollBy({
-      left: dir === "left" ? -amount : amount,
+      left: dir === "left" ? -SCROLL_STEP_PX : SCROLL_STEP_PX,
       behavior: "smooth",
     });
   };
@@ -94,6 +100,7 @@ const Centenarios = () => {
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
+              aria-label="Desplazarse a la izquierda en centenarios"
               className="absolute left-0 lg:left-[-20px] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
             >
               <FaChevronLeft />
@@ -120,6 +127,7 @@ const Centenarios = () => {
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
+              aria-label="Desplazarse a la derecha en centenarios"
               className="absolute right-0 lg:right-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
             >
               <FaChevronRight />

@@ -7,4 +7,6 @@ export interface BotonProps {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void | Promise<void>;
   variant?: "filled" | "outline";
   disabled?: boolean;
+  ariaLabel?: string;
+  title?: string;
 }

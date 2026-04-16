@@ -72,6 +72,7 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
         {canScrollLeft && (
           <button
             onClick={() => scroll("left")}
+            aria-label="Desplazarse a la izquierda en la galería"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
           >
             <FaChevronLeft />
@@ -96,6 +97,7 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
         {canScrollRight && (
           <button
             onClick={() => scroll("right")}
+            aria-label="Desplazarse a la derecha en la galería"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
           >
             <FaChevronRight />

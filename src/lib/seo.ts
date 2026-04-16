@@ -1,5 +1,5 @@
 const SEO_BASE_URL = "https://hogarsanblas.com";
-const SEO_DEFAULT_IMAGE_PATH = "/logo_hogar_san_blas.png";
+const SEO_DEFAULT_IMAGE_PATH = "/logo_hogar_san_blas.webp";
 
 const trimSlashes = (value: string) => value.replace(/^\/+|\/+$/g, "");
 

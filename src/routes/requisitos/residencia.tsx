@@ -19,8 +19,10 @@ function RouteComponent() {
       path="/requisitos/residencia"
     />
     <Navbar />
-    <div className="fade-in-on-scroll">
-      <RequisitosResidencia />
-    </div>
+    <main>
+      <div className="fade-in-on-scroll">
+        <RequisitosResidencia />
+      </div>
+    </main>
   </>
 }

@@ -21,12 +21,14 @@ function RouteComponent() {
         path="/historia"
       />
       <Navbar />
-      <div className="fade-in-on-scroll">
-        <ReseñaFundados />
-      </div>
-      <div className="fade-in-on-scroll">
-        <ReseñaServicio />
-      </div>
+      <main>
+        <div className="fade-in-on-scroll">
+          <ReseñaFundados />
+        </div>
+        <div className="fade-in-on-scroll">
+          <ReseñaServicio />
+        </div>
+      </main>
       <div className="fade-in-on-scroll">
         <Footer />
       </div>
