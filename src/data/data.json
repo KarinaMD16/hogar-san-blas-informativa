@@ -320,7 +320,12 @@
         "Llenar boleta de asistencia cada vez que llega al hogar."
       ]
     },
-    "formulario": "Formulario de Voluntariado"
+    "formulario": {
+      "botones": [
+        { "texto": "Enviar", "ariaLabel": "Enviar formulario de voluntariado" },
+        { "texto": "Cancelar", "ariaLabel": "Cancelar y volver atrás" }
+      ]
+    }
   },
 
   "formularioVoluntariado": {
@@ -536,7 +541,12 @@
         "ruta": "/formularios/voluntariado"
       }
     },
-    "formulario": "Formulario de Donación"
+    "formulario": {
+      "botones": [
+        { "texto": "Enviar", "ariaLabel": "Enviar formulario de donación" },
+        { "texto": "Cancelar", "ariaLabel": "Cancelar y volver atrás" }
+      ]
+    }
   },
 
   "paginaCentenarios": {
