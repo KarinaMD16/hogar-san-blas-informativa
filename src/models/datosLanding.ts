@@ -22,5 +22,5 @@ export interface DatosLanding {
   uneteNosotros: UneteNosotros;
   footer: Footer;
   paginaReseñaHistorica: SeccionReseñaHistorica[];
-  formulario: { botones: { texto: string; ariaLabel?: string }[] };
+  formulario: string[];
 }

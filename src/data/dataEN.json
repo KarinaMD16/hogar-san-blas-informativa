@@ -198,9 +198,7 @@
     "mensaje": "If you meet the requirements, contact us"
   },
 
-  "formulario": {
-    "botones": ["Submit", "Cancel"]
-  },
+  "formulario": ["Submit", "Cancel"],
 
   "contactos": {
     "Contactos": {
@@ -317,12 +315,7 @@
         "Fill out the attendance form each time you arrive at the home."
       ]
     },
-    "formulario": {
-      "botones": [
-        { "texto": "Submit", "ariaLabel": "Submit volunteer form" },
-        { "texto": "Cancel", "ariaLabel": "Cancel and go back" }
-      ]
-    }
+    "formulario": "Volunteer form"
   },
 
   "formularioVoluntariado": {
@@ -547,12 +540,7 @@
         "ruta": "/formularios/voluntariado"
       }
     },
-    "formulario": {
-      "botones": [
-        { "texto": "Submit", "ariaLabel": "Submit donation form" },
-        { "texto": "Cancel", "ariaLabel": "Cancel and go back" }
-      ]
-    }
+    "formulario": "Donation form"
   },
 
   "paginaCentenarios": {
