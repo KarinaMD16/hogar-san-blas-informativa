@@ -21,8 +21,8 @@ const Unete: React.FC<UneteProps> = ({ className }) => {
           {contentJson.uneteNosotros.descripcion}
         </p>
         <div className="flex flex-row gap-4 mt-4 justify-center flex-wrap">
-          {contentJson.uneteNosotros.botones.map(({ texto, ruta }, index) => (
-            <Boton key={index} where={ruta}>
+          {contentJson.uneteNosotros.botones.map(({ texto, ruta, ariaLabel }, index) => (
+            <Boton key={index} where={ruta} ariaLabel={ariaLabel}>
               <span className="font-medium text-base sm:text-sm md:text-base lg:text-lg">
                 {texto}
               </span>

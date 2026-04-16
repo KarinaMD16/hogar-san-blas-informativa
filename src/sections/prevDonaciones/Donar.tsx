@@ -66,10 +66,10 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
           {contentJson.donaciones.descripcion}
         </p>
         <div className="flex gap-4 flex-wrap justify-center">
-          <Boton where={"/formularios/donacion"}>
+          <Boton where={"/formularios/donacion"} ariaLabel={contentJson.donaciones.botones.botonRequisitosAriaLabel}>
             {contentJson.donaciones.botones.botonRequisitos}
           </Boton>
-          <Boton where={"/publicaciones/solicitudes-donaciones"}>
+          <Boton where={"/publicaciones/solicitudes-donaciones"} ariaLabel={contentJson.donaciones.botones.botonVerOtrasAriaLabel}>
             {contentJson.donaciones.botones.botonVerOtras}
           </Boton>
         </div>
@@ -79,6 +79,7 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
         {canScrollLeft && (
           <button
             onClick={() => scroll("left")}
+            aria-label="Desplazarse a la izquierda en la galería de donaciones"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
           >
             <FaChevronLeft />
@@ -97,6 +98,7 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
         {canScrollRight && (
           <button
             onClick={() => scroll("right")}
+            aria-label="Desplazarse a la derecha en la galería de donaciones"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
           >
             <FaChevronRight />

@@ -29,9 +29,9 @@ const CardCentenario = ({ centenario }: CentenarioProps) => {
         "
       >
         <div className="flex flex-col gap-1 max-w-2/3">
-          <h3 className="font-poppins font-semibold text-lg">
+          <h2 className="font-poppins font-semibold text-lg">
             {centenario.nombre}
-          </h3>
+          </h2>
 
           <p className="font-bold text-2xl">
             {centenario.edad} años

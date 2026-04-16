@@ -18,3 +18,42 @@
   # SPA fallback for client routes
   RewriteRule . /index.html [L]
 </IfModule>
+
+# Caché para assets compilados (JS, CSS) - 1 año
+<FilesMatch "\.(js|css|woff2|woff|ttf|eot)$">
+  <IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+  </IfModule>
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </IfModule>
+</FilesMatch>
+
+# Caché para imágenes - 30 días
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|ico|svg)$">
+  <IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 30 days"
+  </IfModule>
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=2592000"
+  </IfModule>
+</FilesMatch>
+
+# Sin caché para HTML (verificar siempre) - 1 hora
+<FilesMatch "\.html?$">
+  <IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 hour"
+  </IfModule>
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </IfModule>
+</FilesMatch>
+
+# Compresión gzip
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+  application/json
+</IfModule>

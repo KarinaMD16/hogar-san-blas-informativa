@@ -21,12 +21,14 @@ function RouteComponent() {
       path="/formularios/voluntariado"
     />
     <Navbar />
-    <div className="fade-in-on-scroll">
-      <RequisitosVoluntario />
-    </div>
-    <div className="fade-in-on-scroll">
-      <SectionFormVoluntario />
-    </div>
+    <main>
+      <div className="fade-in-on-scroll">
+        <RequisitosVoluntario />
+      </div>
+      <div className="fade-in-on-scroll">
+        <SectionFormVoluntario />
+      </div>
+    </main>
     <div className="fade-in-on-scroll">
       <Footer />
     </div>

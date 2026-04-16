@@ -23,7 +23,7 @@ const CardPublicacion = ({ publicacion }: PublicacionProps) => {
       </div>
 
       <div className="text-left ">
-        <h3 className="mb-2 font-poppins font-bold text-lg">{publicacion.Titulo}</h3>
+        <h2 className="mb-2 font-poppins font-bold text-lg">{publicacion.Titulo}</h2>
         <p>{publicacion.Descripcion}</p>
       </div>
     </div>

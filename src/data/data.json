@@ -64,11 +64,13 @@
     "botones": [
       {
         "texto": "Ver más",
-        "ruta": "/historia"
+        "ruta": "/historia",
+        "ariaLabel": "Ver historia completa del Hogar San Blas"
       },
       {
         "texto": "Contáctanos",
-        "ruta": "#footer-contactos"
+        "ruta": "#footer-contactos",
+        "ariaLabel": "Ir a contactos del Hogar San Blas"
       }
     ]
   },
@@ -143,8 +145,11 @@
     "descripcion": "¡Tu ayuda marca la diferencia! Aquí te ofrecemos la información y requisitos necesarios para contribuir con nuestro hogar.",
     "botones": {
       "botonDonar": "QUIERO DONAR",
+      "botonDonarAriaLabel": "Ir a formulario de donaciones",
       "botonRequisitos": "Ver requisitos",
-      "botonVerOtras": "Ver otras peticiones"
+      "botonRequisitosAriaLabel": "Ver requisitos para hacer donaciones",
+      "botonVerOtras": "Ver otras peticiones",
+      "botonVerOtrasAriaLabel": "Ver otras peticiones de donación"
     }
   },
 
@@ -161,7 +166,8 @@
     "botones": [
       {
         "texto": "Quiero ser voluntario",
-        "ruta": "formularios/voluntariado"
+        "ruta": "formularios/voluntariado",
+        "ariaLabel": "Ir a formulario de voluntariado"
       }
     ]
   },
@@ -190,7 +196,10 @@
   },
 
   "formulario": {
-    "botones": ["Enviar", "Cancelar"]
+    "botones": [
+      { "texto": "Enviar", "ariaLabel": "Enviar formulario" },
+      { "texto": "Cancelar", "ariaLabel": "Cancelar y volver atrás" }
+    ]
   },
 
   "contactos": {
@@ -426,10 +435,15 @@
     },
     "botones": {
       "siguiente": "Siguiente",
+      "siguienteAriaLabel": "Ir al siguiente paso del formulario",
       "anterior": "Anterior",
+      "anteriorAriaLabel": "Volver al paso anterior del formulario",
       "enviando": "Enviando...",
+      "enviandoAriaLabel": "Enviando datos de voluntariado",
       "enviar": "Enviar",
-      "eliminar": "Eliminar"
+      "enviarAriaLabel": "Enviar solicitud de voluntariado",
+      "eliminar": "Eliminar",
+      "eliminarAriaLabel": "Eliminar horario"
     }
   },
 
@@ -482,10 +496,15 @@
     },
     "botones": {
       "siguiente": "Siguiente",
+      "siguienteAriaLabel": "Ir al siguiente paso del formulario",
       "anterior": "Anterior",
+      "anteriorAriaLabel": "Volver al paso anterior del formulario",
       "enviando": "Enviando...",
+      "enviandoAriaLabel": "Enviando datos de donación",
       "enviar": "Enviar",
-      "eliminar": "Eliminar"
+      "enviarAriaLabel": "Enviar solicitud de donación",
+      "eliminar": "Eliminar",
+      "eliminarAriaLabel": "Eliminar artículo"
     }
   },
 

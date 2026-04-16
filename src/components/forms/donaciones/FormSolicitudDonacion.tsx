@@ -297,8 +297,9 @@ const FormSolicitudDonacion = () => {
                                 variant="outline"
                                 onClick={handlePrevious}
                                 disabled={mutation.isPending}
+                                ariaLabel={placeholders.botones.anteriorAriaLabel}
                             >
-                                Anterior
+                                {placeholders.botones.anterior}
                             </Boton>
                         ) : <div></div>}
                         
@@ -306,6 +307,7 @@ const FormSolicitudDonacion = () => {
                             <Boton
                                 type="button"
                                 onClick={handleNext}
+                                ariaLabel={placeholders.botones.siguienteAriaLabel}
                             >
                                 {placeholders.botones.siguiente}
                             </Boton>
@@ -314,6 +316,7 @@ const FormSolicitudDonacion = () => {
                                 type="button"
                                 onClick={handleSubmit}
                                 disabled={mutation.isPending}
+                                ariaLabel={mutation.isPending ? placeholders.botones.enviandoAriaLabel : placeholders.botones.enviarAriaLabel}
                             >
                                 {mutation.isPending ? (
                                     <div className="flex items-center">

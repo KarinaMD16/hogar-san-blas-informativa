@@ -28,15 +28,17 @@ function Index() {
         path="/"
       />
       <Navbar />
-      <HeroSection className="fade-in-on-scroll" />
-      <MisionVision className="fade-in-on-scroll" />
-      <Servicios className="fade-in-on-scroll" />
-      <SolicitarResidencia className="fade-in-on-scroll" />
-      <CasosExito className="fade-in-on-scroll" />
-      <Donar className="fade-in-on-scroll" />
-      <Historia className="fade-in-on-scroll" />
-      <Unete className="fade-in-on-scroll" />
-      <PreviewGaleria className="fade-in-on-scroll" />
+      <main>
+        <HeroSection className="fade-in-on-scroll" />
+        <MisionVision className="fade-in-on-scroll" />
+        <Servicios className="fade-in-on-scroll" />
+        <SolicitarResidencia className="fade-in-on-scroll" />
+        <CasosExito className="fade-in-on-scroll" />
+        <Donar className="fade-in-on-scroll" />
+        <Historia className="fade-in-on-scroll" />
+        <Unete className="fade-in-on-scroll" />
+        <PreviewGaleria className="fade-in-on-scroll" />
+      </main>
       <Footer className="fade-in-on-scroll" />
     </>
   )

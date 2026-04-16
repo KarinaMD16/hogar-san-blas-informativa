@@ -19,10 +19,10 @@ function RouteComponent() {
         description="Revisa las solicitudes de donaciones del Hogar San Blas de Nicoya y apóyanos con recursos para el cuidado de adultos mayores."
         path="/publicaciones/solicitudes-donaciones"
       />
-      <div className="flex flex-col items-center justify-center fade-in-on-scroll">
+      <main className="flex flex-col items-center justify-center fade-in-on-scroll">
         <Navbar />
         <Donaciones />
-      </div>
+      </main>
       <div className="fade-in-on-scroll">
         <Footer />
       </div>

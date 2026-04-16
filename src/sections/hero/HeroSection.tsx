@@ -11,11 +11,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
 
   return (
     <section
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${contentJson.hero.imagen})`,
-      }}
       className={`
-        bg-cover bg-center 
+        relative overflow-hidden
         min-h-[720px] lg:min-h-160 
         flex flex-col justify-end items-start 
         bg-night text-basicWhite 
@@ -23,6 +20,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         ${className ?? ""}
       `}
     >
+      <img
+        src={contentJson.hero.imagen}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+        fetchPriority="high"
+        decoding="async"
+      />
+      <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
       <div className="flex flex-col gap-y-8 items-start">
         <h2 className="text-shadow-md text-4xl sm:text-5xl md:text-6xl font-poppins font-bold">
           {contentJson.hero.titulo}
@@ -32,9 +38,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         </p>
         <div className="mb-10 flex justify-center gap-4 sm:gap-1 lg:gap-10">
           {contentJson.hero.botones.map(
-            (boton: { texto: string; ruta: string }, idx: number
+            (boton: { texto: string; ruta: string; ariaLabel?: string }, idx: number
             ) => (
-              <Boton key={idx} where={boton.ruta}>
+              <Boton key={idx} where={boton.ruta} ariaLabel={boton.ariaLabel}>
                 <p className="lg:px-2 lg:py-1 text-lg">{boton.texto}</p>
               </Boton>
             ))}

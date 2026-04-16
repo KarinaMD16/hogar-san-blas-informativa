@@ -241,6 +241,7 @@ const FormSolicitudVoluntariado = () => {
                 type="button"
                 variant="outline"
                 onClick={() => setCurrentStep(prev => prev - 1)}
+                ariaLabel={placeholders.botones.anteriorAriaLabel}
               >
                 {placeholders.botones.anterior}
               </Boton>
@@ -260,6 +261,7 @@ const FormSolicitudVoluntariado = () => {
                     }
                   }
                 }}
+                ariaLabel={placeholders.botones.siguienteAriaLabel}
               >
                 {placeholders.botones.siguiente}
               </Boton>
@@ -267,7 +269,11 @@ const FormSolicitudVoluntariado = () => {
               <form.Subscribe
                 selector={(state) => [state.canSubmit, state.isSubmitting]}
                 children={([canSubmit, isSubmitting]) => (
-                  <Boton type="submit" disabled={!canSubmit || isSubmitting}>
+                  <Boton 
+                    type="submit" 
+                    disabled={!canSubmit || isSubmitting}
+                    ariaLabel={isSubmitting ? placeholders.botones.enviandoAriaLabel : placeholders.botones.enviarAriaLabel}
+                  >
                     {isSubmitting ? placeholders.botones.enviando : placeholders.botones.enviar}
                   </Boton>
                 )}

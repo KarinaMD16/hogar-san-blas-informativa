@@ -21,6 +21,7 @@ const ModalImagenGaleria = ({
         />
         <button
           onClick={onClose}
+          aria-label="Cerrar modal de imagen"
           className="hover:cursor-pointer absolute top-2 right-2 bg-white text-black p-2 rounded-full hover:bg-gray-200"
         >
           <IoMdClose />

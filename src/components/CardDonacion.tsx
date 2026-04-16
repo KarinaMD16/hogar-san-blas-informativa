@@ -29,7 +29,7 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
       </div>
 
       <div>
-        <h3 className="mb-2 w-full text-left font-poppins font-bold text-lg">{publicacion.Titulo}</h3>
+        <h2 className="mb-2 w-full text-left font-poppins font-bold text-lg">{publicacion.Titulo}</h2>
         <p className="w-full text-left">{publicacion.Descripcion}</p>
       </div>
 

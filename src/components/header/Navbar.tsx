@@ -8,9 +8,6 @@ import IdiomaContext from "../../context/language/idiomaContext";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import { AnimatePresence } from "framer-motion";
 
-const SCROLL_RETRY_ATTEMPTS = 40;
-const SECTION_CENTER_TOLERANCE_PX = 64;
-
 type SectionLinkTarget = {
   sectionId: string;
   requiresHomeRoute: boolean;
@@ -30,14 +27,6 @@ function getSectionTarget(ruta: string): SectionLinkTarget | null {
   return null;
 }
 
-function isSectionCentered(element: HTMLElement) {
-  const rect = element.getBoundingClientRect();
-  const sectionCenter = rect.top + rect.height / 2;
-  const viewportCenter = window.innerHeight / 2;
-
-  return Math.abs(sectionCenter - viewportCenter) <= SECTION_CENTER_TOLERANCE_PX;
-}
-
 function scrollToSection(sectionId: string) {
   const section = document.getElementById(sectionId);
 
@@ -45,20 +34,10 @@ function scrollToSection(sectionId: string) {
     return false;
   }
 
-  if (isSectionCentered(section)) {
-    return true;
-  }
-
-  const sectionRect = section.getBoundingClientRect();
-  const sectionCenter = sectionRect.top + sectionRect.height / 2;
-  const viewportCenter = window.innerHeight / 2;
-  const targetTop = window.scrollY + sectionCenter - viewportCenter;
-  const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0);
-  const clampedTargetTop = Math.min(Math.max(targetTop, 0), maxScroll);
-
-  window.scrollTo({
-    top: clampedTargetTop,
+  section.scrollIntoView({
     behavior: "smooth",
+    block: "center",
+    inline: "nearest",
   });
 
   return true;
@@ -88,7 +67,7 @@ const Navbar = () => {
       attempts += 1;
       const scrolled = scrollToSection(sectionId);
 
-      if (!scrolled && attempts < SCROLL_RETRY_ATTEMPTS) {
+      if (!scrolled && attempts < 40) {
         window.requestAnimationFrame(tryScroll);
       }
     };
@@ -135,7 +114,7 @@ const Navbar = () => {
     <header className="fixed top-5 left-0 right-0 z-50 flex justify-between items-center w-full px-6 bg-transparent">
       <Link to="/" className="flex-shrink-0" onClick={handleLogoClick}>
         <img
-          src="/logo_hogar_san_blas.png"
+          src="/logo_hogar_san_blas.webp"
           alt="Logo"
           className="w-16 h-16 lg:ml-8"
         />
