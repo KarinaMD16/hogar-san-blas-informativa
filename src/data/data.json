@@ -195,12 +195,7 @@
     "mensaje": "Si cumples con los requisitos, contáctanos"
   },
 
-  "formulario": {
-    "botones": [
-      { "texto": "Enviar", "ariaLabel": "Enviar formulario" },
-      { "texto": "Cancelar", "ariaLabel": "Cancelar y volver atrás" }
-    ]
-  },
+  "formulario": ["Enviar", "Cancelar"],
 
   "contactos": {
     "Contactos": {
@@ -320,12 +315,7 @@
         "Llenar boleta de asistencia cada vez que llega al hogar."
       ]
     },
-    "formulario": {
-      "botones": [
-        { "texto": "Enviar", "ariaLabel": "Enviar formulario de voluntariado" },
-        { "texto": "Cancelar", "ariaLabel": "Cancelar y volver atrás" }
-      ]
-    }
+    "formulario": "Formulario de Voluntariado"
   },
 
   "formularioVoluntariado": {
@@ -541,12 +531,7 @@
         "ruta": "/formularios/voluntariado"
       }
     },
-    "formulario": {
-      "botones": [
-        { "texto": "Enviar", "ariaLabel": "Enviar formulario de donación" },
-        { "texto": "Cancelar", "ariaLabel": "Cancelar y volver atrás" }
-      ]
-    }
+    "formulario": "Formulario de Donación"
   },
 
   "paginaCentenarios": {
