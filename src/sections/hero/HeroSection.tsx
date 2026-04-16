@@ -24,12 +24,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         src={contentJson.hero.imagen}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 z-0 h-full w-full object-cover object-center"
         fetchPriority="high"
         decoding="async"
       />
-      <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
-      <div className="flex flex-col gap-y-8 items-start">
+      <div className="absolute inset-0 z-0 bg-black/50" aria-hidden="true" />
+      <div className="relative z-10 flex flex-col gap-y-8 items-start">
         <h2 className="text-shadow-md text-4xl sm:text-5xl md:text-6xl font-poppins font-bold">
           {contentJson.hero.titulo}
         </h2>

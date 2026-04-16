@@ -10,7 +10,7 @@ type FooterProps = {
 };
 
 const Footer: React.FC<FooterProps> = ({ className }) => {
-  const { contentJson } = useContext(IdiomaContext);
+    const { contentJson } = useContext(IdiomaContext);
 
     return (
         <footer className="w-full bg-night text-white pb-4">
@@ -21,9 +21,9 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                     <FooterRedes />
                 </div>
                 <div className="flex flex-col items-center w-full lg:w-auto">
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-poppins font-semibold mb-4 text-center">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-poppins font-semibold mb-4 text-center">
                         {contentJson.footer.mensaje}
-                    </h1>
+                    </h2>
                     <FooterMapa />
                 </div>
             </div>

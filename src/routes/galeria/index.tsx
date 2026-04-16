@@ -108,7 +108,9 @@ function RouteComponent() {
     return (
       <div className="w-screen h-screen">
         <Navbar />
-        <span className="mt-40 loading loading-spinner"></span>
+        <main className="flex items-center justify-center w-full h-[calc(100vh-5rem)]">
+          <span className="loading loading-spinner"></span>
+        </main>
       </div>
     );
 

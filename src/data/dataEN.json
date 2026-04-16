@@ -1,10 +1,10 @@
 {
-    "seo": {
-      "titulo": "Hogar San Blas Nursing Home - Care and Well-being for Older Adults",
-      "descripcion": "Hogar San Blas is a nursing home dedicated to the care and well-being of older adults. Learn how to help through volunteering or donations.",
-      "keywords": "nursing home, elders, elderly, older adults, volunteering, donations, Hogar San Blas, Costa Rica, Guanacaste, Nicoya, elderly care, support for older adults",
-      "url": "https://hogarsanblas.com"
-    },¿
+  "seo": {
+    "titulo": "Hogar San Blas Nursing Home - Care and Well-being for Older Adults",
+    "descripcion": "Hogar San Blas is a nursing home dedicated to the care and well-being of older adults. Learn how to help through volunteering or donations.",
+    "keywords": "nursing home, elders, elderly, older adults, volunteering, donations, Hogar San Blas, Costa Rica, Guanacaste, Nicoya, elderly care, support for older adults",
+    "url": "https://hogarsanblas.com"
+  },
 
   "servicios": [
     {
@@ -317,7 +317,12 @@
         "Fill out the attendance form each time you arrive at the home."
       ]
     },
-    "formulario": "Volunteer form"
+    "formulario": {
+      "botones": [
+        { "texto": "Submit", "ariaLabel": "Submit volunteer form" },
+        { "texto": "Cancel", "ariaLabel": "Cancel and go back" }
+      ]
+    }
   },
 
   "formularioVoluntariado": {
@@ -542,7 +547,12 @@
         "ruta": "/formularios/voluntariado"
       }
     },
-    "formulario": "Donation form"
+    "formulario": {
+      "botones": [
+        { "texto": "Submit", "ariaLabel": "Submit donation form" },
+        { "texto": "Cancel", "ariaLabel": "Cancel and go back" }
+      ]
+    }
   },
 
   "paginaCentenarios": {
