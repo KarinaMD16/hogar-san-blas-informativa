@@ -11,18 +11,31 @@ const Centenarios = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const scrollStateRef = useRef({ left: false, right: false });
 
   const updateScrollButtons = () => {
     const el = scrollRef.current;
     if (!el) return;
 
-    // Batch all geometry reads to avoid forced reflows
     const scrollLeft = el.scrollLeft;
     const clientWidth = el.clientWidth;
     const scrollWidth = el.scrollWidth;
 
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+    const newCanScrollLeft = scrollLeft > 0;
+    const newCanScrollRight = scrollLeft + clientWidth < scrollWidth;
+
+    // Only update state if values changed
+    if (
+      scrollStateRef.current.left !== newCanScrollLeft ||
+      scrollStateRef.current.right !== newCanScrollRight
+    ) {
+      scrollStateRef.current = {
+        left: newCanScrollLeft,
+        right: newCanScrollRight,
+      };
+      setCanScrollLeft(newCanScrollLeft);
+      setCanScrollRight(newCanScrollRight);
+    }
   };
 
   useEffect(() => {
@@ -31,22 +44,24 @@ const Centenarios = () => {
     if (!el) return;
 
     let frameId = 0;
+    let ticking = false;
 
     const scheduleUpdate = () => {
-      window.cancelAnimationFrame(frameId);
-      frameId = window.requestAnimationFrame(updateScrollButtons);
+      if (!ticking) {
+        ticking = true;
+        frameId = window.requestAnimationFrame(() => {
+          updateScrollButtons();
+          ticking = false;
+        });
+      }
     };
 
     updateScrollButtons();
-
-    const resizeObserver = new ResizeObserver(scheduleUpdate);
-    resizeObserver.observe(el);
 
     el.addEventListener("scroll", scheduleUpdate, { passive: true });
 
     return () => {
       window.cancelAnimationFrame(frameId);
-      resizeObserver.disconnect();
       el.removeEventListener("scroll", scheduleUpdate);
     };
   }, [contentJson]);

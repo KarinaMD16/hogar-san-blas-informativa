@@ -1,29 +1,34 @@
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export const useFadeIn = (rerunKey?: string) => {
   useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const elements = gsap.utils.toArray<HTMLElement>(".fade-in-on-scroll");
+    const elements = document.querySelectorAll<HTMLElement>(".fade-in-on-scroll");
 
-      elements.forEach((el) => {
-        gsap.from(el, {
-          opacity: 0,
-          y: 40,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 80%",
-            toggleActions: "play reverse play reverse"
-          },
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            gsap.to(entry.target, {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              ease: "power3.out",
+            });
+            observer.unobserve(entry.target);
+          }
         });
-      });
+      },
+      { threshold: 0.1, rootMargin: "20% 0px" }
+    );
+
+    elements.forEach((el) => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(40px)";
+      observer.observe(el);
     });
 
-    return () => ctx.revert();
+    return () => observer.disconnect();
   }, [rerunKey]);
 };
+
