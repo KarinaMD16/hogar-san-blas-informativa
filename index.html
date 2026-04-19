@@ -20,7 +20,8 @@
 
   <link rel="preconnect" href="https://i.ibb.co" crossorigin>
   <link rel="preconnect" href="https://api.sidnam.org" crossorigin>
-  <link rel="preload" as="image" href="https://i.ibb.co/Rp2n96fN/IMG-0395.jpg">
+  <!-- Preload LCP image with high priority -->
+  <link rel="preload" as="image" href="https://i.ibb.co/Rp2n96fN/IMG-0395.jpg" fetchpriority="high">
 
   <!-- open graph -->
   <meta property="og:title" content="Hogar de Ancianos San Blas de Nicoya">
@@ -31,6 +32,30 @@
   <meta property="og:type" content="website">
 
   <link rel="canonical" href="https://hogarsanblas.com">
+
+  <!-- Minimal inline critical CSS for above-the-fold -->
+  <style>
+    /* Prevent layout shift and flash of unstyled content */
+    :root {
+      color-scheme: light dark;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    #root {
+      display: block;
+    }
+  </style>
 
 </head>
 

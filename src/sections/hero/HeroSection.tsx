@@ -26,6 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover object-center"
         fetchPriority="high"
+        loading="eager"
         decoding="async"
       />
       <div className="absolute inset-0 z-0 bg-black/50" aria-hidden="true" />
