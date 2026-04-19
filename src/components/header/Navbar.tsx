@@ -134,7 +134,9 @@ const Navbar = () => {
                   onLinkClick={handleNavLinkClick}
                 />
               ))}
-              <CambiarIdioma />
+              <li>
+                <CambiarIdioma />
+              </li>
             </ul>
 
             <HiOutlineMenu
