@@ -22,8 +22,13 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
   const checkScroll = () => {
     const item = scrollRef.current;
     if (item) {
-      setCanScrollLeft(item.scrollLeft > 0);
-      setCanScrollRight(item.scrollLeft + item.clientWidth < item.scrollWidth);
+      // Batch all geometry reads to avoid forced reflows
+      const scrollLeft = item.scrollLeft;
+      const clientWidth = item.clientWidth;
+      const scrollWidth = item.scrollWidth;
+
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
     }
   };
 
@@ -32,11 +37,21 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
     const el = scrollRef.current;
     if (!el) return;
 
-    el.addEventListener("scroll", checkScroll);
-    window.addEventListener("resize", checkScroll);
+    let frameId = 0;
+    const scheduleUpdate = () => {
+      window.cancelAnimationFrame(frameId);
+      frameId = window.requestAnimationFrame(checkScroll);
+    };
+
+    el.addEventListener("scroll", scheduleUpdate, { passive: true });
+
+    const resizeObserver = new ResizeObserver(scheduleUpdate);
+    resizeObserver.observe(el);
+
     return () => {
-      el.removeEventListener("scroll", checkScroll);
-      window.removeEventListener("resize", checkScroll);
+      window.cancelAnimationFrame(frameId);
+      el.removeEventListener("scroll", scheduleUpdate);
+      resizeObserver.disconnect();
     };
   }, [donaciones]);
 

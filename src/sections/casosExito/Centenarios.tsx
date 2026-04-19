@@ -16,8 +16,13 @@ const Centenarios = () => {
     const el = scrollRef.current;
     if (!el) return;
 
-    setCanScrollLeft(el.scrollLeft > 0);
-    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth);
+    // Batch all geometry reads to avoid forced reflows
+    const scrollLeft = el.scrollLeft;
+    const clientWidth = el.clientWidth;
+    const scrollWidth = el.scrollWidth;
+
+    setCanScrollLeft(scrollLeft > 0);
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
   };
 
   useEffect(() => {
