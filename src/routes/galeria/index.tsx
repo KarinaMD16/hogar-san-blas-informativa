@@ -15,6 +15,7 @@ import ModalImagenGaleria from "../../components/ModalGaleria";
 import type { Galeria } from "../../models/galeria/galeria";
 import { useFadeIn } from "../../components/useFadeIn";
 import Seo from "../../components/Seo";
+import { LoadingSpinner } from "../../components/LoadingSpinner";
 
 export const Route = createFileRoute("/galeria/")({
   component: RouteComponent,
@@ -109,7 +110,7 @@ function RouteComponent() {
       <div className="w-screen h-screen">
         <Navbar />
         <main className="flex items-center justify-center w-full h-[calc(100vh-5rem)]">
-          <span className="loading loading-spinner"></span>
+          <LoadingSpinner />
         </main>
       </div>
     );
