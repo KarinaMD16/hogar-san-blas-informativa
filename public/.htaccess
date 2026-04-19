@@ -1,4 +1,6 @@
-# Hostinger/Apache SEO + SPA routing rules for Hogar San Blas
+# Hostinger/Apache SEO + SPA routing + Cache rules for Hogar San Blas
+
+# Enable mod_rewrite
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
@@ -19,36 +21,58 @@
   RewriteRule . /index.html [L]
 </IfModule>
 
-# Caché para assets compilados (JS, CSS) - 1 año
-<FilesMatch "\.(js|css|woff2|woff|ttf|eot)$">
-  <IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresDefault "access plus 1 year"
-  </IfModule>
+# Enable mod_expires and mod_headers
+<IfModule mod_expires.c>
+  ExpiresActive On
+</IfModule>
+
+# Caché para assets compilados con hash (JS, CSS, fonts) - 1 año (muy larga porque tienen hash)
+<FilesMatch "\.(js|css|woff2?|ttf|eot|otf)$">
   <IfModule mod_headers.c>
     Header set Cache-Control "public, max-age=31536000, immutable"
   </IfModule>
+  <IfModule mod_expires.c>
+    ExpiresDefault "access plus 1 year"
+  </IfModule>
 </FilesMatch>
 
-# Caché para imágenes - 30 días
-<FilesMatch "\.(jpg|jpeg|png|gif|webp|ico|svg)$">
-  <IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresDefault "access plus 30 days"
-  </IfModule>
+# Caché para webp y imágenes - 30 días
+<FilesMatch "\.(webp|jpg|jpeg|png|gif|ico|svg)$">
   <IfModule mod_headers.c>
     Header set Cache-Control "public, max-age=2592000"
   </IfModule>
+  <IfModule mod_expires.c>
+    ExpiresDefault "access plus 30 days"
+  </IfModule>
 </FilesMatch>
 
-# Sin caché para HTML (verificar siempre) - 1 hora
+# HTML: validar siempre (1 hora)
 <FilesMatch "\.html?$">
-  <IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresDefault "access plus 1 hour"
-  </IfModule>
   <IfModule mod_headers.c>
     Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </IfModule>
+  <IfModule mod_expires.c>
+    ExpiresDefault "access plus 1 hour"
+  </IfModule>
+</FilesMatch>
+
+# JSON: validar siempre (1 hora)
+<FilesMatch "\.json$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </IfModule>
+  <IfModule mod_expires.c>
+    ExpiresDefault "access plus 1 hour"
+  </IfModule>
+</FilesMatch>
+
+# XML: validar siempre (1 hora)
+<FilesMatch "\.(xml|sitemap)$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </IfModule>
+  <IfModule mod_expires.c>
+    ExpiresDefault "access plus 1 hour"
   </IfModule>
 </FilesMatch>
 
