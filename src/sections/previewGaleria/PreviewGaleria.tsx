@@ -25,17 +25,30 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const scrollStateRef = useRef({ left: false, right: false });
 
   const checkScroll = () => {
     const item = scrollRef.current;
     if (item) {
-      // Batch all geometry reads to avoid forced reflows
       const scrollLeft = item.scrollLeft;
       const clientWidth = item.clientWidth;
       const scrollWidth = item.scrollWidth;
 
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+      const newCanScrollLeft = scrollLeft > 0;
+      const newCanScrollRight = scrollLeft + clientWidth < scrollWidth;
+
+      // Only update state if values changed
+      if (
+        scrollStateRef.current.left !== newCanScrollLeft ||
+        scrollStateRef.current.right !== newCanScrollRight
+      ) {
+        scrollStateRef.current = {
+          left: newCanScrollLeft,
+          right: newCanScrollRight,
+        };
+        setCanScrollLeft(newCanScrollLeft);
+        setCanScrollRight(newCanScrollRight);
+      }
     }
   };
 
@@ -45,20 +58,23 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
     if (!el) return;
 
     let frameId = 0;
+    let ticking = false;
+
     const scheduleUpdate = () => {
-      window.cancelAnimationFrame(frameId);
-      frameId = window.requestAnimationFrame(checkScroll);
+      if (!ticking) {
+        ticking = true;
+        frameId = window.requestAnimationFrame(() => {
+          checkScroll();
+          ticking = false;
+        });
+      }
     };
 
     el.addEventListener("scroll", scheduleUpdate, { passive: true });
 
-    const resizeObserver = new ResizeObserver(scheduleUpdate);
-    resizeObserver.observe(el);
-
     return () => {
       window.cancelAnimationFrame(frameId);
       el.removeEventListener("scroll", scheduleUpdate);
-      resizeObserver.disconnect();
     };
   }, [imagenes]);
 
