@@ -16,6 +16,7 @@ const Contactos = ({ className }: ContactosProps) => {
 
   return (
     <div className={className}>
+      <h2 className="sr-only">{contentJson.contactos.Contactos.titulo}</h2>
       <ContactosSection
         title={contentJson.contactos.Contactos.titulo}
         items={contentJson.contactos.Contactos.items}
