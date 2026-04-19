@@ -4,6 +4,7 @@ import { useGetEventos } from "../../hooks/publicaciones/publicaciones";
 import type { Publicacion } from "../../models/publicaciones/publicaciones";
 import { MdOutlineFirstPage, MdOutlineLastPage } from "react-icons/md";
 import IdiomaContext from "../../context/language/idiomaContext";
+import { LoadingSpinner } from "../../components/LoadingSpinner";
 
 export const Eventos = () => {
   const { contentJson, idioma } = useContext(IdiomaContext);
@@ -33,7 +34,7 @@ export const Eventos = () => {
   if (loadingEventos || fetchingEventos)
     return (
       <div className="w-screen h-screen">
-        <span className="mt-40 loading loading-spinner"></span>
+        <div className="mt-40"><LoadingSpinner /></div>
       </div>
     );
 

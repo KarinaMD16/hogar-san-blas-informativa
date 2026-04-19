@@ -4,6 +4,7 @@ import { useGetProyectos } from "../../hooks/publicaciones/publicaciones";
 import type { Publicacion } from "../../models/publicaciones/publicaciones";
 import { useContext, useState } from "react";
 import IdiomaContext from "../../context/language/idiomaContext";
+import { LoadingSpinner } from "../../components/LoadingSpinner";
 
 const Proyectos = () => {
   const { contentJson, idioma } = useContext(IdiomaContext);
@@ -39,7 +40,7 @@ const Proyectos = () => {
   if (loadingProyectos || fetchingProyectos)
     return (
       <div className="w-screen h-screen">
-        <span className="mt-40 loading loading-spinner"></span>
+        <span className="mt-40"><LoadingSpinner /></span>
       </div>
     );
 
