@@ -1,11 +1,10 @@
 import { createContext } from "react";
-import { traducciones, type idiomaContextProps } from "../../types/idioma/idiomaTypes";
-
+import type { idiomaContextProps } from "../../types/idioma/idiomaTypes";
 
 const IdiomaContext = createContext<idiomaContextProps>({
   idioma: "es",
-  cambiarIdioma: () => {},
-  contentJson: traducciones.es,
+  cambiarIdioma: () => { },
+  contentJson: {} as any, // Placeholder, will be set by provider
 });
 
 export default IdiomaContext;
