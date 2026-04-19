@@ -26,8 +26,13 @@
   ExpiresActive On
 </IfModule>
 
+# Default: no cache
+<IfModule mod_headers.c>
+  Header set Cache-Control "public, max-age=0, must-revalidate"
+</IfModule>
+
 # Caché para assets compilados con hash (JS, CSS, fonts) - 1 año (muy larga porque tienen hash)
-<FilesMatch "\.(js|css|woff2?|ttf|eot|otf)$">
+<FilesMatch "\.(js|css|woff|woff2|ttf|eot|otf)$">
   <IfModule mod_headers.c>
     Header set Cache-Control "public, max-age=31536000, immutable"
   </IfModule>
