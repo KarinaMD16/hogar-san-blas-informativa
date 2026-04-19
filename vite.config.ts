@@ -2,6 +2,39 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import tailwindcss from '@tailwindcss/vite'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
+import type { Plugin } from 'vite'
+
+// Plugin to defer CSS loading and prevent render blocking
+function deferCssPlugin(): Plugin {
+  return {
+    name: 'defer-css',
+    transformIndexHtml(html: string) {
+      // Inject script that loads CSS asynchronously after DOMContentLoaded
+      const deferScript = `
+        <script>
+          // Defer CSS loading to prevent render blocking
+          function loadCssAsync() {
+            const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
+            cssLinks.forEach(link => {
+              link.media = 'print';
+              link.onload = function() {
+                this.media = 'all';
+              };
+              // Trigger reload to force onload
+              link.href = link.href;
+            });
+          }
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadCssAsync);
+          } else {
+            loadCssAsync();
+          }
+        </script>
+      `;
+      return html.replace('</head>', deferScript + '</head>');
+    },
+  };
+}
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,7 +44,8 @@ export default defineConfig({
       autoCodeSplitting: true,
     }),
     react(),
-    tailwindcss()
+    tailwindcss(),
+    deferCssPlugin(),
   ],
   build: {
     rollupOptions: {
@@ -21,5 +55,6 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash][extname]',
       },
     },
+    cssCodeSplit: true,
   },
 })
