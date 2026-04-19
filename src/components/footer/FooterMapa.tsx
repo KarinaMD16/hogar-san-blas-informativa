@@ -43,6 +43,14 @@ const FooterMapa = () => {
         return;
       }
 
+      // Fix default marker icon paths
+      delete (leaflet.Icon.Default.prototype as any)._getIconUrl;
+      leaflet.Icon.Default.mergeOptions({
+        iconRetinaUrl: new URL("leaflet/dist/images/marker-icon-2x.png", import.meta.url).href,
+        iconUrl: new URL("leaflet/dist/images/marker-icon.png", import.meta.url).href,
+        shadowUrl: new URL("leaflet/dist/images/marker-shadow.png", import.meta.url).href,
+      });
+
       const map = leaflet
         .map(mapRef.current)
         .setView([10.1488373, -85.4550823], 16);
