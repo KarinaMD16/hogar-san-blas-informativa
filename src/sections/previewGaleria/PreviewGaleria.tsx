@@ -4,6 +4,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import IdiomaContext from "../../context/language/idiomaContext";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { cn } from "../../lib/utils";
+import { transformCloudinaryUrl } from "../../lib/cloudinary";
 
 type PreviewGaleriaProps = {
   className?: string;
@@ -141,7 +142,8 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
             <img
               onClick={() => goToImage(imagen.id)}
               key={index}
-              src={imagen.imagenUrl}
+              loading="lazy"
+              src={transformCloudinaryUrl(imagen.imagenUrl, 400)}
               alt=""
               width={240}
               height={160}

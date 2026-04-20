@@ -1,3 +1,4 @@
+import { transformCloudinaryUrl } from "../lib/cloudinary";
 import type { PublicacionProps } from "../types/publicaciones/publicaciones";
 
 const CardPublicacion = ({ publicacion }: PublicacionProps) => {
@@ -11,13 +12,18 @@ const CardPublicacion = ({ publicacion }: PublicacionProps) => {
     >
       <div className="flex flex-col gap-2">
         <img
-          className="
-        rounded-md h-40 object-cover
-        "
-          src={publicacion.imagenUrl}
-          alt={publicacion.Titulo}
+          className="rounded-md h-40 object-cover"
+          src={transformCloudinaryUrl(publicacion.imagenUrl, 400, 160)}
+          srcSet={`
+            ${transformCloudinaryUrl(publicacion.imagenUrl, 200, 160)} 200w,
+            ${transformCloudinaryUrl(publicacion.imagenUrl, 400, 160)} 400w,
+            ${transformCloudinaryUrl(publicacion.imagenUrl, 800, 320)} 800w
+          `}
+          sizes="(max-width: 640px) 200px, 320px"
+          loading="lazy"
           width={320}
           height={160}
+          alt={publicacion.Titulo}
         />
         <div className="flex items-start w-50 sm:w-40 md:w-50 lg:w-3xs">
           <p className="text-sm">{publicacion.fecha}</p>
