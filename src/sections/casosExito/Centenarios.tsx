@@ -12,14 +12,15 @@ const Centenarios = () => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const scrollStateRef = useRef({ left: false, right: false });
+  const dimensionsRef = useRef({ clientWidth: 0, scrollWidth: 0 });
 
   const updateScrollButtons = () => {
     const el = scrollRef.current;
     if (!el) return;
 
     const scrollLeft = el.scrollLeft;
-    const clientWidth = el.clientWidth;
-    const scrollWidth = el.scrollWidth;
+    // Use cached dimensions instead of reading properties
+    const { clientWidth, scrollWidth } = dimensionsRef.current;
 
     const newCanScrollLeft = scrollLeft > 0;
     const newCanScrollRight = scrollLeft + clientWidth < scrollWidth;
@@ -38,10 +39,24 @@ const Centenarios = () => {
     }
   };
 
+  const updateDimensions = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    // Cache dimensions to avoid repeated layout reads
+    dimensionsRef.current = {
+      clientWidth: el.clientWidth,
+      scrollWidth: el.scrollWidth,
+    };
+    updateScrollButtons();
+  };
+
   useEffect(() => {
     const el = scrollRef.current;
 
     if (!el) return;
+
+    updateDimensions();
 
     let frameId = 0;
     let ticking = false;
@@ -56,13 +71,18 @@ const Centenarios = () => {
       }
     };
 
-    updateScrollButtons();
-
     el.addEventListener("scroll", scheduleUpdate, { passive: true });
+
+    // Handle window resize to update cached dimensions
+    const handleResize = () => {
+      updateDimensions();
+    };
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.cancelAnimationFrame(frameId);
       el.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", handleResize);
     };
   }, [contentJson]);
 

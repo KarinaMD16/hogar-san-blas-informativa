@@ -26,34 +26,47 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const scrollStateRef = useRef({ left: false, right: false });
+  const dimensionsRef = useRef({ clientWidth: 0, scrollWidth: 0 });
 
   const checkScroll = () => {
     const item = scrollRef.current;
-    if (item) {
-      const scrollLeft = item.scrollLeft;
-      const clientWidth = item.clientWidth;
-      const scrollWidth = item.scrollWidth;
+    if (!item) return;
 
-      const newCanScrollLeft = scrollLeft > 0;
-      const newCanScrollRight = scrollLeft + clientWidth < scrollWidth;
+    const scrollLeft = item.scrollLeft;
+    // Use cached dimensions instead of reading properties
+    const { clientWidth, scrollWidth } = dimensionsRef.current;
 
-      // Only update state if values changed
-      if (
-        scrollStateRef.current.left !== newCanScrollLeft ||
-        scrollStateRef.current.right !== newCanScrollRight
-      ) {
-        scrollStateRef.current = {
-          left: newCanScrollLeft,
-          right: newCanScrollRight,
-        };
-        setCanScrollLeft(newCanScrollLeft);
-        setCanScrollRight(newCanScrollRight);
-      }
+    const newCanScrollLeft = scrollLeft > 0;
+    const newCanScrollRight = scrollLeft + clientWidth < scrollWidth;
+
+    // Only update state if values changed
+    if (
+      scrollStateRef.current.left !== newCanScrollLeft ||
+      scrollStateRef.current.right !== newCanScrollRight
+    ) {
+      scrollStateRef.current = {
+        left: newCanScrollLeft,
+        right: newCanScrollRight,
+      };
+      setCanScrollLeft(newCanScrollLeft);
+      setCanScrollRight(newCanScrollRight);
     }
   };
 
-  useEffect(() => {
+  const updateDimensions = () => {
+    const item = scrollRef.current;
+    if (!item) return;
+
+    // Cache dimensions to avoid repeated layout reads
+    dimensionsRef.current = {
+      clientWidth: item.clientWidth,
+      scrollWidth: item.scrollWidth,
+    };
     checkScroll();
+  };
+
+  useEffect(() => {
+    updateDimensions();
     const el = scrollRef.current;
     if (!el) return;
 
@@ -72,9 +85,16 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
 
     el.addEventListener("scroll", scheduleUpdate, { passive: true });
 
+    // Handle window resize to update cached dimensions
+    const handleResize = () => {
+      updateDimensions();
+    };
+    window.addEventListener("resize", handleResize);
+
     return () => {
       window.cancelAnimationFrame(frameId);
       el.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", handleResize);
     };
   }, [imagenes]);
 
