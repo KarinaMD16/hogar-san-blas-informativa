@@ -9,16 +9,15 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
 
   return (
     <div
-      className="bg-basicWhite p-4 rounded-lg shadow-md hover:shadow-lg 
+      className="bg-basicWhite p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg
       transition-shadow duration-300
-      w-60 h-90 lg:w-80 lg:h-100 md:w-60 md:h-90 sm:w-50 sm:h-90
+      w-full max-w-lg sm:w-60 h-auto lg:w-80 md:w-60
       flex flex-col items-center justify-between gap-2
     "
     >
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 w-full">
         <img
-          className="rounded-md h-40 object-cover"
           src={transformCloudinaryUrl(publicacion.imagenUrl, 400, 160)}
           srcSet={`
             ${transformCloudinaryUrl(publicacion.imagenUrl, 200, 160)} 200w,
@@ -27,27 +26,26 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
           `}
           sizes="(max-width: 640px) 200px, 320px"
           loading="lazy"
-          width={320}
-          height={160}
+          className="rounded-md h-32 sm:h-40 object-cover w-full"
           alt={publicacion.Titulo}
           width={320}
           height={160}
         />
-        <div className="flex items-start w-50 sm:w-40 md:w-50 lg:w-3xs">
-          <p className="text-sm">{publicacion.fecha}</p>
+        <div className="flex items-start">
+          <p className="text-xs sm:text-sm truncate">{publicacion.fecha}</p>
         </div>
       </div>
 
-      <div>
-        <h2 className="mb-2 w-full text-left font-poppins font-bold text-lg">{publicacion.Titulo}</h2>
-        <p className="w-full text-left">{publicacion.Descripcion}</p>
+      <div className="w-full px-1">
+        <h2 className="mb-2 text-left font-poppins font-bold text-sm sm:text-lg line-clamp-3">{publicacion.Titulo}</h2>
+        <p className="text-left text-xs sm:text-sm line-clamp-3">{publicacion.Descripcion}</p>
       </div>
 
       <a href="/formularios/donacion#formularioDonacion"
-        className=" text-amaranthPink transition-colors duration-300">
-        <span className="font-bold text-base sm:text-sm md:text-base lg:text-lg flex items-center gap-2">
+        className="text-amaranthPink transition-colors duration-300 px-1">
+        <span className="font-bold text-xs sm:text-base flex items-center gap-2">
           {contentJson.donaciones.botones.botonDonar}
-          <ArrowRight />
+          <ArrowRight size={16} className="sm:size-5" />
         </span>
       </a>
     </div>
