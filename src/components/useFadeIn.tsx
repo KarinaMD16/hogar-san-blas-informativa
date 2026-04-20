@@ -5,6 +5,11 @@ export const useFadeIn = (rerunKey?: string) => {
   useLayoutEffect(() => {
     const elements = document.querySelectorAll<HTMLElement>(".fade-in-on-scroll");
 
+    // Add CSS class to set initial state (avoids forced reflow)
+    elements.forEach((el) => {
+      el.classList.add("fade-in-initial");
+    });
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -15,7 +20,12 @@ export const useFadeIn = (rerunKey?: string) => {
               duration: 0.8,
               ease: "power3.out",
             });
-            observer.unobserve(entry.target);
+          } else {
+            // Reset animation when element leaves viewport
+            gsap.set(entry.target, {
+              opacity: 0,
+              y: 40,
+            });
           }
         });
       },
@@ -23,8 +33,6 @@ export const useFadeIn = (rerunKey?: string) => {
     );
 
     elements.forEach((el) => {
-      el.style.opacity = "0";
-      el.style.transform = "translateY(40px)";
       observer.observe(el);
     });
 
