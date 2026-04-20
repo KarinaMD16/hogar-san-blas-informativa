@@ -10,7 +10,7 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
     <div
       className="bg-basicWhite p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg
       transition-shadow duration-300
-      w-[84vw] max-w-88 sm:w-60 h-auto lg:w-80 md:w-60
+      w-[76vw] max-w-80 sm:w-60 h-auto lg:w-80 md:w-60
       flex-none snap-start
       flex flex-col items-center justify-between gap-2
     "

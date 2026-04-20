@@ -170,7 +170,7 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
         </div>
       </div>
 
-      <div className="relative w-full max-w-md md:max-w-2xl px-2 md:px-10 lg:px-12">
+      <div className="relative w-full max-w-md md:max-w-xl lg:max-w-188 px-2 md:px-10 lg:px-12">
         {canScrollLeft && (
           <button
             type="button"
