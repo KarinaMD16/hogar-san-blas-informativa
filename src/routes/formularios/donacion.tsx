@@ -20,12 +20,14 @@ function RouteComponent() {
       path="/formularios/donacion"
     />
     <Navbar />
-    <div className="fade-in-on-scroll">
-      <RequisitosDonacion />
-    </div>
-    <div className="fade-in-on-scroll">
-      <SectionFormDonacion />
-    </div>
+    <main>
+      <div className="fade-in-on-scroll">
+        <RequisitosDonacion />
+      </div>
+      <div className="fade-in-on-scroll">
+        <SectionFormDonacion />
+      </div>
+    </main>
     <div className="fade-in-on-scroll">
       <Footer />
     </div>

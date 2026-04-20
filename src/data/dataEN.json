@@ -1,10 +1,10 @@
 {
-    "seo": {
-      "titulo": "Hogar San Blas Nursing Home - Care and Well-being for Older Adults",
-      "descripcion": "Hogar San Blas is a nursing home dedicated to the care and well-being of older adults. Learn how to help through volunteering or donations.",
-      "keywords": "nursing home, elders, elderly, older adults, volunteering, donations, Hogar San Blas, Costa Rica, Guanacaste, Nicoya, elderly care, support for older adults",
-      "url": "https://hogarsanblas.com"
-    },
+  "seo": {
+    "titulo": "Hogar San Blas Nursing Home - Care and Well-being for Older Adults",
+    "descripcion": "Hogar San Blas is a nursing home dedicated to the care and well-being of older adults. Learn how to help through volunteering or donations.",
+    "keywords": "nursing home, elders, elderly, older adults, volunteering, donations, Hogar San Blas, Costa Rica, Guanacaste, Nicoya, elderly care, support for older adults",
+    "url": "https://hogarsanblas.com"
+  },
 
   "servicios": [
     {
@@ -60,15 +60,17 @@
   "hero": {
     "titulo": "Hogar San Blas",
     "descripcion": "We are dedicated to the wellbeing of our seniors with love and compromise. We take pride in offering a safe, vibrant environment for our residents, fostering respect and quality of life within the community.",
-    "imagen": "https://i.ibb.co/Rp2n96fN/IMG-0395.jpg",
+    "imagen": "https://i.ibb.co/0RxcPLgv/IMG-0395.webp",
     "botones": [
       {
         "texto": "Read more",
-        "ruta": "/historia"
+        "ruta": "/historia",
+        "ariaLabel": "Read full history of Hogar San Blas"
       },
       {
         "texto": "Contact us",
-        "ruta": "#footer-contactos"
+        "ruta": "#footer-contactos",
+        "ariaLabel": "Go to Hogar San Blas contacts"
       }
     ]
   },
@@ -146,15 +148,18 @@
     "descripcion": "Your support makes a difference! Here's all the information and requirements to contribute with us",
     "botones": {
       "botonDonar": "Donate",
+      "botonDonarAriaLabel": "Go to donation form",
       "botonRequisitos": "View requirements",
-      "botonVerOtras": "More petitions"
+      "botonRequisitosAriaLabel": "View requirements for donations",
+      "botonVerOtras": "More petitions",
+      "botonVerOtrasAriaLabel": "View other donation requests"
     }
   },
 
   "historia": {
     "titulo": "Since 1983",
     "subtitulo": "Serving our senior community",
-    "imagen": "https://i.ibb.co/whhkfybL/IMG-0401.jpg",
+    "imagen": "https://i.ibb.co/gM6WMyRJ/IMG-0401.webp",
     "botonVerMas": "Read more"
   },
 
@@ -164,7 +169,8 @@
     "botones": [
       {
         "texto": "I want to volunteer",
-        "ruta": "formularios/voluntariado"
+        "ruta": "formularios/voluntariado",
+        "ariaLabel": "Go to volunteer form"
       }
     ]
   },
@@ -192,9 +198,7 @@
     "mensaje": "If you meet the requirements, contact us"
   },
 
-  "formulario": {
-    "botones": ["Submit", "Cancel"]
-  },
+  "formulario": ["Submit", "Cancel"],
 
   "contactos": {
     "Contactos": {
@@ -426,11 +430,16 @@
     },
     "botones": {
       "siguiente": "Next",
+      "siguienteAriaLabel": "Go to next step of form",
       "anterior": "Previous",
+      "anteriorAriaLabel": "Go to previous step of form",
       "enviar": "Submit",
+      "enviarAriaLabel": "Submit volunteer request",
       "cancelar": "Cancel",
       "enviando": "Submitting...",
-      "eliminar": "Delete"
+      "enviandoAriaLabel": "Submitting volunteer data",
+      "eliminar": "Delete",
+      "eliminarAriaLabel": "Delete time slot"
     }
   },
 
@@ -487,11 +496,16 @@
     },
     "botones": {
       "siguiente": "Next",
+      "siguienteAriaLabel": "Go to next step of form",
       "anterior": "Previous",
+      "anteriorAriaLabel": "Go to previous step of form",
       "enviar": "Submit",
+      "enviarAriaLabel": "Submit donation request",
       "cancelar": "Cancel",
       "enviando": "Submitting...",
-      "eliminar": "Delete"
+      "enviandoAriaLabel": "Submitting donation data",
+      "eliminar": "Delete",
+      "eliminarAriaLabel": "Delete item"
     }
   },
 

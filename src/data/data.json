@@ -60,15 +60,17 @@
   "hero": {
     "titulo": "Hogar San Blas",
     "descripcion": "Bienvenidos al Hogar San Blas de Nicoya, donde dedicamos nuestra labor al cuidado y bienestar de adultos mayores con amor y compromiso. Nos enorgullece ofrecer un entorno seguro y lleno de vida para nuestros residentes, promoviendo el respeto y la calidad de vida en la comunidad. ",
-    "imagen": "https://i.ibb.co/Rp2n96fN/IMG-0395.jpg",
+    "imagen": "https://i.ibb.co/0RxcPLgv/IMG-0395.webp",
     "botones": [
       {
         "texto": "Ver más",
-        "ruta": "/historia"
+        "ruta": "/historia",
+        "ariaLabel": "Ver historia completa del Hogar San Blas"
       },
       {
         "texto": "Contáctanos",
-        "ruta": "#footer-contactos"
+        "ruta": "#footer-contactos",
+        "ariaLabel": "Ir a contactos del Hogar San Blas"
       }
     ]
   },
@@ -143,15 +145,18 @@
     "descripcion": "¡Tu ayuda marca la diferencia! Aquí te ofrecemos la información y requisitos necesarios para contribuir con nuestro hogar.",
     "botones": {
       "botonDonar": "QUIERO DONAR",
+      "botonDonarAriaLabel": "Ir a formulario de donaciones",
       "botonRequisitos": "Ver requisitos",
-      "botonVerOtras": "Ver otras peticiones"
+      "botonRequisitosAriaLabel": "Ver requisitos para hacer donaciones",
+      "botonVerOtras": "Ver otras peticiones",
+      "botonVerOtrasAriaLabel": "Ver otras peticiones de donación"
     }
   },
 
   "historia": {
     "titulo": "Desde 1983",
     "subtitulo": "Al servicio de nuestros adultos mayores",
-    "imagen": "https://i.ibb.co/whhkfybL/IMG-0401.jpg",
+    "imagen": "https://i.ibb.co/gM6WMyRJ/IMG-0401.webp",
     "botonVerMas": "Ver más"
   },
 
@@ -161,7 +166,8 @@
     "botones": [
       {
         "texto": "Quiero ser voluntario",
-        "ruta": "formularios/voluntariado"
+        "ruta": "formularios/voluntariado",
+        "ariaLabel": "Ir a formulario de voluntariado"
       }
     ]
   },
@@ -189,9 +195,7 @@
     "mensaje": "Si cumples con los requisitos, contáctanos"
   },
 
-  "formulario": {
-    "botones": ["Enviar", "Cancelar"]
-  },
+  "formulario": ["Enviar", "Cancelar"],
 
   "contactos": {
     "Contactos": {
@@ -426,10 +430,15 @@
     },
     "botones": {
       "siguiente": "Siguiente",
+      "siguienteAriaLabel": "Ir al siguiente paso del formulario",
       "anterior": "Anterior",
+      "anteriorAriaLabel": "Volver al paso anterior del formulario",
       "enviando": "Enviando...",
+      "enviandoAriaLabel": "Enviando datos de voluntariado",
       "enviar": "Enviar",
-      "eliminar": "Eliminar"
+      "enviarAriaLabel": "Enviar solicitud de voluntariado",
+      "eliminar": "Eliminar",
+      "eliminarAriaLabel": "Eliminar horario"
     }
   },
 
@@ -482,10 +491,15 @@
     },
     "botones": {
       "siguiente": "Siguiente",
+      "siguienteAriaLabel": "Ir al siguiente paso del formulario",
       "anterior": "Anterior",
+      "anteriorAriaLabel": "Volver al paso anterior del formulario",
       "enviando": "Enviando...",
+      "enviandoAriaLabel": "Enviando datos de donación",
       "enviar": "Enviar",
-      "eliminar": "Eliminar"
+      "enviarAriaLabel": "Enviar solicitud de donación",
+      "eliminar": "Eliminar",
+      "eliminarAriaLabel": "Eliminar artículo"
     }
   },
 

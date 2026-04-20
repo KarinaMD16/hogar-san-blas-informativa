@@ -15,6 +15,7 @@ import ModalImagenGaleria from "../../components/ModalGaleria";
 import type { Galeria } from "../../models/galeria/galeria";
 import { useFadeIn } from "../../components/useFadeIn";
 import Seo from "../../components/Seo";
+import { LoadingSpinner } from "../../components/LoadingSpinner";
 
 export const Route = createFileRoute("/galeria/")({
   component: RouteComponent,
@@ -108,7 +109,9 @@ function RouteComponent() {
     return (
       <div className="w-screen h-screen">
         <Navbar />
-        <span className="mt-40 loading loading-spinner"></span>
+        <main className="flex items-center justify-center w-full h-[calc(100vh-5rem)]">
+          <LoadingSpinner />
+        </main>
       </div>
     );
 
@@ -120,79 +123,83 @@ function RouteComponent() {
         path="/galeria"
       />
       <Navbar />
-      <div className="mt-30 flex flex-col lg:w-5xl md:w-4xl sm:w-3xl gap-3 justify-center items-center fade-in-on-scroll">
-        <h1 className="text-4xl font-poppins font-bold text-amaranthPink ">
-          {contentJson.titulosSecciones.Galeria.tituloExtend}
-        </h1>
-        <Divider />
-        <div className="flex flex-wrap justify-center gap-2">
-          <BotonGaleria
-            children={contentJson.titulosSecciones.Galeria.filtroTodas}
-            isActive={selectedBtn === null}
-            toggleCategoria={() => setCategoria(null)}
-          />
-
-          {Categorias?.map((categoria) => (
+      <main>
+        <div className="mt-30 flex flex-col lg:w-5xl md:w-4xl sm:w-3xl gap-3 justify-center items-center fade-in-on-scroll">
+          <h1 className="text-4xl font-poppins font-bold text-amaranthPink ">
+            {contentJson.titulosSecciones.Galeria.tituloExtend}
+          </h1>
+          <Divider />
+          <div className="flex flex-wrap justify-center gap-2">
             <BotonGaleria
-              key={categoria.id}
-              children={categoria.nombre}
-              isActive={selectedBtn === categoria.id}
-              toggleCategoria={() => setCategoria(categoria.id)}
+              children={contentJson.titulosSecciones.Galeria.filtroTodas}
+              isActive={selectedBtn === null}
+              toggleCategoria={() => setCategoria(null)}
+              ariaLabel="Ver todas las imágenes de la galería"
             />
-          ))}
-        </div>
 
-        <p className=" text-night max-w-2xl">
-          {selectedBtn === null
-            ? "Aquí puedes explorar todas las imágenes de nuestra galería."
-            : Categorias?.find((c) => c.id === selectedBtn)?.descripcion}
-        </p>
+            {Categorias?.map((categoria) => (
+              <BotonGaleria
+                key={categoria.id}
+                children={categoria.nombre}
+                isActive={selectedBtn === categoria.id}
+                toggleCategoria={() => setCategoria(categoria.id)}
+                ariaLabel={`Filtrar galería por categoría: ${categoria.nombre}`}
+              />
+            ))}
+          </div>
 
-        {noHayContenido ? (
-          <p className="max-w-xl text-center text-base italic text-night/60 sm:text-lg">
-            {mensajeSinContenido}
+          <p className=" text-night max-w-2xl">
+            {selectedBtn === null
+              ? "Aquí puedes explorar todas las imágenes de nuestra galería."
+              : Categorias?.find((c) => c.id === selectedBtn)?.descripcion}
           </p>
-        ) : (
-          <div
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 
+
+          {noHayContenido ? (
+            <p className="max-w-xl text-center text-base italic text-night/60 sm:text-lg">
+              {mensajeSinContenido}
+            </p>
+          ) : (
+            <div
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 
         lg:gap-6 md:gap-4 sm:gap-4 gap-4
         justify-items-center-safe"
-          >
-            {Imagenes &&
-              Imagenes.map((imagenes) => (
-                <CardImagenGaleria
-                  key={imagenes.id}
-                  imagenes={imagenes}
-                  toggleModal={handleImagenClick}
-                />
-              ))}
-          </div>
-        )}
+            >
+              {Imagenes &&
+                Imagenes.map((imagenes) => (
+                  <CardImagenGaleria
+                    key={imagenes.id}
+                    imagenes={imagenes}
+                    toggleModal={handleImagenClick}
+                  />
+                ))}
+            </div>
+          )}
 
-        {Imagenes && Imagenes.length > 0 && (
-          <div className="mt-2 inline-flex items-center justify-center gap-3 rounded-full border border-ecruYellow300 bg-basicWhite px-3 py-2 shadow-md">
-            <button
-              onClick={lastPage}
-              disabled={page === 1}
-              aria-label={idioma === "es" ? "Pagina anterior" : "Previous page"}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-amaranthPink text-white transition hover:cursor-pointer hover:bg-amaranthPinkDark disabled:cursor-not-allowed disabled:bg-ecruYellow300 disabled:text-night/55"
-            >
-              <MdOutlineFirstPage size={20} />
-            </button>
-            <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-night shadow-inner">
-              {paginaTexto}
-            </span>
-            <button
-              onClick={nextPage}
-              disabled={noHayMasPaginas || isPlaceholderData}
-              aria-label={idioma === "es" ? "Pagina siguiente" : "Next page"}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-amaranthPink text-white transition hover:cursor-pointer hover:bg-amaranthPinkDark disabled:cursor-not-allowed disabled:bg-ecruYellow300 disabled:text-night/55"
-            >
-              <MdOutlineLastPage size={20} />
-            </button>
-          </div>
-        )}
-      </div>
+          {Imagenes && Imagenes.length > 0 && (
+            <div className="mt-2 inline-flex items-center justify-center gap-3 rounded-full border border-ecruYellow300 bg-basicWhite px-3 py-2 shadow-md">
+              <button
+                onClick={lastPage}
+                disabled={page === 1}
+                aria-label={idioma === "es" ? "Pagina anterior" : "Previous page"}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-amaranthPink text-white transition hover:cursor-pointer hover:bg-amaranthPinkDark disabled:cursor-not-allowed disabled:bg-ecruYellow300 disabled:text-night/55"
+              >
+                <MdOutlineFirstPage size={20} />
+              </button>
+              <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-night shadow-inner">
+                {paginaTexto}
+              </span>
+              <button
+                onClick={nextPage}
+                disabled={noHayMasPaginas || isPlaceholderData}
+                aria-label={idioma === "es" ? "Pagina siguiente" : "Next page"}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-amaranthPink text-white transition hover:cursor-pointer hover:bg-amaranthPinkDark disabled:cursor-not-allowed disabled:bg-ecruYellow300 disabled:text-night/55"
+              >
+                <MdOutlineLastPage size={20} />
+              </button>
+            </div>
+          )}
+        </div>
+      </main>
 
       <ModalImagenGaleria
         open={modalOpen}

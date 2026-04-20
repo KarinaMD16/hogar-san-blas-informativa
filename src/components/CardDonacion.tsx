@@ -30,6 +30,8 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
           width={320}
           height={160}
           alt={publicacion.Titulo}
+          width={320}
+          height={160}
         />
         <div className="flex items-start w-50 sm:w-40 md:w-50 lg:w-3xs">
           <p className="text-sm">{publicacion.fecha}</p>
@@ -37,7 +39,7 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
       </div>
 
       <div>
-        <h3 className="mb-2 w-full text-left font-poppins font-bold text-lg">{publicacion.Titulo}</h3>
+        <h2 className="mb-2 w-full text-left font-poppins font-bold text-lg">{publicacion.Titulo}</h2>
         <p className="w-full text-left">{publicacion.Descripcion}</p>
       </div>
 

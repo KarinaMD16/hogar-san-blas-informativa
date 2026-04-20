@@ -18,12 +18,30 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const scrollStateRef = useRef({ left: false, right: false });
 
   const checkScroll = () => {
     const item = scrollRef.current;
     if (item) {
-      setCanScrollLeft(item.scrollLeft > 0);
-      setCanScrollRight(item.scrollLeft + item.clientWidth < item.scrollWidth);
+      const scrollLeft = item.scrollLeft;
+      const clientWidth = item.clientWidth;
+      const scrollWidth = item.scrollWidth;
+
+      const newCanScrollLeft = scrollLeft > 0;
+      const newCanScrollRight = scrollLeft + clientWidth < scrollWidth;
+
+      // Only update state if values changed
+      if (
+        scrollStateRef.current.left !== newCanScrollLeft ||
+        scrollStateRef.current.right !== newCanScrollRight
+      ) {
+        scrollStateRef.current = {
+          left: newCanScrollLeft,
+          right: newCanScrollRight,
+        };
+        setCanScrollLeft(newCanScrollLeft);
+        setCanScrollRight(newCanScrollRight);
+      }
     }
   };
 
@@ -32,11 +50,24 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
     const el = scrollRef.current;
     if (!el) return;
 
-    el.addEventListener("scroll", checkScroll);
-    window.addEventListener("resize", checkScroll);
+    let frameId = 0;
+    let ticking = false;
+
+    const scheduleUpdate = () => {
+      if (!ticking) {
+        ticking = true;
+        frameId = window.requestAnimationFrame(() => {
+          checkScroll();
+          ticking = false;
+        });
+      }
+    };
+
+    el.addEventListener("scroll", scheduleUpdate, { passive: true });
+
     return () => {
-      el.removeEventListener("scroll", checkScroll);
-      window.removeEventListener("resize", checkScroll);
+      window.cancelAnimationFrame(frameId);
+      el.removeEventListener("scroll", scheduleUpdate);
     };
   }, [donaciones]);
 
@@ -57,7 +88,7 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
         ${className ?? ""}
       `}
     >
-      <div className="w-md flex flex-col gap-3">
+      <div className="w-md flex flex-col gap-3 text-center">
         <h1 className="font-poppins font-bold text-amaranthPink text-2xl sm:text-3xl md:text-4xl text-shadow-md mb-2">
           {contentJson.donaciones.titulo}
         </h1>
@@ -66,10 +97,10 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
           {contentJson.donaciones.descripcion}
         </p>
         <div className="flex gap-4 flex-wrap justify-center">
-          <Boton where={"/formularios/donacion"}>
+          <Boton where={"/formularios/donacion"} ariaLabel={contentJson.donaciones.botones.botonRequisitosAriaLabel}>
             {contentJson.donaciones.botones.botonRequisitos}
           </Boton>
-          <Boton where={"/publicaciones/solicitudes-donaciones"}>
+          <Boton where={"/publicaciones/solicitudes-donaciones"} ariaLabel={contentJson.donaciones.botones.botonVerOtrasAriaLabel}>
             {contentJson.donaciones.botones.botonVerOtras}
           </Boton>
         </div>
@@ -78,10 +109,14 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
       <div className="relative lg:w-2xl w-65">
         {canScrollLeft && (
           <button
+            type="button"
             onClick={() => scroll("left")}
+            aria-label="Desplazarse a la izquierda en la galería de donaciones"
+            title="Desplazarse a la izquierda en la galería de donaciones"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
           >
-            <FaChevronLeft />
+            <FaChevronLeft aria-hidden="true" />
+            <span className="sr-only">Desplazarse a la izquierda en la galería de donaciones</span>
           </button>
         )}
 
@@ -96,10 +131,14 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
 
         {canScrollRight && (
           <button
+            type="button"
             onClick={() => scroll("right")}
+            aria-label="Desplazarse a la derecha en la galería de donaciones"
+            title="Desplazarse a la derecha en la galería de donaciones"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
           >
-            <FaChevronRight />
+            <FaChevronRight aria-hidden="true" />
+            <span className="sr-only">Desplazarse a la derecha en la galería de donaciones</span>
           </button>
         )}
       </div>

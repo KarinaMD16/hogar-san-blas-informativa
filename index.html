@@ -1,48 +1,73 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
 
-    <link rel="icon" type="image/png" href="/logo_hogar_san_blas.png" />
+<head>
+  <meta charset="UTF-8" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/logo_hogar_san_blas.webp" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Hogar de Ancianos San Blas | Cuidado y apoyo para adultos mayores</title>
+  <!-- Google Fonts with preload for custom typography -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap">
 
-    <meta name="description" content="Hogar San Blas es un hogar de ancianos dedicado al cuidado y bienestar de adultos mayores. Conoce cómo ayudar mediante voluntariado o donaciones.">
+  <title>Hogar de Ancianos San Blas | Cuidado y apoyo para adultos mayores</title>
 
-    <meta name="keywords" content="hogar de ancianos, adultos mayores, voluntariado, donaciones, Hogar San Blas, Costa Rica, Guanacaste, Nicoya, tercera edad, cuidado de ancianos, apoyo a adultos mayores">
+  <meta name="description"
+    content="Hogar San Blas es un hogar de ancianos dedicado al cuidado y bienestar de adultos mayores. Conoce cómo ayudar mediante voluntariado o donaciones.">
 
-    <meta name="author" content="Hogar San Blas">
+  <meta name="keywords"
+    content="hogar de ancianos, adultos mayores, voluntariado, donaciones, Hogar San Blas, Costa Rica, Guanacaste, Nicoya, tercera edad, cuidado de ancianos, apoyo a adultos mayores">
 
-    <!-- open graph -->
-    <meta property="og:title" content="Hogar de Ancianos San Blas de Nicoya">
-    <meta property="og:description" content="Conoce sobre el Hogar San Blas y apoya a nuestros adultos mayores mediante voluntariado o donaciones.">
-    <meta property="og:image" content="https://hogarsanblas.com/logo_hogar_san_blas.png">
-    <meta property="og:url" content="https://hogarsanblas.com">
-    <meta property="og:type" content="website">
+  <meta name="author" content="Hogar San Blas">
 
-    <link rel="canonical" href="https://hogarsanblas.com">
+  <link rel="preconnect" href="https://i.ibb.co" crossorigin>
+  <link rel="preconnect" href="https://api.sidnam.org" crossorigin>
+  <!-- Preload LCP image with high priority -->
+  <link rel="preload" as="image" href="https://i.ibb.co/0RxcPLgv/IMG-0395.webp" fetchpriority="high">
 
-    <!-- leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
+  <!-- open graph -->
+  <meta property="og:title" content="Hogar de Ancianos San Blas de Nicoya">
+  <meta property="og:description"
+    content="Conoce sobre el Hogar San Blas y apoya a nuestros adultos mayores mediante voluntariado o donaciones.">
+  <meta property="og:image" content="https://hogarsanblas.com/logo_hogar_san_blas.webp">
+  <meta property="og:url" content="https://hogarsanblas.com">
+  <meta property="og:type" content="website">
 
-  </head>
+  <link rel="canonical" href="https://hogarsanblas.com">
 
-  <body>
-    <div id="root"></div>
+  <!-- Minimal inline critical CSS for above-the-fold -->
+  <style>
+    /* Prevent layout shift and flash of unstyled content */
+    :root {
+      color-scheme: light dark;
+    }
 
-    <script type="module" src="/src/main.tsx"></script>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin="">
-    </script>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
 
-  </body>
+    #root {
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="module" src="/src/main.tsx"></script>
+
+</body>
+
 </html>

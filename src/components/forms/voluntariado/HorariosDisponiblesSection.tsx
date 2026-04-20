@@ -23,7 +23,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
   const { contentJson } = useContext(IdiomaContext);
   const placeholders = contentJson.formularioVoluntariado;
 
-  
+
   return (
     <>
       <form.Field
@@ -55,9 +55,9 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
 
           return (
             <div className="mb-4">
-            <Label htmlFor="observaciones" className="block text-left text-sm font-medium mb-1">
-              {placeholders.horario.label} <span className="text-red-600">*</span>
-            </Label>
+              <Label htmlFor="observaciones" className="block text-left text-sm font-medium mb-1">
+                {placeholders.horario.label} <span className="text-red-600">*</span>
+              </Label>
 
               {horarios.length === 0 && (
                 <p className="text-gray-500 text-sm mb-2">No hay horarios agregados</p>
@@ -76,7 +76,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                     className="mb-3 p-3 border border-gray-200 rounded-md bg-gray-200/10"
                   >
                     <div className="flex justify-between mb-2">
-                      <h4 className="text-sm font-medium">{placeholders.horario.horario} {index + 1}</h4>
+                      <h3 className="text-sm font-medium">{placeholders.horario.horario} {index + 1}</h3>
                       <button
                         type="button"
                         onClick={() => removeHorario(index)}
@@ -116,90 +116,90 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                         </DropdownMenu>
                       </div>
 
-                        <div className="w-full">
-                          <Label
-                            htmlFor={`horario-inicio-${index}`}
-                            className="text-sm block mb-1"
-                          >
-                            {placeholders.horario.inicio}
-                          </Label>
-                          <Popover>
-                            <PopoverTrigger asChild>
-                              <button
-                                type="button"
-                                className="w-full flex items-center justify-between px-3 py-2 text-black border border-gray-200 rounded-md hover:bg-gray-50"
-                              >
-                                <span>{horario.horaInicio || "--:--"}</span>
-                                <Clock size={18} className="text-gray-500" />
-                              </button>
-                            </PopoverTrigger>
-                            <PopoverContent
-                              className="p-0 w-40 scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent"
-                              style={{ maxHeight: 200, overflowY: "auto" }}
+                      <div className="w-full">
+                        <Label
+                          htmlFor={`horario-inicio-${index}`}
+                          className="text-sm block mb-1"
+                        >
+                          {placeholders.horario.inicio}
+                        </Label>
+                        <Popover>
+                          <PopoverTrigger asChild>
+                            <button
+                              type="button"
+                              className="w-full flex items-center justify-between px-3 py-2 text-black border border-gray-200 rounded-md hover:bg-gray-50"
                             >
-                              <Command>
-                                <CommandGroup>
-                                  {horas.map((time) => (
-                                    <CommandItem 
-                                      key={time}
-                                      value={time}
-                                      onSelect={(value) =>
-                                          updateHorario(index, "horaInicio", value)
-                                        }
-                                        className="cursor-pointer text-black hover:bg-gray-100"
-                                      >
-                                        {time}
-                                      </CommandItem>
-                                    ))}
-                                </CommandGroup>
-                              </Command>
-                            </PopoverContent>
-                          </Popover>
-                        </div>
+                              <span>{horario.horaInicio || "--:--"}</span>
+                              <Clock size={18} className="text-gray-500" />
+                            </button>
+                          </PopoverTrigger>
+                          <PopoverContent
+                            className="p-0 w-40 scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent"
+                            style={{ maxHeight: 200, overflowY: "auto" }}
+                          >
+                            <Command>
+                              <CommandGroup>
+                                {horas.map((time) => (
+                                  <CommandItem
+                                    key={time}
+                                    value={time}
+                                    onSelect={(value) =>
+                                      updateHorario(index, "horaInicio", value)
+                                    }
+                                    className="cursor-pointer text-black hover:bg-gray-100"
+                                  >
+                                    {time}
+                                  </CommandItem>
+                                ))}
+                              </CommandGroup>
+                            </Command>
+                          </PopoverContent>
+                        </Popover>
+                      </div>
 
-                        <div className="w-full">
-                          <Label
-                            htmlFor={`horario-fin-${index}`}
-                            className="text-sm block mb-1"
-                          >
-                            {placeholders.horario.fin}
-                          </Label>
-                          <Popover>
-                            <PopoverTrigger asChild>
-                              <button
-                                type="button"
-                                className="w-full flex items-center justify-between px-3 py-2 text-black border border-gray-200 rounded-md hover:bg-gray-50"
-                                disabled={!horario.horaInicio}
-                              >
-                                <span>{horario.horaFin || "--:--"}</span>
-                                <Clock size={18} className="text-gray-500" />
-                              </button>
-                            </PopoverTrigger>
-                            <PopoverContent
-                              className="p-0 w-40 scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent"
-                              style={{ maxHeight: 200, overflowY: "auto" }}
+                      <div className="w-full">
+                        <Label
+                          htmlFor={`horario-fin-${index}`}
+                          className="text-sm block mb-1"
+                        >
+                          {placeholders.horario.fin}
+                        </Label>
+                        <Popover>
+                          <PopoverTrigger asChild>
+                            <button
+                              type="button"
+                              className="w-full flex items-center justify-between px-3 py-2 text-black border border-gray-200 rounded-md hover:bg-gray-50"
+                              disabled={!horario.horaInicio}
                             >
-                              <Command>
-                                <CommandGroup>
-                                  {horasFinFiltradas.map((time) => (
-                                    <CommandItem
-                                        key={time}
-                                        value={time}
-                                        onSelect={(value) =>
-                                          updateHorario(index, "horaFin", value)
-                                        }
-                                        className="cursor-pointer text-black hover:bg-gray-100"
-                                      >
-                                        {time}
-                                      </CommandItem>
-                                    ))}
-                                </CommandGroup>
-                              </Command>
-                            </PopoverContent>
-                          </Popover>
-                        </div>
+                              <span>{horario.horaFin || "--:--"}</span>
+                              <Clock size={18} className="text-gray-500" />
+                            </button>
+                          </PopoverTrigger>
+                          <PopoverContent
+                            className="p-0 w-40 scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent"
+                            style={{ maxHeight: 200, overflowY: "auto" }}
+                          >
+                            <Command>
+                              <CommandGroup>
+                                {horasFinFiltradas.map((time) => (
+                                  <CommandItem
+                                    key={time}
+                                    value={time}
+                                    onSelect={(value) =>
+                                      updateHorario(index, "horaFin", value)
+                                    }
+                                    className="cursor-pointer text-black hover:bg-gray-100"
+                                  >
+                                    {time}
+                                  </CommandItem>
+                                ))}
+                              </CommandGroup>
+                            </Command>
+                          </PopoverContent>
+                        </Popover>
                       </div>
                     </div>
+                  </div>
                 );
               })}
 
@@ -229,11 +229,11 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                 </p>
               )}
             </div>
-              );
+          );
         }}
       />
 
-      <form.Field 
+      <form.Field
         name="observaciones"
         validators={{ onChangeAsyncDebounceMs: 500 }}
         children={(field: {
@@ -254,9 +254,9 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
             {formErrors.observaciones && (
               <p className="text-red-700 text-sm">{formErrors.observaciones}</p>
             )}
-            </div>
-          )}
+          </div>
+        )}
       />
-  </>
-);
+    </>
+  );
 };

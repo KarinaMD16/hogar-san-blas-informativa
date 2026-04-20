@@ -26,12 +26,30 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const scrollStateRef = useRef({ left: false, right: false });
 
   const checkScroll = () => {
     const item = scrollRef.current;
     if (item) {
-      setCanScrollLeft(item.scrollLeft > 0);
-      setCanScrollRight(item.scrollLeft + item.clientWidth < item.scrollWidth);
+      const scrollLeft = item.scrollLeft;
+      const clientWidth = item.clientWidth;
+      const scrollWidth = item.scrollWidth;
+
+      const newCanScrollLeft = scrollLeft > 0;
+      const newCanScrollRight = scrollLeft + clientWidth < scrollWidth;
+
+      // Only update state if values changed
+      if (
+        scrollStateRef.current.left !== newCanScrollLeft ||
+        scrollStateRef.current.right !== newCanScrollRight
+      ) {
+        scrollStateRef.current = {
+          left: newCanScrollLeft,
+          right: newCanScrollRight,
+        };
+        setCanScrollLeft(newCanScrollLeft);
+        setCanScrollRight(newCanScrollRight);
+      }
     }
   };
 
@@ -40,11 +58,24 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
     const el = scrollRef.current;
     if (!el) return;
 
-    el.addEventListener("scroll", checkScroll);
-    window.addEventListener("resize", checkScroll);
+    let frameId = 0;
+    let ticking = false;
+
+    const scheduleUpdate = () => {
+      if (!ticking) {
+        ticking = true;
+        frameId = window.requestAnimationFrame(() => {
+          checkScroll();
+          ticking = false;
+        });
+      }
+    };
+
+    el.addEventListener("scroll", scheduleUpdate, { passive: true });
+
     return () => {
-      el.removeEventListener("scroll", checkScroll);
-      window.removeEventListener("resize", checkScroll);
+      window.cancelAnimationFrame(frameId);
+      el.removeEventListener("scroll", scheduleUpdate);
     };
   }, [imagenes]);
 
@@ -72,10 +103,14 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
       <div className="w-65 sm:w-full lg:w-full relative px-10">
         {canScrollLeft && (
           <button
+            type="button"
             onClick={() => scroll("left")}
+            aria-label="Desplazarse a la izquierda en la galería"
+            title="Desplazarse a la izquierda en la galería"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
           >
-            <FaChevronLeft />
+            <FaChevronLeft aria-hidden="true" />
+            <span className="sr-only">Desplazarse a la izquierda en la galería</span>
           </button>
         )}
 
@@ -90,6 +125,8 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
               loading="lazy"
               src={transformCloudinaryUrl(imagen.imagenUrl, 400)}
               alt=""
+              width={240}
+              height={160}
               className="hover:cursor-pointer object-cover mb-2 w-60 h-40 sm:w-70 sm:h-45 rounded-lg flex-shrink-0"
             />
           ))}
@@ -97,10 +134,14 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
 
         {canScrollRight && (
           <button
+            type="button"
             onClick={() => scroll("right")}
+            aria-label="Desplazarse a la derecha en la galería"
+            title="Desplazarse a la derecha en la galería"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-ecruYellow rounded-full p-2 shadow"
           >
-            <FaChevronRight />
+            <FaChevronRight aria-hidden="true" />
+            <span className="sr-only">Desplazarse a la derecha en la galería</span>
           </button>
         )}
       </div>

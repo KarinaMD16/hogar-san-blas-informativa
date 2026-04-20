@@ -4,6 +4,7 @@ import { useGetDonaciones } from "../../hooks/publicaciones/publicaciones";
 import type { Publicacion } from "../../models/publicaciones/publicaciones";
 import { useContext, useState } from "react";
 import IdiomaContext from "../../context/language/idiomaContext";
+import { LoadingSpinner } from "../../components/LoadingSpinner";
 
 const Donaciones = () => {
   const { contentJson, idioma } = useContext(IdiomaContext);
@@ -39,7 +40,7 @@ const Donaciones = () => {
   if (loadingDonaciones || fetchingDonaciones)
     return (
       <div className="w-screen h-screen">
-        <span className="mt-40 loading loading-spinner"></span>
+        <span className="mt-40"><LoadingSpinner /></span>
       </div>
     );
 

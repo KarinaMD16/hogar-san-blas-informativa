@@ -5,6 +5,7 @@ export interface BotonGaleriaProps {
   children: ReactNode;
   isActive: boolean
   toggleCategoria: () => void;
+  ariaLabel?: string;
 }
 export interface CardGaleriaProps {
   imagenes: Galeria,

@@ -4,10 +4,12 @@ const BotonGaleria = ({
   children,
   isActive,
   toggleCategoria,
+  ariaLabel,
 }: BotonGaleriaProps) => {
   return (
     <button
       onClick={toggleCategoria}
+      aria-label={ariaLabel}
       className={`font-poppins font-medium
         ${
           isActive
