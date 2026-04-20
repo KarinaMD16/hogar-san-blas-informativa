@@ -53,8 +53,16 @@ export default defineConfig({
         entryFileNames: 'assets/[name]-[hash].js',
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash][extname]',
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom'],
+          'vendor-router': ['@tanstack/react-router'],
+          'vendor-query': ['@tanstack/react-query'],
+          'vendor-leaflet': ['leaflet'],
+          'vendor-ui': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-popover', '@radix-ui/react-progress'],
+        },
       },
     },
     cssCodeSplit: true,
+    chunkSizeWarningLimit: 1000,
   },
 })

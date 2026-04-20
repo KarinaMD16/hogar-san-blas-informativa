@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        opensans: ['Open Sans', 'sans-serif'],
+      },
       colors: {
         ecruYellow: '#DBBA6B',
         ecruYellow300: '#E1CC9A',

@@ -8,7 +8,14 @@ import { IdiomaProvider } from './context/language/idiomaContextProvider';
 import App from './App';
 import { HelmetProvider } from 'react-helmet-async'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5, // 5 minutos
+      gcTime: 1000 * 60 * 10,   // 10 minutos (garbage collection time)
+    },
+  },
+})
 const router = createRouter({ routeTree })
 
 declare module '@tanstack/react-router' {

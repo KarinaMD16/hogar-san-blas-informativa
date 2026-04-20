@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
+import { useQueryClient } from '@tanstack/react-query'
 import Servicios from '../sections/servicios/Servicios'
 import Unete from '../sections/unirse/Unete'
 import MisionVision from '../sections/misionVision/MisionVision'
@@ -11,6 +12,8 @@ import HeroSection from '../sections/hero/HeroSection'
 import Navbar from '../components/header/Navbar'
 import { useFadeIn } from '../components/useFadeIn'
 import Seo from '../components/Seo'
+import { getDonaciones } from '../services/publicaciones/donacionesServices'
+import { getTodasGaleria } from '../services/galeria/galeria'
 
 // Lazy load below-the-fold sections to avoid render-blocking API calls
 const Donar = lazy(() => import('../sections/prevDonaciones/Donar'))
@@ -25,6 +28,26 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   useFadeIn();
+  const queryClient = useQueryClient();
+
+  // Prefetch API data while JS bundles are loading to reduce critical chain
+  useEffect(() => {
+    const prefetchData = async () => {
+      try {
+        await queryClient.prefetchQuery({
+          queryKey: ['donaciones', 1],
+          queryFn: () => getDonaciones(1, 5),
+        });
+        await queryClient.prefetchQuery({
+          queryKey: ['imagenes', 1, 8],
+          queryFn: () => getTodasGaleria(1, 8),
+        });
+      } catch {
+        // Silently fail - data will still load when components mount
+      }
+    };
+    prefetchData();
+  }, [queryClient]);
 
   return (
     <>
