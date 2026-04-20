@@ -14,10 +14,10 @@ const Unete: React.FC<UneteProps> = ({ className }) => {
   return (
     <section className="flex justify-center">
       <section className={cn("border-4 border-ecruYellow rounded-3xl p-4 m-4 w-screen h-full", className)}>
-        <h1 className="text-3xl font-bold text-amaranthPink py-1">
+        <h1 className="text-3xl font-bold text-amaranthPink py-1 text-center">
           {contentJson.uneteNosotros.titulo}
         </h1>
-        <p className="text-lg text-night py-5">
+        <p className="text-lg text-night py-5 text-center">
           {contentJson.uneteNosotros.descripcion}
         </p>
         <div className="flex flex-row gap-4 mt-4 justify-center flex-wrap">
