@@ -10,12 +10,13 @@ import ContactosSection from "./ContactosSectionProps";
 import { useContext } from "react";
 import IdiomaContext from "../../context/language/idiomaContext";
 import type { ContactosProps } from "../../models/contactos/contactos";
+import { cn } from "../../lib/utils";
 
 const Contactos = ({ className }: ContactosProps) => {
   const { contentJson } = useContext(IdiomaContext);
 
   return (
-    <div className={className}>
+    <div className={cn("text-center", className)}>
       <h2 className="sr-only">{contentJson.contactos.Contactos.titulo}</h2>
       <ContactosSection
         title={contentJson.contactos.Contactos.titulo}

@@ -88,7 +88,7 @@ const Donar: React.FC<DonarProps> = ({ className }) => {
         ${className ?? ""}
       `}
     >
-      <div className="w-md flex flex-col gap-3">
+      <div className="w-md flex flex-col gap-3 text-center">
         <h1 className="font-poppins font-bold text-amaranthPink text-2xl sm:text-3xl md:text-4xl text-shadow-md mb-2">
           {contentJson.donaciones.titulo}
         </h1>

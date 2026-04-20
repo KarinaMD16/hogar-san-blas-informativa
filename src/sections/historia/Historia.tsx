@@ -21,11 +21,11 @@ const Historia: React.FC<HistoriaProps> = ({ className }) => {
         ${className ?? ""}
       `}
     >
-      <h1 className="uppercase text-white text-4xl font-bold text-shadow-md mb-0 leading-tight tracking-tight">
+      <h1 className="uppercase text-white text-4xl font-bold text-shadow-md mb-0 leading-tight tracking-tight text-center">
         {contentJson.historia.titulo}
       </h1>
       <Divider />
-      <h2 className="uppercase text-white text-4xl font-bold text-shadow-md mb-0 leading-tight tracking-tight">
+      <h2 className="uppercase text-white text-4xl font-bold text-shadow-md mb-0 leading-tight tracking-tight text-center">
         {contentJson.historia.subtitulo}
       </h2>
       <div>
