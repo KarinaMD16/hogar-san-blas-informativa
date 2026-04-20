@@ -24,8 +24,6 @@ const CardPublicacion = ({ publicacion }: PublicacionProps) => {
           width={320}
           height={160}
           alt={publicacion.Titulo}
-          width={320}
-          height={160}
         />
         <div className="flex items-start w-50 sm:w-40 md:w-50 lg:w-3xs">
           <p className="text-sm">{publicacion.fecha}</p>
