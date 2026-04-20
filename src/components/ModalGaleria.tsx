@@ -1,5 +1,6 @@
 import { IoMdClose } from "react-icons/io";
 import type { ModalImagenGaleriaProps } from "../types/galeria/galeria";
+import { transformCloudinaryUrl } from "../lib/cloudinary";
 
 const ModalImagenGaleria = ({
   imagen,
@@ -15,7 +16,13 @@ const ModalImagenGaleria = ({
     >
       <div className="relative" onClick={(e) => e.stopPropagation()}>
         <img
-          src={imagen.imagenUrl}
+          src={transformCloudinaryUrl(imagen.imagenUrl, 1200)}
+          srcSet={`
+            ${transformCloudinaryUrl(imagen.imagenUrl, 600)} 600w,
+            ${transformCloudinaryUrl(imagen.imagenUrl, 1200)} 1200w,
+            ${transformCloudinaryUrl(imagen.imagenUrl, 1600)} 1600w
+          `}
+          sizes="(max-width: 768px) 90vw, 1200px"
           alt={imagen.descripcion ?? "Imagen galería"}
           className="max-w-full max-h-[90vh] rounded-2xl shadow-lg"
         />

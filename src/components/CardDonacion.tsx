@@ -2,6 +2,7 @@ import { useContext } from "react";
 import IdiomaContext from "../context/language/idiomaContext";
 import type { PublicacionProps } from "../types/publicaciones/publicaciones";
 import { ArrowRight } from "lucide-react";
+import { transformCloudinaryUrl } from "../lib/cloudinary";
 
 const CardDonacion = ({ publicacion }: PublicacionProps) => {
   const { contentJson } = useContext(IdiomaContext);
@@ -17,10 +18,17 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
 
       <div className="flex flex-col gap-2">
         <img
-          className="
-        rounded-md h-40 object-cover
-        "
-          src={publicacion.imagenUrl}
+          className="rounded-md h-40 object-cover"
+          src={transformCloudinaryUrl(publicacion.imagenUrl, 400, 160)}
+          srcSet={`
+            ${transformCloudinaryUrl(publicacion.imagenUrl, 200, 160)} 200w,
+            ${transformCloudinaryUrl(publicacion.imagenUrl, 400, 160)} 400w,
+            ${transformCloudinaryUrl(publicacion.imagenUrl, 800, 320)} 800w
+          `}
+          sizes="(max-width: 640px) 200px, 320px"
+          loading="lazy"
+          width={320}
+          height={160}
           alt={publicacion.Titulo}
         />
         <div className="flex items-start w-50 sm:w-40 md:w-50 lg:w-3xs">
