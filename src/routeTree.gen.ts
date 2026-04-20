@@ -80,9 +80,9 @@ export interface FileRoutesByFullPath {
   '/publicaciones/proyectos': typeof PublicacionesProyectosRoute
   '/publicaciones/solicitudes-donaciones': typeof PublicacionesSolicitudesDonacionesRoute
   '/requisitos/residencia': typeof RequisitosResidenciaRoute
-  '/casosdeexito/': typeof CasosdeexitoIndexRoute
-  '/galeria/': typeof GaleriaIndexRoute
-  '/historia/': typeof HistoriaIndexRoute
+  '/casosdeexito': typeof CasosdeexitoIndexRoute
+  '/galeria': typeof GaleriaIndexRoute
+  '/historia': typeof HistoriaIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -119,9 +119,9 @@ export interface FileRouteTypes {
     | '/publicaciones/proyectos'
     | '/publicaciones/solicitudes-donaciones'
     | '/requisitos/residencia'
-    | '/casosdeexito/'
-    | '/galeria/'
-    | '/historia/'
+    | '/casosdeexito'
+    | '/galeria'
+    | '/historia'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -173,21 +173,21 @@ declare module '@tanstack/react-router' {
     '/historia/': {
       id: '/historia/'
       path: '/historia'
-      fullPath: '/historia/'
+      fullPath: '/historia'
       preLoaderRoute: typeof HistoriaIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/galeria/': {
       id: '/galeria/'
       path: '/galeria'
-      fullPath: '/galeria/'
+      fullPath: '/galeria'
       preLoaderRoute: typeof GaleriaIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casosdeexito/': {
       id: '/casosdeexito/'
       path: '/casosdeexito'
-      fullPath: '/casosdeexito/'
+      fullPath: '/casosdeexito'
       preLoaderRoute: typeof CasosdeexitoIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
