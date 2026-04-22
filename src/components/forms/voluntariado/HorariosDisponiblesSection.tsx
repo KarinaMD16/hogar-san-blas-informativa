@@ -99,13 +99,13 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                             {horario.dia || "Seleccionar día"}
                           </DropdownMenuTrigger>
 
-                          <DropdownMenuContent>
+                          <DropdownMenuContent className="bg-white border-gray-200">
                             {dias.map((dia) => (
                               <DropdownMenuItem
                                 key={dia}
                                 className={`hover:cursor-pointer ${diasUsados.includes(dia)
-                                  ? "text-gray-400 pointer-events-none select-none"
-                                  : ""
+                                  ? "bg-white text-gray-400 pointer-events-none select-none"
+                                  : "bg-white hover:bg-gray-100 focus:bg-gray-100"
                                   }`}
                                 onSelect={() => updateHorario(index, "dia", dia)}
                               >
@@ -134,10 +134,10 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                             </button>
                           </PopoverTrigger>
                           <PopoverContent
-                            className="p-0 w-40 scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent"
+                            className="p-0 w-40 bg-white border-gray-200 scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent"
                             style={{ maxHeight: 200, overflowY: "auto" }}
                           >
-                            <Command>
+                            <Command className="bg-white">
                               <CommandGroup>
                                 {horas.map((time) => (
                                   <CommandItem
@@ -146,7 +146,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                                     onSelect={(value) =>
                                       updateHorario(index, "horaInicio", value)
                                     }
-                                    className="cursor-pointer text-black hover:bg-gray-100"
+                                    className="cursor-pointer bg-white text-black hover:bg-gray-100 data-[selected=true]:bg-gray-100"
                                   >
                                     {time}
                                   </CommandItem>
@@ -176,10 +176,10 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                             </button>
                           </PopoverTrigger>
                           <PopoverContent
-                            className="p-0 w-40 scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent"
+                            className="p-0 w-40 bg-white border-gray-200 scrollbar-thin scrollbar-thumb-ecruYellow scrollbar-track-transparent"
                             style={{ maxHeight: 200, overflowY: "auto" }}
                           >
-                            <Command>
+                            <Command className="bg-white">
                               <CommandGroup>
                                 {horasFinFiltradas.map((time) => (
                                   <CommandItem
@@ -188,7 +188,7 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
                                     onSelect={(value) =>
                                       updateHorario(index, "horaFin", value)
                                     }
-                                    className="cursor-pointer text-black hover:bg-gray-100"
+                                    className="cursor-pointer bg-white text-black hover:bg-gray-100 data-[selected=true]:bg-gray-100"
                                   >
                                     {time}
                                   </CommandItem>

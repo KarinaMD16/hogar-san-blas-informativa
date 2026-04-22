@@ -100,13 +100,19 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
   }, [imagenes]);
 
   const scroll = (dir: "left" | "right") => {
-    if (scrollRef.current) {
-      const amount = 300;
-      scrollRef.current.scrollBy({
-        left: dir === "left" ? -amount : amount,
-        behavior: "smooth",
-      });
-    }
+    const track = scrollRef.current;
+    if (!track) return;
+
+    const firstImage = track.firstElementChild as HTMLElement | null;
+    if (!firstImage) return;
+
+    const gap = parseFloat(window.getComputedStyle(track).columnGap || "0");
+    const amount = firstImage.getBoundingClientRect().width + gap;
+
+    track.scrollBy({
+      left: dir === "left" ? -amount : amount,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -136,7 +142,7 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
 
         <div
           ref={scrollRef}
-          className="flex flex-row gap-3 overflow-x-auto scroll-smooth scrollbar-none pb-2"
+          className="flex flex-row gap-3 overflow-x-auto scroll-smooth scrollbar-none pb-2 snap-x snap-mandatory"
         >
           {imagenes?.map((imagen, index) => (
             <img
@@ -147,7 +153,7 @@ const PreviewGaleria: React.FC<PreviewGaleriaProps> = ({ className }) => {
               alt=""
               width={240}
               height={160}
-              className="hover:cursor-pointer object-cover mb-2 w-60 h-40 sm:w-70 sm:h-45 rounded-lg flex-shrink-0"
+              className="hover:cursor-pointer object-cover mb-2 w-60 h-40 sm:w-70 sm:h-45 rounded-lg shrink-0 snap-start"
             />
           ))}
         </div>

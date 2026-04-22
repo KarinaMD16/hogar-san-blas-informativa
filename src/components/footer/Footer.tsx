@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
         <footer className="w-full bg-night text-white pb-4">
             <div className={cn("flex flex-col lg:flex-row justify-around bg-night text-white py-4 gap-8", className)}>
                 <div id="footer-contactos" className="flex flex-col gap-2 mt-6 w-full lg:w-auto">
-                    <Contactos className="flex flex-col items-center md:flex-row gap-8 md:gap-16 mb-8" />
+                    <Contactos className="flex flex-col items-center md:flex-row md:items-start gap-8 md:gap-16 mb-8" />
                     <div id="linea-separadora" className="w-64 md:w-84 lg:w-100 h-0.5 bg-white rounded mx-auto" />
                     <FooterRedes />
                 </div>
