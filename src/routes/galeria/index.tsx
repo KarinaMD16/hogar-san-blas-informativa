@@ -148,7 +148,7 @@ function RouteComponent() {
             ))}
           </div>
 
-          <p className=" text-night max-w-2xl">
+          <p className="w-full px-4 text-center text-night max-w-2xl mx-auto sm:px-0">
             {selectedBtn === null
               ? "Aquí puedes explorar todas las imágenes de nuestra galería."
               : Categorias?.find((c) => c.id === selectedBtn)?.descripcion}
