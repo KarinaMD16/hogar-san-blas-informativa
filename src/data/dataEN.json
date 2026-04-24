@@ -281,7 +281,8 @@
     "publicaciones": {
       "eventos": "Our events",
       "proyectos": "Our proyects",
-      "donaciones": "You can donate"
+      "donaciones": "We are requesting donations",
+      "botonLeerMas": "Read more"
     }
   },
 
