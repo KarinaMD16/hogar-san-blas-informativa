@@ -19,6 +19,7 @@ const PublicacionDetalleDialog = ({ publicacion }: PublicacionDetalleDialogProps
     const [imageLoaded, setImageLoaded] = useState(false);
     const dialogBodyRef = useRef<HTMLDivElement | null>(null);
     const fechaEtiqueta = idioma === "es" ? "Publicado en" : "Created at";
+    const loadingImageLabel = idioma === "es" ? "Cargando imagen" : "Loading image";
 
     const animateDialog = useCallback(() => {
         const dialogBody = dialogBodyRef.current;
@@ -100,7 +101,14 @@ const PublicacionDetalleDialog = ({ publicacion }: PublicacionDetalleDialogProps
             <div ref={dialogBodyRef} className="grid max-h-[88vh] overflow-y-auto lg:grid-cols-[1.15fr_0.85fr]">
                 <div className="relative bg-night/5">
                     {!imageLoaded && (
-                        <div className="absolute inset-0 animate-pulse bg-linear-to-br from-ecruYellow100 via-basicWhite to-softCoral/20" />
+                        <div
+                            className="absolute inset-0 animate-pulse bg-linear-to-br from-ecruYellow100 via-basicWhite to-softCoral/20"
+                            role="status"
+                            aria-live="polite"
+                            aria-label={loadingImageLabel}
+                        >
+                            <span className="sr-only">{loadingImageLabel}</span>
+                        </div>
                     )}
                     <img
                         src={transformCloudinaryUrl(publicacion.imagenUrl, 1200, 900)}

@@ -7,6 +7,7 @@ import { useFadeIn } from '../components/useFadeIn'
 import Seo from '../components/Seo'
 import { getDonaciones } from '../services/publicaciones/donacionesServices'
 import { getTodasGaleria } from '../services/galeria/galeria'
+import { scheduleIdleTask } from '../lib/idle'
 
 // Lazy load below-the-fold sections to reduce initial parse/evaluation work.
 const MisionVision = lazy(() => import('../sections/misionVision/MisionVision'))
@@ -96,6 +97,11 @@ function Index() {
           queryKey: ['donaciones', 1],
           queryFn: () => getDonaciones(1, 5),
         });
+
+        if (isCancelled) {
+          return;
+        }
+
         await queryClient.prefetchQuery({
           queryKey: ['imagenes', 1, 8],
           queryFn: () => getTodasGaleria(1, 8),
@@ -105,29 +111,15 @@ function Index() {
       }
     };
 
-    const idleWindow = window as Window & {
-      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number;
-      cancelIdleCallback?: (handle: number) => void;
-    };
-
-    if (idleWindow.requestIdleCallback) {
-      const idleHandle = idleWindow.requestIdleCallback(() => {
-        void prefetchData();
-      }, { timeout: 1500 });
-
-      return () => {
-        isCancelled = true;
-        idleWindow.cancelIdleCallback?.(idleHandle);
-      };
-    }
-
-    const timeoutId = window.setTimeout(() => {
+    const cancelScheduledPrefetch = scheduleIdleTask(() => {
       void prefetchData();
-    }, 300);
+    }, { timeout: 1500, fallbackDelay: 300 });
 
     return () => {
       isCancelled = true;
-      window.clearTimeout(timeoutId);
+      cancelScheduledPrefetch();
+      void queryClient.cancelQueries({ queryKey: ['donaciones', 1] });
+      void queryClient.cancelQueries({ queryKey: ['imagenes', 1, 8] });
     };
   }, [queryClient]);
 
