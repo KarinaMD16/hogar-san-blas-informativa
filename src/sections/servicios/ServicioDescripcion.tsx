@@ -1,6 +1,10 @@
 import type { DescripcionServicioProps } from "../../types/servicios";
 import { useState, useEffect } from "react";
-import { buildResponsiveSrcSet, transformCloudinaryUrl } from "../../lib/cloudinary";
+import {
+  buildResponsiveSrcSet,
+  handleImageProxyError,
+  transformCloudinaryUrl,
+} from "../../lib/cloudinary";
 
 const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
   const imagenes = servicio.imagenes;
@@ -30,6 +34,7 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
           className={`transition-opacity duration-500 ease-in-out
             ${fade ? "opacity-100" : "opacity-0"} 
             shadow-sm shadow-night/20 border-2 rounded-xl border-basicWhite object-cover w-60 h-60`}
+          data-fallback-src={imagenes[imagenIndex]}
           src={transformCloudinaryUrl(imagenes[imagenIndex], 480, 480)}
           srcSet={buildResponsiveSrcSet(imagenes[imagenIndex], [
             { width: 240, height: 240 },
@@ -37,6 +42,7 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
             { width: 720, height: 720 },
           ])}
           sizes="240px"
+          onError={handleImageProxyError}
           alt={servicio.titulo}
         />
         <div className="text-center sm:text-left">
@@ -64,12 +70,14 @@ const ServicioDescripcion = ({ servicio }: DescripcionServicioProps) => {
             <img
               onClick={() => cambiarImagen(index)}
               key={index}
+              data-fallback-src={imagen}
               src={transformCloudinaryUrl(imagen, 240, 240)}
               srcSet={buildResponsiveSrcSet(imagen, [
                 { width: 120, height: 120 },
                 { width: 240, height: 240 },
               ])}
               sizes="(max-width: 640px) 96px, 120px"
+              onError={handleImageProxyError}
               alt={`Imagen de ${servicio.titulo}`}
               className={`object-cover mt-1 mb-1 w-24 h-24 sm:w-30 sm:h-30 rounded-xl flex-shrink-0
                 transition hover:scale-105 hover:cursor-pointer 

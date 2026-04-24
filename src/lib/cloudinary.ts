@@ -1,3 +1,5 @@
+import type { SyntheticEvent } from "react";
+
 type ResponsiveVariant = {
   width: number;
   height?: number;
@@ -5,12 +7,9 @@ type ResponsiveVariant = {
 
 const WSRV_BASE_URL = "https://wsrv.nl";
 const ENABLE_EXTERNAL_IMAGE_PROXY =
-  import.meta.env.VITE_ENABLE_EXTERNAL_IMAGE_PROXY === "true";
+  import.meta.env.VITE_ENABLE_EXTERNAL_IMAGE_PROXY !== "false";
 
 const isRemoteHttpUrl = (url: string) => /^https?:\/\//i.test(url);
-
-const isAlreadyOptimizedFormat = (url: string) =>
-  /\.(webp|avif)(?:[?#].*)?$/i.test(url);
 
 const normalizeRemoteUrl = (url: string) => {
   return url.replace(/^https?:\/\//, "");
@@ -34,11 +33,7 @@ export const transformCloudinaryUrl = (
     );
   }
 
-  if (
-    !ENABLE_EXTERNAL_IMAGE_PROXY ||
-    !isRemoteHttpUrl(url) ||
-    isAlreadyOptimizedFormat(url)
-  ) {
+  if (!ENABLE_EXTERNAL_IMAGE_PROXY || !isRemoteHttpUrl(url)) {
     return url;
   }
 
@@ -53,6 +48,20 @@ export const transformCloudinaryUrl = (
     fit: "cover",
   });
   return `${WSRV_BASE_URL}/?${params.toString()}`;
+};
+
+export const handleImageProxyError = (
+  event: SyntheticEvent<HTMLImageElement>
+) => {
+  const element = event.currentTarget;
+  const fallbackSrc = element.dataset.fallbackSrc;
+
+  if (!fallbackSrc || element.src === fallbackSrc) {
+    return;
+  }
+
+  element.removeAttribute("srcset");
+  element.src = fallbackSrc;
 };
 
 export const buildResponsiveSrcSet = (
