@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Boton from "../../components/Boton";
 import Divider from "../../components/Divider";
 import IdiomaContext from "../../context/language/idiomaContext";
+import { buildResponsiveSrcSet, transformCloudinaryUrl } from "../../lib/cloudinary";
 
 import { cn } from "../../lib/utils";
 
@@ -34,7 +35,13 @@ const CasosExito: React.FC<CasosExitoProps> = ({ className }) => {
 
       <div className="flex flex-col justify-center items-center">
         <img
-          src={contentJson.casosExito.imagen}
+          src={transformCloudinaryUrl(contentJson.casosExito.imagen, 400, 550)}
+          srcSet={buildResponsiveSrcSet(contentJson.casosExito.imagen, [
+            { width: 300, height: 450 },
+            { width: 400, height: 550 },
+            { width: 800, height: 1100 },
+          ])}
+          sizes="(max-width: 640px) 300px, (max-width: 1024px) 350px, 400px"
           alt="Imagen de Casos de Éxito"
           className="
                       w-[300px] sm:w-[350px] md:w-[400px] 

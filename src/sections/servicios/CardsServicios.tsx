@@ -1,4 +1,5 @@
 import type { CardServicioProps } from "../../types/servicios";
+import { buildResponsiveSrcSet, transformCloudinaryUrl } from "../../lib/cloudinary";
 
 const CardsServicios = ({
   servicio,
@@ -18,7 +19,7 @@ const CardsServicios = ({
 
         border
         ${isSelected
-        ? "bg-basicWhite border-amaranthPink/30 shadow-md shadow-amaranthPink/10"
+          ? "bg-basicWhite border-amaranthPink/30 shadow-md shadow-amaranthPink/10"
           : "bg-transparent border-night/10 hover:border-ecruYellow/60 hover:shadow-md hover:shadow-night/10"
         }
 
@@ -26,7 +27,13 @@ const CardsServicios = ({
       `}
     >
       <img
-        src={servicio.imagenPrincipal}
+        src={transformCloudinaryUrl(servicio.imagenPrincipal, 224, 224)}
+        srcSet={buildResponsiveSrcSet(servicio.imagenPrincipal, [
+          { width: 112, height: 112 },
+          { width: 224, height: 224 },
+          { width: 336, height: 336 },
+        ])}
+        sizes="112px"
         alt={servicio.titulo}
         className="
           rounded-xl object-cover w-28 h-28
