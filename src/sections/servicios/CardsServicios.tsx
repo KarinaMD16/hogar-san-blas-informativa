@@ -1,5 +1,9 @@
 import type { CardServicioProps } from "../../types/servicios";
-import { buildResponsiveSrcSet, transformCloudinaryUrl } from "../../lib/cloudinary";
+import {
+  buildResponsiveSrcSet,
+  handleImageProxyError,
+  transformCloudinaryUrl,
+} from "../../lib/cloudinary";
 
 const CardsServicios = ({
   servicio,
@@ -27,6 +31,7 @@ const CardsServicios = ({
       `}
     >
       <img
+        data-fallback-src={servicio.imagenPrincipal}
         src={transformCloudinaryUrl(servicio.imagenPrincipal, 224, 224)}
         srcSet={buildResponsiveSrcSet(servicio.imagenPrincipal, [
           { width: 112, height: 112 },
@@ -34,6 +39,7 @@ const CardsServicios = ({
           { width: 336, height: 336 },
         ])}
         sizes="112px"
+        onError={handleImageProxyError}
         alt={servicio.titulo}
         className="
           rounded-xl object-cover w-28 h-28
