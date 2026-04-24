@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Idioma, ProviderContextProps, TextosIdioma } from "../../types/idioma/idiomaTypes";
 import IdiomaContext from "./idiomaContext";
+import dataEs from "../../data/data.json";
 
 export const IdiomaProvider = ({ children }: ProviderContextProps) => {
   const [idioma, setIdioma] = useState<Idioma>(() => {
@@ -10,7 +11,7 @@ export const IdiomaProvider = ({ children }: ProviderContextProps) => {
       : "es";
   });
 
-  const [contentJson, setContentJson] = useState<TextosIdioma | null>(null);
+  const [contentJson, setContentJson] = useState<TextosIdioma>(dataEs);
 
   const cambiarIdioma = () => {
     setIdioma((prevIdioma) => (prevIdioma === "es" ? "en" : "es"));
@@ -18,20 +19,19 @@ export const IdiomaProvider = ({ children }: ProviderContextProps) => {
 
   useEffect(() => {
     localStorage.setItem("idioma", idioma);
-    // Dynamically import only the needed language file
-    import(idioma === "es" ? "../../data/data.json" : "../../data/dataEN.json")
+
+    if (idioma === "es") {
+      setContentJson(dataEs);
+      return;
+    }
+
+    // English translations are loaded on demand to keep initial dependency chains shorter.
+    import("../../data/dataEN.json")
       .then((module) => setContentJson(module.default))
       .catch(() => {
-        // Fallback - import with relative path
-        import(idioma === "es" ? "../../data/data.json" : "../../data/dataEN.json").then((module) =>
-          setContentJson(module.default)
-        );
+        setContentJson(dataEs);
       });
   }, [idioma]);
-
-  if (!contentJson) {
-    return null; // or a loading state
-  }
 
   return (
     <IdiomaContext.Provider value={{

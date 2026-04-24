@@ -8,9 +8,11 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Fonts with preload for custom typography -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap">
+  <!-- Establish early connections only for origins used during initial render -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap">
 
   <title>Hogar de Ancianos San Blas | Cuidado y apoyo para adultos mayores</title>
 
@@ -22,10 +24,12 @@
 
   <meta name="author" content="Hogar San Blas">
 
-  <link rel="preconnect" href="https://i.ibb.co" crossorigin>
-  <link rel="preconnect" href="https://api.sidnam.org" crossorigin>
-  <!-- Preload LCP image with high priority -->
-  <link rel="preload" as="image" href="https://i.ibb.co/0RxcPLgv/IMG-0395.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://wsrv.nl">
+  <!-- Preload the exact Hero LCP candidate requested by src/srcSet at runtime -->
+  <link rel="preload" as="image"
+    href="https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=960&h=540&output=webp&q=70&we=&n=-1&fit=cover"
+    imagesrcset="https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=640&h=360&output=webp&q=70&we=&n=-1&fit=cover 640w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=960&h=540&output=webp&q=70&we=&n=-1&fit=cover 960w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=1280&h=720&output=webp&q=70&we=&n=-1&fit=cover 1280w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=1600&h=900&output=webp&q=70&we=&n=-1&fit=cover 1600w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=1920&h=1080&output=webp&q=70&we=&n=-1&fit=cover 1920w"
+    imagesizes="100vw" fetchpriority="high">
 
   <!-- open graph -->
   <meta property="og:title" content="Hogar de Ancianos San Blas de Nicoya">
