@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Boton from "../../components/Boton";
 import IdiomaContext from "../../context/language/idiomaContext";
+import { buildResponsiveSrcSet, transformCloudinaryUrl } from "../../lib/cloudinary";
 
 type HeroSectionProps = {
   className?: string;
@@ -21,7 +22,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
       `}
     >
       <img
-        src={contentJson.hero.imagen}
+        src={transformCloudinaryUrl(contentJson.hero.imagen, 1600, 900)}
+        srcSet={buildResponsiveSrcSet(contentJson.hero.imagen, [
+          { width: 640, height: 360 },
+          { width: 960, height: 540 },
+          { width: 1280, height: 720 },
+          { width: 1600, height: 900 },
+          { width: 1920, height: 1080 },
+        ])}
+        sizes="100vw"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 z-0 h-full w-full object-cover object-center"
