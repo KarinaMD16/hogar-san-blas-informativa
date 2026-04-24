@@ -18,32 +18,25 @@ export const transformCloudinaryUrl = (
   width: number,
   height?: number
 ) => {
-  if (isCloudinaryUrl(url)) {
-    const cropMode = height ? "fill" : "limit";
-    const heightTransform = height ? `,h_${height}` : "";
+  const effectiveHeight = height ?? width;
 
+  if (isCloudinaryUrl(url)) {
     return url.replace(
       "/upload/",
-      `/upload/w_${width}${heightTransform},c_${cropMode},g_auto,dpr_auto,f_auto,q_auto:eco/`
+      `/upload/w_${width},h_${effectiveHeight},c_fill,g_auto,dpr_auto,f_auto,q_auto:eco/`
     );
   }
 
   const params = new URLSearchParams({
     url: normalizeRemoteUrl(url),
     w: width.toString(),
+    h: effectiveHeight.toString(),
     output: "webp",
     q: "70",
     we: "",
     n: "-1",
+    fit: "cover",
   });
-
-  if (height) {
-    params.set("h", height.toString());
-    params.set("fit", "cover");
-  } else {
-    params.set("fit", "inside");
-  }
-
   return `${WSRV_BASE_URL}/?${params.toString()}`;
 };
 
