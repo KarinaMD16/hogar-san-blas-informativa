@@ -8,7 +8,6 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Establish early connections only for origins used during initial render -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style"
@@ -30,13 +29,11 @@
   <meta name="author" content="Hogar San Blas">
 
   <link rel="preconnect" href="https://wsrv.nl" crossorigin>
-  <!-- Preload the exact Hero LCP candidate requested by src/srcSet at runtime (q=60) -->
   <link rel="preload" as="image"
     href="https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=960&h=540&output=webp&q=60&we=&n=-1&fit=cover"
-    imagesrcset="https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=480&h=270&output=webp&q=60&we=&n=-1&fit=cover 480w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=640&h=360&output=webp&q=60&we=&n=-1&fit=cover 640w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=960&h=540&output=webp&q=60&we=&n=-1&fit=cover 960w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=1280&h=720&output=webp&q=60&we=&n=-1&fit=cover 1280w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=1600&h=900&output=webp&q=60&we=&n=-1&fit=cover 1600w"
+    imagesrcset="https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=480&h=270&output=webp&q=60&we=&n=-1&fit=cover 480w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=640&h=360&output=webp&q=60&we=&n=-1&fit=cover 640w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=960&h=540&output=webp&q=60&we=&n=-1&fit=cover 960w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=1280&h=720&output=webp&q=60&we=&n=-1&fit=cover 1280w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=1600&h=900&output=webp&q=60&we=&n=-1&fit=cover 1600w, https://wsrv.nl/?url=i.ibb.co%2F0RxcPLgv%2FIMG-0395.webp&w=1920&h=1080&output=webp&q=60&we=&n=-1&fit=cover 1920w"
     imagesizes="100vw" fetchpriority="high">
 
-  <!-- open graph -->
   <meta property="og:title" content="Hogar de Ancianos San Blas de Nicoya">
   <meta property="og:description"
     content="Conoce sobre el Hogar San Blas y apoya a nuestros adultos mayores mediante voluntariado o donaciones.">
@@ -46,9 +43,7 @@
 
   <link rel="canonical" href="https://hogarsanblas.com">
 
-  <!-- Minimal inline critical CSS for above-the-fold -->
   <style>
-    /* Prevent layout shift and flash of unstyled content */
     :root {
       color-scheme: light dark;
     }
