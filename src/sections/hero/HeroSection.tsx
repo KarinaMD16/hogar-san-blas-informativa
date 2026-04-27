@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
     <section
       className={`
         relative overflow-hidden
-        min-h-[720px] lg:min-h-160 
+        min-h-180 lg:min-h-160 
         flex flex-col justify-end items-start 
         bg-night text-basicWhite 
         sm:px-8 md:px-25
@@ -49,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         <h2 className="text-shadow-md text-4xl sm:text-5xl md:text-6xl font-poppins font-bold">
           {contentJson.hero.titulo}
         </h2>
-        <p className="font-opensans text-justify text-md sm:text-base md:text-lg text-shadow-md mx-auto max-w-screen-md mb-6 px-4 lg:leading-7 leading-5">
+        <p className="font-opensans text-justify text-md sm:text-base md:text-lg text-shadow-md mx-auto max-w-3xl mb-6 px-4 lg:leading-7 leading-5">
           {contentJson.hero.descripcion}
         </p>
         <div className="mb-10 flex justify-center gap-4 sm:gap-1 lg:gap-10">
