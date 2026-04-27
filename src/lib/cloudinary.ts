@@ -9,7 +9,11 @@ const WSRV_BASE_URL = "https://wsrv.nl";
 const ENABLE_EXTERNAL_IMAGE_PROXY =
   import.meta.env.VITE_ENABLE_EXTERNAL_IMAGE_PROXY !== "false";
 
-const IMAGE_QUALITY = (import.meta.env.VITE_IMAGE_QUALITY as string) ?? "60";
+const IMAGE_QUALITY =
+  typeof import.meta.env.VITE_IMAGE_QUALITY === "string" &&
+  import.meta.env.VITE_IMAGE_QUALITY.trim() !== ""
+    ? import.meta.env.VITE_IMAGE_QUALITY
+    : "60";
 
 const isRemoteHttpUrl = (url: string) => /^https?:\/\//i.test(url);
 
