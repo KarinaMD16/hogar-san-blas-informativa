@@ -19,7 +19,7 @@ function RouteComponent() {
         description="Descubre los eventos y actividades del Hogar San Blas de Nicoya para apoyar y compartir con nuestras personas adultas mayores."
         path="/publicaciones/eventos"
       />
-      <main className="flex flex-col items-center justify-center fade-in-on-scroll">
+      <main className="flex flex-col items-center justify-center">
         <Navbar />
         <Eventos />
       </main>

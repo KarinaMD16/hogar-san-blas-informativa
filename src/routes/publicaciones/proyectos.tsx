@@ -19,7 +19,7 @@ function RouteComponent() {
         description="Conoce los proyectos del Hogar San Blas enfocados en mejorar la calidad de vida de las personas adultas mayores de nuestra comunidad."
         path="/publicaciones/proyectos"
       />
-      <main className="flex flex-col items-center justify-center fade-in-on-scroll">
+      <main className="flex flex-col items-center justify-center">
         <Navbar />
         <Proyectos />
       </main>

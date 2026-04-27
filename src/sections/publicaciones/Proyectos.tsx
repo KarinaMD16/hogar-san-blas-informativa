@@ -39,7 +39,7 @@ const Proyectos = () => {
 
   if (loadingProyectos || fetchingProyectos)
     return (
-      <div className="w-screen h-screen">
+      <div className="w-screen h-screen fade-in-on-scroll">
         <span className="mt-40"><LoadingSpinner /></span>
       </div>
     );
@@ -47,7 +47,7 @@ const Proyectos = () => {
   return (
     <section
       id="proyectos"
-      className="lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6 mt-15"
+      className="fade-in-on-scroll lg:w-6xl md:w-4xl sm:w-3xl flex items-center justify-center flex-col gap-6 mt-15"
     >
       <h1 className="text-4xl text-justify font-poppins font-bold text-amaranthPink">
         {contentJson.titulosSecciones.publicaciones.proyectos}
