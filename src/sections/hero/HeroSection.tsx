@@ -14,6 +14,18 @@ type HeroSectionProps = {
 const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
   const { contentJson } = useContext(IdiomaContext);
 
+  const DEFAULT_HERO_WIDTH = 960;
+  const DEFAULT_HERO_HEIGHT = 540;
+
+  const HERO_SRCSET_VARIANTS = [
+    { width: 480, height: 270 },
+    { width: 640, height: 360 },
+    { width: DEFAULT_HERO_WIDTH, height: DEFAULT_HERO_HEIGHT },
+    { width: 1280, height: 720 },
+    { width: 1600, height: 900 },
+    { width: 1920, height: 1080 },
+  ];
+
   return (
     <section
       className={`
@@ -27,14 +39,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
     >
       <img
         data-fallback-src={contentJson.hero.imagen}
-        src={transformCloudinaryUrl(contentJson.hero.imagen, 1600, 900)}
-        srcSet={buildResponsiveSrcSet(contentJson.hero.imagen, [
-          { width: 480, height: 270 },
-          { width: 640, height: 360 },
-          { width: 960, height: 540 },
-          { width: 1280, height: 720 },
-          { width: 1600, height: 900 },
-        ])}
+        src={transformCloudinaryUrl(contentJson.hero.imagen, DEFAULT_HERO_WIDTH, DEFAULT_HERO_HEIGHT)}
+        width={DEFAULT_HERO_WIDTH}
+        height={DEFAULT_HERO_HEIGHT}
+        srcSet={buildResponsiveSrcSet(contentJson.hero.imagen, HERO_SRCSET_VARIANTS)}
         sizes="100vw"
         onError={handleImageProxyError}
         alt=""
