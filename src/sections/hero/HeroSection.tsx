@@ -29,11 +29,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         data-fallback-src={contentJson.hero.imagen}
         src={transformCloudinaryUrl(contentJson.hero.imagen, 1600, 900)}
         srcSet={buildResponsiveSrcSet(contentJson.hero.imagen, [
+          { width: 480, height: 270 },
           { width: 640, height: 360 },
           { width: 960, height: 540 },
           { width: 1280, height: 720 },
           { width: 1600, height: 900 },
-          { width: 1920, height: 1080 },
         ])}
         sizes="100vw"
         onError={handleImageProxyError}
