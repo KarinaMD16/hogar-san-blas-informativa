@@ -9,6 +9,8 @@ const WSRV_BASE_URL = "https://wsrv.nl";
 const ENABLE_EXTERNAL_IMAGE_PROXY =
   import.meta.env.VITE_ENABLE_EXTERNAL_IMAGE_PROXY !== "false";
 
+const IMAGE_QUALITY = (import.meta.env.VITE_IMAGE_QUALITY as string) ?? "60";
+
 const isRemoteHttpUrl = (url: string) => /^https?:\/\//i.test(url);
 
 const normalizeRemoteUrl = (url: string) => {
@@ -42,7 +44,7 @@ export const transformCloudinaryUrl = (
     w: width.toString(),
     h: effectiveHeight.toString(),
     output: "webp",
-    q: "70",
+    q: IMAGE_QUALITY,
     we: "",
     n: "-1",
     fit: "cover",
