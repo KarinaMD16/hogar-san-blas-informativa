@@ -27,7 +27,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
     >
       <img
         data-fallback-src={contentJson.hero.imagen}
-        src={transformCloudinaryUrl(contentJson.hero.imagen, 1600, 900)}
+        src={transformCloudinaryUrl(contentJson.hero.imagen, 960, 540)}
+        width={960}
+        height={540}
         srcSet={buildResponsiveSrcSet(contentJson.hero.imagen, [
           { width: 480, height: 270 },
           { width: 640, height: 360 },
