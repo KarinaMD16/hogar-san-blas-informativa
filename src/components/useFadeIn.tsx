@@ -1,45 +1,44 @@
 import { useLayoutEffect } from "react";
-import gsap from "gsap";
 
 export const useFadeIn = (rerunKey?: string) => {
   useLayoutEffect(() => {
     const observedElements = new Set<HTMLElement>();
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          gsap.killTweensOf(entry.target);
-
-          if (entry.isIntersecting) {
-            gsap.to(entry.target, {
-              opacity: 1,
-              y: 0,
-              duration: 0.8,
-              ease: "power3.out",
-              overwrite: "auto",
-            });
-          } else {
-            // Reset animation when element leaves viewport
-            gsap.set(entry.target, {
-              opacity: 0,
-              y: 40,
-              overwrite: "auto",
-            });
-          }
-        });
-      },
-      { threshold: 0.15, rootMargin: "0px" }
-    );
+    let isCancelled = false;
+    let domObserver: MutationObserver | null = null;
+    let intersectionObserver: IntersectionObserver | null = null;
 
     const observeElement = (el: HTMLElement) => {
       if (observedElements.has(el)) {
         return;
       }
 
-      // Add CSS class to set initial state (avoids forced reflow)
       el.classList.add("fade-in-initial");
       observedElements.add(el);
-      observer.observe(el);
+
+      const isInViewport = () => {
+        try {
+          const r = el.getBoundingClientRect();
+          return r.top < window.innerHeight && r.bottom > 0;
+        } catch {
+          return false;
+        }
+      };
+
+      if (intersectionObserver) {
+        intersectionObserver.observe(el);
+      } else {
+        // Defer the in-viewport check to the next frame so layout can settle.
+        requestAnimationFrame(() => {
+          if (intersectionObserver) {
+            intersectionObserver.observe(el);
+            return;
+          }
+
+          if (isInViewport()) {
+            el.classList.add("fade-in-visible");
+          }
+        });
+      }
     };
 
     const observeExistingElements = () => {
@@ -50,7 +49,7 @@ export const useFadeIn = (rerunKey?: string) => {
 
     observeExistingElements();
 
-    const domObserver = new MutationObserver((mutations) => {
+    domObserver = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
           if (!(node instanceof HTMLElement)) {
@@ -70,9 +69,70 @@ export const useFadeIn = (rerunKey?: string) => {
 
     domObserver.observe(document.body, { childList: true, subtree: true });
 
+    void import("gsap")
+      .then(({ default: gsap }) => {
+      if (isCancelled) {
+        return;
+      }
+
+      intersectionObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            gsap.killTweensOf(entry.target);
+
+            if (entry.isIntersecting) {
+              gsap.to(entry.target, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: "power3.out",
+                overwrite: "auto",
+              });
+            } else {
+              gsap.set(entry.target, {
+                opacity: 0,
+                y: 40,
+                overwrite: "auto",
+              });
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px" }
+      );
+
+     if (isCancelled) {
+        intersectionObserver.disconnect();
+        return;
+      }
+
+      // Initialize observed elements: if some were already marked visible
+      // before GSAP loaded, set their GSAP state so GSAP won't hide them.
+      observedElements.forEach((el) => {
+        if (el.classList.contains("fade-in-visible")) {
+          gsap.set(el, { opacity: 1, y: 0, overwrite: "auto" });
+        } else {
+          intersectionObserver!.observe(el);
+        }
+      });
+      })
+      .catch((err) => {
+        // If GSAP fails to load (network/chunk error), reveal content
+        // so users aren't left looking at invisible elements.
+        try {
+          observedElements.forEach((el) => {
+            el.classList.remove("fade-in-initial");
+            el.classList.add("fade-in-visible");
+          });
+        } catch {
+          // ignore DOM errors
+        }
+        console.warn("Failed to load GSAP for fade-in animations:", err);
+      });
+
     return () => {
-      domObserver.disconnect();
-      observer.disconnect();
+      isCancelled = true;
+      domObserver?.disconnect();
+      intersectionObserver?.disconnect();
     };
   }, [rerunKey]);
 };
