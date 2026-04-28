@@ -96,6 +96,18 @@ const Navbar = () => {
 
     event.preventDefault();
 
+    // Check if the target section exists on the current page
+    const sectionExists = !!document.getElementById(target.sectionId);
+
+    // If section doesn't exist on current page and we're not on home, navigate to home first
+    if (!sectionExists && location.pathname !== "/") {
+      await navigate({ to: "/" });
+      // After navigating to home, scroll to the section
+      setTimeout(() => scrollToSectionWhenReady(target.sectionId), 100);
+      return;
+    }
+
+    // If we need the home route or we're already on home, just scroll
     if (target.requiresHomeRoute && location.pathname !== "/") {
       await navigate({ to: "/" });
     }
