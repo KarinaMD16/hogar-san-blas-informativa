@@ -23,7 +23,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
     { width: DEFAULT_HERO_WIDTH, height: DEFAULT_HERO_HEIGHT },
     { width: 1280, height: 720 },
     { width: 1600, height: 900 },
-    { width: 1920, height: 1080 },
   ];
 
   return (
@@ -43,7 +42,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         width={DEFAULT_HERO_WIDTH}
         height={DEFAULT_HERO_HEIGHT}
         srcSet={buildResponsiveSrcSet(contentJson.hero.imagen, HERO_SRCSET_VARIANTS)}
-        sizes="100vw"
+        sizes="(min-width: 1600px) 1600px, 100vw"
         onError={handleImageProxyError}
         alt=""
         aria-hidden="true"
