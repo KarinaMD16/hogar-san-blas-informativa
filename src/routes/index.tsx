@@ -69,7 +69,13 @@ const DeferredSection = ({
   }, [rootMargin, shouldRender]);
 
   return (
-    <div ref={containerRef}>
+    <div
+      ref={containerRef}
+      style={{
+        contentVisibility: 'auto',
+        containIntrinsicSize: `1px ${minHeight}px`,
+      }}
+    >
       {shouldRender ? children : <SectionFallback minHeight={minHeight} />}
     </div>
   );
