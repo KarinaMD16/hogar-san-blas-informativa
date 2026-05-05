@@ -14,15 +14,16 @@ const CardPublicacion = ({ publicacion }: PublicacionProps) => {
   return (
     <Dialog>
       <div
-        className="bg-basicWhite p-4 rounded-lg shadow-md hover:shadow-lg 
-    transition-shadow duration-300
-      w-60 h-90 lg:w-80 lg:h-100 md:w-60 md:h-90 sm:w-50 sm:h-90
-      flex flex-col items-center justify-start gap-4
+        className="bg-basicWhite p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg
+      transition-shadow duration-300
+      w-[76vw] max-w-80 sm:w-60 h-auto lg:w-80 md:w-60
+      flex-none snap-start
+      flex flex-col items-center justify-between gap-2
     "
       >
         <div className="flex flex-col gap-2 w-full">
           <img
-            className="rounded-md h-40 object-cover"
+            className="rounded-md h-40 w-full object-cover"
             src={transformCloudinaryUrl(publicacion.imagenUrl, 400, 160)}
             srcSet={`
               ${transformCloudinaryUrl(publicacion.imagenUrl, 200, 160)} 200w,
@@ -35,14 +36,14 @@ const CardPublicacion = ({ publicacion }: PublicacionProps) => {
             height={160}
             alt={publicacion.Titulo}
           />
-          <div className="flex items-start w-50 sm:w-40 md:w-50 lg:w-3xs">
+          <div className="flex items-start w-full">
             <p className="text-sm">{publicacion.fecha}</p>
           </div>
         </div>
 
         <div className="w-full px-1">
-          <h2 className="mb-2 text-left font-poppins font-bold text-sm sm:text-lg line-clamp-2 sm:line-clamp-3 wrap-break-word">{publicacion.Titulo}</h2>
-          <p className="text-left text-xs sm:text-sm line-clamp-2 sm:line-clamp-3 wrap-break-word text-night/80">{resumenDescripcion}</p>
+          <h2 className="text-left font-poppins font-bold sm:text-lg line-clamp-2 sm:line-clamp-3 wrap-break-word m-0">{publicacion.Titulo}</h2>
+          <p className="text-left line-clamp-2 sm:line-clamp-3 wrap-break-word text-night/80">{resumenDescripcion}</p>
         </div>
 
         <div className="mt-auto flex w-full flex-col gap-3">
