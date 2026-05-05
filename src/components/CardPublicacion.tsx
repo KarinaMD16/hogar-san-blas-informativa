@@ -20,7 +20,7 @@ const CardPublicacion = ({ publicacion }: PublicacionProps) => {
       flex flex-col items-center justify-start gap-4
     "
       >
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 w-full">
           <img
             className="rounded-md h-40 object-cover"
             src={transformCloudinaryUrl(publicacion.imagenUrl, 400, 160)}
