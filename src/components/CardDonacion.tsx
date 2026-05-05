@@ -9,7 +9,7 @@ import PublicacionDetalleDialog from "./PublicacionDetalleDialog";
 
 const CardDonacion = ({ publicacion }: PublicacionProps) => {
   const { contentJson } = useContext(IdiomaContext);
-  const resumenDescripcion = crearResumen(publicacion.Descripcion, 135);
+  const resumenDescripcion = crearResumen(publicacion.Descripcion, 90);
   const botonLeerMas = contentJson.titulosSecciones.publicaciones.botonLeerMas;
   const botonDonar = contentJson.donaciones.botones.botonDonar;
 
@@ -45,8 +45,8 @@ const CardDonacion = ({ publicacion }: PublicacionProps) => {
         </div>
 
         <div className="w-full px-1">
-          <h2 className="mb-2 text-left font-poppins font-bold text-sm sm:text-lg line-clamp-3 wrap-break-word">{publicacion.Titulo}</h2>
-          <p className="text-left text-xs sm:text-sm line-clamp-3 wrap-break-word text-night/80">{resumenDescripcion}</p>
+          <h2 className="mb-2 text-left font-poppins font-bold text-sm sm:text-lg line-clamp-2 sm:line-clamp-3 wrap-break-word">{publicacion.Titulo}</h2>
+          <p className="text-left text-xs sm:text-sm line-clamp-2 sm:line-clamp-3 wrap-break-word text-night/80">{resumenDescripcion}</p>
         </div>
 
         <div className="flex w-full flex-col gap-2 px-1">

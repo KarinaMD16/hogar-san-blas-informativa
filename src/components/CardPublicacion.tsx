@@ -9,7 +9,7 @@ import PublicacionDetalleDialog from "./PublicacionDetalleDialog";
 const CardPublicacion = ({ publicacion }: PublicacionProps) => {
   const { contentJson } = useContext(IdiomaContext);
   const botonLeerMas = contentJson.titulosSecciones.publicaciones.botonLeerMas;
-  const resumenDescripcion = crearResumen(publicacion.Descripcion, 95);
+  const resumenDescripcion = crearResumen(publicacion.Descripcion, 70);
 
   return (
     <Dialog>
@@ -40,9 +40,9 @@ const CardPublicacion = ({ publicacion }: PublicacionProps) => {
           </div>
         </div>
 
-        <div className="text-left w-full">
-          <h2 className="mb-2 font-poppins font-bold text-lg">{publicacion.Titulo}</h2>
-          <p className="text-sm leading-6 text-night/80 line-clamp-2">{resumenDescripcion}</p>
+        <div className="w-full px-1">
+          <h2 className="mb-2 text-left font-poppins font-bold text-sm sm:text-lg line-clamp-2 sm:line-clamp-3 wrap-break-word">{publicacion.Titulo}</h2>
+          <p className="text-left text-xs sm:text-sm line-clamp-2 sm:line-clamp-3 wrap-break-word text-night/80">{resumenDescripcion}</p>
         </div>
 
         <div className="mt-auto flex w-full flex-col gap-3">
