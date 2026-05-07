@@ -11,6 +11,22 @@ type HeroSectionProps = {
   className?: string;
 };
 
+function scrollToSection(sectionId: string) {
+  const section = document.getElementById(sectionId);
+
+  if (!section) {
+    return false;
+  }
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  });
+
+  return true;
+}
+
 const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
   const { contentJson } = useContext(IdiomaContext);
 
@@ -24,6 +40,40 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
     { width: 1280, height: 720 },
     { width: 1600, height: 900 },
   ];
+
+  const scrollToSectionWhenReady = (sectionId: string) => {
+    let attempts = 0;
+    const maxAttempts = 30;
+    let probeScroll = 0;
+
+    const tryScroll = () => {
+      attempts += 1;
+      const scrolled = scrollToSection(sectionId);
+
+      if (scrolled) {
+        return;
+      }
+
+      if (attempts >= maxAttempts) {
+        return;
+      }
+
+      // Section likely wrapped in a lazy/deferred container that only mounts
+      // when its IntersectionObserver intersects the viewport. Probe-scroll
+      // down the page in viewport-sized steps to force those sections to mount,
+      // then retry until the target appears in the DOM.
+      probeScroll += window.innerHeight;
+      const maxScroll = document.documentElement.scrollHeight;
+      window.scrollTo({
+        top: probeScroll > maxScroll ? maxScroll : probeScroll,
+        behavior: "auto",
+      });
+
+      window.setTimeout(tryScroll, 100);
+    };
+
+    tryScroll();
+  };
 
   return (
     <section
@@ -62,11 +112,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
         <div className="mb-10 flex justify-center gap-4 sm:gap-1 lg:gap-10">
           {contentJson.hero.botones.map(
             (boton: { texto: string; ruta: string; ariaLabel?: string }, idx: number
-            ) => (
-              <Boton key={idx} where={boton.ruta} ariaLabel={boton.ariaLabel}>
-                <p className="lg:px-2 lg:py-1 text-lg">{boton.texto}</p>
-              </Boton>
-            ))}
+            ) => {
+              const isAnchor = boton.ruta.startsWith('#')
+
+              return (
+                <Boton
+                  key={idx}
+                  where={isAnchor ? undefined : boton.ruta}
+                  onClick={isAnchor ? () => scrollToSectionWhenReady(boton.ruta.slice(1)) : undefined}
+                  ariaLabel={boton.ariaLabel}
+                >
+                  <p className="lg:px-2 lg:py-1 text-lg">{boton.texto}</p>
+                </Boton>
+              )
+            })}
         </div>
       </div>
     </section>

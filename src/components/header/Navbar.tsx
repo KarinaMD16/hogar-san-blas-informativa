@@ -62,17 +62,36 @@ const Navbar = () => {
 
   const scrollToSectionWhenReady = (sectionId: string) => {
     let attempts = 0;
+    const maxAttempts = 30;
+    let probeScroll = 0;
 
     const tryScroll = () => {
       attempts += 1;
       const scrolled = scrollToSection(sectionId);
 
-      if (!scrolled && attempts < 40) {
-        window.requestAnimationFrame(tryScroll);
+      if (scrolled) {
+        return;
       }
+
+      if (attempts >= maxAttempts) {
+        return;
+      }
+
+      // Section likely wrapped in a lazy/deferred container that only mounts
+      // when its IntersectionObserver intersects the viewport. Probe-scroll
+      // down the page in viewport-sized steps to force those sections to mount,
+      // then retry until the target appears in the DOM.
+      probeScroll += window.innerHeight;
+      const maxScroll = document.documentElement.scrollHeight;
+      window.scrollTo({
+        top: probeScroll > maxScroll ? maxScroll : probeScroll,
+        behavior: "auto",
+      });
+
+      window.setTimeout(tryScroll, 100);
     };
 
-    window.requestAnimationFrame(tryScroll);
+    tryScroll();
   };
 
   const handleLogoClick = (event: MouseEvent<HTMLAnchorElement>) => {
