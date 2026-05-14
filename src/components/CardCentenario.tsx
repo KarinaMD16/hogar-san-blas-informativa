@@ -33,7 +33,7 @@ const CardCentenario = ({ centenario }: CentenarioProps) => {
         </h2>
         <div className="flex items-center justify-evenly w-full">
           <p className="font-semibold text-md md:text-xl">
-              {centenario.edad} años
+              {centenario.edad}
           </p>
 
           <p className="text-gray-600 font-medium text-xs sm:text-sm max-w-1/3">

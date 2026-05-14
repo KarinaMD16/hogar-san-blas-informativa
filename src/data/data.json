@@ -557,14 +557,14 @@
         "lista": [
           {
             "nombre": "Jose Cornelio Francisco López Fajardo",
-            "edad": 101,
-            "fecha": "Nació el 6 de sept de 1924",
+            "edad": "101 años",
+            "fecha": "Nació el 6 de Sep de 1924",
             "imagen": "https://i.ibb.co/8W8NscZ/don-cornelio.jpg"
           },
           {
             "nombre": "Leandro Cerdas Cantillano",
-            "edad": 102,
-            "fecha": "Nació el 16 de marzo de 1924",
+            "edad": "102 años",
+            "fecha": "Nació el 16 de Mar de 1924",
             "imagen": "https://i.ibb.co/JwJyXcyK/centenario-section.webp"
           }
         ]
@@ -575,37 +575,37 @@
         "lista": [
           {
             "nombre": "Reinery Fonseca Gutiérrez",
-            "edad": 106,
+            "edad": "106 años",
             "fecha": "1914 - 2021",
             "imagen": "https://i.ibb.co/5hTHqfmB/do-a-reinery-4.jpg"
           },
           {
             "nombre": "Cristóbal de Jesús Muñoz Villalobos",
-            "edad": 104,
+            "edad": "104 años",
             "fecha": "1917 - 2021",
             "imagen": "https://i.ibb.co/SXbRN0pX/don-cristobal.jpg"
           },
           {
             "nombre": "Juana Almanza Blandon",
-            "edad": 100,
+            "edad": "100 años",
             "fecha": "1923 - 2024",
             "imagen": "https://i.ibb.co/YVbvYZY/What-is-Pool-Coping-Expert-Advice-from-Eco-Outdoor.jpg"
           },
           {
             "nombre": "María Hermenia del Carmen Solano Luna",
-            "edad": 103,
+            "edad": "103 años",
             "fecha": "1921 - 2024",
             "imagen": "https://i.ibb.co/YVbvYZY/What-is-Pool-Coping-Expert-Advice-from-Eco-Outdoor.jpg"
           },
           {
             "nombre": "Blanca Nieve Lamas Jaen",
-            "edad": 101,
+            "edad": "101 años",
             "fecha": "1920 - 2021",
             "imagen": "https://i.ibb.co/YVbvYZY/What-is-Pool-Coping-Expert-Advice-from-Eco-Outdoor.jpg"
           },
           {
             "nombre": "María de la Paz González González",
-            "edad": 103,
+            "edad": "103 años",
             "fecha": "1918 - 2021",
             "imagen": "https://i.ibb.co/YVbvYZY/What-is-Pool-Coping-Expert-Advice-from-Eco-Outdoor.jpg"
           }
