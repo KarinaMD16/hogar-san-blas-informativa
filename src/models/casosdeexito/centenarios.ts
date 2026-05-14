@@ -1,6 +1,6 @@
 export interface Centenario {
     nombre: string;
-    edad: number;
+    edad: string;
     fecha: string;
     imagen: string;
 }
