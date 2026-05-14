@@ -108,7 +108,7 @@ const Centenarios = () => {
             {contentJson.paginaCentenarios.centenarios.residentes.titulo}
           </h1>
 
-          <p className="text-lg font-semibold mb-14 text-left">
+          <p className="text-lg mb-14 text-left">
             {contentJson.paginaCentenarios.centenarios.residentes.subtitulo}
           </p>
         </div>
@@ -130,7 +130,7 @@ const Centenarios = () => {
             {contentJson.paginaCentenarios.centenarios.pasados.titulo}
           </h1>
 
-          <p className="text-lg font-semibold mb-14 text-left">
+          <p className="text-lg mb-14 text-left">
             {contentJson.paginaCentenarios.centenarios.pasados.subtitulo}
           </p>
         </div>

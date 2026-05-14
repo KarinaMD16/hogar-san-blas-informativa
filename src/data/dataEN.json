@@ -565,9 +565,9 @@
         "subtitulo": "They currently live in our home, serving as living testimony of longevity and care.",
         "lista": [
           {
-            "nombre": "Ana Medina Duarte",
-            "edad": 102,
-            "fecha": "Born on March 15, 1922",
+            "nombre": "Jose Cornelio Francisco López Fajardo",
+            "edad": 101,
+            "fecha": "Born on September 6, 1924",
             "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           },
           {
@@ -617,12 +617,6 @@
             "edad": 104,
             "fecha": "1917 - 2021",
             "imagen": "https://i.ibb.co/JwJyXcyK/centenario-section.webp"
-          },
-          {
-            "nombre": "Jose Cornelio Francisco López Fajardo",
-            "edad": 100,
-            "fecha": "1924 - 2024",
-            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
           }
         ]
       }

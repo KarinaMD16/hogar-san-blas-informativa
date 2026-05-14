@@ -545,8 +545,8 @@
     "zonaAzul": {
       "titulo": "Somos zona azul del mundo",
       "descripcion": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "Nicoya es una de las zonas azules del mundo, un lugar reconocido por la extraordinaria longevidad de sus habitantes y por la manera en que viven: con tranquilidad, cercanía familiar, alimentación natural y un profundo sentido de comunidad.",
+        "En el Hogar San Blas, esta esencia se vive cada día. Nuestros adultos mayores son reflejo de generaciones llenas de esfuerzo, sabiduría y amor por la vida. Sus historias inspiran a nuestra comunidad y nos recuerdan la importancia de cuidar, acompañar y valorar a quienes han construido el camino antes que nosotros."
       ],
       "imagen": "https://i.ibb.co/d4LgGVt4/zona-azul.jpg"
     },
@@ -556,10 +556,10 @@
         "subtitulo": "Actualmente residen en nuestro hogar, siendo testimonio vivo de longevidad y cuidado.",
         "lista": [
           {
-            "nombre": "Ana Medina González",
-            "edad": 102,
-            "fecha": "Nació el 15 de marzo de 1922",
-            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+            "nombre": "Jose Cornelio Francisco López Fajardo",
+            "edad": 101,
+            "fecha": "Nació el 6 de sept de 1924",
+            "imagen": "https://i.ibb.co/8W8NscZ/don-cornelio.jpg"
           },
           {
             "nombre": "Leandro Cerdas Cantillano",
@@ -574,46 +574,40 @@
         "subtitulo": "A lo largo de los años, tuvimos el honor de acompañar a otros centenarios cuya memoria forma parte de nuestra historia institucional.",
         "lista": [
           {
-            "nombre": "Juana Almanza Blandon",
-            "edad": 100,
-            "fecha": "1923 - 2023",
-            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
-          },
-          {
-            "nombre": "María Hermenia del Carmen Solano Luna",
-            "edad": 103,
-            "fecha": "1921 - 2024",
-            "imagen": "https://i.ibb.co/JwJyXcyK/centenario-section.webp"
-          },
-          {
             "nombre": "Reinery Fonseca Gutiérrez",
             "edad": 106,
-            "fecha": "1914 - 2020",
-            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
-          },
-          {
-            "nombre": "Blanca Nieve Lamas Jaen",
-            "edad": 101,
-            "fecha": "1920 - 2021",
-            "imagen": "https://i.ibb.co/JwJyXcyK/centenario-section.webp"
-          },
-          {
-            "nombre": "María de la Paz González González",
-            "edad": 103,
-            "fecha": "1918 - 2021",
-            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+            "fecha": "1914 - 2021",
+            "imagen": "https://i.ibb.co/5hTHqfmB/do-a-reinery-4.jpg"
           },
           {
             "nombre": "Cristóbal de Jesús Muñoz Villalobos",
             "edad": 104,
             "fecha": "1917 - 2021",
-            "imagen": "https://i.ibb.co/JwJyXcyK/centenario-section.webp"
+            "imagen": "https://i.ibb.co/SXbRN0pX/don-cristobal.jpg"
           },
           {
-            "nombre": "Jose Cornelio Francisco López Fajardo",
+            "nombre": "Juana Almanza Blandon",
             "edad": 100,
-            "fecha": "1924 - 2024",
-            "imagen": "https://i.ibb.co/C5NFY55X/IMG-0426.jpg"
+            "fecha": "1923 - 2024",
+            "imagen": "https://i.ibb.co/YVbvYZY/What-is-Pool-Coping-Expert-Advice-from-Eco-Outdoor.jpg"
+          },
+          {
+            "nombre": "María Hermenia del Carmen Solano Luna",
+            "edad": 103,
+            "fecha": "1921 - 2024",
+            "imagen": "https://i.ibb.co/YVbvYZY/What-is-Pool-Coping-Expert-Advice-from-Eco-Outdoor.jpg"
+          },
+          {
+            "nombre": "Blanca Nieve Lamas Jaen",
+            "edad": 101,
+            "fecha": "1920 - 2021",
+            "imagen": "https://i.ibb.co/YVbvYZY/What-is-Pool-Coping-Expert-Advice-from-Eco-Outdoor.jpg"
+          },
+          {
+            "nombre": "María de la Paz González González",
+            "edad": 103,
+            "fecha": "1918 - 2021",
+            "imagen": "https://i.ibb.co/YVbvYZY/What-is-Pool-Coping-Expert-Advice-from-Eco-Outdoor.jpg"
           }
         ]
       }
