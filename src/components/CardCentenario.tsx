@@ -5,7 +5,7 @@ const CardCentenario = ({ centenario }: CentenarioProps) => {
     <div
       className="
       relative
-      w-72 md:w-80
+      w-62 md:w-80
       h-96
       rounded-3xl
       overflow-hidden
@@ -25,22 +25,21 @@ const CardCentenario = ({ centenario }: CentenarioProps) => {
         backdrop-blur-sm
         rounded-2xl
         p-3
-        flex items-center justify-between gap-4
+        flex flex-col items-center justify-between gap-4 text-center
         "
       >
-        <div className="flex flex-col gap-1 max-w-2/3">
-          <h2 className="font-poppins font-semibold text-lg">
-            {centenario.nombre}
-          </h2>
+        <h2 className="font-poppins font-bold text-sm md:text-lg">
+          {centenario.nombre}
+        </h2>
+        <div className="flex items-center justify-evenly w-full">
+          <p className="font-semibold text-md md:text-xl">
+              {centenario.edad}
+          </p>
 
-          <p className="font-bold text-2xl">
-            {centenario.edad} años
+          <p className="text-gray-600 font-medium text-xs sm:text-sm max-w-1/3">
+            {centenario.fecha}
           </p>
         </div>
-
-        <p className="text-gray-600 font-medium max-w-1/3">
-          {centenario.fecha}
-        </p>
       </div>
     </div>
   );
