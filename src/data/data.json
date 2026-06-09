@@ -78,7 +78,7 @@
   "misionVision": {
     "mision": {
       "titulo": "Misión",
-      "descripcion": "Brindar calidad  de atención a los residentes del Hogar de Ancianos San Blas de Nicoya y a los Usuarios de la red de Cuido de la Asociación Nicoyana de Atención al Anciano, de eficiencia y seguridad, velando por su estado físico, mental, social, espiritual y alimentario, sin ver color, raza, religión ni procedencia."
+      "descripcion": "Brindar calidad de vida, atención integral y cuido a los residentes del Hogar de larga Estancia San Blas de Nicoya, a los beneficiarios del Programa Red de Cuido y a los usuarios de CECUIDAM, los tres programas que atiende Asociación Nicoyana de Atención al Anciano, velando por su estado físico, mental, social, espiritual y alimentario, sin ver color, raza, religión ni procedencia."
     },
     "vision": {
       "titulo": "Visión",
@@ -86,7 +86,7 @@
     },
     "objetivos": {
       "titulo": "Objetivos",
-      "descripcion": "Lograr a diciembre 2022 el ingreso de recursos para satisfacer necesidades básicas, específicas y mejoras a la infraestructura del Hogar de Ancianos San Blas, así como dar calidad en todos los servicios que se le brindan a las personas Adultas Mayores residentes y de la Red de Atención domiciliar."
+      "descripcion": "Lograr el ingreso de recursos para satisfacer necesidades básicas, específicas y mejoras a la infraestructura del Hogar de Ancianos San Blas, así como dar calidad en todos los servicios que se le brindan a las personas Adultas Mayores residentes y de la Red de Atención domiciliar."
     },
     "valores": {
       "titulo": "Valores",
@@ -124,10 +124,9 @@
     "titulo": "¿Estás interesado en solicitar residencia?",
     "subtitulo": ["Para ser residente, debes cumplir con:", "Requisitos:"],
     "requisitos": [
-      "Edad y Estado de Salud: Adultos mayores que necesiten asistencia y cuidado especializado.",
+      "Edad y Estado de Salud: Adultos mayores 65+, que necesiten asistencia, que no tengan red de apoyo familiar y requieran cuido especializado.",
       "Documentación: Copia de cédula de identidad o pasaporte del residente.",
-      "Evaluación Médica: Evaluación médica reciente para garantizar el adecuado cuidado según las necesidades del residente.",
-      "Compromiso Familiar: Comunicación abierta y participación de la familia en el proceso de ingreso y cuidado del residente."
+      "Evaluación Médica: Evaluación médica reciente para garantizar el adecuado cuidado según las necesidades del residente."
     ],
     "mensaje": "Si cumples con los requisitos, contáctanos"
   },
@@ -208,7 +207,7 @@
     },
     "Horario": {
       "titulo": "Horario",
-      "items": ["Lunes a Viernes", "8am a 3pm"]
+      "items": ["Lunes a Viernes", "7am a 4pm"]
     },
     "Direccion": {
       "titulo": "Dirección",
@@ -511,13 +510,13 @@
       "requisitos": [
         "Ropa en buen estado: sin manchas, que no esté rota ni muy desgastada",
         "Medicamentos: consultar por el protocolo de donación de medicamentos",
-        "Alimentos: no pasados de su fecha de vencimiento"
+        "Alimentos aptos para el consumo que no hayan expirado."
       ]
     },
     "donacionMonetaria": {
       "subtitulo": [
         "Podés hacer donaciones monetarias",
-        "Podés hacerlo por medio de SINPE móvil o transferencia:"
+        "Podés hacerlo por medio de SINPE móvil o transferencia, todas las siguientes a nombre de Asociación Nicoyana de Atención al Anciano:"
       ],
       "medios": [
         "SINPE móvil: 8972-9912",

@@ -78,7 +78,7 @@
   "misionVision": {
     "mision": {
       "titulo": "Mission",
-      "descripcion": "To provide quality care to the residents of the Hogar San Blas in Nicoya and to the users of the Care Network of the Nicoya Association for Elderly Care, with efficiency and safety — ensuring their physical, mental, social, spiritual, and nutritional well-being, without discrimination based on color, race, religion, or origin."
+      "descripcion": "To provide quality of life, comprehensive care, and support to the residents of the San Blas de Nicoya Long-Term Care Home, the beneficiaries of the Care Network Program (Red de Cuido), and the users of CECUIDAM—the three programs operated by the Nicoyan Association for Elderly Care. The organization works to ensure the physical, mental, social, spiritual, and nutritional well-being of those it serves, regardless of color, race, religion, or place of origin."
     },
     "vision": {
       "titulo": "Vision",
@@ -86,7 +86,7 @@
     },
     "objetivos": {
       "titulo": "Goals",
-      "descripcion": "By December 2022, secure the necessary resources to meet basic and specific needs, as well as improvements to the infrastructure of the Hogar San Blas. Additionally, ensure quality in all services provided to older adults living in the residence and those in the Home Care Network."
+      "descripcion": "Secure the necessary resources to meet basic and specific needs, as well as improvements to the infrastructure of the Hogar San Blas. Additionally, ensure quality in all services provided to older adults living in the residence and those in the Home Care Network."
     },
     "valores": {
       "titulo": "Values",
@@ -127,7 +127,7 @@
       "Requirements:"
     ],
     "requisitos": [
-      "Age and Health Condition: Elderly adults who require assistance and specialized care.",
+      "Age and Health Condition: Adults aged 65 and older. Individuals who require assistance and specialized care. Individuals who do not have a family support network.",
       "Documentation: Copy of the resident's ID card or passport.",
       "Medical Evaluation: Recent medical evaluation to ensure appropriate care based on the resident's needs.",
       "Family Commitment: Open communication and active participation from the family in the admission process and ongoing care of the resident."
@@ -211,7 +211,7 @@
     },
     "Horario": {
       "titulo": "Schedule",
-      "items": ["Monday to Friday", "8am to 3pm"]
+      "items": ["Monday to Friday", "7am to 4pm"]
     },
     "Direccion": {
       "titulo": "Address",
@@ -517,13 +517,13 @@
       "requisitos": [
         "Clothing in good condition: without stains, not broken or very worn out",
         "Medications: consult the donation protocol for medications",
-        "Food: not expired"
+        "Food items suitable for consumption and not expired."
       ]
     },
     "donacionMonetaria": {
       "subtitulo": [
         "You can make monetary donations",
-        "You can do it by SINPE móvil or transfer:"
+        "You can do it by SINPE móvil or transfer, all are registered under the name: Asociación Nicoyana de Atención al Anciano:"
       ],
       "medios": [
         "SINPE móvil: 8972-9912",
