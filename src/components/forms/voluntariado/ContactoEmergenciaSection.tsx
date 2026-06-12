@@ -14,13 +14,19 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
             const contacto =
                     Array.isArray(field.state.value) && field.state.value.length > 0
                     ? field.state.value[0]
-                    : { nombre: "", telefono: "" };
+                    : { id: 1, nombre: "", telefono: "" };
+
+                // Ensure contacto has an id
+                const contactoWithId = {
+                  ...contacto,
+                  id: contacto.id || 1
+                };
 
                 const handleContactChange = (
                     key: "nombre" | "telefono",
                     value: string
                 ) => {
-                    const updatedContact = { ...contacto, [key]: value };
+                    const updatedContact = { ...contactoWithId, [key]: value };
                     field.handleChange([updatedContact]);
                 };
 
@@ -36,7 +42,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                         <InputField
                             id="contacto-nombre"
                             type="text"
-                            value={contacto.nombre}
+                            value={contactoWithId.nombre}
                             onChange={(e) =>
                             handleContactChange("nombre", e.target.value)
                             }
@@ -54,7 +60,7 @@ export const ContactoEmergenciaSection = ({ form, formErrors }: any) => {
                         <InputField
                             id="contacto-telefono"
                             type="tel"
-                            value={contacto.telefono}
+                            value={contactoWithId.telefono}
                             onChange={(e) =>
                             handleContactChange("telefono", e.target.value)
                             }

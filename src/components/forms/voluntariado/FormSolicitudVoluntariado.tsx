@@ -44,20 +44,26 @@ const FormSolicitudVoluntariado = () => {
       experienciaLaboral: "",
       tipoVoluntariado: 0,
       cantidadHoras: undefined,
-      contactosEmergencia: [{ nombre: "", telefono: "" }],
+      contactosEmergencia: [{ id: 1, nombre: "", telefono: "" }],
       horarios: [],
       observaciones: ""
     },
     onSubmit: async ({ value }: { value: CrearSolicitudPendienteDto }) => {
-  // First filter the horarios
+  // Filter horarios to only include complete entries with id
   const filteredHorarios = value.horarios?.filter(
-    (h) => h.dia && h.horaInicio && h.horaFin
+    (h) => h.id !== undefined && h.dia && h.horaInicio && h.horaFin
+  );
+
+  // Filter contactos de emergencia to only include complete entries with id
+  const filteredContactos = value.contactosEmergencia?.filter(
+    (c) => c.id !== undefined && c.nombre && c.telefono
   );
 
   // Create form data without modifying the original value
   const formData = {
     ...value,
-    horarios: filteredHorarios || [],
+    horarios: filteredHorarios && filteredHorarios.length > 0 ? filteredHorarios : undefined,
+    contactosEmergencia: filteredContactos && filteredContactos.length > 0 ? filteredContactos : undefined,
     // Convert cantidadHoras to number and handle empty/undefined
     cantidadHoras: value.cantidadHoras ? Number(value.cantidadHoras) : undefined
   };
@@ -90,7 +96,7 @@ const FormSolicitudVoluntariado = () => {
   }
 
   try {
-    // Send the form data (without cantidadHoras if it was 0/undefined)
+    // Send the form data matching CrearSolicitudPendienteDto structure
     const result = await mutation.mutateAsync(formData);
     console.log("Form submission successful:", result);
     toast.success("Solicitud de voluntario enviada", {
