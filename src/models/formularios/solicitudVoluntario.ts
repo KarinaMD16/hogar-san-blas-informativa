@@ -4,11 +4,13 @@ export interface TipoVoluntariado{
 }
 
 export interface ContactoEmergenciaPendiente {
+  id?: number;
   nombre: string;
   telefono: string;
 }
 
 export interface HorarioPendiente {
+  id?: number;
   dia: string;
   horaInicio: string;
   horaFin: string;

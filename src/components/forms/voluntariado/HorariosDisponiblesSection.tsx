@@ -33,7 +33,10 @@ export const HorariosDisponiblesSection = ({ form, formErrors }: any) => {
           const horarios = Array.isArray(field.state.value) ? field.state.value : [];
 
           const addHorario = () => {
-            field.handleChange([...horarios, { dia: "", horaInicio: "", horaFin: "" }]);
+            const newId = horarios.length > 0 
+              ? Math.max(...horarios.map((h: any) => h.id || 0)) + 1 
+              : 1;
+            field.handleChange([...horarios, { id: newId, dia: "", horaInicio: "", horaFin: "" }]);
           };
 
           const removeHorario = (index: number) => {
