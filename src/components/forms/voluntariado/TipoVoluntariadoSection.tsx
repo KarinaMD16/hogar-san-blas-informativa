@@ -10,7 +10,8 @@ const TipoVoluntariadoSection = ({ form, formErrors }: any) => {
 
   const tipoSeleccionadoId = useStore(form.store, (state: any) => state.values.tipoVoluntariado);
   const tipoSeleccionado = tiposVoluntariado?.find((tipo) => tipo.id === tipoSeleccionadoId);
-  const isHoras = tipoSeleccionado?.nombre.toLowerCase().includes("horas");
+  const nombreTipoSeleccionado = tipoSeleccionado?.nombre?.toLowerCase() ?? "";
+  const isHoras = nombreTipoSeleccionado.includes("horas") || nombreTipoSeleccionado.includes("tcu");
 
   const { contentJson } = useContext(IdiomaContext);
   const placeholders = contentJson.formularioVoluntariado;
