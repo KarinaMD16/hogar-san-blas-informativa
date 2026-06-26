@@ -126,13 +126,18 @@
       "To become a resident, you must meet the following:",
       "Requirements:"
     ],
-    "requisitos": [
-      "Age and Health Condition: Adults aged 65 and older. Individuals who require assistance and specialized care. Individuals who do not have a family support network.",
-      "Documentation: Copy of the resident's ID card or passport.",
-      "Medical Evaluation: Recent medical evaluation to ensure appropriate care based on the resident's needs.",
-      "Family Commitment: Open communication and active participation from the family in the admission process and ongoing care of the resident."
+    "requirements": [
+      "Age and Health Status: Older adults aged 65+, who need assistance, do not have a family support network, and require specialized care.",
+      "Application letter signed by the applicant stating their wish to be admitted to the institution and indicating whether they are in full use of their mental faculties.",
+      "Medical report",
+      "Pension certification issued by the CCSS",
+      "Certification of movable and immovable property",
+      "SINERUBE certification, issued by IMAS",
+      "Social work study",
+      "Blood tests",
+      "COVID-19 vaccination records"
     ],
-    "mensaje": "If you meet the requirements, contact us"
+    "mensaje": "If you meet the requirements, please contact us. The home reserves the right of admission based on the evaluation of each case."
   },
 
   "casosExito": {

@@ -125,10 +125,16 @@
     "subtitulo": ["Para ser residente, debes cumplir con:", "Requisitos:"],
     "requisitos": [
       "Edad y Estado de Salud: Adultos mayores 65+, que necesiten asistencia, que no tengan red de apoyo familiar y requieran cuido especializado.",
-      "Documentación: Copia de cédula de identidad o pasaporte del residente.",
-      "Evaluación Médica: Evaluación médica reciente para garantizar el adecuado cuidado según las necesidades del residente."
+      "Carta de solicitud firmada por el solicitante con el deseo de querer ser institucionalizado(a) expresando si tienen uso de sus facultades mentales",
+      "Dictamen médico",
+      "Certificación de pensión emitida por la CCSS",
+      "Certificación de Bienes muebles e inmuebles",
+      "Certificación del SINERUBE, en IMAS",
+      "Estudio de trabajo social",
+      "Examenes de sangre",
+      "Vacunas del COVID-19"
     ],
-    "mensaje": "Si cumples con los requisitos, contáctanos"
+    "mensaje": "Si cumples con los requisitos, contáctanos. El hogar se reserva el derecho de admisión según valoración del caso."
   },
 
   "casosExito": {
